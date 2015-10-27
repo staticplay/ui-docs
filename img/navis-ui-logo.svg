@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="20px" viewBox="0 0 50 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>navis-ui-logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="navis-logo--inverted" sketch:type="MSLayerGroup" fill="#FFFFFF">
+            <g id="Group" sketch:type="MSShapeGroup">
+                <path d="M34.615,11.565 C33.819,15.65 24.801,19.019 13.687,19.682 L16.446,14.854 C24.377,14.111 30.186,12.042 30.345,9.602 C30.557,6.525 21.777,4.058 10.69,4.058 C7.003,4.058 3.528,4.323 0.531,4.827 L0.584,4.562 C2.918,4.085 5.491,3.74 8.197,3.554 L10.85,4.88498131e-15 L13.29,3.342 C25.943,3.395 35.465,7.056 34.616,11.565 L34.615,11.565 Z M10.716,11.141 C8.859,11.141 7.188,10.876 6.048,10.478 L10.716,19.178 L16.127,10.239 C14.88,10.796 12.917,11.141 10.716,11.141 L10.716,11.141 Z" id="Shape"></path>
+            </g>
+        </g>
+        <text id="ui" sketch:type="MSTextLayer" font-family="Source Sans Pro" font-size="16" font-style="italic" font-weight="normal" fill="#FFFFFF">
+            <tspan x="37" y="19">ui</tspan>
+        </text>
+    </g>
+</svg>
