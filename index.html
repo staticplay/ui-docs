@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google" value="notranslate">
     <title>NAVIS ui</title>
-    <link href="../dist/app.css" rel="stylesheet">
+    <link href="dist/app.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="prism.js"></script>
@@ -1329,7 +1329,7 @@
 </code></pre>
 <h4 id="vertical">Vertical</h4>
 <pre><code class="lang-html_example"> &lt;ul class=&quot;c-subnav--vertical&quot;&gt;
-   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;c-subnav--active&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
  &lt;/ul&gt;
@@ -1354,51 +1354,36 @@
               <div>
                 <h3 id="inputs">Inputs</h3>
 <p> Supported input types are, <code>text</code>, <code>password</code>, <code>date</code>, <code>datetime</code>, <code>datetime-local</code>, <code>month</code>, <code>week</code>, <code>email</code>, <code>number</code>, <code>search</code>, <code>tel</code>, <code>time</code>, <code>url</code>, <code>color</code>.</p>
-<h6 id="html">HTML</h6>
-<pre><code class="lang-html">  &lt;label for=&quot;input-1-1&quot;&gt;Label&lt;/label&gt;
-  &lt;input type=&quot;text&quot; id=&quot;input-1-1&quot;&gt;
+<pre><code class="lang-html_example"> &lt;label for=&quot;input-1-1&quot;&gt;Label&lt;/label&gt;
+ &lt;input type=&quot;text&quot; id=&quot;input-1-1&quot;&gt;
+
+ &lt;label for=&quot;input-1-2&quot;&gt;Focus&lt;/label&gt;
+ &lt;input type=&quot;text&quot; id=&quot;input-1-2&quot; class=&quot;focus&quot;&gt;
+
+ &lt;div class=&quot;c-input-group&quot;&gt;
+   &lt;label for=&quot;input-2-1&quot;&gt;Warning&lt;/label&gt;
+   &lt;input type=&quot;email&quot; id=&quot;input-2-1&quot; value=&quot;notauser at clientcom&quot; required&gt;
+   &lt;div class=&quot;c-validation--warning&quot;&gt;Warning validated message&lt;/div&gt;
+ &lt;/div&gt;
+
+ &lt;div class=&quot;c-input-group&quot;&gt;
+   &lt;label for=&quot;input-2-2&quot;&gt;Error&lt;/label&gt;
+   &lt;input type=&quot;text&quot; id=&quot;input-2-2&quot; class=&quot;error&quot;&gt;
+   &lt;div class=&quot;c-validation--error&quot; placeholder=&quot;Placeholder text&quot;&gt;Error validated message&lt;/div&gt;
+ &lt;/div&gt;
 </code></pre>
-<h6 id="result">RESULT</h6>
- <div class="u-row">
-   <div class="u-column">
-     <label for="input-1-1">Label</label>
-     <input type="text" id="input-1-1">
-   </div>
-   <div class="u-column">
-     <label for="input-1-2">Focus</label>
-     <input type="text" id="input-1-2" class="focus">
-   </div>
- </div>
+<h3 id="textarea">Textarea</h3>
+<pre><code class="lang-html_example"> &lt;label for=&quot;textarea-1-1&quot;&gt;Textarea&lt;/label&gt;
+ &lt;textarea id=&quot;textarea-1-1&quot;&gt;&lt;/textarea&gt;
+</code></pre>
+<h3 id="checkboxes">Checkboxes</h3>
+<pre><code class="lang-html_example">   &lt;input type=&quot;checkbox&quot; class=&quot;c-checkbox&quot;&gt;Checkbox&lt;/input&gt;
+   &lt;label&gt;&lt;/label&gt;
+   &lt;br&gt;
+   &lt;input type=&quot;checkbox&quot; class=&quot;c-checkbox&quot; checked&gt;Checked Checkbox&lt;/input&gt;
+   &lt;label&gt;&lt;/label&gt;
+</code></pre>
 
- <div class="u-row">
- <div class="u-column">
-   <div class="c-input-group">
-     <label for="input-2-1">Validation Warning</label>
-     <input type="email" id="input-2-1" value="notauser at clientcom" required>
-     <div class="c-validation--warning">Warning validated message</div>
-   </div>
-  </div>
- <div class="u-column">
-  <div class="c-input-group">
-   <label for="input-2-2">Validation Error</label>
-   <input type="text" id="input-2-2" class="error">
-   <div class="c-validation--error" placeholder="Placeholder text">Error validated message</div>
-   </div>
- </div>
- </div>
-
-<p> <label for="textarea-1-1">Textarea</label>
- <textarea id="textarea-1-1"></textarea></p>
- <div class="u-row">
-   <div class="u-column c-input-group">
-     <input type="checkbox" class="c-checkbox">Checkbox</input>
-     <label></label>
-   </div>
-   <div class="u-column c-input-group">
-     <input type="checkbox" class="c-checkbox" checked>Checked Checkbox</input>
-     <label></label>
-   </div>
- </div>
                 
               </div>
             </section>
