@@ -1,0 +1,1551 @@
+<!doctype html>
+<html class="s-app no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google" value="notranslate">
+    <title>NAVIS ui</title>
+    <link href="../dist/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="prism.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body class="t-default t-docs">
+    <div id="app">
+      <header class="c-bar--top">
+        <nav>
+          <ul>
+            <li><h1 class="o-brand">Name</h1></li>
+            <li><i class="o-icon-right-dir"></i> <h2>Styleguide</h2></li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li><a href="https://github.com/jonathantneal/mdcss"><i class="o-icon-help-circle"></i></a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="c-bar u-red-700">
+        <nav class="c-menu">
+          
+          <ul>
+              <li>
+                  <a href="#settings">Settings</a>
+                  
+          <ul>
+              <li>
+                  <a href="#global">Global</a>
+                  
+              </li>
+              
+              <li>
+                  <a href="#colors">Colors</a>
+                  
+              </li>
+              </ul>
+          
+              </li>
+              
+              <li>
+                  <a href="#utilities">Utilities</a>
+                  
+          <ul>
+              <li>
+                  <a href="#media">Media</a>
+                  
+              </li>
+              
+              <li>
+                  <a href="#mixins">Mixins</a>
+                  
+              </li>
+              
+              <li>
+                  <a href="#classes">Classes</a>
+                  
+              </li>
+              
+              <li>
+                  <a href="#grid">Grid</a>
+                  
+              </li>
+              
+              <li>
+                  <a href="#syntax">Syntax</a>
+                  
+              </li>
+              </ul>
+          
+              </li>
+              
+              <li>
+                  <a href="#base">Base</a>
+                  
+          <ul>
+              <li>
+                  <a href="#reset">Reset</a>
+                  
+              </li>
+              
+              <li>
+                  <a href="#layout">Layout</a>
+                  
+              </li>
+              
+              <li>
+                  <a href="#shapes">Shapes</a>
+                  
+              </li>
+              
+              <li>
+                  <a href="#typography">Typography</a>
+                  
+              </li>
+              
+              <li>
+                  <a href="#images">Images</a>
+                  
+              </li>
+              </ul>
+          
+              </li>
+              
+              <li>
+                  <a href="#navigation">Navigation</a>
+                  
+          <ul>
+              <li>
+                  <a href="#accordion">Accordion</a>
+                  
+              </li>
+              
+              <li>
+                  <a href="#bar">Bar</a>
+                  
+              </li>
+              
+              <li>
+                  <a href="#menu">Menu</a>
+                  
+              </li>
+              
+              <li>
+                  <a href="#subnav">Subnav</a>
+                  
+              </li>
+              </ul>
+          
+              </li>
+              
+              <li>
+                  <a href="#forms">Forms</a>
+                  
+          <ul>
+              <li>
+                  <a href="#elements">Elements</a>
+                  
+              </li>
+              
+              <li>
+                  <a href="#buttons">Buttons</a>
+                  
+              </li>
+              
+              <li>
+                  <a href="#dropdowns">Dropdowns</a>
+                  
+              </li>
+              </ul>
+          
+              </li>
+              
+              <li>
+                  <a href="#containers">Containers</a>
+                  
+          <ul>
+              <li>
+                  <a href="#card">Card</a>
+                  
+              </li>
+              
+              <li>
+                  <a href="#tooltips">Tooltips</a>
+                  
+              </li>
+              
+              <li>
+                  <a href="#modal">Modal</a>
+                  
+              </li>
+              </ul>
+          
+              </li>
+              </ul>
+          
+        </nav>
+      </div>
+      <main class="o-main">
+            <section id="settings">
+              <h2 class="doc-section-heading">Settings</h2>
+
+              <div>
+                
+                
+            <section id="global">
+              <h3 class="doc-section-heading">Global</h3>
+
+              <div>
+                <h2 id="getting-started">Getting Started</h2>
+<p> In your command line application, you will want to install the necessary tools
+ to start working on the UI framework. Make sure your other projects are at the
+ same level for synced releases.</p>
+<h3 id="setup">Setup</h3>
+<p> Make sure to add these things to your layout file</p>
+<h6 id="html">HTML</h6>
+<pre><code class="lang-html"> &lt;html class=&quot;s-app&quot;&gt;
+
+ &lt;head&gt;
+   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700&quot;&gt;
+   &lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/app.css&quot;&gt;
+ &lt;/head&gt;
+
+ &lt;body class=&quot;t-default&quot;&gt;
+   &lt;div class=&quot;s-app-container&quot;&gt;
+</code></pre>
+<h1 id="settings">Settings</h1>
+<h2 id="global">Global</h2>
+<p> This is a list of global variables, and their default values.</p>
+<h6 id="settings-global-css">SETTINGS/global.css</h6>
+<pre><code class="lang-css"> --global-duration: .1s;
+ --global-margin: 8px;
+ --global-rounded: 4px;
+</code></pre>
+
+                
+              </div>
+            </section>
+          
+            <section id="colors">
+              <h3 class="doc-section-heading">Colors</h3>
+
+              <div>
+                <p>This collection of colors it intended to serve the interface of all our product applications and all the components you can see in this document.</p>
+ <style>
+ .u-chip {
+    font-family: monospace;
+    width: 150px
+    height: 50px;
+    padding: 1em 2em;
+  }
+  .u-chip-large {
+    height: 100px;
+    font-size: 2rem;
+    font-family: inherit;
+    padding: 1em;
+    margin-top: .5em;
+    }
+ </style>
+
+<h2 id="brand-colors">Brand Colors</h2>
+ <div class="u-row">
+   <div class="u-column--12@sm u-column--4@md u-center">
+     <img src="img/navis-logo.svg" alt="Navis Logo" style="width: 200px;">
+     <br>
+     <br>
+   </div>
+   <div class="u-column--12@sm u-column--4@md">
+     <div class="u-chip u-blue-800" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">
+       --blue-800
+       <span class="u-right">--primary-color</span>
+     </div>
+     <div class="u-chip u-orange-600" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">
+       --orange-600
+       <span class="u-right">--secondary-color</span>
+     </div>
+   </div>
+   <div class="u-column--12@sm u-column--4@md">
+     <div class="u-chip u-grey-800" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">
+       --grey-800
+       <span class="u-right">--text-color</span>
+     </div>
+     <div class="u-chip u-grey-50" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">
+       --grey-50
+       <span class="u-right">--background-color</span>
+     </div>
+   </div>
+ </div>
+
+<h2 id="color-system">Color System</h2>
+ <div class="u-row">
+ <div class="u-column--12@sm u-column--4@md">
+ <div class="u-chip u-chip-large u-blue-800">Blue</div>
+ <div class="u-chip u-blue-50" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--blue-50</div>
+ <div class="u-chip u-blue-100" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--blue-100</div>
+ <div class="u-chip u-blue-200" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--blue-200</div>
+ <div class="u-chip u-blue-300" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--blue-300</div>
+ <div class="u-chip u-blue-400" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--blue-400</div>
+ <div class="u-chip u-blue-500" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--blue-500</div>
+ <div class="u-chip u-blue-600" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--blue-600</div>
+ <div class="u-chip u-blue-700" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--blue-700</div>
+ <div class="u-chip u-blue-800" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--blue-800</div>
+ <div class="u-chip u-blue-900" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--blue-900</div>
+ <div class="u-chip u-blue-1000" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--blue-1000</div>
+ <div class="u-chip u-blue-1100" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--blue-1100</div>
+ <br>
+ <div class="u-chip u-magenta-500" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--magenta-500</div>
+ <div class="u-chip u-purple-a100" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--purple-a100</div>
+ </div>
+ <div class="u-column--12@sm u-column--4@md">
+ <div class="u-chip u-chip-large u-grey-800">Grey</div>
+ <div class="u-chip u-grey-50" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--grey-50</div>
+ <div class="u-chip u-grey-100" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--grey-100</div>
+ <div class="u-chip u-grey-300" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--grey-300</div>
+ <div class="u-chip u-grey-500" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--grey-500</div>
+ <div class="u-chip u-grey-600" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--grey-600</div>
+ <div class="u-chip u-grey-700" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--grey-700</div>
+ <div class="u-chip u-grey-800" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--grey-800</div>
+ <div class="u-chip u-black" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--black</div>
+ <div class="u-chip u-white" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--white</div>
+
+ <div class="u-chip u-chip-large u-green-800">Green</div>
+ <div class="u-chip u-green-600" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--green-600</div>
+ <div class="u-chip u-green-700" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--green-700</div>
+ <div class="u-chip u-green-800" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--green-800</div>
+
+<p> </div>
+ <div class="u-column--12@sm u-column--4@md">
+ <div class="u-chip u-chip-large u-orange-600">Orange</div>
+ <div class="u-chip u-orange-500" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--orange-500</div>
+ <div class="u-chip u-orange-600" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--orange-600</div></p>
+ <div class="u-chip u-chip-large u-gold-700">Gold</div>
+ <div class="u-chip u-gold-50" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--gold-50</div>
+ <div class="u-chip u-gold-200" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--gold-200</div>
+ <div class="u-chip u-gold-300" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--gold-300</div>
+ <div class="u-chip u-gold-500" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--gold-500</div>
+ <div class="u-chip u-gold-700" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--gold-700</div>
+
+ <div class="u-chip u-chip-large u-red-800">Red</div>
+ <div class="u-chip u-red-600" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--red-600</div>
+ <div class="u-chip u-red-700" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--red-700</div>
+ <div class="u-chip u-red-800" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--red-800</div>
+ </div>
+ </div>
+                
+              </div>
+            </section>
+          
+              </div>
+            </section>
+          
+            <section id="utilities">
+              <h2 class="doc-section-heading">Utilities</h2>
+
+              <div>
+                
+                
+            <section id="media">
+              <h3 class="doc-section-heading">Media</h3>
+
+              <div>
+                <p>Responsive breakpoints for styling for different devices and groups of devices.</p>
+<h4 id="handhelds">Handhelds</h4>
+<p> Only Small Devices <code>@media (--sm) { }</code></p>
+<p> Small plus larger devices <code>@media (--sm-up) { }</code></p>
+<h4 id="tablets">Tablets</h4>
+<p> Only Medium Devices <code>@media (--md) { }</code></p>
+<p> Medium plus larger devices <code>@media (--md-up) { }</code></p>
+<p> Medium plus smaller devices <code>@media (--md-down) { }</code></p>
+<h4 id="computers">Computers</h4>
+<p> Only Large Devices <code>@media (--lg) { }</code></p>
+<p> Large plus larger devices <code>@media (--lg-up) { }</code></p>
+<p> Large plus smaller devices <code>@media (--lg-down) { }</code></p>
+<h4 id="printers">Printers</h4>
+<p> Simply put, <code>@media print { }</code></p>
+<h4 id="classes">Classes</h4>
+<p> You will also notice some classes are appended with <code>@sm</code>, <code>@md</code>, <code>@lg</code>, and <code>@print</code> for the same purposes.</p>
+<p> See <a href="#syntax">syntax</a>/<a href="#responsive-suffixes">responsive-suffixes</a> for more info.</p>
+
+                
+              </div>
+            </section>
+          
+            <section id="mixins">
+              <h3 class="doc-section-heading">Mixins</h3>
+
+              <div>
+                <h4 id="list-item-horizontal">List Item Horizontal</h4>
+<pre><code class="lang-css"> @mixin list-item-horizontal $padding, $direction;
+</code></pre>
+<h4 id="image-bullets">Image Bullets</h4>
+<pre><code class="lang-css"> @mixin image-bullets $icon, $width, $height, $line-height;
+</code></pre>
+<h4 id="triangle">Triangle</h4>
+<pre><code class="lang-css"> @mixin triangle $direction, $color, $size;
+</code></pre>
+ <div class="arrow"></div>
+
+<h4 id="plank">Plank</h4>
+<pre><code class="lang-css"> @mixin plank $type;
+</code></pre>
+<h4 id="sticky-footer">Sticky Footer</h4>
+<pre><code class="lang-css"> @mixin sticky-footer $height;
+</code></pre>
+
+                
+              </div>
+            </section>
+          
+            <section id="classes">
+              <h3 class="doc-section-heading">Classes</h3>
+
+              <div>
+                
+                
+              </div>
+            </section>
+          
+            <section id="grid">
+              <h3 class="doc-section-heading">Grid</h3>
+
+              <div>
+                <p>Grids are the bread and butter of web design, this one is based on flexbox. Needless to say you will find this grid system a joy to use.</p>
+<h6 id="resources">RESOURCES</h6>
+<p> <a href="http://jonyablonski.com/2015/flexbox-myth-busting/">Flexbox Mythbusting</a></p>
+<h2 id="responsive">Responsive</h2>
+<p> Media appended classes let you create simple or complex grid systems.</p>
+ <div class="u-row">
+   <div class="u-column--3@sm u-column--2@md u-column--1@lg">
+     <div class="box-row">
+       <span class="u-show@sm">3</span>
+       <span class="u-show@md">2</span>
+       <span class="u-show@lg">1</span>
+     </div>
+   </div>
+   <div class="u-column--6@sm u-column--8@md u-column--10@lg">
+     <div class="box-row">
+       <span class="u-show@sm">6</span>
+       <span class="u-show@md">8</span>
+       <span class="u-show@lg">10</span>
+     </div>
+   </div>
+   <div class="u-column--3@sm u-column--2@md u-column--1@lg">
+     <div class="box-row">
+       <span class="u-show@sm">3</span>
+       <span class="u-show@md">2</span>
+       <span class="u-show@lg">1</span>
+     </div>
+   </div>
+ </div>
+
+ <div class="u-row">
+   <div class="u-column--3@sm u-column--2@md u-column--1@lg">
+     <div class="box-row">
+       <span class="u-show@sm">3</span>
+       <span class="u-show@md">2</span>
+       <span class="u-show@lg">1</span>
+     </div>
+   </div>
+   <div class="u-column--9@sm u-column--10@md u-column--11@lg">
+     <div class="box-row">
+       <span class="u-show@sm">9</span>
+       <span class="u-show@md">10</span>
+       <span class="u-show@lg">11</span>
+     </div>
+   </div>
+ </div>
+
+ <div class="u-row">
+   <div class="u-column--6@sm u-column--8@md u-column--10@lg">
+     <div class="box-row">
+       <span class="u-show@sm">6</span>
+       <span class="u-show@md">8</span>
+       <span class="u-show@lg">10</span>
+     </div>
+   </div>
+   <div class="u-column--6@sm u-column--4@md u-column--2@lg">
+     <div class="box-row">
+       <span class="u-show@sm">6</span>
+       <span class="u-show@md">4</span>
+       <span class="u-show@lg">2</span>
+     </div>
+   </div>
+ </div>
+
+<h3 id="column-syntax">Column Syntax</h3>
+<h6 id="html">HTML</h6>
+<pre><code class="lang-html"> &lt;div class=&quot;u-row&quot;&gt;
+   &lt;div class=&quot;u-column--8@sm u-column--6@md u-column--4@lg&quot;&gt;...&lt;/div&gt;
+ &lt;/div&gt;
+</code></pre>
+<h2 id="fluid">Fluid</h2>
+ <div class="u-row">
+   <div class="u-column--12">
+     <div class="box-row">
+       <span>12</span>
+     </div>
+   </div>
+ </div>
+ <div class="u-row">
+   <div class="u-column--1">
+     <div class="box-row">
+       <span>1</span>
+     </div>
+   </div>
+   <div class="u-column--11">
+     <div class="box-row">
+       <span>11</span>
+     </div>
+   </div>
+ </div>
+ <div class="u-row">
+   <div class="u-column--2">
+     <div class="box-row">
+       <span>2</span>
+     </div>
+   </div>
+   <div class="u-column--10">
+     <div class="box-row">
+       <span>10</span>
+     </div>
+   </div>
+ </div>
+ <div class="u-row">
+   <div class="u-column--3">
+     <div class="box-row">
+       <span>3</span>
+     </div>
+   </div>
+   <div class="u-column--9">
+     <div class="box-row">
+       <span>9</span>
+     </div>
+   </div>
+ </div>
+ <div class="u-row">
+   <div class="u-column--4">
+     <div class="box-row">
+       <span>4</span>
+     </div>
+   </div>
+   <div class="u-column--8">
+     <div class="box-row">
+       <span>8</span>
+     </div>
+   </div>
+ </div>
+ <div class="u-row">
+   <div class="u-column--5">
+     <div class="box-row">
+       <span>5</span>
+     </div>
+   </div>
+   <div class="u-column--7">
+     <div class="box-row">
+       <span>7</span>
+     </div>
+   </div>
+ </div>
+ <div class="u-row">
+   <div class="u-column--6">
+     <div class="box-row">
+       <span>6</span>
+     </div>
+   </div>
+   <div class="u-column--6">
+     <div class="box-row">
+       <span>6</span>
+     </div>
+   </div>
+ </div>
+ <div class="u-row">
+   <div class="u-column--7">
+     <div class="box-row">
+       <span>7</span>
+     </div>
+   </div>
+   <div class="u-column--5">
+     <div class="box-row">
+       <span>5</span>
+     </div>
+   </div>
+ </div>
+ <div class="u-row">
+   <div class="u-column--8">
+     <div class="box-row">
+       <span>8</span>
+     </div>
+   </div>
+   <div class="u-column--4">
+     <div class="box-row">
+       <span>4</span>
+     </div>
+   </div>
+ </div>
+ <div class="u-row">
+   <div class="u-column--9">
+     <div class="box-row">
+       <span>9</span>
+     </div>
+   </div>
+   <div class="u-column--3">
+     <div class="box-row">
+       <span>3</span>
+     </div>
+   </div>
+ </div>
+ <div class="u-row">
+   <div class="u-column--10">
+     <div class="box-row">
+       <span>10</span>
+     </div>
+   </div>
+   <div class="u-column--2">
+     <div class="box-row">
+       <span>2</span>
+     </div>
+   </div>
+ </div>
+ <div class="u-row">
+   <div class="u-column--11">
+     <div class="box-row">
+       <span>11</span>
+     </div>
+   </div>
+   <div class="u-column--1">
+     <div class="box-row">
+       <span>1</span>
+     </div>
+   </div>
+ </div>
+
+<h3 id="column-offset">Column Offset</h3>
+<p> Move back and forth any number of columns wide you need to offset the position of your column within the grid.</p>
+<h6 id="html">HTML</h6>
+<pre><code class="lang-html"> &lt;div class=&quot;row&quot;&gt;
+   &lt;div class=&quot;u-column--1 u-offset--11&quot;&gt;...&lt;/div&gt;
+ &lt;/div&gt;
+</code></pre>
+ <div class="u-row"> <div class="u-column--1 u-offset--11">
+   <div class="box-row"> <span><i class="o-icon-right-dir"></i> 11</span> </div>
+ </div> </div>
+ <div class="u-row"> <div class="u-column--2 u-offset--10">
+   <div class="box-row"> <span><i class="o-icon-right-dir"></i> 10</span> </div>
+ </div> </div>
+ <div class="u-row"> <div class="u-column--3 u-offset--9">
+   <div class="box-row"> <span><i class="o-icon-right-dir"></i> 9</span> </div>
+ </div> </div>
+ <div class="u-row"> <div class="u-column--4 u-offset--8">
+   <div class="box-row"> <span><i class="o-icon-right-dir"></i> 8</span> </div>
+ </div> </div>
+ <div class="u-row"> <div class="u-column--5 u-offset--7">
+   <div class="box-row"> <span><i class="o-icon-right-dir"></i> 7</span> </div>
+ </div> </div>
+ <div class="u-row"> <div class="u-column--6 u-offset--6">
+   <div class="box-row"> <span><i class="o-icon-right-dir"></i> 6</span> </div>
+ </div> </div>
+ <div class="u-row"> <div class="u-column--7 u-offset--5">
+   <div class="box-row"> <span><i class="o-icon-right-dir"></i> 5</span> </div>
+ </div> </div>
+ <div class="u-row"> <div class="u-column--8 u-offset--4">
+   <div class="box-row"> <span><i class="o-icon-right-dir"></i> 4</span> </div>
+ </div> </div>
+ <div class="u-row"> <div class="u-column--9 u-offset--3">
+   <div class="box-row"> <span><i class="o-icon-right-dir"></i> 3</span> </div>
+ </div> </div>
+ <div class="u-row"> <div class="u-column--10 u-offset--2">
+   <div class="box-row"> <span><i class="o-icon-right-dir"></i> 2</span> </div>
+ </div> </div>
+ <div class="u-row"> <div class="u-column--11 u-offset--1">
+   <div class="box-row"> <span><i class="o-icon-right-dir"></i> 1</span> </div>
+ </div> </div>
+
+<h3 id="autopilot">Autopilot</h3>
+<p> If you don&#39;t have time to think about how wide things should be, don&#39;t specify, just say <code>.u-column</code>.</p>
+ <div class="u-row">
+   <div class="u-column"><div class="box-row">auto</div></div>
+   <div class="u-column"><div class="box-row">auto</div></div>
+ </div>
+ <div class="u-row">
+   <div class="u-column"><div class="box-row">auto</div></div>
+   <div class="u-column"><div class="box-row">auto</div></div>
+   <div class="u-column"><div class="box-row">auto</div></div>
+ </div>
+
+<pre><code class="lang-html"> &lt;div class=&quot;u-row&quot;&gt;
+   &lt;div class=&quot;u-column&quot;&gt;...&lt;/div&gt;
+   &lt;div class=&quot;u-column&quot;&gt;...&lt;/div&gt;
+ &lt;/div&gt;
+</code></pre>
+<h3 id="nesting">Nesting</h3>
+<p> You can setup any number of levels of grids deep you would like.</p>
+ <div class="u-row">
+   <div class="u-column--4">
+     <div class="box box-container">
+       <div class="u-row">
+         <div class="u-column--12">
+           <div class="box-first box-container">
+             <div class="u-row">
+               <div class="u-column--6">
+                 <div class="box-nested"></div>
+               </div>
+               <div class="u-column--6">
+                 <div class="box-nested"></div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="u-column--8">
+     <div class="box box-container">
+       <div class="u-row">
+         <div class="u-column--12">
+           <div class="box-first box-container">
+             <div class="u-row">
+               <div class="u-column--3">
+                 <div class="box-nested"></div>
+               </div>
+               <div class="u-column--6">
+                 <div class="box-nested"></div>
+               </div>
+               <div class="u-column--3">
+                 <div class="box-nested"></div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+<h3 id="align">Align</h3>
+<p> Shortcuts to placing your elements left or right.</p>
+<h6 id="start">START</h6>
+ <div class="u-row">
+   <div class="u-column--12">
+     <div class="box box-container">
+       <div class="u-row u-start">
+         <div class="u-column--6">
+           <div class="box-nested">
+           .u-row.u-start
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+<h6 id="center">CENTER</h6>
+ <div class="u-row">
+   <div class="u-column--12">
+     <div class="box box-container">
+       <div class="u-row u-center">
+         <div class="u-column--8">
+           <div class="box-nested">
+           .u-row.u-center
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+<h6 id="end">END</h6>
+ <div class="u-row">
+   <div class="u-column--12">
+     <div class="box box-container">
+       <div class="u-row u-end">
+         <div class="u-column--4">
+           <div class="box-nested">
+           .u-row.u-end
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+<h6 id="top">TOP</h6>
+ <div class="u-row u-top">
+   <div class="u-column--6">
+     <div class="box--large">.u-row.u-top</div>
+   </div>
+   <div class="u-column--6">
+     <div class="box"></div>
+   </div>
+ </div>
+
+<h6 id="middle">MIDDLE</h6>
+ <div class="u-row u-middle">
+   <div class="u-column--6">
+     <div class="box--large">.u-row.u-middle</div>
+   </div>
+   <div class="u-column--6">
+     <div class="box"></div>
+   </div>
+ </div>
+
+<h6 id="bottom">BOTTOM</h6>
+ <div class="u-row u-bottom">
+   <div class="u-column--6">
+     <div class="box--large">.u-row.u-bottom</div>
+   </div>
+   <div class="u-column--6">
+     <div class="box"></div>
+   </div>
+ </div>
+
+<h3 id="distributed">Distributed</h3>
+<p> Evenly distribute objects into a row or column.</p>
+<h5 id="around">AROUND</h5>
+<pre><code class="lang-html"> &lt;div class=&quot;u-row u-around&quot;&gt;...&lt;/div&gt;
+</code></pre>
+ <div class="u-row">
+   <div class="u-column--12">
+     <div class="box box-container">
+       <div class="u-row u-around">
+         <div class="u-column--2">
+           <div class="box-nested">2</div>
+         </div>
+         <div class="u-column--2">
+           <div class="box-nested">2</div>
+         </div>
+         <div class="u-column--2">
+           <div class="box-nested">2</div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+<h5 id="between">BETWEEN</h5>
+<pre><code class="lang-html"> &lt;div class=&quot;u-row u-between&quot;&gt;...&lt;/div&gt;
+</code></pre>
+ <div class="u-row">
+   <div class="u-column--12">
+     <div class="box box-container">
+       <div class="u-row u-between">
+         <div class="u-column--2">
+           <div class="box-nested">2</div>
+         </div>
+         <div class="u-column--2">
+           <div class="box-nested">2</div>
+         </div>
+         <div class="u-column--2">
+           <div class="box-nested">2</div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+<h3 id="ordering">Ordering</h3>
+<p> Manipulate the order of objects with special column classes.</p>
+<h6 id="first">FIRST</h6>
+<pre><code class="lang-html"> &lt;div class=&quot;u-column--2 u-first&quot;&gt;...&lt;/div&gt;
+</code></pre>
+ <div class="u-row">
+   <div class="u-column--12">
+     <div class="box box-container">
+       <div class="u-row">
+         <div class="u-column--2">
+           <div class="box-first">1</div>
+         </div>
+         <div class="u-column--2">
+           <div class="box-first">2</div>
+         </div>
+         <div class="u-column--2">
+           <div class="box-first">3</div>
+         </div>
+         <div class="u-column--2">
+           <div class="box-first">4</div>
+         </div>
+         <div class="u-column--2">
+           <div class="box-first">5</div>
+         </div>
+         <div class="u-column--2 u-first">
+           <div class="box-nested">6</div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+<h6 id="first">FIRST</h6>
+<pre><code class="lang-html"> &lt;div class=&quot;u-column--2 u-last&quot;&gt;...&lt;/div&gt;
+</code></pre>
+ <div class="u-row">
+   <div class="u-column--12">
+     <div class="box box-container">
+       <div class="u-row">
+         <div class="u-column--2 u-last">
+           <div class="box-nested">1</div>
+         </div>
+         <div class="u-column--2">
+           <div class="box-first">2</div>
+         </div>
+         <div class="u-column--2">
+           <div class="box-first">3</div>
+         </div>
+         <div class="u-column--2">
+           <div class="box-first">4</div>
+         </div>
+         <div class="u-column--2">
+           <div class="box-first">5</div>
+         </div>
+         <div class="u-column--2">
+           <div class="box-first">6</div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+<h6 id="reverse">REVERSE</h6>
+<pre><code class="lang-html"> &lt;div class=&quot;u-row u-row--reverse&quot;&gt;...&lt;/div&gt;
+</code></pre>
+ <div class="u-row">
+   <div class="u-column--12">
+     <div class="box box-container">
+       <div class="u-row u-row--reverse">
+         <div class="u-column--2">
+           <div class="box-first">1</div>
+         </div>
+         <div class="u-column--2">
+           <div class="box-first">2</div>
+         </div>
+         <div class="u-column--2">
+           <div class="box-first">3</div>
+         </div>
+         <div class="u-column--2">
+           <div class="box-first">4</div>
+         </div>
+         <div class="u-column--2">
+           <div class="box-first">5</div>
+         </div>
+         <div class="u-column--2">
+           <div class="box-first">6</div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+                
+              </div>
+            </section>
+          
+            <section id="syntax">
+              <h3 class="doc-section-heading">Syntax</h3>
+
+              <div>
+                <p>Synopsis - Give developers more knowledge about how the classes behave in a non-relative sense: BEM + ITCSS = BEMIT</p>
+<h6 id="sources">SOURCES</h6>
+<p><a href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/">More Transparent UI Code with Namespaces</a></p>
+<p><a href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT: Taking the BEM Naming Convention a Step Further</a></p>
+<h2 id="anatomy">Anatomy</h2>
+<pre><code class="lang-css">.namespace-block__element--modifier\@media { }
+</code></pre>
+<div class="u-row">
+<div class="u-column--6@md">
+
+<h3>Namespaces</h3>
+
+<p> Object <code>.o-object-name[<element>|<modifier>] {}</code></p>
+
+<p>Component <code> .c-component-name[<element>|<modifier>] {}</code></p>
+
+<p>Utility <code>.u-utility-name {}</code></p>
+
+<p>Theme <code>.t-theme-name {}</code></p>
+
+<p>Scope <code>.s-scope-name {}</code></p>
+
+<p>State <code>.[is|has]-state {}</code></p>
+
+<p>Hack <code>._<namespace>hack-name {}</code></p>
+
+<p>Javascript <code>.js-component-name {}</code></p>
+
+<p>Quality Assurance <code>.qa-node-name {}</code></p>
+<small>IDs for QA are acceptable</small>
+
+</div>
+
+<div class="u-column--6@md">
+
+<h2 id="responsive-suffixes">Responsive Suffixes</h2>
+<p>Breakpoints</p>
+<pre><code class="lang-css">.o-object-name\@sm {}
+.o-object-name\@md {}
+.o-object-name\@lg {}
+</code></pre>
+<p>Media type</p>
+<pre><code class="lang-css">.u-utility-name\@print {}
+</code></pre>
+
+                
+              </div>
+            </section>
+          
+              </div>
+            </section>
+          
+            <section id="base">
+              <h2 class="doc-section-heading">Base</h2>
+
+              <div>
+                
+                
+            <section id="reset">
+              <h3 class="doc-section-heading">Reset</h3>
+
+              <div>
+                <div class="u-row">
+ <div class="u-column--2">
+   <img src="img/sanitizecss.png" alt="">
+ </div>
+ <div class="u-column--10">
+   <p>This framework uses <a href="https://github.com/10up/sanitize.css">sanitize.css</a> by 10up. It provides the most up to date CSS reset for modern browsers.</p>
+ </div>
+ </div>
+                
+              </div>
+            </section>
+          
+            <section id="layout">
+              <h3 class="doc-section-heading">Layout</h3>
+
+              <div>
+                <p>The main layout depends on the <code>.s-app</code> class to render a holy grail layout that scales down nicely to mobile.</p>
+ <div class="u-column--6@md">
+ <img src="img/layout-holy-grail.svg" alt="">
+ </div>
+
+<p> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes#Holy_Grail_Layout_example">Mozilla - Holy Grail Layout</a></p>
+
+                
+              </div>
+            </section>
+          
+            <section id="shapes">
+              <h3 class="doc-section-heading">Shapes</h3>
+
+              <div>
+                <pre><code class="lang-html_example"> &lt;span class=&quot;o-triangle--right&quot;&gt;&lt;/span&gt;
+</code></pre>
+
+                
+              </div>
+            </section>
+          
+            <section id="typography">
+              <h3 class="doc-section-heading">Typography</h3>
+
+              <div>
+                <h1 id="headline-1">Headline 1</h1>
+<h2 id="headline-2">Headline 2</h2>
+<h3 id="headline-3">Headline 3</h3>
+<h4 id="headline-4">Headline 4</h4>
+<h5 id="headline-5">Headline 5</h5>
+<h6 id="headline-6">Headline 6</h6>
+ <div class="u-row u-top">
+ <div class="u-column--6@md">
+ <h1 class="u-loud">Loud Headline</h1>
+ <code>.u-loud</code>
+ <h3 class="u-soft">Soft Headline</h3>
+ <code>.u-soft</code>
+ <h6 class="u-fancy">Fancy Headline</h6>
+ <code>.u-fancy</code>
+ </div>
+ <div class="u-column--6@md">
+   <div class="u-intro">Large type puts the user at ease by providing a clear starting point.</div>
+   <div><p><strong>At last he addressed Bruno.</strong> I hope you have had a good night, my child? Bruno looked puzzled. I’s had the same night oo’ve had, he replied. There’s only been one night since yesterday! It was the Professor’s turn to look puzzled now. He took off his spectacles.</p></div>
+   <div><small><strong>Old woman! Man! Man. Sorry.</strong> What knight live in that castle over there? I’m thirty-seven. I-- what? I’m thirty-seven. I’m not old. Well, I can’t just call you “Man”. Well, you could say ’Dennis’. Well, I didn’t know you were called ’Dennis’. Well, you didn’t bother to find out, did you? I did say ’sorry’ about the ’old woman’, but from the behind you looked-- What I object to is that you automatically treat me like an inferior!</small></div>
+ </div>
+ </div>
+
+<h3 id="customize">Customize</h3>
+<pre><code class="lang-css">  --font-family: &#39;Source Sans Pro&#39;, sans-serif;
+  --font-weight: 400;
+  --font-weight-bold: 600;
+  --h-margin: 1em 0 .25em;
+</code></pre>
+
+                
+              </div>
+            </section>
+          
+            <section id="images">
+              <h3 class="doc-section-heading">Images</h3>
+
+              <div>
+                <h3 id="icons">Icons</h3>
+<p> Usage <code>&lt;i class=&quot;o-icon-user&quot;&gt;&lt;/i&gt;</code></p>
+<p> <ul class="icon-example">
+ <li>
+ <i class="o-icon-user"></i>
+ <code>o-icon-user</code>
+ </li>
+ <li>
+ <i class="o-icon-user-add"></i>
+ <code>o-icon-user-add</code>
+ </li>
+ <li>
+ <i class="o-icon-users"></i>
+ <code>o-icon-users</code>
+ </li>
+ <li>
+ <i class="o-icon-check-mark"></i>
+ <code>o-icon-check-mark</code>
+ </li>
+ <li>
+ <i class="o-icon-check-mark-circle"></i>
+ <code>o-icon-check-mark-circle</code>
+ </li>
+ <li>
+ <i class="o-icon-x-mark-circle"></i>
+ <code>o-icon-x-mark-circle</code>
+ </li>
+ <li>
+ <i class="o-icon-x-mark"></i>
+ <code>o-icon-x-mark</code>
+ </li>
+ <li>
+ <i class="o-icon-cog"></i>
+ <code>o-icon-cog</code>
+ </li>
+ <li>
+ <i class="o-icon-search"></i>
+ <code>o-icon-search</code>
+ </li>
+ <li>
+ <i class="o-icon-inbox"></i>
+ <code>o-icon-inbox</code>
+ </li>
+ <li>
+ <i class="o-icon-star"></i>
+ <code>o-icon-star</code>
+ </li>
+ <li>
+ <i class="o-icon-help-circle"></i>
+ <code>o-icon-help-circle</code>
+ </li>
+ <li>
+ <i class="o-icon-key"></i>
+ <code>o-icon-key</code>
+ </li>
+ <li>
+ <i class="o-icon-block"></i>
+ <code>o-icon-block</code>
+ </li>
+ <li>
+ <i class="o-icon-calendar"></i>
+ <code>o-icon-calendar</code>
+ </li>
+ <li>
+ <i class="o-icon-clock"></i>
+ <code>o-icon-clock</code>
+ </li>
+ <li>
+ <i class="o-icon-reload-ccw"></i>
+ <code>o-icon-reload-ccw</code>
+ </li>
+ <li>
+ <i class="o-icon-email"></i>
+ <code>o-icon-email</code>
+ </li>
+ <li>
+ <i class="o-icon-login"></i>
+ <code>o-icon-login</code>
+ </li>
+ <li>
+ <i class="o-icon-info-circled"></i>
+ <code>o-icon-info-circled</code>
+ </li>
+ <li>
+ <i class="o-icon-eye-close"></i>
+ <code>o-icon-eye-close</code>
+ </li>
+ <li>
+ <i class="o-icon-eye"></i>
+ <code>o-icon-eye</code>
+ </li>
+ <li>
+ <i class="o-icon-plus-circle"></i>
+ <code>o-icon-plus-circle</code>
+ </li>
+ <li>
+ <i class="o-icon-down-dir"></i>
+ <code>o-icon-down-dir</code>
+ </li>
+ <li>
+ <i class="o-icon-right-dir"></i>
+ <code>o-icon-right-dir</code>
+ </li>
+ <li>
+ <i class="o-icon-up-dir"></i>
+ <code>o-icon-up-dir</code>
+ </li>
+ <li>
+ <i class="o-icon-left-dir"></i>
+ <code>o-icon-left-dir</code>
+ </li></p>
+
+                
+              </div>
+            </section>
+          
+              </div>
+            </section>
+          
+            <section id="navigation">
+              <h2 class="doc-section-heading">Navigation</h2>
+
+              <div>
+                
+                
+            <section id="accordion">
+              <h3 class="doc-section-heading">Accordion</h3>
+
+              <div>
+                <p>A simple accordion with a gradient of blue. More advanced use cases to come.</p>
+<pre><code class="lang-html_example"> &lt;nav class=&quot;c-accordion&quot;&gt;
+   &lt;ul class=&quot;c-accordion__top&quot;&gt;
+     &lt;li class=&quot;has-descendants&quot;&gt;
+       &lt;input type=&quot;checkbox&quot; id=&quot;descendants-1&quot;&gt;
+       &lt;label for=&quot;descendants-1&quot;&gt;Top item 1&lt;/label&gt;
+       &lt;ul class=&quot;c-accordion__mid&quot;&gt;
+         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mid item 1&lt;/a&gt;&lt;/li&gt;
+         &lt;li class=&quot;has-descendants&quot;&gt;
+           &lt;input type=&quot;checkbox&quot; id=&quot;descendants-2&quot;&gt;
+           &lt;label for=&quot;descendants-2&quot;&gt;Mid item 1&lt;/label&gt;
+           &lt;ul class=&quot;c-accordion__bottom&quot;&gt;
+             &lt;li&gt;&lt;a href=&quot;#&quot;&gt;
+               &lt;strong&gt;Bottom item 1&lt;/strong&gt;
+               &lt;div&gt;Description&lt;/div&gt;
+             &lt;/a&gt;&lt;/li&gt;
+             &lt;li&gt;&lt;a href=&quot;#&quot;&gt;
+               &lt;strong&gt;Bottom item 2&lt;/strong&gt;
+               &lt;div&gt;Description&lt;/div&gt;
+             &lt;/a&gt;&lt;/li&gt;
+           &lt;/ul&gt;
+         &lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mid item 3&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Mid item 4&lt;/a&gt;&lt;/li&gt;
+       &lt;/ul&gt;
+   &lt;/ul&gt;
+   &lt;a class=&quot;c-accordion__toggle&quot;&gt;&lt;/a&gt;
+ &lt;/nav&gt;
+</code></pre>
+<h4 id="customize">Customize</h4>
+<pre><code class="lang-css">
+  --accordion-top-color: var(--blue-400);
+  --accordion-mid-color: var(--blue-100);
+  --accordion-bottom-color: var(--blue-50);
+  --accordion-hover-color: var(--blue-800);
+  --accordion-text-color: var(--grey-800);
+  --accordion-toggle-color: var(--grey-500);
+</code></pre>
+
+                
+              </div>
+            </section>
+          
+            <section id="bar">
+              <h3 class="doc-section-heading">Bar</h3>
+
+              <div>
+                <p>Use the class <code>.c-bar</code> on a <code>&lt;div&gt;</code> or <code>&lt;header&gt;</code> to get an application style top bar.</p>
+<pre><code class="lang-html_example"> &lt;header class=&quot;c-bar&quot;&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;h1 class=&quot;o-brand&quot;&gt;Title&lt;/h1&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; &lt;h2&gt;Item&lt;/h2&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;o-icon-help-circle&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+ &lt;/header&gt;
+</code></pre>
+<p> <br><br></p>
+<pre><code class="lang-html_example"> &lt;div class=&quot;u-row&quot;&gt;
+   &lt;div class=&quot;u-column--6@md&quot;&gt;
+     &lt;header class=&quot;u-orange-600 c-bar&quot;&gt;
+        &lt;nav&gt;
+          &lt;ul&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;o-icon-help-circle&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+        &lt;/nav&gt;
+        &lt;nav&gt;
+          &lt;ul&gt;
+            &lt;li&gt;&lt;h2&gt;Reverse Bar&lt;/h2&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/nav&gt;
+     &lt;/header&gt;
+     &lt;/div&gt;
+
+     &lt;div class=&quot;u-column--6@md&quot;&gt;
+     &lt;header class=&quot;c-bar u-red-600&quot;&gt;
+        &lt;nav&gt;
+          &lt;ul&gt;&lt;li&gt;&lt;h2&gt;Half Bar&lt;/h2&gt;&lt;/li&gt;&lt;/ul&gt;
+        &lt;/nav&gt;
+        &lt;nav&gt;
+          &lt;ul&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;o-icon-star&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+        &lt;/nav&gt;
+     &lt;/header&gt;
+   &lt;/div&gt;
+ &lt;/div&gt;
+</code></pre>
+
+                
+              </div>
+            </section>
+          
+            <section id="menu">
+              <h3 class="doc-section-heading">Menu</h3>
+
+              <div>
+                
+                
+              </div>
+            </section>
+          
+            <section id="subnav">
+              <h3 class="doc-section-heading">Subnav</h3>
+
+              <div>
+                <p>A horizontal list of options using a <code>&lt;ul&gt;</code>.</p>
+<h4 id="horizontal">Horizontal</h4>
+<pre><code class="lang-html_example"> &lt;ul class=&quot;c-subnav--horizontal&quot;&gt;
+   &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;c-subnav--active&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+</code></pre>
+<h4 id="vertical">Vertical</h4>
+<pre><code class="lang-html_example"> &lt;ul class=&quot;c-subnav--vertical&quot;&gt;
+   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+</code></pre>
+
+                
+              </div>
+            </section>
+          
+              </div>
+            </section>
+          
+            <section id="forms">
+              <h2 class="doc-section-heading">Forms</h2>
+
+              <div>
+                
+                
+            <section id="elements">
+              <h3 class="doc-section-heading">Elements</h3>
+
+              <div>
+                <h3 id="inputs">Inputs</h3>
+<p> Supported input types are, <code>text</code>, <code>password</code>, <code>date</code>, <code>datetime</code>, <code>datetime-local</code>, <code>month</code>, <code>week</code>, <code>email</code>, <code>number</code>, <code>search</code>, <code>tel</code>, <code>time</code>, <code>url</code>, <code>color</code>.</p>
+<h6 id="html">HTML</h6>
+<pre><code class="lang-html">  &lt;label for=&quot;input-1-1&quot;&gt;Label&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;input-1-1&quot;&gt;
+</code></pre>
+<h6 id="result">RESULT</h6>
+ <div class="u-row">
+   <div class="u-column">
+     <label for="input-1-1">Label</label>
+     <input type="text" id="input-1-1">
+   </div>
+   <div class="u-column">
+     <label for="input-1-2">Focus</label>
+     <input type="text" id="input-1-2" class="focus">
+   </div>
+ </div>
+
+ <div class="u-row">
+ <div class="u-column">
+   <div class="c-input-group">
+     <label for="input-2-1">Validation Warning</label>
+     <input type="email" id="input-2-1" value="notauser at clientcom" required>
+     <div class="c-validation--warning">Warning validated message</div>
+   </div>
+  </div>
+ <div class="u-column">
+  <div class="c-input-group">
+   <label for="input-2-2">Validation Error</label>
+   <input type="text" id="input-2-2" class="error">
+   <div class="c-validation--error" placeholder="Placeholder text">Error validated message</div>
+   </div>
+ </div>
+ </div>
+
+<p> <label for="textarea-1-1">Textarea</label>
+ <textarea id="textarea-1-1"></textarea></p>
+ <div class="u-row">
+   <div class="u-column c-input-group">
+     <input type="checkbox" class="c-checkbox">Checkbox</input>
+     <label></label>
+   </div>
+   <div class="u-column c-input-group">
+     <input type="checkbox" class="c-checkbox" checked>Checked Checkbox</input>
+     <label></label>
+   </div>
+ </div>
+                
+              </div>
+            </section>
+          
+            <section id="buttons">
+              <h3 class="doc-section-heading">Buttons</h3>
+
+              <div>
+                <p>Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code> element. It&#39;s easy to make a new button.</p>
+<pre><code class="lang-html_example"> &lt;a href=&quot;#&quot; class=&quot;c-button&quot;&gt;Default&lt;/a&gt;
+</code></pre>
+<h4 id="size-and-form">Size and Form</h4>
+<p> You can optionally use modifier classes that let you manipulate the size and shape of your button.</p>
+<pre><code class="lang-html_example"> &lt;a href=&quot;#&quot; class=&quot;c-button&quot;&gt;Default&lt;/a&gt;
+ &lt;a href=&quot;#&quot; class=&quot;c-button--round&quot;&gt;Round&lt;/a&gt;
+ &lt;a href=&quot;#&quot; class=&quot;c-button--small&quot;&gt;Small&lt;/a&gt;
+ &lt;a href=&quot;#&quot; class=&quot;c-button--large&quot;&gt;Large&lt;/a&gt;
+ &lt;a href=&quot;#&quot; class=&quot;c-button--wide&quot;&gt;Wide&lt;/a&gt;
+</code></pre>
+<h4 id="color">Color</h4>
+<p> Stateful color classes are provided to further communicate the intentions of your button action.</p>
+<pre><code class="lang-html_example"> &lt;a href=&quot;#&quot; class=&quot;c-button&quot;&gt;Default&lt;/a&gt;
+ &lt;a href=&quot;#&quot; class=&quot;c-button--secondary&quot;&gt;Secondary&lt;/a&gt;
+ &lt;a href=&quot;#&quot; class=&quot;c-button--alert&quot;&gt;Alert&lt;/a&gt;
+ &lt;a href=&quot;#&quot; class=&quot;c-button--info&quot;&gt;Info&lt;/a&gt;
+ &lt;a href=&quot;#&quot; class=&quot;c-button--link&quot;&gt;Link&lt;/a&gt;
+ &lt;a href=&quot;#&quot; class=&quot;c-button--anchor&quot;&gt;Anchor&lt;/a&gt;
+</code></pre>
+<h4 id="states">States</h4>
+<pre><code class="lang-html_example"> &lt;a href=&quot;#&quot; class=&quot;c-button&quot;&gt;Default&lt;/a&gt;
+ &lt;a href=&quot;#&quot; class=&quot;c-button--active&quot;&gt;Active&lt;/a&gt;
+ &lt;a href=&quot;#&quot; class=&quot;c-button--disabled&quot;&gt;Disabled&lt;/a&gt;
+</code></pre>
+<h4 id="icons">Icons</h4>
+<pre><code class="lang-html_example"> &lt;button class=&quot;c-button&quot;&gt;&lt;i class=&quot;o-icon-email&quot;&gt;&lt;/i&gt; Email&lt;/button&gt;
+ &lt;a class=&quot;c-button&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;o-icon-inbox&quot;&gt;&lt;/i&gt; Inbox&lt;/a&gt;
+</code></pre>
+<h4 id="customize">Customize</h4>
+<pre><code class="lang-css"> --button-background: var(--orange-600);
+ --button-background-hover: var(--orange-500);
+ --button-color: contrast(var(--button-background));
+ --button-disabled-opacity: .35;
+ --button-font-size: 1.125rem;
+ --button-font-size-sm: calc(var(--button-font-size) * .75);
+ --button-font-size-lg: calc(var(--button-font-size) * 1.25);
+ --button-margin: var(--global-margin);
+ --button-padding: .7em 1.5em;
+ --button-round: var(--global-rounded);
+</code></pre>
+<h4 id="mixins">Mixins</h4>
+<p> <code>@mixin button var(--button-background), var(--button-color), var(--button-font-size);</code></p>
+
+                
+              </div>
+            </section>
+          
+            <section id="dropdowns">
+              <h3 class="doc-section-heading">Dropdowns</h3>
+
+              <div>
+                <pre><code class="lang-html_example"> &lt;div class=&quot;c-dropdown&quot;&gt;
+   &lt;input type=&quot;checkbox&quot; id=&quot;dropdown-1&quot;&gt;
+   &lt;label for=&quot;dropdown-1&quot; class=&quot;c-dropdown__toggle&quot;&gt;Option 1 &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/label&gt;
+   &lt;ul class=&quot;c-dropdown__content&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
+     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Option 1&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Option 2&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+ &lt;/div&gt;
+</code></pre>
+
+                
+              </div>
+            </section>
+          
+              </div>
+            </section>
+          
+            <section id="containers">
+              <h2 class="doc-section-heading">Containers</h2>
+
+              <div>
+                
+                
+            <section id="card">
+              <h3 class="doc-section-heading">Card</h3>
+
+              <div>
+                <pre><code class="lang-html_example"> &lt;div class=&quot;c-card&quot;&gt;
+   &lt;h3&gt;Card Title&lt;/h3&gt;
+   &lt;p&gt;I could have used lorem ipsum, but what&#39;s the fun in that?&lt;/p&gt;
+ &lt;/div&gt;
+</code></pre>
+<h3 id="customize">Customize</h3>
+<pre><code class="lang-css">  --card-background-color: var(--white);
+</code></pre>
+
+                
+              </div>
+            </section>
+          
+            <section id="tooltips">
+              <h3 class="doc-section-heading">Tooltips</h3>
+
+              <div>
+                <pre><code class="lang-html_example"> &lt;a class=&quot;c-button c-tooltip c-tooltip--top&quot; data-tooltip=&quot;Tooltip content goes in a data-tooltip attribute.&quot;&gt;Top tooltip&lt;/a&gt;
+ &lt;a class=&quot;c-button c-tooltip c-tooltip--right&quot; data-tooltip=&quot;Tooltip content goes in a data-tooltip attribute.&quot;&gt;Right tooltip&lt;/a&gt;
+ &lt;a class=&quot;c-button c-tooltip c-tooltip--bottom&quot; data-tooltip=&quot;Tooltip content goes in a data-tooltip attribute.&quot;&gt;Bottom tooltip&lt;/a&gt;
+ &lt;a class=&quot;c-button c-tooltip c-tooltip--left&quot; data-tooltip=&quot;Tooltip content goes in a data-tooltip attribute.&quot;&gt;Left tooltip&lt;/a&gt;
+</code></pre>
+<h3 id="customize">Customize</h3>
+<pre><code class="lang-css">  --tooltip-arrow-size: .375rem;
+  --tooltip-background: var(--white);
+  --tooltip-margin: .5rem;
+  --tooltip-zindex: 1000;
+</code></pre>
+
+                
+              </div>
+            </section>
+          
+            <section id="modal">
+              <h3 class="doc-section-heading">Modal</h3>
+
+              <div>
+                <pre><code class="lang-html_example"> &lt;a href=&quot;#test-modal&quot; class=&quot;c-button&quot;&gt;Open Modal&lt;/a&gt;
+
+ &lt;div class=&quot;c-modal&quot; id=&quot;test-modal&quot;&gt;
+   &lt;div class=&quot;c-modal__content&quot;&gt;
+     &lt;div class=&quot;c-modal__card&quot;&gt;
+       &lt;div class=&quot;c-modal__title&quot;&gt;Modal Title &lt;a href=&quot;#close&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+       &lt;p&gt;This is a card in a modal, what will they think of next?&lt;/p&gt;
+       &lt;div class=&quot;c-modal__actions&quot;&gt;
+         &lt;a href=&quot;#close&quot; class=&quot;c-button--alert&quot;&gt;Close&lt;/a&gt;
+       &lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;a href=&quot;#close&quot; class=&quot;c-modal__close&quot;&gt;&lt;/a&gt;
+ &lt;/div&gt;
+</code></pre>
+
+                
+              </div>
+            </section>
+          
+              </div>
+            </section>
+          </main>
+    </div>
+  </body>
+</html>
