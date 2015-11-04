@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="s-app no-js">
+<html class="s-app t-default t-docs no-js">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,7 @@
     <script src="prism.js"></script>
     <script src="script.js"></script>
   </head>
-  <body class="t-default t-docs">
+  <body>
     <div id="app">
       <header class="c-bar--top">
         <nav>
@@ -186,6 +186,33 @@
         </nav>
       </div>
       <main class="o-main">
+            <section>
+              <div>
+                <h1 id="compass-ui">Compass ui</h1>
+<h2 id="getting-started">Getting Started</h2>
+<p> In your command line application, you will want to install the necessary tools
+ to start working on the UI framework. Make sure your other projects are at the
+ same level for synced releases.</p>
+<p> Make sure to add these things to your layout file. Optionaly for legacy browser support of HTML5 and layout, you can import <a href="https://modernizr.com/">modernizr</a>/<a href="http://cdnjs.com/libraries/modernizr">cdn</a> into your head section.</p>
+<pre><code class="lang-html"> &lt;!-- App scope and default theme classes --&gt;
+ &lt;html class=&quot;s-app t-default&quot;&gt;
+
+ &lt;head&gt;
+   &lt;!-- This enables smaller devices to view this site responsively --&gt;
+   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+   &lt;!-- This is the default webfont --&gt;
+   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700&quot;&gt;
+
+   &lt;!-- This is the main stylesheet --&gt;
+   &lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/app.css&quot;&gt;
+ &lt;/head&gt;
+</code></pre>
+
+                
+              </div>
+            </section>
+          
             <section id="settings">
               <h2 class="doc-section-heading">Settings</h2>
 
@@ -196,31 +223,17 @@
               <h3 class="doc-section-heading">Global</h3>
 
               <div>
-                <h2 id="getting-started">Getting Started</h2>
-<p> In your command line application, you will want to install the necessary tools
- to start working on the UI framework. Make sure your other projects are at the
- same level for synced releases.</p>
-<h3 id="setup">Setup</h3>
-<p> Make sure to add these things to your layout file</p>
-<h6 id="html">HTML</h6>
-<pre><code class="lang-html"> &lt;html class=&quot;s-app&quot;&gt;
-
- &lt;head&gt;
-   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700&quot;&gt;
-   &lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/app.css&quot;&gt;
- &lt;/head&gt;
-
- &lt;body class=&quot;t-default&quot;&gt;
-   &lt;div class=&quot;s-app-container&quot;&gt;
-</code></pre>
-<h1 id="settings">Settings</h1>
-<h2 id="global">Global</h2>
-<p> This is a list of global variables, and their default values.</p>
+                <p>This is a list of global variables, and their default values.</p>
 <h6 id="settings-global-css">SETTINGS/global.css</h6>
-<pre><code class="lang-css"> --global-duration: .1s;
- --global-margin: 8px;
- --global-rounded: 4px;
+<pre><code class="lang-css">  --global-gutter-width: 1rem;
+  --global-outter-margin: 1rem;
+  --global-small-media-min: 48;
+  --global-medium-media-min: 64;
+  --global-large-media-min: 75;
+
+  --global-duration: .1s;
+  --global-margin: 8px;
+  --global-rounded: 4px;
 </code></pre>
 
                 
