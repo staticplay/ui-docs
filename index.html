@@ -170,12 +170,17 @@
               </li>
               
               <li>
-                  <a href="#tooltips">Tooltips</a>
+                  <a href="#modal">Modal</a>
                   
               </li>
               
               <li>
-                  <a href="#modal">Modal</a>
+                  <a href="#notification">Notification</a>
+                  
+              </li>
+              
+              <li>
+                  <a href="#tooltips">Tooltips</a>
                   
               </li>
               </ul>
@@ -323,6 +328,7 @@
  <div class="u-chip u-white" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--white</div>
 
  <div class="u-chip u-chip-large u-green-800">Green</div>
+ <div class="u-chip u-green-50" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--green-50</div>
  <div class="u-chip u-green-600" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--green-600</div>
  <div class="u-chip u-green-700" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--green-700</div>
  <div class="u-chip u-green-800" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--green-800</div>
@@ -340,6 +346,7 @@
  <div class="u-chip u-gold-700" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--gold-700</div>
 
  <div class="u-chip u-chip-large u-red-800">Red</div>
+ <div class="u-chip u-red-50" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--red-50</div>
  <div class="u-chip u-red-600" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--red-600</div>
  <div class="u-chip u-red-700" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--red-700</div>
  <div class="u-chip u-red-800" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--red-800</div>
@@ -633,44 +640,44 @@
    </div>
  </div>
 
-<h3 id="column-offset">Column Offset</h3>
-<p> Move back and forth any number of columns wide you need to offset the position of your column within the grid.</p>
+<h3 id="column-push">Column Push</h3>
+<p> Move back and forth any number of columns wide you need to push the position of your column within the grid.</p>
 <h6 id="html">HTML</h6>
 <pre><code class="lang-html"> &lt;div class=&quot;row&quot;&gt;
-   &lt;div class=&quot;u-column--1 u-offset--11&quot;&gt;...&lt;/div&gt;
+   &lt;div class=&quot;u-column--1 u-push--11&quot;&gt;...&lt;/div&gt;
  &lt;/div&gt;
 </code></pre>
- <div class="u-row"> <div class="u-column--1 u-offset--11">
+ <div class="u-row"> <div class="u-column--1 u-push--11">
    <div class="box-row"> <span><i class="o-icon-right-dir"></i> 11</span> </div>
  </div> </div>
- <div class="u-row"> <div class="u-column--2 u-offset--10">
+ <div class="u-row"> <div class="u-column--2 u-push--10">
    <div class="box-row"> <span><i class="o-icon-right-dir"></i> 10</span> </div>
  </div> </div>
- <div class="u-row"> <div class="u-column--3 u-offset--9">
+ <div class="u-row"> <div class="u-column--3 u-push--9">
    <div class="box-row"> <span><i class="o-icon-right-dir"></i> 9</span> </div>
  </div> </div>
- <div class="u-row"> <div class="u-column--4 u-offset--8">
+ <div class="u-row"> <div class="u-column--4 u-push--8">
    <div class="box-row"> <span><i class="o-icon-right-dir"></i> 8</span> </div>
  </div> </div>
- <div class="u-row"> <div class="u-column--5 u-offset--7">
+ <div class="u-row"> <div class="u-column--5 u-push--7">
    <div class="box-row"> <span><i class="o-icon-right-dir"></i> 7</span> </div>
  </div> </div>
- <div class="u-row"> <div class="u-column--6 u-offset--6">
+ <div class="u-row"> <div class="u-column--6 u-push--6">
    <div class="box-row"> <span><i class="o-icon-right-dir"></i> 6</span> </div>
  </div> </div>
- <div class="u-row"> <div class="u-column--7 u-offset--5">
+ <div class="u-row"> <div class="u-column--7 u-push--5">
    <div class="box-row"> <span><i class="o-icon-right-dir"></i> 5</span> </div>
  </div> </div>
- <div class="u-row"> <div class="u-column--8 u-offset--4">
+ <div class="u-row"> <div class="u-column--8 u-push--4">
    <div class="box-row"> <span><i class="o-icon-right-dir"></i> 4</span> </div>
  </div> </div>
- <div class="u-row"> <div class="u-column--9 u-offset--3">
+ <div class="u-row"> <div class="u-column--9 u-push--3">
    <div class="box-row"> <span><i class="o-icon-right-dir"></i> 3</span> </div>
  </div> </div>
- <div class="u-row"> <div class="u-column--10 u-offset--2">
+ <div class="u-row"> <div class="u-column--10 u-push--2">
    <div class="box-row"> <span><i class="o-icon-right-dir"></i> 2</span> </div>
  </div> </div>
- <div class="u-row"> <div class="u-column--11 u-offset--1">
+ <div class="u-row"> <div class="u-column--11 u-push--1">
    <div class="box-row"> <span><i class="o-icon-right-dir"></i> 1</span> </div>
  </div> </div>
 
@@ -1104,10 +1111,6 @@
  <code>o-icon-user</code>
  </li>
  <li>
- <i class="o-icon-user-add"></i>
- <code>o-icon-user-add</code>
- </li>
- <li>
  <i class="o-icon-users"></i>
  <code>o-icon-users</code>
  </li>
@@ -1206,6 +1209,14 @@
  <li>
  <i class="o-icon-left-dir"></i>
  <code>o-icon-left-dir</code>
+ </li>
+ <li>
+ <i class="o-icon-exclamation-triangle"></i>
+ <code>o-icon-exclamation-triangle</code>
+ </li>
+ <li>
+ <i class="o-icon-cancel"></i>
+ <code>o-icon-cancel</code>
  </li></p>
 
                 
@@ -1390,11 +1401,11 @@
  &lt;textarea id=&quot;textarea-1-1&quot;&gt;&lt;/textarea&gt;
 </code></pre>
 <h3 id="checkboxes">Checkboxes</h3>
-<pre><code class="lang-html_example">   &lt;input type=&quot;checkbox&quot; class=&quot;c-checkbox&quot;&gt;Checkbox&lt;/input&gt;
-   &lt;label&gt;&lt;/label&gt;
+<pre><code class="lang-html_example">   &lt;input type=&quot;checkbox&quot; class=&quot;c-checkbox&quot;&gt;&lt;/input&gt;
+   &lt;label&gt;Checkbox&lt;/label&gt;
    &lt;br&gt;
-   &lt;input type=&quot;checkbox&quot; class=&quot;c-checkbox&quot; checked&gt;Checked Checkbox&lt;/input&gt;
-   &lt;label&gt;&lt;/label&gt;
+   &lt;input type=&quot;checkbox&quot; class=&quot;c-checkbox&quot; checked&gt;&lt;/input&gt;
+   &lt;label&gt;Checked Checkbox&lt;/label&gt;
 </code></pre>
 
                 
@@ -1497,26 +1508,6 @@
               </div>
             </section>
           
-            <section id="tooltips">
-              <h3 class="doc-section-heading">Tooltips</h3>
-
-              <div>
-                <pre><code class="lang-html_example"> &lt;a class=&quot;c-button c-tooltip c-tooltip--top&quot; data-tooltip=&quot;Tooltip content goes in a data-tooltip attribute.&quot;&gt;Top tooltip&lt;/a&gt;
- &lt;a class=&quot;c-button c-tooltip c-tooltip--right&quot; data-tooltip=&quot;Tooltip content goes in a data-tooltip attribute.&quot;&gt;Right tooltip&lt;/a&gt;
- &lt;a class=&quot;c-button c-tooltip c-tooltip--bottom&quot; data-tooltip=&quot;Tooltip content goes in a data-tooltip attribute.&quot;&gt;Bottom tooltip&lt;/a&gt;
- &lt;a class=&quot;c-button c-tooltip c-tooltip--left&quot; data-tooltip=&quot;Tooltip content goes in a data-tooltip attribute.&quot;&gt;Left tooltip&lt;/a&gt;
-</code></pre>
-<h3 id="customize">Customize</h3>
-<pre><code class="lang-css">  --tooltip-arrow-size: .375rem;
-  --tooltip-background: var(--white);
-  --tooltip-margin: .5rem;
-  --tooltip-zindex: 1000;
-</code></pre>
-
-                
-              </div>
-            </section>
-          
             <section id="modal">
               <h3 class="doc-section-heading">Modal</h3>
 
@@ -1535,6 +1526,83 @@
    &lt;/div&gt;
    &lt;a href=&quot;#close&quot; class=&quot;c-modal__close&quot;&gt;&lt;/a&gt;
  &lt;/div&gt;
+</code></pre>
+
+                
+              </div>
+            </section>
+          
+            <section id="notification">
+              <h3 class="doc-section-heading">Notification</h3>
+
+              <div>
+                <p>A floating card that communicates a notification message.</p>
+<h3 id="states">States</h3>
+<p> Note: This default state gets manual control over what icon is shown.</p>
+<pre><code class="lang-html_example"> &lt;div class=&quot;c-notification&quot;&gt;
+   &lt;i class=&quot;c-notification__icon o-icon-info-circled&quot;&gt;&lt;/i&gt;
+   &lt;div class=&quot;c-notification__content&quot;&gt;
+     &lt;h6&gt;Default Notification&lt;/h6&gt;
+     &lt;p&gt;Communicate a meaningful message.&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;i class=&quot;c-notification__cancel&quot;&gt;&lt;/i&gt;
+ &lt;/div&gt;
+</code></pre>
+<pre><code class="lang-html_example"> &lt;div class=&quot;c-notification--success&quot;&gt;
+   &lt;i class=&quot;c-notification__icon&quot;&gt;&lt;/i&gt;
+   &lt;div class=&quot;c-notification__content&quot;&gt;
+     &lt;h6&gt;Successful Notification&lt;/h6&gt;
+     &lt;p&gt;Communicate a meaningful message.&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;i class=&quot;c-notification__cancel&quot;&gt;&lt;/i&gt;
+ &lt;/div&gt;
+</code></pre>
+<pre><code class="lang-html_example"> &lt;div class=&quot;c-notification--warning&quot;&gt;
+   &lt;i class=&quot;c-notification__icon&quot;&gt;&lt;/i&gt;
+   &lt;div class=&quot;c-notification__content&quot;&gt;
+     &lt;h6&gt;Warning Notification&lt;/h6&gt;
+     &lt;p&gt;Communicate a meaningful message.&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;i class=&quot;c-notification__cancel&quot;&gt;&lt;/i&gt;
+ &lt;/div&gt;
+</code></pre>
+<pre><code class="lang-html_example"> &lt;div class=&quot;c-notification--error&quot;&gt;
+   &lt;i class=&quot;c-notification__icon&quot;&gt;&lt;/i&gt;
+   &lt;div class=&quot;c-notification__content&quot;&gt;
+     &lt;h6&gt;Error Notification&lt;/h6&gt;
+     &lt;p&gt;Communicate a meaningful message.&lt;/p&gt;
+   &lt;/div&gt;
+   &lt;i class=&quot;c-notification__cancel&quot;&gt;&lt;/i&gt;
+ &lt;/div&gt;
+</code></pre>
+<h3 id="positions">Positions</h3>
+<p> You can apply modifier classes to your notification to pin them to different areas around the viewport.</p>
+<h6 id="classes">CLASSES</h6>
+<pre><code> .c-notification--top-left
+ .c-notification--top
+ .c-notification--top-right
+ .c-notification--bottom-right
+ .c-notification--bottom
+ .c-notification--bottom-left
+</code></pre>
+                
+              </div>
+            </section>
+          
+            <section id="tooltips">
+              <h3 class="doc-section-heading">Tooltips</h3>
+
+              <div>
+                <pre><code class="lang-html_example"> &lt;a class=&quot;c-button c-tooltip c-tooltip--top&quot; data-tooltip=&quot;Tooltip content goes in a data-tooltip attribute.&quot;&gt;Top tooltip&lt;/a&gt;
+ &lt;a class=&quot;c-button c-tooltip c-tooltip--right&quot; data-tooltip=&quot;Tooltip content goes in a data-tooltip attribute.&quot;&gt;Right tooltip&lt;/a&gt;
+ &lt;a class=&quot;c-button c-tooltip c-tooltip--bottom&quot; data-tooltip=&quot;Tooltip content goes in a data-tooltip attribute.&quot;&gt;Bottom tooltip&lt;/a&gt;
+ &lt;a class=&quot;c-button c-tooltip c-tooltip--left&quot; data-tooltip=&quot;Tooltip content goes in a data-tooltip attribute.&quot;&gt;Left tooltip&lt;/a&gt;
+</code></pre>
+<h3 id="customize">Customize</h3>
+<pre><code class="lang-css">  --tooltip-arrow-size: .375rem;
+  --tooltip-background: var(--white);
+  --tooltip-margin: .5rem;
+  --tooltip-zindex: 1000;
 </code></pre>
 
                 
