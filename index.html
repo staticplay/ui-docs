@@ -7,7 +7,7 @@
     <title>NAVIS ui</title>
     <link href="dist/app.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="dist/js/modernizr.min.js"></script>
     <script src="prism.js"></script>
     <script src="script.js"></script>
   </head>
@@ -1103,8 +1103,7 @@
               <h3 class="doc-section-heading">Images</h3>
 
               <div>
-                <h3 id="icons">Icons</h3>
-<p> Usage <code>&lt;i class=&quot;o-icon-user&quot;&gt;&lt;/i&gt;</code></p>
+                <p>Todo</p>
 
                 
               </div>
@@ -1287,12 +1286,26 @@
 <pre><code class="lang-html_example"> &lt;label for=&quot;textarea-1-1&quot;&gt;Textarea&lt;/label&gt;
  &lt;textarea id=&quot;textarea-1-1&quot;&gt;&lt;/textarea&gt;
 </code></pre>
+<h3 id="select">Select</h3>
+<pre><code class="lang-html_example"> &lt;select&gt;
+   &lt;option&gt;Option 1&lt;/option&gt;
+   &lt;option&gt;Option 1&lt;/option&gt;
+   &lt;option&gt;Option 1&lt;/option&gt;
+ &lt;/select&gt;
+</code></pre>
 <h3 id="checkboxes">Checkboxes</h3>
 <pre><code class="lang-html_example">   &lt;input type=&quot;checkbox&quot; class=&quot;c-checkbox&quot;&gt;&lt;/input&gt;
    &lt;label&gt;Checkbox&lt;/label&gt;
    &lt;br&gt;
    &lt;input type=&quot;checkbox&quot; class=&quot;c-checkbox&quot; checked&gt;&lt;/input&gt;
    &lt;label&gt;Checked Checkbox&lt;/label&gt;
+</code></pre>
+<h3 id="radio">Radio</h3>
+<pre><code class="lang-html_example">   &lt;input type=&quot;radio&quot; class=&quot;c-radio&quot;&gt;&lt;/input&gt;
+   &lt;label&gt;Radio&lt;/label&gt;
+   &lt;br&gt;
+   &lt;input type=&quot;radio&quot; class=&quot;c-radio&quot; checked&gt;&lt;/input&gt;
+   &lt;label&gt;Selected Radio&lt;/label&gt;
 </code></pre>
 
                 
@@ -1357,7 +1370,7 @@
               <div>
                 <pre><code class="lang-html_example"> &lt;div class=&quot;c-dropdown&quot;&gt;
    &lt;input type=&quot;checkbox&quot; id=&quot;dropdown-1&quot;&gt;
-   &lt;label for=&quot;dropdown-1&quot; class=&quot;c-dropdown__toggle&quot;&gt;Option 1 &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/label&gt;
+   &lt;label for=&quot;dropdown-1&quot; class=&quot;c-dropdown__toggle&quot;&gt;Option 1&lt;/label&gt;
    &lt;ul class=&quot;c-dropdown__content&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Option 1&lt;/a&gt;&lt;/li&gt;
      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Option 2&lt;/a&gt;&lt;/li&gt;
@@ -1480,10 +1493,10 @@
               <h3 class="doc-section-heading">Tooltips</h3>
 
               <div>
-                <pre><code class="lang-html_example"> &lt;a class=&quot;c-button c-tooltip c-tooltip--top&quot; data-tooltip=&quot;Tooltip content goes in a data-tooltip attribute.&quot;&gt;Top tooltip&lt;/a&gt;
- &lt;a class=&quot;c-button c-tooltip c-tooltip--right&quot; data-tooltip=&quot;Tooltip content goes in a data-tooltip attribute.&quot;&gt;Right tooltip&lt;/a&gt;
- &lt;a class=&quot;c-button c-tooltip c-tooltip--bottom&quot; data-tooltip=&quot;Tooltip content goes in a data-tooltip attribute.&quot;&gt;Bottom tooltip&lt;/a&gt;
- &lt;a class=&quot;c-button c-tooltip c-tooltip--left&quot; data-tooltip=&quot;Tooltip content goes in a data-tooltip attribute.&quot;&gt;Left tooltip&lt;/a&gt;
+                <pre><code class="lang-html_example"> &lt;button class=&quot;c-button c-tooltip c-tooltip--top&quot; data-tooltip=&quot;Tooltip content goes in a data-tooltip attribute.&quot;&gt;Top tooltip&lt;/a&gt;
+ &lt;button class=&quot;c-button c-tooltip c-tooltip--right&quot; data-tooltip=&quot;Tooltip content goes in a data-tooltip attribute.&quot;&gt;Right tooltip&lt;/a&gt;
+ &lt;button class=&quot;c-button c-tooltip c-tooltip--bottom&quot; data-tooltip=&quot;Tooltip content goes in a data-tooltip attribute.&quot;&gt;Bottom tooltip&lt;/a&gt;
+ &lt;button class=&quot;c-button c-tooltip c-tooltip--left&quot; data-tooltip=&quot;Tooltip content goes in a data-tooltip attribute.&quot;&gt;Left tooltip&lt;/a&gt;
 </code></pre>
 <h3 id="customize">Customize</h3>
 <pre><code class="lang-css">  --tooltip-arrow-size: .375rem;
