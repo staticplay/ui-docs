@@ -60,6 +60,11 @@
 				</li>
 				
 				<li>
+					<a href="#positioning"><span>Positioning</span></a>
+					
+				</li>
+				
+				<li>
 					<a href="#visibility"><span>Visibility</span></a>
 					
 				</li>
@@ -97,6 +102,11 @@
 				
 				<li>
 					<a href="#images"><span>Images</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#tables"><span>Tables</span></a>
 					
 				</li>
 				
@@ -352,6 +362,7 @@
 <h4 id="handhelds">Handhelds</h4>
 <p> Only Small Devices <code>@media (--sm) { }</code></p>
 <p> Small plus larger devices <code>@media (--sm-up) { }</code></p>
+<p> Small plus smaller devices <code>@media (--sm-down) { }</code></p>
 <h4 id="tablets">Tablets</h4>
 <p> Only Medium Devices <code>@media (--md) { }</code></p>
 <p> Medium plus larger devices <code>@media (--md-up) { }</code></p>
@@ -370,7 +381,7 @@
 <p> Landscape orientation <code>@media (--landscape) { }</code></p>
 <p> Portrait orientation <code>@media (--portrait) { }</code></p>
 <h4 id="classes">Classes</h4>
-<p> You will also notice some classes are appended with <code>@sm</code>, <code>@md</code>, <code>@lg</code>, and <code>@print</code> for the same purposes.</p>
+<p> You will also notice some classes are appended with <code>@tn</code>, <code>@sm</code>, <code>@md</code>, <code>@lg</code>, and <code>@print</code> for the same purposes.</p>
 <p> See <a href="#syntax">syntax</a>/<a href="#responsive-suffixes">responsive-suffixes</a> for more info.</p>
 
 				
@@ -933,6 +944,25 @@
 			</div>
 		</section>
 		
+		<section id="positioning">
+			<h3>Positioning</h3>
+			<div>
+				<ul>
+<li><code>u-attach--top</code><ul>
+<li><code>u-attach--top-right</code></li>
+<li><code>u-attach--top-left</code></li>
+<li><code>u-attach--bottom</code></li>
+<li><code>u-attach--bottom-right</code></li>
+<li><code>u-attach--bottom-left</code></li>
+<li><code>u-attach--middle</code></li>
+</ul>
+</li>
+</ul>
+
+				
+			</div>
+		</section>
+		
 		<section id="visibility">
 			<h3>Visibility</h3>
 			<div>
@@ -1001,7 +1031,6 @@
 <p>Javascript <code>.js-component-name {}</code></p>
 
 <p>Quality Assurance <code>.qa-node-name {}</code></p>
-<small>IDs for QA are acceptable</small>
 
 </div>
 
@@ -1015,6 +1044,13 @@
 </code></pre>
 <p>Media type</p>
 <pre><code class="lang-css">.u-utility-name\@print {}
+</code></pre>
+<h2 id="extends">Extends</h2>
+<p>Chaining selectors is good when done right, take for example this extend with a class.</p>
+<pre><code class="lang-css">.foo,
+%foo {
+  color: pink;
+}
 </code></pre>
 
 				
@@ -1098,6 +1134,199 @@
 			<h3>Images</h3>
 			<div>
 				<p>Todo</p>
+
+				
+			</div>
+		</section>
+		
+		<section id="tables">
+			<h3>Tables</h3>
+			<div>
+				<p>This is a set of ways to format tables for responsive applications.</p>
+<pre><code class="lang-example">   &lt;div class=&quot;c-button-group&quot;&gt;
+     &lt;button class=&quot;c-button c-button--small is-active&quot; aria-label=&quot;Swipe View&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;view_headline&lt;/i&gt;&lt;/button&gt;
+     &lt;button class=&quot;c-button c-button--small&quot; aria-label=&quot;Toggle View&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;view_column&lt;/i&gt;&lt;/button&gt;
+     &lt;button class=&quot;c-button c-button--small&quot; aria-label=&quot;Stacked View&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;view_stream&lt;/i&gt;&lt;/button&gt;
+   &lt;/div&gt;
+   &lt;table class=&quot;o-table o-table--toggle&quot;&gt;
+     &lt;thead&gt;
+       &lt;tr&gt;
+         &lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;
+         &lt;th scope=&quot;col&quot; class=&quot;o-table__priority-3&quot;&gt;Opens&lt;/th&gt;
+         &lt;th scope=&quot;col&quot; class=&quot;o-table__priority-2&quot;&gt;Open %&lt;/th&gt;
+         &lt;th scope=&quot;col&quot; class=&quot;o-table__priority-1&quot;&gt;Clicks&lt;/th&gt;
+         &lt;th scope=&quot;col&quot; class=&quot;o-table__priority-4&quot;&gt;Click %&lt;/th&gt;
+         &lt;th scope=&quot;col&quot; class=&quot;o-table__priority-5&quot;&gt;Booked&lt;/th&gt;
+         &lt;th scope=&quot;col&quot; class=&quot;o-table__priority-6&quot;&gt;Attr Rev&lt;/th&gt;
+         &lt;th scope=&quot;col&quot; class=&quot;o-table__priority-6&quot;&gt;Bounce %&lt;/th&gt;
+         &lt;th scope=&quot;col&quot; class=&quot;o-table__priority-6&quot;&gt;Share %&lt;/th&gt;
+         &lt;th scope=&quot;col&quot; class=&quot;o-table__priority-6&quot;&gt;Unsub %&lt;/th&gt;
+       &lt;/tr&gt;
+     &lt;/thead&gt;
+     &lt;tbody&gt;
+
+       &lt;tr&gt;
+         &lt;td&gt;Auto Agent&lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-3&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Opens&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;300&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-2&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Open %&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;60&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-1&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Clicks&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;3000&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-4&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Click %&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;32&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-5&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Booked&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;12000&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-6&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Attr Rev&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;32800&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-6&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Bounce %&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;32&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-6&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Share %&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;32&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-6&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Unsub %&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;32&lt;/span&gt;
+         &lt;/td&gt;
+       &lt;/tr&gt;
+
+       &lt;tr&gt;
+         &lt;td&gt;First child entry&lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-3&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Opens&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;100&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-2&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Open %&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;54&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-1&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Clicks&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;1200&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-4&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Click %&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;18&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-5&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Booked&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;6000&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-6&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Attr Rev&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;24000&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-6&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Bounce %&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;18&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-6&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Share %&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;18&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-6&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Unsub %&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;18&lt;/span&gt;
+         &lt;/td&gt;
+       &lt;/tr&gt;
+
+       &lt;tr&gt;
+         &lt;td&gt;Second child entry&lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-3&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Opens&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;600&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-2&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Open %&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;72&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-1&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Clicks&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;960&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-4&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Click %&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;42&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-5&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Booked&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;3000&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-6&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Attr Rev&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;1200&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-6&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Bounce %&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;42&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-6&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Share %&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;42&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-6&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Unsub %&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;42&lt;/span&gt;
+         &lt;/td&gt;
+       &lt;/tr&gt;
+
+       &lt;tr&gt;
+         &lt;td&gt;Third child entry&lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-3&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Opens&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;300&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-2&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Open %&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;60&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-1&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Clicks&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;840&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-4&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Click %&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;32&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-5&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Booked&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;12000&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-6&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Attr Rev&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;30800&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-6&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Bounce %&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;32&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-6&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Share %&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;32&lt;/span&gt;
+         &lt;/td&gt;
+         &lt;td class=&quot;o-table__priority-6&quot;&gt;
+           &lt;span class=&quot;o-table__label&quot;&gt;Unsub %&lt;/span&gt;
+           &lt;span class=&quot;o-table__content&quot;&gt;32&lt;/span&gt;
+         &lt;/td&gt;
+       &lt;/tr&gt;
+     &lt;/tbody&gt;
+   &lt;/table&gt;
+</code></pre>
 
 				
 			</div>
@@ -1248,8 +1477,8 @@
 			<h3>Elements</h3>
 			<div>
 				<p>Supported input types are, <code>text</code>, <code>password</code>, <code>date</code>, <code>datetime</code>, <code>datetime-local</code>, <code>month</code>, <code>week</code>, <code>email</code>, <code>number</code>, <code>search</code>, <code>tel</code>, <code>time</code>, <code>url</code>, <code>color</code>.</p>
-<pre><code class="lang-example:html">    &lt;label id=&quot;l1&quot; for=&quot;input-1-1&quot;&gt;Label&lt;/label&gt;
-    &lt;input type=&quot;text&quot; id=&quot;input-1-1&quot; aria-labelledby=&quot;l1&quot;&gt;
+<pre><code class="lang-example:html">  &lt;label id=&quot;l1&quot; for=&quot;input-1-1&quot;&gt;Label&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;input-1-1&quot; aria-labelledby=&quot;l1&quot;&gt;
 </code></pre>
 <pre><code class="lang-example:html">  &lt;label id=&quot;l2&quot; for=&quot;input-1-2&quot;&gt;Focus&lt;/label&gt;
   &lt;input type=&quot;text&quot; id=&quot;input-1-2&quot; class=&quot;focus&quot; aria-labelledby=&quot;l2&quot;&gt;
@@ -1278,18 +1507,20 @@
   &lt;/select&gt;
 </code></pre>
 <h3 id="checkboxes">Checkboxes</h3>
-<pre><code class="lang-example:html">  &lt;input type=&quot;checkbox&quot; class=&quot;c-checkbox&quot;&gt;&lt;/input&gt;
-  &lt;label&gt;Checkbox&lt;/label&gt;
-</code></pre>
-<pre><code class="lang-example:html">  &lt;input type=&quot;checkbox&quot; class=&quot;c-checkbox&quot; checked&gt;&lt;/input&gt;
-  &lt;label&gt;Checked Checkbox&lt;/label&gt;
+<p> This checkbox is rendered based on the Material icon <a href="https://design.google.com/icons/#ic_check_box">check box</a> and <a href="https://design.google.com/icons/#ic_check_box_outline_blank">check box outline blank</a>.</p>
+<pre><code class="lang-example:html">  &lt;input id=&quot;c1&quot; type=&quot;checkbox&quot; class=&quot;c-checkbox&quot; aria-labelledby=&quot;c1l&quot;&gt;&lt;/input&gt;
+  &lt;label for=&quot;c1&quot; id=&quot;c1l&quot;&gt;Checkbox&lt;/label&gt;
+
+  &lt;input id=&quot;c2&quot; type=&quot;checkbox&quot; class=&quot;c-checkbox&quot; aria-labelledby=&quot;c2l&quot; checked&gt;&lt;/input&gt;
+  &lt;label for=&quot;c2&quot; id=&quot;c2l&quot;&gt;Checked Checkbox&lt;/label&gt;
 </code></pre>
 <h3 id="radio">Radio</h3>
-<pre><code class="lang-example:html">  &lt;input type=&quot;radio&quot; class=&quot;c-radio&quot;&gt;&lt;/input&gt;
-  &lt;label&gt;Radio&lt;/label&gt;
-</code></pre>
-<pre><code class="lang-example:html">  &lt;input type=&quot;radio&quot; class=&quot;c-radio&quot; checked&gt;&lt;/input&gt;
-  &lt;label&gt;Selected Radio&lt;/label&gt;
+<p> This radio control is rendered based on the Material icon <a href="https://design.google.com/icons/#ic_radio_button_checked">radio button checked</a> and the <a href="https://design.google.com/icons/#ic_radio_button_unchecked">radio button unchecked</a>.</p>
+<pre><code class="lang-example:html">  &lt;input id=&quot;r1&quot; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio&quot; aria-labelledby=&quot;r1l&quot;&gt;&lt;/input&gt;
+  &lt;label for=&quot;r1&quot; id=&quot;r1l&quot;&gt;Radio&lt;/label&gt;
+
+  &lt;input id=&quot;r2&quot; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio&quot; aria-labelledby=&quot;r2l&quot; checked&gt;&lt;/input&gt;
+  &lt;label for=&quot;r2&quot; id=&quot;r2l&quot;&gt;Selected Radio&lt;/label&gt;
 </code></pre>
 
 				
@@ -1333,6 +1564,20 @@
   --button-font-size-sm: calc(var(--button-font-size) * .75);
   --button-font-size-lg: calc(var(--button-font-size) * 1.25);
   --button-round: var(--global-rounded);
+</code></pre>
+<h4 id="horizontal-button-group">Horizontal Button Group</h4>
+<pre><code class="lang-example:html"> &lt;div class=&quot;c-button-group&quot;&gt;
+   &lt;button class=&quot;c-button&quot;&gt;First&lt;/button&gt;
+   &lt;button class=&quot;c-button&quot;&gt;Second&lt;/button&gt;
+   &lt;button class=&quot;c-button&quot;&gt;Third&lt;/button&gt;
+ &lt;/div&gt;
+</code></pre>
+<h4 id="vertical-button-group">Vertical Button Group</h4>
+<pre><code class="lang-example:html"> &lt;div class=&quot;c-button-group--vertical&quot;&gt;
+   &lt;button class=&quot;c-button&quot;&gt;First&lt;/button&gt;
+   &lt;button class=&quot;c-button&quot;&gt;Second&lt;/button&gt;
+   &lt;button class=&quot;c-button&quot;&gt;Third&lt;/button&gt;
+ &lt;/div&gt;
 </code></pre>
 
 				
@@ -1384,17 +1629,23 @@
 		<section id="modal">
 			<h3>Modal</h3>
 			<div>
-				<pre><code class="lang-example:html"> &lt;a href=&quot;#test-modal&quot;&gt;Open Modal&lt;/a&gt;
-
- &lt;div class=&quot;c-modal&quot; id=&quot;test-modal&quot;&gt;
-   &lt;div class=&quot;c-modal__card&quot;&gt;
-     &lt;div class=&quot;c-modal__title&quot;&gt;Modal Title &lt;a href=&quot;#close&quot;&gt;&lt;/a&gt;&lt;/div&gt;
-     &lt;p&gt;This is a card in a modal, what will they think of next?&lt;/p&gt;
-     &lt;div class=&quot;c-modal__actions&quot;&gt;
-       &lt;a href=&quot;#close&quot;&gt;Close&lt;/a&gt;
+				<pre><code class="lang-example:html">
+ &lt;div class=&quot;c-modal is-active&quot;&gt;
+   &lt;div class=&quot;c-modal__card [u-attach--middle]&quot;&gt;
+     &lt;div class=&quot;c-modal__title&quot;&gt;
+       &lt;span&gt;Modal Title&lt;/span&gt;
+       &lt;button class=&quot;o-close&quot;&gt;
+         &lt;i class=&quot;material-icons&quot;&gt;close&lt;/i&gt;
+       &lt;/button&gt;
+     &lt;/div&gt;
+     &lt;div class=&quot;c-modal__content u-row u-row--colapse&quot;&gt;
+       &lt;p&gt;This is a card in a modal, what will they think of next?&lt;/p&gt;
+       &lt;div class=&quot;c-modal__actions&quot;&gt;
+         &lt;button class=&quot;c-button--anchor&quot;&gt;Close&lt;/button&gt;
+       &lt;/div&gt;
      &lt;/div&gt;
    &lt;/div&gt;
-   &lt;a href=&quot;#close&quot; class=&quot;c-modal__close&quot;&gt;&lt;/a&gt;
+   &lt;div class=&quot;c-modal__close&quot;&gt;&lt;/div&gt;
  &lt;/div&gt;
 </code></pre>
 
@@ -1462,7 +1713,7 @@
 			<h3>Tooltips</h3>
 			<div>
 				<div class="u-text-center">
- <button class="c-button c-tooltip" data-tooltip="Tooltip content goes in a data-tooltip attribute."><i class="material-icons">message</i> Top tooltip</button>
+ <span data-tooltip="Tooltip content goes in a data-tooltip attribute."><i class="material-icons">message</i> Top tooltip</span>
  </div>
 
  <h3>Customize</h3>
@@ -1480,7 +1731,7 @@
 			</div>
 		</section>
 		
-	<footer>Last modified Thursday, 21 January 2016 15:41
+	<footer>Last modified Tuesday, 26 January 2016 16:28
 </div>
 </main>
 <script src="prism.js"></script>
