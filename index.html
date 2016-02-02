@@ -103,6 +103,25 @@
 				</li>
 				
 				<li>
+					<a href="#form"><span>Form</span></a>
+					
+	<ul>
+		
+				<li>
+					<a href="#inputs"><span>Inputs</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#dropdowns"><span>Dropdowns</span></a>
+					
+				</li>
+				
+	</ul>
+	
+				</li>
+				
+				<li>
 					<a href="#patterns"><span>Patterns</span></a>
 					
 	<ul>
@@ -134,25 +153,6 @@
 				
 				<li>
 					<a href="#tooltips"><span>Tooltips</span></a>
-					
-				</li>
-				
-	</ul>
-	
-				</li>
-				
-				<li>
-					<a href="#form"><span>Form</span></a>
-					
-	<ul>
-		
-				<li>
-					<a href="#inputs"><span>Inputs</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#dropdowns"><span>Dropdowns</span></a>
 					
 				</li>
 				
@@ -1077,6 +1077,85 @@
 			</div>
 		</section>
 		
+		<section id="form">
+			<h2>Form</h2>
+			<div>
+				
+				
+		<section id="inputs">
+			<h3>Inputs</h3>
+			<div>
+				<p>Supported input types are, <code>text</code>, <code>password</code>, <code>date</code>, <code>datetime</code>, <code>datetime-local</code>, <code>month</code>, <code>week</code>, <code>email</code>, <code>number</code>, <code>search</code>, <code>tel</code>, <code>time</code>, <code>url</code>, <code>color</code>.</p>
+<pre><code class="lang-example:html">  &lt;label id=&#39;l1&#39; for=&quot;input-1-1&quot;&gt;Label&lt;/label&gt;
+  &lt;input type=&#39;text&#39; id=&quot;input-1-1&quot; aria-labelledby=&quot;l1&quot;&gt;
+</code></pre>
+<pre><code class="lang-example:html">  &lt;label id=&#39;l2&#39; for=&quot;input-1-2&quot;&gt;Focus&lt;/label&gt;
+  &lt;input type=&#39;text&#39; id=&quot;input-1-2&quot; class=&quot;focus&quot; aria-labelledby=&quot;l2&quot;&gt;
+</code></pre>
+<pre><code class="lang-example:html">  &lt;div class=&#39;c-input-group&#39;&gt;
+   &lt;label id=&#39;l3&#39; for=&quot;input-2-1&quot;&gt;Warning&lt;/label&gt;
+   &lt;input type=&#39;email&#39; id=&quot;input-2-1&quot; value=&quot;notauser at clientcom&quot; aria-labelledby=&quot;l3&quot; required&gt;
+   &lt;div class=&#39;c-validation--warning&#39;&gt;Warning validated message&lt;/div&gt;
+  &lt;/div&gt;
+</code></pre>
+<pre><code class="lang-example:html">  &lt;div class=&#39;c-input-group&#39;&gt;
+   &lt;label id=&#39;l4&#39; for=&quot;input-2-2&quot;&gt;Error&lt;/label&gt;
+   &lt;input type=&#39;text&#39; id=&quot;input-2-2&quot; class=&quot;error&quot; aria-labelledby=&quot;l4&quot;&gt;
+   &lt;div class=&#39;c-validation--error&#39; placeholder=&quot;Placeholder text&quot;&gt;Error validated message&lt;/div&gt;
+  &lt;/div&gt;
+</code></pre>
+<h3 id="textarea">Textarea</h3>
+<pre><code class="lang-example:html">  &lt;label for=&#39;textarea-1-1&#39;&gt;Textarea&lt;/label&gt;
+  &lt;textarea id=&#39;textarea-1-1&#39;&gt;&lt;/textarea&gt;
+</code></pre>
+<h3 id="select">Select</h3>
+<pre><code class="lang-example:html">  &lt;select&gt;
+   &lt;option&gt;Option 1&lt;/option&gt;
+   &lt;option&gt;Option 2&lt;/option&gt;
+   &lt;option&gt;Option 3&lt;/option&gt;
+  &lt;/select&gt;
+</code></pre>
+<h3 id="checkboxes">Checkboxes</h3>
+<p> This checkbox is rendered based on the Material icon <a href="https://design.google.com/icons/#ic_check_box">check box</a> and <a href="https://design.google.com/icons/#ic_check_box_outline_blank">check box outline blank</a>.</p>
+<pre><code class="lang-example:html">  &lt;input id=&#39;c1&#39; type=&quot;checkbox&quot; class=&quot;c-checkbox&quot; aria-labelledby=&quot;c1l&quot;&gt;&lt;/input&gt;
+  &lt;label for=&#39;c1&#39; id=&quot;c1l&quot;&gt;Checkbox&lt;/label&gt;
+
+  &lt;input id=&#39;c2&#39; type=&quot;checkbox&quot; class=&quot;c-checkbox&quot; aria-labelledby=&quot;c2l&quot; checked&gt;&lt;/input&gt;
+  &lt;label for=&#39;c2&#39; id=&quot;c2l&quot;&gt;Checked Checkbox&lt;/label&gt;
+</code></pre>
+<h3 id="radio">Radio</h3>
+<p> This radio control is rendered based on the Material icon <a href="https://design.google.com/icons/#ic_radio_button_checked">radio button checked</a> and the <a href="https://design.google.com/icons/#ic_radio_button_unchecked">radio button unchecked</a>.</p>
+<pre><code class="lang-example:html">  &lt;input id=&#39;r1&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio&quot; aria-labelledby=&quot;r1l&quot;&gt;&lt;/input&gt;
+  &lt;label for=&#39;r1&#39; id=&quot;r1l&quot;&gt;Radio&lt;/label&gt;
+
+  &lt;input id=&#39;r2&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio&quot; aria-labelledby=&quot;r2l&quot; checked&gt;&lt;/input&gt;
+  &lt;label for=&#39;r2&#39; id=&quot;r2l&quot;&gt;Selected Radio&lt;/label&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="dropdowns">
+			<h3>Dropdowns</h3>
+			<div>
+				<pre><code class="lang-example:html"> &lt;div class=&quot;c-dropdown&quot;&gt;
+   &lt;div class=&quot;c-dropdown__toggle&quot;&gt;Option 1&lt;/div&gt;
+   &lt;ul class=&quot;c-dropdown__content is-active&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
+     &lt;li&gt;&lt;button&gt;Option 1&lt;/button&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;button&gt;Option 2&lt;/button&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;button&gt;Option 3&lt;/button&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+ &lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+			</div>
+		</section>
+		
 		<section id="patterns">
 			<h2>Patterns</h2>
 			<div>
@@ -1460,86 +1539,7 @@
 			</div>
 		</section>
 		
-		<section id="form">
-			<h2>Form</h2>
-			<div>
-				
-				
-		<section id="inputs">
-			<h3>Inputs</h3>
-			<div>
-				<p>Supported input types are, <code>text</code>, <code>password</code>, <code>date</code>, <code>datetime</code>, <code>datetime-local</code>, <code>month</code>, <code>week</code>, <code>email</code>, <code>number</code>, <code>search</code>, <code>tel</code>, <code>time</code>, <code>url</code>, <code>color</code>.</p>
-<pre><code class="lang-example:html">  &lt;label id=&#39;l1&#39; for=&quot;input-1-1&quot;&gt;Label&lt;/label&gt;
-  &lt;input type=&#39;text&#39; id=&quot;input-1-1&quot; aria-labelledby=&quot;l1&quot;&gt;
-</code></pre>
-<pre><code class="lang-example:html">  &lt;label id=&#39;l2&#39; for=&quot;input-1-2&quot;&gt;Focus&lt;/label&gt;
-  &lt;input type=&#39;text&#39; id=&quot;input-1-2&quot; class=&quot;focus&quot; aria-labelledby=&quot;l2&quot;&gt;
-</code></pre>
-<pre><code class="lang-example:html">  &lt;div class=&#39;c-input-group&#39;&gt;
-   &lt;label id=&#39;l3&#39; for=&quot;input-2-1&quot;&gt;Warning&lt;/label&gt;
-   &lt;input type=&#39;email&#39; id=&quot;input-2-1&quot; value=&quot;notauser at clientcom&quot; aria-labelledby=&quot;l3&quot; required&gt;
-   &lt;div class=&#39;c-validation--warning&#39;&gt;Warning validated message&lt;/div&gt;
-  &lt;/div&gt;
-</code></pre>
-<pre><code class="lang-example:html">  &lt;div class=&#39;c-input-group&#39;&gt;
-   &lt;label id=&#39;l4&#39; for=&quot;input-2-2&quot;&gt;Error&lt;/label&gt;
-   &lt;input type=&#39;text&#39; id=&quot;input-2-2&quot; class=&quot;error&quot; aria-labelledby=&quot;l4&quot;&gt;
-   &lt;div class=&#39;c-validation--error&#39; placeholder=&quot;Placeholder text&quot;&gt;Error validated message&lt;/div&gt;
-  &lt;/div&gt;
-</code></pre>
-<h3 id="textarea">Textarea</h3>
-<pre><code class="lang-example:html">  &lt;label for=&#39;textarea-1-1&#39;&gt;Textarea&lt;/label&gt;
-  &lt;textarea id=&#39;textarea-1-1&#39;&gt;&lt;/textarea&gt;
-</code></pre>
-<h3 id="select">Select</h3>
-<pre><code class="lang-example:html">  &lt;select&gt;
-   &lt;option&gt;Option 1&lt;/option&gt;
-   &lt;option&gt;Option 2&lt;/option&gt;
-   &lt;option&gt;Option 3&lt;/option&gt;
-  &lt;/select&gt;
-</code></pre>
-<h3 id="checkboxes">Checkboxes</h3>
-<p> This checkbox is rendered based on the Material icon <a href="https://design.google.com/icons/#ic_check_box">check box</a> and <a href="https://design.google.com/icons/#ic_check_box_outline_blank">check box outline blank</a>.</p>
-<pre><code class="lang-example:html">  &lt;input id=&#39;c1&#39; type=&quot;checkbox&quot; class=&quot;c-checkbox&quot; aria-labelledby=&quot;c1l&quot;&gt;&lt;/input&gt;
-  &lt;label for=&#39;c1&#39; id=&quot;c1l&quot;&gt;Checkbox&lt;/label&gt;
-
-  &lt;input id=&#39;c2&#39; type=&quot;checkbox&quot; class=&quot;c-checkbox&quot; aria-labelledby=&quot;c2l&quot; checked&gt;&lt;/input&gt;
-  &lt;label for=&#39;c2&#39; id=&quot;c2l&quot;&gt;Checked Checkbox&lt;/label&gt;
-</code></pre>
-<h3 id="radio">Radio</h3>
-<p> This radio control is rendered based on the Material icon <a href="https://design.google.com/icons/#ic_radio_button_checked">radio button checked</a> and the <a href="https://design.google.com/icons/#ic_radio_button_unchecked">radio button unchecked</a>.</p>
-<pre><code class="lang-example:html">  &lt;input id=&#39;r1&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio&quot; aria-labelledby=&quot;r1l&quot;&gt;&lt;/input&gt;
-  &lt;label for=&#39;r1&#39; id=&quot;r1l&quot;&gt;Radio&lt;/label&gt;
-
-  &lt;input id=&#39;r2&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio&quot; aria-labelledby=&quot;r2l&quot; checked&gt;&lt;/input&gt;
-  &lt;label for=&#39;r2&#39; id=&quot;r2l&quot;&gt;Selected Radio&lt;/label&gt;
-</code></pre>
-
-				
-			</div>
-		</section>
-		
-		<section id="dropdowns">
-			<h3>Dropdowns</h3>
-			<div>
-				<pre><code class="lang-example:html"> &lt;div class=&quot;c-dropdown&quot;&gt;
-   &lt;div class=&quot;c-dropdown__toggle&quot;&gt;Option 1&lt;/div&gt;
-   &lt;ul class=&quot;c-dropdown__content is-active&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
-     &lt;li&gt;&lt;button&gt;Option 1&lt;/button&gt;&lt;/li&gt;
-     &lt;li&gt;&lt;button&gt;Option 2&lt;/button&gt;&lt;/li&gt;
-     &lt;li&gt;&lt;button&gt;Option 3&lt;/button&gt;&lt;/li&gt;
-   &lt;/ul&gt;
- &lt;/div&gt;
-</code></pre>
-
-				
-			</div>
-		</section>
-		
-			</div>
-		</section>
-		
-	<footer>Last modified Tuesday, 2 February 2016 13:12
+	<footer>Last modified Tuesday, 2 February 2016 13:18
 </main>
 <script src="prism.js"></script>
 <script src="examples.js"></script>
