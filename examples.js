@@ -112,7 +112,6 @@ examples.lang = {
 		// add default block styles to iframe dom
 		idoc.documentElement.setAttribute('style', examples.htmlcss);
 		idoc.body.setAttribute('style', examples.bodycss);
-                idoc.firstChild.setAttribute('class', ' t-default');
 
 		if (conf.width) style.width = String(conf.width);
 
