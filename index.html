@@ -103,25 +103,6 @@
 				</li>
 				
 				<li>
-					<a href="#form"><span>Form</span></a>
-					
-	<ul>
-		
-				<li>
-					<a href="#inputs"><span>Inputs</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#dropdowns"><span>Dropdowns</span></a>
-					
-				</li>
-				
-	</ul>
-	
-				</li>
-				
-				<li>
 					<a href="#patterns"><span>Patterns</span></a>
 					
 	<ul>
@@ -153,6 +134,25 @@
 				
 				<li>
 					<a href="#tooltips"><span>Tooltips</span></a>
+					
+				</li>
+				
+	</ul>
+	
+				</li>
+				
+				<li>
+					<a href="#form"><span>Form</span></a>
+					
+	<ul>
+		
+				<li>
+					<a href="#inputs"><span>Inputs</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#dropdowns"><span>Dropdowns</span></a>
 					
 				</li>
 				
@@ -823,9 +823,7 @@
 			<h3>Colour Palette</h3>
 			<div>
 				<p>This collection of colors it intended to serve the interface of all our product applications and all the components you can see in this document.</p>
-<pre><code class="lang-example"> &lt;div class=&quot;u-row&quot;&gt;
- &lt;div class=&quot;u-column--12@sm u-column--4@md&quot;&gt;
- &lt;div class=&quot;u-chip u-chip-large u-blue-800&quot;&gt;Blue&lt;/div&gt;
+<pre><code class="lang-example"> &lt;h5&gt;Brand Primary&lt;/h5&gt;
  &lt;div class=&quot;u-chip u-blue-50&quot; contenteditable=&quot;true&quot;&gt;--blue-50&lt;/div&gt;
  &lt;div class=&quot;u-chip u-blue-100&quot; contenteditable=&quot;true&quot;&gt;--blue-100&lt;/div&gt;
  &lt;div class=&quot;u-chip u-blue-200&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--blue-200&lt;/div&gt;
@@ -838,14 +836,17 @@
  &lt;div class=&quot;u-chip u-blue-900&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--blue-900&lt;/div&gt;
  &lt;div class=&quot;u-chip u-blue-1000&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--blue-1000&lt;/div&gt;
  &lt;div class=&quot;u-chip u-blue-1100&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--blue-1100&lt;/div&gt;
- &lt;br&gt;
 
- &lt;div class=&quot;u-chip u-magenta-500&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--magenta-500&lt;/div&gt;
- &lt;div class=&quot;u-chip u-purple-a100&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--purple-a100&lt;/div&gt;
- &lt;/div&gt;
+ &lt;hr&gt;
 
- &lt;div class=&quot;u-column--12@sm u-column--4@md&quot;&gt;
- &lt;div class=&quot;u-chip u-chip-large u-grey-800&quot;&gt;Grey&lt;/div&gt;
+ &lt;h5&gt;Brand Secondary&lt;/h5&gt;
+ &lt;div class=&quot;u-chip u-orange-500&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--orange-500&lt;/div&gt;
+ &lt;div class=&quot;u-chip u-orange-600&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--orange-600&lt;/div&gt;
+
+ &lt;hr&gt;
+
+ &lt;h5&gt;Grayscale (Neutral)&lt;/h5&gt;
+ &lt;div class=&quot;u-chip u-white&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--white&lt;/div&gt;
  &lt;div class=&quot;u-chip u-grey-50&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--grey-50&lt;/div&gt;
  &lt;div class=&quot;u-chip u-grey-100&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--grey-100&lt;/div&gt;
  &lt;div class=&quot;u-chip u-grey-300&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--grey-300&lt;/div&gt;
@@ -854,34 +855,28 @@
  &lt;div class=&quot;u-chip u-grey-700&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--grey-700&lt;/div&gt;
  &lt;div class=&quot;u-chip u-grey-800&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--grey-800&lt;/div&gt;
  &lt;div class=&quot;u-chip u-black&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--black&lt;/div&gt;
- &lt;div class=&quot;u-chip u-white&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--white&lt;/div&gt;
 
- &lt;div class=&quot;u-chip u-chip-large u-green-800&quot;&gt;Green&lt;/div&gt;
+ &lt;hr&gt;
+
+ &lt;h5&gt;Utility&lt;/h5&gt;
  &lt;div class=&quot;u-chip u-green-50&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--green-50&lt;/div&gt;
  &lt;div class=&quot;u-chip u-green-600&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--green-600&lt;/div&gt;
  &lt;div class=&quot;u-chip u-green-700&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--green-700&lt;/div&gt;
  &lt;div class=&quot;u-chip u-green-800&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--green-800&lt;/div&gt;
 
- &lt;/div&gt;
- &lt;div class=&quot;u-column--12@sm u-column--4@md&quot;&gt;
- &lt;div class=&quot;u-chip u-chip-large u-orange-600&quot;&gt;Orange&lt;/div&gt;
- &lt;div class=&quot;u-chip u-orange-500&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--orange-500&lt;/div&gt;
- &lt;div class=&quot;u-chip u-orange-600&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--orange-600&lt;/div&gt;
-
- &lt;div class=&quot;u-chip u-chip-large u-gold-700&quot;&gt;Gold&lt;/div&gt;
  &lt;div class=&quot;u-chip u-gold-50&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--gold-50&lt;/div&gt;
  &lt;div class=&quot;u-chip u-gold-200&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--gold-200&lt;/div&gt;
  &lt;div class=&quot;u-chip u-gold-300&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--gold-300&lt;/div&gt;
  &lt;div class=&quot;u-chip u-gold-500&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--gold-500&lt;/div&gt;
  &lt;div class=&quot;u-chip u-gold-700&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--gold-700&lt;/div&gt;
 
- &lt;div class=&quot;u-chip u-chip-large u-red-800&quot;&gt;Red&lt;/div&gt;
  &lt;div class=&quot;u-chip u-red-50&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--red-50&lt;/div&gt;
  &lt;div class=&quot;u-chip u-red-600&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--red-600&lt;/div&gt;
  &lt;div class=&quot;u-chip u-red-700&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--red-700&lt;/div&gt;
  &lt;div class=&quot;u-chip u-red-800&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--red-800&lt;/div&gt;
- &lt;/div&gt;
- &lt;/div&gt;
+
+ &lt;div class=&quot;u-chip u-magenta-500&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--magenta-500&lt;/div&gt;
+ &lt;div class=&quot;u-chip u-purple-a100&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--purple-a100&lt;/div&gt;
 </code></pre>
 
 				
@@ -1012,31 +1007,6 @@
   &lt;/nav&gt;
 &lt;/header&gt;
 </code></pre>
-<pre><code class="lang-example">&lt;div class=&quot;u-row&quot;&gt;
- &lt;div class=&quot;u-column--6@md&quot;&gt;
-   &lt;header class=&quot;u-orange-600 c-bar&quot;&gt;
-      &lt;nav&gt;
-        &lt;ul&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;help&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-      &lt;/nav&gt;
-      &lt;nav&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;h2&gt;Reverse Bar&lt;/h2&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/nav&gt;
-   &lt;/header&gt;
-   &lt;/div&gt;
-   &lt;div class=&quot;u-column--6@md&quot;&gt;
-   &lt;header class=&quot;c-bar u-red-600&quot;&gt;
-      &lt;nav&gt;
-        &lt;ul&gt;&lt;li&gt;&lt;h2&gt;Half Bar&lt;/h2&gt;&lt;/li&gt;&lt;/ul&gt;
-      &lt;/nav&gt;
-      &lt;nav&gt;
-        &lt;ul&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;star&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
-      &lt;/nav&gt;
-   &lt;/header&gt;
- &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
 
 				
 			</div>
@@ -1045,7 +1015,13 @@
 		<section id="menu">
 			<h3>Menu</h3>
 			<div>
-				<p>@Todo</p>
+				<pre><code class="lang-example:html"> &lt;div class=&quot;c-menu is-active&quot;&gt;
+   &lt;ul&gt;
+     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Thing 1&lt;/a&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Thing 2&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+ &lt;/div&gt;
+</code></pre>
 
 				
 			</div>
@@ -1068,85 +1044,6 @@
    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
  &lt;/ul&gt;
-</code></pre>
-
-				
-			</div>
-		</section>
-		
-			</div>
-		</section>
-		
-		<section id="form">
-			<h2>Form</h2>
-			<div>
-				
-				
-		<section id="inputs">
-			<h3>Inputs</h3>
-			<div>
-				<p>Supported input types are, <code>text</code>, <code>password</code>, <code>date</code>, <code>datetime</code>, <code>datetime-local</code>, <code>month</code>, <code>week</code>, <code>email</code>, <code>number</code>, <code>search</code>, <code>tel</code>, <code>time</code>, <code>url</code>, <code>color</code>.</p>
-<pre><code class="lang-example:html">  &lt;label id=&#39;l1&#39; for=&quot;input-1-1&quot;&gt;Label&lt;/label&gt;
-  &lt;input type=&#39;text&#39; id=&quot;input-1-1&quot; aria-labelledby=&quot;l1&quot;&gt;
-</code></pre>
-<pre><code class="lang-example:html">  &lt;label id=&#39;l2&#39; for=&quot;input-1-2&quot;&gt;Focus&lt;/label&gt;
-  &lt;input type=&#39;text&#39; id=&quot;input-1-2&quot; class=&quot;focus&quot; aria-labelledby=&quot;l2&quot;&gt;
-</code></pre>
-<pre><code class="lang-example:html">  &lt;div class=&#39;c-input-group&#39;&gt;
-   &lt;label id=&#39;l3&#39; for=&quot;input-2-1&quot;&gt;Warning&lt;/label&gt;
-   &lt;input type=&#39;email&#39; id=&quot;input-2-1&quot; value=&quot;notauser at clientcom&quot; aria-labelledby=&quot;l3&quot; required&gt;
-   &lt;div class=&#39;c-validation--warning&#39;&gt;Warning validated message&lt;/div&gt;
-  &lt;/div&gt;
-</code></pre>
-<pre><code class="lang-example:html">  &lt;div class=&#39;c-input-group&#39;&gt;
-   &lt;label id=&#39;l4&#39; for=&quot;input-2-2&quot;&gt;Error&lt;/label&gt;
-   &lt;input type=&#39;text&#39; id=&quot;input-2-2&quot; class=&quot;error&quot; aria-labelledby=&quot;l4&quot;&gt;
-   &lt;div class=&#39;c-validation--error&#39; placeholder=&quot;Placeholder text&quot;&gt;Error validated message&lt;/div&gt;
-  &lt;/div&gt;
-</code></pre>
-<h3 id="textarea">Textarea</h3>
-<pre><code class="lang-example:html">  &lt;label for=&#39;textarea-1-1&#39;&gt;Textarea&lt;/label&gt;
-  &lt;textarea id=&#39;textarea-1-1&#39;&gt;&lt;/textarea&gt;
-</code></pre>
-<h3 id="select">Select</h3>
-<pre><code class="lang-example:html">  &lt;select&gt;
-   &lt;option&gt;Option 1&lt;/option&gt;
-   &lt;option&gt;Option 2&lt;/option&gt;
-   &lt;option&gt;Option 3&lt;/option&gt;
-  &lt;/select&gt;
-</code></pre>
-<h3 id="checkboxes">Checkboxes</h3>
-<p> This checkbox is rendered based on the Material icon <a href="https://design.google.com/icons/#ic_check_box">check box</a> and <a href="https://design.google.com/icons/#ic_check_box_outline_blank">check box outline blank</a>.</p>
-<pre><code class="lang-example:html">  &lt;input id=&#39;c1&#39; type=&quot;checkbox&quot; class=&quot;c-checkbox&quot; aria-labelledby=&quot;c1l&quot;&gt;&lt;/input&gt;
-  &lt;label for=&#39;c1&#39; id=&quot;c1l&quot;&gt;Checkbox&lt;/label&gt;
-
-  &lt;input id=&#39;c2&#39; type=&quot;checkbox&quot; class=&quot;c-checkbox&quot; aria-labelledby=&quot;c2l&quot; checked&gt;&lt;/input&gt;
-  &lt;label for=&#39;c2&#39; id=&quot;c2l&quot;&gt;Checked Checkbox&lt;/label&gt;
-</code></pre>
-<h3 id="radio">Radio</h3>
-<p> This radio control is rendered based on the Material icon <a href="https://design.google.com/icons/#ic_radio_button_checked">radio button checked</a> and the <a href="https://design.google.com/icons/#ic_radio_button_unchecked">radio button unchecked</a>.</p>
-<pre><code class="lang-example:html">  &lt;input id=&#39;r1&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio&quot; aria-labelledby=&quot;r1l&quot;&gt;&lt;/input&gt;
-  &lt;label for=&#39;r1&#39; id=&quot;r1l&quot;&gt;Radio&lt;/label&gt;
-
-  &lt;input id=&#39;r2&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio&quot; aria-labelledby=&quot;r2l&quot; checked&gt;&lt;/input&gt;
-  &lt;label for=&#39;r2&#39; id=&quot;r2l&quot;&gt;Selected Radio&lt;/label&gt;
-</code></pre>
-
-				
-			</div>
-		</section>
-		
-		<section id="dropdowns">
-			<h3>Dropdowns</h3>
-			<div>
-				<pre><code class="lang-example:html"> &lt;div class=&quot;c-dropdown&quot;&gt;
-   &lt;div class=&quot;c-dropdown__toggle&quot;&gt;Option 1&lt;/div&gt;
-   &lt;ul class=&quot;c-dropdown__content is-active&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
-     &lt;li&gt;&lt;button&gt;Option 1&lt;/button&gt;&lt;/li&gt;
-     &lt;li&gt;&lt;button&gt;Option 2&lt;/button&gt;&lt;/li&gt;
-     &lt;li&gt;&lt;button&gt;Option 3&lt;/button&gt;&lt;/li&gt;
-   &lt;/ul&gt;
- &lt;/div&gt;
 </code></pre>
 
 				
@@ -1539,7 +1436,86 @@
 			</div>
 		</section>
 		
-	<footer>Last modified Tuesday, 2 February 2016 13:18
+		<section id="form">
+			<h2>Form</h2>
+			<div>
+				
+				
+		<section id="inputs">
+			<h3>Inputs</h3>
+			<div>
+				<p>Supported input types are, <code>text</code>, <code>password</code>, <code>date</code>, <code>datetime</code>, <code>datetime-local</code>, <code>month</code>, <code>week</code>, <code>email</code>, <code>number</code>, <code>search</code>, <code>tel</code>, <code>time</code>, <code>url</code>, <code>color</code>.</p>
+<pre><code class="lang-example:html">  &lt;label id=&#39;l1&#39; for=&quot;input-1-1&quot;&gt;Label&lt;/label&gt;
+  &lt;input type=&#39;text&#39; id=&quot;input-1-1&quot; aria-labelledby=&quot;l1&quot;&gt;
+</code></pre>
+<pre><code class="lang-example:html">  &lt;label id=&#39;l2&#39; for=&quot;input-1-2&quot;&gt;Focus&lt;/label&gt;
+  &lt;input type=&#39;text&#39; id=&quot;input-1-2&quot; class=&quot;focus&quot; aria-labelledby=&quot;l2&quot;&gt;
+</code></pre>
+<pre><code class="lang-example:html">  &lt;div class=&#39;c-input-group&#39;&gt;
+   &lt;label id=&#39;l3&#39; for=&quot;input-2-1&quot;&gt;Warning&lt;/label&gt;
+   &lt;input type=&#39;email&#39; id=&quot;input-2-1&quot; value=&quot;notauser at clientcom&quot; aria-labelledby=&quot;l3&quot; required&gt;
+   &lt;div class=&#39;c-validation--warning&#39;&gt;Warning validated message&lt;/div&gt;
+  &lt;/div&gt;
+</code></pre>
+<pre><code class="lang-example:html">  &lt;div class=&#39;c-input-group&#39;&gt;
+   &lt;label id=&#39;l4&#39; for=&quot;input-2-2&quot;&gt;Error&lt;/label&gt;
+   &lt;input type=&#39;text&#39; id=&quot;input-2-2&quot; class=&quot;error&quot; aria-labelledby=&quot;l4&quot;&gt;
+   &lt;div class=&#39;c-validation--error&#39; placeholder=&quot;Placeholder text&quot;&gt;Error validated message&lt;/div&gt;
+  &lt;/div&gt;
+</code></pre>
+<h3 id="textarea">Textarea</h3>
+<pre><code class="lang-example:html">  &lt;label for=&#39;textarea-1-1&#39;&gt;Textarea&lt;/label&gt;
+  &lt;textarea id=&#39;textarea-1-1&#39;&gt;&lt;/textarea&gt;
+</code></pre>
+<h3 id="select">Select</h3>
+<pre><code class="lang-example:html">  &lt;select&gt;
+   &lt;option&gt;Option 1&lt;/option&gt;
+   &lt;option&gt;Option 2&lt;/option&gt;
+   &lt;option&gt;Option 3&lt;/option&gt;
+  &lt;/select&gt;
+</code></pre>
+<h3 id="checkboxes">Checkboxes</h3>
+<p> This checkbox is rendered based on the Material icon <a href="https://design.google.com/icons/#ic_check_box">check box</a> and <a href="https://design.google.com/icons/#ic_check_box_outline_blank">check box outline blank</a>.</p>
+<pre><code class="lang-example:html">  &lt;input id=&#39;c1&#39; type=&quot;checkbox&quot; class=&quot;c-checkbox&quot; aria-labelledby=&quot;c1l&quot;&gt;&lt;/input&gt;
+  &lt;label for=&#39;c1&#39; id=&quot;c1l&quot;&gt;Checkbox&lt;/label&gt;
+
+  &lt;input id=&#39;c2&#39; type=&quot;checkbox&quot; class=&quot;c-checkbox&quot; aria-labelledby=&quot;c2l&quot; checked&gt;&lt;/input&gt;
+  &lt;label for=&#39;c2&#39; id=&quot;c2l&quot;&gt;Checked Checkbox&lt;/label&gt;
+</code></pre>
+<h3 id="radio">Radio</h3>
+<p> This radio control is rendered based on the Material icon <a href="https://design.google.com/icons/#ic_radio_button_checked">radio button checked</a> and the <a href="https://design.google.com/icons/#ic_radio_button_unchecked">radio button unchecked</a>.</p>
+<pre><code class="lang-example:html">  &lt;input id=&#39;r1&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio&quot; aria-labelledby=&quot;r1l&quot;&gt;&lt;/input&gt;
+  &lt;label for=&#39;r1&#39; id=&quot;r1l&quot;&gt;Radio&lt;/label&gt;
+
+  &lt;input id=&#39;r2&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio&quot; aria-labelledby=&quot;r2l&quot; checked&gt;&lt;/input&gt;
+  &lt;label for=&#39;r2&#39; id=&quot;r2l&quot;&gt;Selected Radio&lt;/label&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="dropdowns">
+			<h3>Dropdowns</h3>
+			<div>
+				<pre><code class="lang-example:html"> &lt;div class=&quot;c-dropdown&quot;&gt;
+   &lt;div class=&quot;c-dropdown__toggle&quot;&gt;Option 1&lt;/div&gt;
+   &lt;ul class=&quot;c-dropdown__content is-active&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
+     &lt;li&gt;&lt;button&gt;Option 1&lt;/button&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;button&gt;Option 2&lt;/button&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;button&gt;Option 3&lt;/button&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+ &lt;/div&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+			</div>
+		</section>
+		
+	<footer>Last modified Tuesday, 2 February 2016 14:05
 </main>
 <script src="prism.js"></script>
 <script src="examples.js"></script>

@@ -664,25 +664,7 @@
   padding-right: 1rem;
 }
 /* Row */
-.u-row, .o-main, .c-bar, .c-bar--top, .c-bar--bottom, .c-bar--tools, .c-menu > ul, .o-action-area, .c-modal, .c-modal--help, .c-modal--help__title, .c-notification, .c-notification--success, .c-notification--warning, .c-notification--error {
-  box-sizing: border-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 0 1 auto;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  margin-left: -.5rem;
-  margin-left: -0.5rem;
-  margin-right: -.5rem;
-  margin-right: -0.5rem;
-}
+.u-row, .o-main, .c-menu > ul, .o-action-area, .c-modal, .c-modal--help, .c-modal--help__title, .c-notification, .c-notification--success, .c-notification--warning, .c-notification--error { box-sizing: border-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex: 0 1 auto; -ms-flex: 0 1 auto; flex: 0 1 auto; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-left: -.5rem; margin-left: -0.5rem; margin-right: -.5rem; margin-right: -0.5rem; }
 .u-row--reverse { -webkit-flex-direction: row-reverse; -ms-flex-direction: row-reverse; flex-direction: row-reverse; }
 .u-first, .u-column--first { -webkit-order: -1; -ms-flex-order: -1; order: -1; }
 .u-last, .u-column--last { -webkit-order: 1; -ms-flex-order: 1; order: 1; }
@@ -695,7 +677,7 @@
   padding-right: 0;
 }
 /* Columns */
-.u-column, .c-bar nav, .c-bar--top nav, .c-bar--bottom nav, .c-bar--tools nav { box-sizing: border-box; -webkit-flex: 1 0 0%; -ms-flex: 1 0 0%; flex: 1 0 0%; max-width: 100%; padding-left: .5rem; padding-left: 0.5rem; padding-right: .5rem; padding-right: 0.5rem; }
+.u-column { box-sizing: border-box; -webkit-flex: 1 0 0%; -ms-flex: 1 0 0%; flex: 1 0 0%; max-width: 100%; padding-left: .5rem; padding-left: 0.5rem; padding-right: .5rem; padding-right: 0.5rem; }
 .u-column--reverse { -webkit-flex-direction: column-reverse; -ms-flex-direction: column-reverse; flex-direction: column-reverse; }
 .u-column--1, .c-notification__icon { -webkit-flex-basis: 8.33333% !important; -ms-flex-preferred-size: 8.33333% !important; flex-basis: 8.33333% !important; /* IE11 */ max-width: 8.33333% !important; box-sizing: border-box; -webkit-flex: 1 0 0%; -ms-flex: 1 0 0%; flex: 1 0 0%; max-width: 100%; padding-left: .5rem; padding-left: 0.5rem; padding-right: .5rem; padding-right: 0.5rem; }
 .u-column--2 { -webkit-flex-basis: 16.66666% !important; -ms-flex-preferred-size: 16.66666% !important; flex-basis: 16.66666% !important; /* IE11 */ max-width: 16.66666% !important; box-sizing: border-box; -webkit-flex: 1 0 0%; -ms-flex: 1 0 0%; flex: 1 0 0%; max-width: 100%; padding-left: .5rem; padding-left: 0.5rem; padding-right: .5rem; padding-right: 0.5rem; }
@@ -1084,7 +1066,7 @@ Chaining selectors is good when done right, take for example this extend with a 
 .s-healthcheck [class^='c-'], .s-healthcheck [class*=' c-'] { outline: 5px solid cyan; }
 .s-healthcheck [class*='@'] { outline: 5px solid rosybrown; }
 .s-healthcheck [class^='_'] { outline: 5px solid red; }
-.t-default input:not([type='range']):not([aria-label]):not([aria-labelledby]), .c-button:not(button):not([type=submit]), .c-button--success:not(button):not([type=submit]), .c-button--secondary:not(button):not([type=submit]), .c-button--alert:not(button):not([type=submit]), .c-button--info:not(button):not([type=submit]), .c-button--anchor:not(button):not([type=submit]), .c-button--link:not(button):not([type=submit]), .t-default button[disabled]:not([aria-hidden]), .t-default [type='submit'][disabled]:not([aria-hidden]), .t-devcards button:not([class]):not(button):not([type=submit]), .t-devcards input[type="button"]:not([class]):not(button):not([type=submit]) {
+.c-button:not(button):not([type=submit]), .c-button--success:not(button):not([type=submit]), .c-button--secondary:not(button):not([type=submit]), .c-button--alert:not(button):not([type=submit]), .c-button--info:not(button):not([type=submit]), .c-button--anchor:not(button):not([type=submit]), .c-button--link:not(button):not([type=submit]), .t-default button[disabled]:not([aria-hidden]), .t-default [type='submit'][disabled]:not([aria-hidden]), .t-default input:not([type='range']):not([aria-label]):not([aria-labelledby]), .t-devcards button:not([class]):not(button):not([type=submit]), .t-devcards input[type="button"]:not([class]):not(button):not([type=submit]) {
   outline: 2px solid #d03000;
 }
 /*---
@@ -1183,12 +1165,12 @@ Use these special classes to hide an element from any device as follows:
   .u-hide\@lg-up { display: none !important; }
   .u-show\@md { display: none !important; }
 }
-.c-accordion ul ul, .c-accordion--left ul ul, .c-accordion--right ul ul, .o-icon-bar, .c-checkbox + label::after, .c-radio--alt + label::after, .c-modal, .c-modal__close, .c-modal--help, .c-modal--help__close, [data-tooltip]::before, [data-tooltip]::after {
+.c-accordion ul ul, .c-accordion--left ul ul, .c-accordion--right ul ul, .o-icon-bar, .c-modal, .c-modal__close, .c-modal--help, .c-modal--help__close, [data-tooltip]::before, [data-tooltip]::after, .c-checkbox + label::after, .c-radio--alt + label::after {
   opacity: 0;
   transition: visibility 0s 2s, opacity .1s linear;
   visibility: hidden;
 }
-.c-accordion li > input[type='checkbox']:checked + label + ul, .c-accordion li > input[type='checkbox']:checked + label:nth-of-type(n) + ul, .c-accordion--left li > input[type='checkbox']:checked + label + ul, .c-accordion--left li > input[type='checkbox']:checked + label:nth-of-type(n) + ul, .c-accordion--right li > input[type='checkbox']:checked + label + ul, .c-accordion--right li > input[type='checkbox']:checked + label:nth-of-type(n) + ul, li .is-active .o-icon-bar, li .has-descendants:hover .o-icon-bar, li .has-descendants:focus .o-icon-bar, .c-checkbox:checked + label::after, .c-radio--alt:checked + label::after, .c-modal:target, .c-modal.is-active, .is-active .c-modal__close, .c-modal--help:target, .c-modal--help.is-active, .is-active .c-modal--help__close, [data-tooltip]:hover::before, [data-tooltip]:hover::after, [data-tooltip]:focus::before, [data-tooltip]:focus::after {
+.c-accordion li > input[type='checkbox']:checked + label + ul, .c-accordion li > input[type='checkbox']:checked + label:nth-of-type(n) + ul, .c-accordion--left li > input[type='checkbox']:checked + label + ul, .c-accordion--left li > input[type='checkbox']:checked + label:nth-of-type(n) + ul, .c-accordion--right li > input[type='checkbox']:checked + label + ul, .c-accordion--right li > input[type='checkbox']:checked + label:nth-of-type(n) + ul, li .is-active .o-icon-bar, li .has-descendants:hover .o-icon-bar, li .has-descendants:focus .o-icon-bar, .c-modal:target, .c-modal.is-active, .is-active .c-modal__close, .c-modal--help:target, .c-modal--help.is-active, .is-active .c-modal--help__close, [data-tooltip]:hover::before, [data-tooltip]:hover::after, [data-tooltip]:focus::before, [data-tooltip]:focus::after, .c-checkbox:checked + label::after, .c-radio--alt:checked + label::after {
   opacity: 1;
   transition: opacity .1s linear;
   visibility: visible;
@@ -1248,9 +1230,7 @@ Use these special classes to hide an element from any device as follows:
  This collection of colors it intended to serve the interface of all our product applications and all the components you can see in this document.
 
  ```example
- <div class="u-row">
- <div class="u-column--12@sm u-column--4@md">
- <div class="u-chip u-chip-large u-blue-800">Blue</div>
+ <h5>Brand Primary</h5>
  <div class="u-chip u-blue-50" contenteditable="true">--blue-50</div>
  <div class="u-chip u-blue-100" contenteditable="true">--blue-100</div>
  <div class="u-chip u-blue-200" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--blue-200</div>
@@ -1263,14 +1243,17 @@ Use these special classes to hide an element from any device as follows:
  <div class="u-chip u-blue-900" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--blue-900</div>
  <div class="u-chip u-blue-1000" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--blue-1000</div>
  <div class="u-chip u-blue-1100" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--blue-1100</div>
- <br>
 
- <div class="u-chip u-magenta-500" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--magenta-500</div>
- <div class="u-chip u-purple-a100" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--purple-a100</div>
- </div>
+ <hr>
 
- <div class="u-column--12@sm u-column--4@md">
- <div class="u-chip u-chip-large u-grey-800">Grey</div>
+ <h5>Brand Secondary</h5>
+ <div class="u-chip u-orange-500" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--orange-500</div>
+ <div class="u-chip u-orange-600" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--orange-600</div>
+
+ <hr>
+
+ <h5>Grayscale (Neutral)</h5>
+ <div class="u-chip u-white" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--white</div>
  <div class="u-chip u-grey-50" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--grey-50</div>
  <div class="u-chip u-grey-100" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--grey-100</div>
  <div class="u-chip u-grey-300" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--grey-300</div>
@@ -1279,34 +1262,29 @@ Use these special classes to hide an element from any device as follows:
  <div class="u-chip u-grey-700" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--grey-700</div>
  <div class="u-chip u-grey-800" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--grey-800</div>
  <div class="u-chip u-black" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--black</div>
- <div class="u-chip u-white" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--white</div>
 
- <div class="u-chip u-chip-large u-green-800">Green</div>
+ <hr>
+
+ <h5>Utility</h5>
  <div class="u-chip u-green-50" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--green-50</div>
  <div class="u-chip u-green-600" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--green-600</div>
  <div class="u-chip u-green-700" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--green-700</div>
  <div class="u-chip u-green-800" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--green-800</div>
 
- </div>
- <div class="u-column--12@sm u-column--4@md">
- <div class="u-chip u-chip-large u-orange-600">Orange</div>
- <div class="u-chip u-orange-500" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--orange-500</div>
- <div class="u-chip u-orange-600" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--orange-600</div>
-
- <div class="u-chip u-chip-large u-gold-700">Gold</div>
  <div class="u-chip u-gold-50" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--gold-50</div>
  <div class="u-chip u-gold-200" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--gold-200</div>
  <div class="u-chip u-gold-300" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--gold-300</div>
  <div class="u-chip u-gold-500" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--gold-500</div>
  <div class="u-chip u-gold-700" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--gold-700</div>
 
- <div class="u-chip u-chip-large u-red-800">Red</div>
  <div class="u-chip u-red-50" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--red-50</div>
  <div class="u-chip u-red-600" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--red-600</div>
  <div class="u-chip u-red-700" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--red-700</div>
  <div class="u-chip u-red-800" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--red-800</div>
- </div>
- </div>
+
+ <div class="u-chip u-magenta-500" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--magenta-500</div>
+ <div class="u-chip u-purple-a100" contenteditable="true" onclick="document.execCommand('selectAll',false,null)">--purple-a100</div>
+
  ```
 
 */
@@ -1530,6 +1508,7 @@ Use these special classes to hide an element from any device as follows:
 .t-default code, .t-default kbd, .t-default pre, .t-default samp { font-family: monospace, monospace; }
 /* specify the list style of nav lists */
 .t-default nav ol, .t-default nav ul { list-style: none; }
+.t-default hr { border-top: 2px solid #ddddd4; margin: 2.5em 0; }
 /* Lists */
 .u-list-inline li, .c-subnav li, .c-subnav--horizontal li, .c-subnav--vertical li {
   list-style-image: none;
@@ -1711,35 +1690,25 @@ Use the class `.c-bar` on a `<div>` or `<header>` to get an application style to
 </header>
 ```
 
-```example
-<div class="u-row">
- <div class="u-column--6@md">
-   <header class="u-orange-600 c-bar">
-      <nav>
-        <ul><li><a href="#"><i class="material-icons">help</i></a></li></ul>
-      </nav>
-      <nav>
-        <ul>
-          <li><h2>Reverse Bar</h2></li>
-        </ul>
-      </nav>
-   </header>
-   </div>
-   <div class="u-column--6@md">
-   <header class="c-bar u-red-600">
-      <nav>
-        <ul><li><h2>Half Bar</h2></li></ul>
-      </nav>
-      <nav>
-        <ul><li><a href="#"><i class="material-icons">star</i></a></li></ul>
-      </nav>
-   </header>
- </div>
-</div>
-```
-
  */
 .c-bar, .c-bar--top {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -.5rem;
+  margin-left: -0.5rem;
+  margin-right: -.5rem;
+  margin-right: -0.5rem;
   background-color: #0d2c54;
   border-color: transparent;
   border-style: solid;
@@ -1754,27 +1723,27 @@ Use the class `.c-bar` on a `<div>` or `<header>` to get an application style to
 .c-bar h1, .c-bar h2, .c-bar h3, .c-bar h4, .c-bar h5, .c-bar h6, .c-bar--top h1, .c-bar--top h2, .c-bar--top h3, .c-bar--top h4, .c-bar--top h5, .c-bar--top h6 { height: 46px; margin: 0; }
 .c-bar > :nth-child(even) > ul > li, .c-bar--top > :nth-child(even) > ul > li { margin-left: 10px; }
 .c-bar > :nth-child(odd) > ul > li, .c-bar--top > :nth-child(odd) > ul > li { margin-right: 10px; }
-.c-bar nav, .c-bar--top nav { padding: .5em 0; }
+.c-bar nav, .c-bar--top nav { box-sizing: border-box; -webkit-flex: 1 0 0%; -ms-flex: 1 0 0%; flex: 1 0 0%; max-width: 100%; padding-left: .5rem; padding-left: 0.5rem; padding-right: .5rem; padding-right: 0.5rem; padding: .5em 0; }
 .c-bar nav > ul, .c-bar--top nav > ul { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; height: 41px; list-style: none; }
 .c-bar nav > ul > li, .c-bar--top nav > ul > li { display: inline-block; }
 .c-bar nav > ul h2, .c-bar nav > ul h3, .c-bar nav > ul h4, .c-bar nav > ul h5, .c-bar nav > ul h6, .c-bar--top nav > ul h2, .c-bar--top nav > ul h3, .c-bar--top nav > ul h4, .c-bar--top nav > ul h5, .c-bar--top nav > ul h6 { display: inline; font-size: 1.25em; font-weight: 400; margin-right: 0; margin-top: 0; overflow: hidden; padding: 0; position: relative; text-transform: uppercase; vertical-align: middle; }
 .c-bar i, .c-bar--top i { font-size: 25px; }
-.c-bar--bottom { background-color: #fcfcf9; border-color: #ddddd4; border-style: solid; border-width: 2px 0 0; color: #000; max-height: 58px; min-height: 58px; padding: 0 16px; z-index: 100; padding-top: 16px; }
+.c-bar--bottom { box-sizing: border-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex: 0 1 auto; -ms-flex: 0 1 auto; flex: 0 1 auto; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-left: -.5rem; margin-left: -0.5rem; margin-right: -.5rem; margin-right: -0.5rem; background-color: #fcfcf9; border-color: #ddddd4; border-style: solid; border-width: 2px 0 0; color: #000; max-height: 58px; min-height: 58px; padding: 0 16px; z-index: 100; padding-top: 16px; }
 .c-bar--bottom > a:not([class]), .c-bar--bottom i { color: #000; }
 .c-bar--bottom h1, .c-bar--bottom h2, .c-bar--bottom h3, .c-bar--bottom h4, .c-bar--bottom h5, .c-bar--bottom h6 { height: 46px; margin: 0; }
 .c-bar--bottom > :nth-child(even) > ul > li { margin-left: 10px; }
 .c-bar--bottom > :nth-child(odd) > ul > li { margin-right: 10px; }
-.c-bar--bottom nav { padding: .5em 0; }
+.c-bar--bottom nav { box-sizing: border-box; -webkit-flex: 1 0 0%; -ms-flex: 1 0 0%; flex: 1 0 0%; max-width: 100%; padding-left: .5rem; padding-left: 0.5rem; padding-right: .5rem; padding-right: 0.5rem; padding: .5em 0; }
 .c-bar--bottom nav > ul { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; height: 41px; list-style: none; }
 .c-bar--bottom nav > ul > li { display: inline-block; }
 .c-bar--bottom nav > ul h2, .c-bar--bottom nav > ul h3, .c-bar--bottom nav > ul h4, .c-bar--bottom nav > ul h5, .c-bar--bottom nav > ul h6 { display: inline; font-size: 1.25em; font-weight: 400; margin-right: 0; margin-top: 0; overflow: hidden; padding: 0; position: relative; text-transform: uppercase; vertical-align: middle; }
 .c-bar--bottom i { font-size: 25px; }
-.c-bar--tools { background-color: #fff; border-color: transparent; border-style: solid; border-width: 0 0 2px; color: #000; max-height: 58px; min-height: 58px; padding: 0 16px; z-index: 100; box-shadow: 0 0 3px rgba(0, 0, 0, .36); margin-bottom: 16px; }
+.c-bar--tools { box-sizing: border-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex: 0 1 auto; -ms-flex: 0 1 auto; flex: 0 1 auto; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-left: -.5rem; margin-left: -0.5rem; margin-right: -.5rem; margin-right: -0.5rem; background-color: #fff; border-color: transparent; border-style: solid; border-width: 0 0 2px; color: #000; max-height: 58px; min-height: 58px; padding: 0 16px; z-index: 100; box-shadow: 0 0 3px rgba(0, 0, 0, .36); margin-bottom: 16px; }
 .c-bar--tools > a:not([class]), .c-bar--tools i { color: #000; }
 .c-bar--tools h1, .c-bar--tools h2, .c-bar--tools h3, .c-bar--tools h4, .c-bar--tools h5, .c-bar--tools h6 { height: 46px; margin: 0; }
 .c-bar--tools > :nth-child(even) > ul > li { margin-left: 10px; }
 .c-bar--tools > :nth-child(odd) > ul > li { margin-right: 10px; }
-.c-bar--tools nav { padding: .5em 0; }
+.c-bar--tools nav { box-sizing: border-box; -webkit-flex: 1 0 0%; -ms-flex: 1 0 0%; flex: 1 0 0%; max-width: 100%; padding-left: .5rem; padding-left: 0.5rem; padding-right: .5rem; padding-right: 0.5rem; padding: .5em 0; }
 .c-bar--tools nav > ul { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; height: 41px; list-style: none; }
 .c-bar--tools nav > ul > li { display: inline-block; }
 .c-bar--tools nav > ul h2, .c-bar--tools nav > ul h3, .c-bar--tools nav > ul h4, .c-bar--tools nav > ul h5, .c-bar--tools nav > ul h6 { display: inline; font-size: 1.25em; font-weight: 400; margin-right: 0; margin-top: 0; overflow: hidden; padding: 0; position: relative; text-transform: uppercase; vertical-align: middle; }
@@ -1796,7 +1765,14 @@ Use the class `.c-bar` on a `<div>` or `<header>` to get an application style to
  section: Navigation
  ---
 
- @Todo
+ ```example:html
+ <div class="c-menu is-active">
+   <ul>
+     <li><a href="#">Thing 1</a></li>
+     <li><a href="#">Thing 2</a></li>
+   </ul>
+ </div>
+ ```
 
  */
 .c-menu > ul { background-color: #0d2c54; color: #fff; position: relative; }
@@ -1809,6 +1785,7 @@ Use the class `.c-bar` on a `<div>` or `<header>` to get an application style to
 .c-menu > ul > li:hover > a + ul, .c-menu > ul > li:focus > a + ul { display: block; }
 .c-menu > ul > li:hover > a + ul a:hover, .c-menu > ul > li:hover > a + ul a:focus, .c-menu > ul > li:focus > a + ul a:hover, .c-menu > ul > li:focus > a + ul a:focus { background-color: #1c7dab; }
 .c-menu ul { display: none; }
+.c-menu.is-active ul { display: block !important; }
 /*---
  section: Navigation
  title: Subnav
@@ -1848,300 +1825,6 @@ Use the class `.c-bar` on a `<div>` or `<header>` to get an application style to
 .tabs [role=tab][aria-selected=true][tabindex='0'] { text-decoration: underline; }
 .tabs [role=tabpanel][aria-hidden=true] { display: none; }
 .tabs [role=tabpanel][aria-hidden=false] { display: block; }
-/* Form */
-/*---
- section: Form
- title: Inputs
- ---
-
- Supported input types are, `text`, `password`, `date`, `datetime`, `datetime-local`, `month`, `week`, `email`, `number`, `search`, `tel`, `time`, `url`, `color`.
-
- ```example:html
-  <label id='l1' for="input-1-1">Label</label>
-  <input type='text' id="input-1-1" aria-labelledby="l1">
- ```
- ```example:html
-  <label id='l2' for="input-1-2">Focus</label>
-  <input type='text' id="input-1-2" class="focus" aria-labelledby="l2">
- ```
- ```example:html
-  <div class='c-input-group'>
-   <label id='l3' for="input-2-1">Warning</label>
-   <input type='email' id="input-2-1" value="notauser at clientcom" aria-labelledby="l3" required>
-   <div class='c-validation--warning'>Warning validated message</div>
-  </div>
- ```
- ```example:html
-  <div class='c-input-group'>
-   <label id='l4' for="input-2-2">Error</label>
-   <input type='text' id="input-2-2" class="error" aria-labelledby="l4">
-   <div class='c-validation--error' placeholder="Placeholder text">Error validated message</div>
-  </div>
- ```
-
- ### Textarea
- ```example:html
-  <label for='textarea-1-1'>Textarea</label>
-  <textarea id='textarea-1-1'></textarea>
- ```
-
- ### Select
- ```example:html
-  <select>
-   <option>Option 1</option>
-   <option>Option 2</option>
-   <option>Option 3</option>
-  </select>
- ```
-
- ### Checkboxes
-
- This checkbox is rendered based on the Material icon [check box](https://design.google.com/icons/#ic_check_box) and [check box outline blank](https://design.google.com/icons/#ic_check_box_outline_blank).
-
- ```example:html
-  <input id='c1' type="checkbox" class="c-checkbox" aria-labelledby="c1l"></input>
-  <label for='c1' id="c1l">Checkbox</label>
-
-  <input id='c2' type="checkbox" class="c-checkbox" aria-labelledby="c2l" checked></input>
-  <label for='c2' id="c2l">Checked Checkbox</label>
- ```
-
- ### Radio
-
- This radio control is rendered based on the Material icon [radio button checked](https://design.google.com/icons/#ic_radio_button_checked) and the [radio button unchecked](https://design.google.com/icons/#ic_radio_button_unchecked).
-
- ```example:html
-  <input id='r1' type="radio" name="radiogroup" class="c-radio" aria-labelledby="r1l"></input>
-  <label for='r1' id="r1l">Radio</label>
-
-  <input id='r2' type="radio" name="radiogroup" class="c-radio" aria-labelledby="r2l" checked></input>
-  <label for='r2' id="r2l">Selected Radio</label>
- ```
-
- */
-.t-default input:not([type]), .t-default [type='text'], .t-default [type='password'], .t-default [type='date'], .t-default [type='datetime'], .t-default [type='datetime-local'], .t-default [type='month'], .t-default [type='week'], .t-default [type='email'], .t-default [type='number'], .t-default [type='search'], .t-default [type='tel'], .t-default [type='time'], .t-default [type='url'], .t-default [type='color'], .t-default textarea {
-  background-color: #fff;
-  border: 1px solid #a3a396;
-  border-radius: 4px;
-  color: #000;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 0 16px 0;
-  min-height: 38px; /* IE11 Input Height */
-  padding: 2px 4px;
-  width: 100%;
-}
-.t-default input { border-radius: 0; }
-/* iOS 8+ */
-.t-default input[type='button'], .t-default input[type='reset'], .t-default input[type='submit'] { -webkit-appearance: button; -moz-appearance: button; appearance: button;/* iOS 8+ */ }
-.t-default input[type='number'] { width: auto;/* Firefox 36+ */ }
-.t-default input[type='search'] { -webkit-appearance: textfield; -moz-appearance: textfield; appearance: textfield; }
-/* Chrome 45+, Safari 9+ */
-.t-default input[type='search']::-webkit-search-cancel-button, .t-default input[type='search']::-webkit-search-decoration { -webkit-appearance: none; appearance: none;/* Chrome 45+, Safari 9+ */ }
-.t-default select::-ms-expand {/* Edge 12+, Internet Explorer 11- */ }
-.t-default select::-ms-value { color: currentColor;/* Edge 12+, Internet Explorer 11- */ }
-/* specify the minimum height of form elements */
-.t-default button, .t-default [type='button'], .t-default [type='date'], .t-default [type='datetime'], .t-default [type='datetime-local'], .t-default [type='email'], .t-default [type='month'], .t-default [type='number'], .t-default [type='password'], .t-default [type='reset'], .t-default [type='search'], .t-default [type='submit'], .t-default [type='tel'], .t-default [type='text'], .t-default [type='time'], .t-default [type='url'], .t-default [type='week'], .t-default select, .t-default textarea { min-height: 1.5em; }
-.t-default input:not([type]), .t-default [type='text'], .t-default [type='password'], .t-default [type='date'], .t-default [type='datetime'], .t-default [type='datetime-local'], .t-default [type='month'], .t-default [type='week'], .t-default [type='email'], .t-default [type='number'], .t-default [type='search'], .t-default [type='tel'], .t-default [type='time'], .t-default [type='url'], .t-default [type='color'] { font-size: 18px; }
-@media varonly screen and (min-width: 48em) {
- .t-default input:not([type]), .t-default [type='text'], .t-default [type='password'], .t-default [type='date'], .t-default [type='datetime'], .t-default [type='datetime-local'], .t-default [type='month'], .t-default [type='week'], .t-default [type='email'], .t-default [type='number'], .t-default [type='search'], .t-default [type='tel'], .t-default [type='time'], .t-default [type='url'], .t-default [type='color'] { font-size: 16px; } }
-.t-default textarea { font-size: 16px; height: auto; outline: none; overflow: auto; resize: vertical; }
-@media varonly screen and (min-width: 48em) {
- .t-default textarea { font-size: 14px; } }
-.t-default input:not([type='range']) { transition-duration: .1s; }
-.t-default input:not([type='range']):focus, .t-default input:not([type='range']).focus { border: 1px solid #00a0d0; box-shadow: 0 0 6px #00a0d0; outline: 0; }
-.t-default input:not([type='range']):focus:invalid, .t-default input:not([type='range']):focus.invalid { border: 1px solid #f07700; box-shadow: 0 0 6px #f07700; outline: 0; }
-.t-default input:not([type='range']):invalid, .t-default input:not([type='range']).invalid { border: #f07700 1px solid; }
-.t-default input:not([type='range']):focus.error { border: 1px solid #d03000; box-shadow: 0 0 6px #d03000; outline: 0; }
-.t-default input:not([type='range']).error { border: #d03000 1px solid; }
-.t-default input:not([type='range']) + i { background-color: #fff; color: #77776d; }
-.t-default label { color: #000; cursor: pointer; display: block; font-size: 14px; font-weight: 600; line-height: 1.5; margin-bottom: 4px; }
-/* specify the progress cursor of updating elements */
-.t-default [aria-busy='true'] { cursor: progress; }
-/* specify the pointer cursor of trigger elements */
-.t-default [aria-controls] { cursor: pointer; }
-/* specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
-.t-default [aria-disabled] { cursor: default; }
-/** @define c-input-group */
-.c-input-group {
-  position: relative;
-
-}
-.c-input-group .u-right { cursor: pointer; padding: 6px 0; position: absolute; right: 2px; text-align: center; top: 1px; transition-duration: .1s; width: 40px; }
-.c-checkbox {
-  height: 0;
-  opacity: 0;
-  position: absolute;
-  width: 0;
-}
-.c-checkbox + label { cursor: pointer; font-weight: normal; line-height: 1em; margin-bottom: 1em; position: relative; text-align: left; vertical-align: top; }
-.c-checkbox + label::before, .c-checkbox + label::after { direction: ltr; display: inline-block; font-family: 'Material Icons'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; font-size: 120%; font-style: normal; -webkit-font-variant-ligatures: common-ligatures; font-variant-ligatures: common-ligatures; font-weight: normal; letter-spacing: normal; line-height: 1; margin-right: .25em; text-transform: none; white-space: nowrap; word-wrap: normal; }
-.c-checkbox + label::before { border-radius: 4px; color: #77776d; content: 'check_box_outline_blank'; }
-.c-checkbox + label::after { color: #09b081; content: 'check_box'; left: 0; position: absolute; }
-.c-checkbox:focus + label, .c-checkbox + label:active, .c-checkbox:checked + label:active { box-shadow: 0 0 6px #00a0d0; }
-.c-checkbox:indeterminate + label::after { color: #77776d; content: 'check_box_indeterminate'; }
-.c-radio {
-  height: 0;
-  opacity: 0;
-  position: absolute;
-  width: 0;
-}
-.c-radio + label { font-weight: normal; position: relative; }
-.c-radio + label::before { background-color: #fff; border: 2px solid #77776d; border-radius: 50px; content: ''; display: inline-block; float: left; font-size: 14px; margin-bottom: 0; margin-right: 8px; margin-top: 3px; padding: 6px; position: relative; }
-.c-radio + label::after { background-color: #fff; border-radius: 50px; content: ''; height: 6px; left: 5px; opacity: 0; position: absolute; top: 8px; transition-duration: .1s; width: 6px; z-index: 5px; }
-.c-radio:focus + label, .c-radio + label:active, .c-radio:checked + label:active { box-shadow: 0 0 6px #00a0d0; }
-.c-radio:checked + label::before { background-color: #09b081; border: 2px solid #09b081; color: #99a1a7; }
-.c-radio:checked + label::after { opacity: 1; }
-.c-radio--alt {
-  height: 0;
-  opacity: 0;
-  position: absolute;
-  width: 0;
-}
-.c-radio--alt + label { cursor: pointer; font-weight: normal; line-height: 1em; margin-bottom: 1em; position: relative; text-align: left; vertical-align: top; }
-.c-radio--alt + label::before, .c-radio--alt + label::after { direction: ltr; display: inline-block; font-family: 'Material Icons'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; font-size: 120%; font-style: normal; -webkit-font-variant-ligatures: common-ligatures; font-variant-ligatures: common-ligatures; font-weight: normal; letter-spacing: normal; line-height: 1; margin-right: .25em; text-transform: none; white-space: nowrap; word-wrap: normal; }
-.c-radio--alt + label::before { border-radius: 4px; color: #77776d; content: 'radio_button_unchecked'; }
-.c-radio--alt + label::after { color: #00a0d0; content: 'radio_button_checked'; left: 0; position: absolute; }
-.c-radio--alt:focus + label, .c-radio--alt + label:active, .c-radio--alt:checked + label:active { box-shadow: 0 0 6px #00a0d0; }
-.c-radio--alt + label { display: inline-block; text-align: center !important; }
-.c-radio--alt + label::before, .c-radio--alt + label::after { font-size: 24px !important; margin: 0 .125em .25em !important; }
-.c-radio--alt + label::before { display: block; }
-.c-radio--alt + label::after { left: auto; top: 0; }
-.c-validation, .c-validation--warning, .c-validation--error {
-  border-radius: 0 0 4px 4px;
-  font-size: 12px;
-  line-height: 1.3;
-  margin-bottom: 16px;
-  margin-top: -18px;
-  padding: 5px 7px 3px;
-  position: relative;
-  transition-duration: .1s;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  z-index: -1;
-}
-.c-validation--warning { background-color: #feb; color: #000; }
-.c-validation--error { background-color: #d03000; color: #fff; }
-hr {
-  border-top: .5px solid #ccccc2;
-  margin: .5em 0;
-}
-/*---
- section: Form
- title: Dropdowns
- ---
-
- ```example:html
- <div class="c-dropdown">
-   <div class="c-dropdown__toggle">Option 1</div>
-   <ul class="c-dropdown__content is-active" id="test-dropdown" tabindex="-1" aria-hidden="true">
-     <li><button>Option 1</button></li>
-     <li><button>Option 2</button></li>
-     <li><button>Option 3</button></li>
-   </ul>
- </div>
- ```
-
- */
-/* Callout */
-.c-dropdown, .c-dropdown--icon {
-  height: 35px;
-  position: relative;
-  z-index: 20;
-}
-.t-default select {
-  background-color: #fff;
-  border: 1px solid #a3a396;
-  border-radius: 4px;
-  color: rgba(0, 0, 0, .75);
-  cursor: pointer;
-  display: inline-block;
-  font-size: 18px !important;
-  font-weight: normal !important;
-  margin: 0;
-  padding: 2px 5px;
-  position: relative;
-  text-align: left;
-}
-.t-default select { height: 38px; width: 100%; }
-.c-dropdown > button > i { transition: opacity .1s linear; }
-.c-dropdown__toggle { background-color: #fff; border: 1px solid #a3a396; border-radius: 4px; color: rgba(0, 0, 0, .75); cursor: pointer; display: inline-block; font-size: 18px !important; font-weight: normal !important; margin-top: 0 !important; min-width: 100px; padding: 0 5px; position: relative; text-align: left; }
-@media varonly screen and (min-width: 48em) {
- .c-dropdown__toggle { font-size: 16px !important; min-width: 144px; } }
-.c-dropdown__toggle::before { $perpendicular-borders: 5px solid transparent;
- @if 'bottom' == right { border-left: 7.5px solid #000; }
- @if 'bottom' == top { border-bottom: 7.5px solid #000; }
- @if 'bottom' == bottom { border-top: 7.5px solid #000; }
- @if 'bottom' == left { border-right: 7.5px solid #000; }
- @if 'bottom' == top or 'bottom' == bottom { border-left: $perpendicular-borders; border-right: $perpendicular-borders; }
- @else if 'bottom' == right or 'bottom' == left { border-bottom: $perpendicular-borders; border-top: $perpendicular-borders; } content: ''; height: 0; width: 0; z-index: 2; position: absolute; right: 13px; top: 13px; }
-.c-dropdown__content { display: inline-block; margin: 0; max-width: 100%; min-width: 100px; overflow: hidden; position: relative; z-index: 1;/* @mixin fade-out; */ list-style: none; opacity: 0; padding: 3px; transition: visibility 0s .1s, opacity 1s linear; visibility: hidden; background-color: #fff; box-shadow: #a3a396 0 0 7px; color: rgba(0, 0, 0, .75); border-radius: 4px; position: absolute; right: 0; top: 2.25em; }
-.c-dropdown__content.is-active {/* @mixin fade-in; */ opacity: 1; transition: opacity .1s linear; visibility: visible; }
-.c-dropdown__content button { -webkit-appearance: none; -moz-appearance: none; appearance: none; background-color: initial; border-width: 0; cursor: pointer; display: block; line-height: 1; max-width: 100%; min-width: 44px; outline: 0; position: relative; text-align: center; text-decoration: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; vertical-align: middle; white-space: nowrap; z-index: 11; margin: 0; padding: 15px; width: 100%; text-align: left; }
-.c-dropdown__content button:not([class]) { background-color: #fff; border-radius: 4px; color: rgba(0, 0, 0, .75); transition: background .3s ease-in-out, color .3s ease-in-out; }
-.c-dropdown__content button:not([class])::after { bottom: 0; content: ''; left: 0; opacity: 0; position: absolute; right: 0; top: 0; z-index: 5; }
-.c-dropdown__content button:not([class]):hover::after { opacity: 1; }
-.c-dropdown__content button:not([class])[disabled] { pointer-events: none; }
-.c-dropdown__content button:not([class])::after { border-radius: 4px; box-shadow: 4px; transition: opacity .3s ease-in-out; }
-.c-dropdown__content button:not([class]):hover, .c-dropdown__content button:not([class]):focus { background-color: #eeeee7; }
-.c-dropdown__content button:not([class])[disabled] { opacity: .35; }
-.c-dropdown__content::before { right: 20px !important; }
-.c-dropdown__content::after { display: none; }
-.c-dropdown__content button { padding: 10px; width: 100%; }
-.c-dropdown__content i { color: #444; top: 3px !important; }
-.c-dropdown__content ul:not(:last-child) { border-bottom: 1px solid #ccccc2; margin-bottom: 3px; padding-bottom: 3px; }
-.c-dropdown__content .o-headline { cursor: default; font-size: 14px; font-weight: bold; text-transform: uppercase; }
-.c-dropdown__content .o-headline:hover, .c-dropdown__content .o-headline:focus { background-color: transparent; }
-.c-dropdown__content .o-external { color: #ccccc2; }
-.c-dropdown--icon { cursor: pointer; height: auto; }
-.c-dropdown--icon__content { position: absolute; right: 1rem; }
-.c-dropcard--right {
-  display: inline-block;
-  margin: 0;
-  max-width: 100%;
-  min-width: 289px;
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  /* @mixin fade-out; */
-  list-style: none;
-  opacity: 0;
-  padding: .5em 1em;
-  transition: visibility 0s .1s, opacity 1s linear;
-  visibility: hidden;
-  overflow: visible;
-  background-color: #fff;
-  box-shadow: #a3a396 0 0 7px;
-  color: rgba(0, 0, 0, .75);
-  border-radius: 4px;
-  margin-left: 9px;
-  left: 99%;
-  position: absolute;
-  top: 11px;
-  z-index: 10;
-}
-.c-dropcard--right.is-active {/* @mixin fade-in; */ opacity: 1; transition: opacity .1s linear; visibility: visible; }
-.c-dropcard--right button { -webkit-appearance: none; -moz-appearance: none; appearance: none; background-color: initial; border-width: 0; cursor: pointer; display: block; line-height: 1; max-width: 100%; min-width: 44px; outline: 0; position: relative; text-align: center; text-decoration: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; vertical-align: middle; white-space: nowrap; z-index: 11; margin: 0; padding: 15px; width: 100%; text-align: left; }
-.c-dropcard--right::before, .c-dropcard--right::after { content: ''; position: absolute; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
-.c-dropcard--right::before { height: 15px; width: 15px; }
-.c-dropcard--right::after { height: 11px; width: 11px; z-index: -1; }
-.c-dropcard--right button:not([class]) { background-color: #fff; border-radius: 4px; color: rgba(0, 0, 0, .75); transition: background .3s ease-in-out, color .3s ease-in-out; }
-.c-dropcard--right button:not([class])::after { bottom: 0; content: ''; left: 0; opacity: 0; position: absolute; right: 0; top: 0; z-index: 5; }
-.c-dropcard--right button:not([class]):hover::after { opacity: 1; }
-.c-dropcard--right button:not([class])[disabled] { pointer-events: none; }
-.c-dropcard--right button:not([class])::after { border-radius: 4px; box-shadow: 4px; transition: opacity .3s ease-in-out; }
-.c-dropcard--right button:not([class]):hover, .c-dropcard--right button:not([class]):focus { background-color: #eeeee7; }
-.c-dropcard--right button:not([class])[disabled] { opacity: .35; }
-.c-dropcard--right::before { background-color: #fff; }
-.c-dropcard--right::after { background-color: transparent; box-shadow: 0 0 3px 1px rgba(0, 0, 0, .4); }
-.c-dropcard--right::before, .c-dropcard--right::after { bottom: auto; left: -6px; right: auto; top: 6px; }
-.c-dropcard--right::before { margin-top: -2%; }
-.c-dropcard--right::before { margin-top: -2px !important; }
-.c-dropcard--right div { position: relative; }
-.c-dropcard--right small { color: #047; }
 /* Patterns */
 /*---
  section: Patterns
@@ -2260,7 +1943,13 @@ hr {
 /* Icon */
 .c-button i, .c-button--success i, .c-button--secondary i, .c-button--alert i, .c-button--info i, .c-button--anchor i, .c-button--link i, .t-devcards button:not([class]) i, .t-devcards input[type="button"]:not([class]) i { color: #fff; }
 /* Reset */
-.t-default button { -webkit-appearance: button; -moz-appearance: button; appearance: button;/* iOS 8+ */ overflow: visible;/* Internet Explorer 12- */ }
+button {
+  background: inherit;
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button; /* iOS 8+ */
+  overflow: visible; /* Internet Explorer 12- */
+}
 /* Classes */
 /* Patterns First */
 .c-button--wide {
@@ -2470,7 +2159,7 @@ Markup:
   z-index: 500;
 }
 .c-modal__close { background: rgba(0, 0, 0, .6); bottom: 0; left: 0; position: fixed; right: 0; top: 0; z-index: 400; }
-.c-modal__card { margin: 0 0 1em; overflow: hidden; position: relative; z-index: 1; background-color: #eeeee7; box-shadow: 0 0 10px rgba(0, 0, 0, .4); color: #444; padding: .5rem 1rem; min-height: 120px; min-width: 120px; z-index: 450; }
+.c-modal__card { margin: 0 0 1em; overflow: hidden; position: relative; z-index: 1; background-color: #eeeee7; box-shadow: 0 0 10px rgba(0, 0, 0, .4); color: #444; padding: .5rem 1rem; min-height: 120px; min-width: 120px; padding: 0; z-index: 450; }
 .c-modal__card h1, .c-modal__card h2, .c-modal__card h3, .c-modal__card h4, .c-modal__card h5, .c-modal__card h6 { margin-top: 10px; }
 .c-modal__title {/* @extend %row-break; */ background-color: #047; color: #fff; font-size: 1.3em; height: 55px; margin-bottom: .5em; margin-top: -.5em; padding: .5em .5em; position: relative; }
 .c-modal__title .o-close { cursor: pointer; position: absolute; right: 4px; top: 9px; }
@@ -2478,7 +2167,7 @@ Markup:
 .c-modal__content { padding: .5em 1em; }
 .c-modal--help { z-index: 500; }
 .c-modal--help__close { background: rgba(0, 0, 0, .6); bottom: 0; left: 0; position: fixed; right: 0; top: 0; z-index: 400; }
-.c-modal--help__card { margin: 0 0 1em; overflow: hidden; position: relative; z-index: 1; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, .4); color: #444; padding: .5rem 1rem; min-height: 120px; min-width: 120px; z-index: 450; }
+.c-modal--help__card { margin: 0 0 1em; overflow: hidden; position: relative; z-index: 1; background-color: #fff; box-shadow: 0 0 10px rgba(0, 0, 0, .4); color: #444; padding: .5rem 1rem; min-height: 120px; min-width: 120px; padding: 0; z-index: 450; }
 .c-modal--help__card h1, .c-modal--help__card h2, .c-modal--help__card h3, .c-modal--help__card h4, .c-modal--help__card h5, .c-modal--help__card h6 { margin-top: 10px; }
 .c-modal--help__title {/* @extend %row-break; */ background-color: #1c7dab; color: #fff; font-size: 1.3em; height: 55px; margin-bottom: .5em; margin-top: -.5em; padding: .5em .5em; position: relative; }
 .c-modal--help__title .o-close { cursor: pointer; position: absolute; right: 4px; top: 9px; }
@@ -2877,36 +2566,303 @@ Markup:
 [data-tooltip]::before { background: #fff; border-radius: 2px; box-shadow: 0 5px 10px rgba(0, 0, 0, .3); color: #000; content: attr(data-tooltip); font-size: .83333rem; line-height: 1.3; margin: 0; min-width: 300px; padding: .5rem; }
 /* Arrow */
 [data-tooltip]::after { background: transparent; border: 10px solid transparent; border-top-color: #fff; content: ''; margin-bottom: -20px; position: absolute; z-index: 51; }
+/* Form */
+/*---
+ section: Form
+ title: Inputs
+ ---
+
+ Supported input types are, `text`, `password`, `date`, `datetime`, `datetime-local`, `month`, `week`, `email`, `number`, `search`, `tel`, `time`, `url`, `color`.
+
+ ```example:html
+  <label id='l1' for="input-1-1">Label</label>
+  <input type='text' id="input-1-1" aria-labelledby="l1">
+ ```
+ ```example:html
+  <label id='l2' for="input-1-2">Focus</label>
+  <input type='text' id="input-1-2" class="focus" aria-labelledby="l2">
+ ```
+ ```example:html
+  <div class='c-input-group'>
+   <label id='l3' for="input-2-1">Warning</label>
+   <input type='email' id="input-2-1" value="notauser at clientcom" aria-labelledby="l3" required>
+   <div class='c-validation--warning'>Warning validated message</div>
+  </div>
+ ```
+ ```example:html
+  <div class='c-input-group'>
+   <label id='l4' for="input-2-2">Error</label>
+   <input type='text' id="input-2-2" class="error" aria-labelledby="l4">
+   <div class='c-validation--error' placeholder="Placeholder text">Error validated message</div>
+  </div>
+ ```
+
+ ### Textarea
+ ```example:html
+  <label for='textarea-1-1'>Textarea</label>
+  <textarea id='textarea-1-1'></textarea>
+ ```
+
+ ### Select
+ ```example:html
+  <select>
+   <option>Option 1</option>
+   <option>Option 2</option>
+   <option>Option 3</option>
+  </select>
+ ```
+
+ ### Checkboxes
+
+ This checkbox is rendered based on the Material icon [check box](https://design.google.com/icons/#ic_check_box) and [check box outline blank](https://design.google.com/icons/#ic_check_box_outline_blank).
+
+ ```example:html
+  <input id='c1' type="checkbox" class="c-checkbox" aria-labelledby="c1l"></input>
+  <label for='c1' id="c1l">Checkbox</label>
+
+  <input id='c2' type="checkbox" class="c-checkbox" aria-labelledby="c2l" checked></input>
+  <label for='c2' id="c2l">Checked Checkbox</label>
+ ```
+
+ ### Radio
+
+ This radio control is rendered based on the Material icon [radio button checked](https://design.google.com/icons/#ic_radio_button_checked) and the [radio button unchecked](https://design.google.com/icons/#ic_radio_button_unchecked).
+
+ ```example:html
+  <input id='r1' type="radio" name="radiogroup" class="c-radio" aria-labelledby="r1l"></input>
+  <label for='r1' id="r1l">Radio</label>
+
+  <input id='r2' type="radio" name="radiogroup" class="c-radio" aria-labelledby="r2l" checked></input>
+  <label for='r2' id="r2l">Selected Radio</label>
+ ```
+
+ */
+.t-default input:not([type]), .t-default [type='text'], .t-default [type='password'], .t-default [type='date'], .t-default [type='datetime'], .t-default [type='datetime-local'], .t-default [type='month'], .t-default [type='week'], .t-default [type='email'], .t-default [type='number'], .t-default [type='search'], .t-default [type='tel'], .t-default [type='time'], .t-default [type='url'], .t-default [type='color'], .t-default textarea {
+  background-color: #fff;
+  border: 1px solid #a3a396;
+  border-radius: 4px;
+  color: #000;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 16px 0;
+  min-height: 38px; /* IE11 Input Height */
+  padding: 2px 4px;
+  width: 100%;
+}
+.t-default input { border-radius: 0; }
+/* iOS 8+ */
+.t-default input[type='button'], .t-default input[type='reset'], .t-default input[type='submit'] { -webkit-appearance: button; -moz-appearance: button; appearance: button;/* iOS 8+ */ }
+.t-default input[type='number'] { width: auto;/* Firefox 36+ */ }
+.t-default input[type='search'] { -webkit-appearance: textfield; -moz-appearance: textfield; appearance: textfield; }
+/* Chrome 45+, Safari 9+ */
+.t-default input[type='search']::-webkit-search-cancel-button, .t-default input[type='search']::-webkit-search-decoration { -webkit-appearance: none; appearance: none;/* Chrome 45+, Safari 9+ */ }
+.t-default select::-ms-expand {/* Edge 12+, Internet Explorer 11- */ }
+.t-default select::-ms-value { color: currentColor;/* Edge 12+, Internet Explorer 11- */ }
+/* specify the minimum height of form elements */
+.t-default button, .t-default [type='button'], .t-default [type='date'], .t-default [type='datetime'], .t-default [type='datetime-local'], .t-default [type='email'], .t-default [type='month'], .t-default [type='number'], .t-default [type='password'], .t-default [type='reset'], .t-default [type='search'], .t-default [type='submit'], .t-default [type='tel'], .t-default [type='text'], .t-default [type='time'], .t-default [type='url'], .t-default [type='week'], .t-default select, .t-default textarea { min-height: 1.5em; }
+.t-default input:not([type]), .t-default [type='text'], .t-default [type='password'], .t-default [type='date'], .t-default [type='datetime'], .t-default [type='datetime-local'], .t-default [type='month'], .t-default [type='week'], .t-default [type='email'], .t-default [type='number'], .t-default [type='search'], .t-default [type='tel'], .t-default [type='time'], .t-default [type='url'], .t-default [type='color'] { font-size: 18px; }
+@media varonly screen and (min-width: 48em) {
+ .t-default input:not([type]), .t-default [type='text'], .t-default [type='password'], .t-default [type='date'], .t-default [type='datetime'], .t-default [type='datetime-local'], .t-default [type='month'], .t-default [type='week'], .t-default [type='email'], .t-default [type='number'], .t-default [type='search'], .t-default [type='tel'], .t-default [type='time'], .t-default [type='url'], .t-default [type='color'] { font-size: 16px; } }
+.t-default textarea { font-size: 16px; height: auto; outline: none; overflow: auto; resize: vertical; }
+@media varonly screen and (min-width: 48em) {
+ .t-default textarea { font-size: 14px; } }
+.t-default input:not([type='range']) { transition-duration: .1s; }
+.t-default input:not([type='range']):focus, .t-default input:not([type='range']).focus { border: 1px solid #00a0d0; box-shadow: 0 0 6px #00a0d0; outline: 0; }
+.t-default input:not([type='range']):focus:invalid, .t-default input:not([type='range']):focus.invalid { border: 1px solid #f07700; box-shadow: 0 0 6px #f07700; outline: 0; }
+.t-default input:not([type='range']):invalid, .t-default input:not([type='range']).invalid { border: #f07700 1px solid; }
+.t-default input:not([type='range']):focus.error { border: 1px solid #d03000; box-shadow: 0 0 6px #d03000; outline: 0; }
+.t-default input:not([type='range']).error { border: #d03000 1px solid; }
+.t-default input:not([type='range']) + i { background-color: #fff; color: #77776d; }
+.t-default label { color: #000; cursor: pointer; display: block; font-size: 14px; font-weight: 600; line-height: 1.5; margin-bottom: 4px; }
+/* specify the progress cursor of updating elements */
+.t-default [aria-busy='true'] { cursor: progress; }
+/* specify the pointer cursor of trigger elements */
+.t-default [aria-controls] { cursor: pointer; }
+/* specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+.t-default [aria-disabled] { cursor: default; }
+/** @define c-input-group */
+.c-input-group {
+  position: relative;
+
+}
+.c-input-group .u-right { cursor: pointer; padding: 6px 0; position: absolute; right: 2px; text-align: center; top: 1px; transition-duration: .1s; width: 40px; }
+.c-checkbox {
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  width: 0;
+}
+.c-checkbox + label { cursor: pointer; font-weight: normal; line-height: 1em; margin-bottom: 1em; position: relative; text-align: left; vertical-align: top; }
+.c-checkbox + label::before, .c-checkbox + label::after { direction: ltr; display: inline-block; font-family: 'Material Icons'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; font-size: 120%; font-style: normal; -webkit-font-variant-ligatures: common-ligatures; font-variant-ligatures: common-ligatures; font-weight: normal; letter-spacing: normal; line-height: 1; margin-right: .25em; text-transform: none; white-space: nowrap; word-wrap: normal; }
+.c-checkbox + label::before { border-radius: 4px; color: #77776d; content: 'check_box_outline_blank'; }
+.c-checkbox + label::after { color: #09b081; content: 'check_box'; left: 0; position: absolute; }
+.c-checkbox:focus + label, .c-checkbox + label:active, .c-checkbox:checked + label:active { box-shadow: 0 0 6px #00a0d0; }
+.c-checkbox:indeterminate + label::after { color: #77776d; content: 'check_box_indeterminate'; }
+.c-radio {
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  width: 0;
+}
+.c-radio + label { font-weight: normal; position: relative; }
+.c-radio + label::before { background-color: #fff; border: 2px solid #77776d; border-radius: 50px; content: ''; display: inline-block; float: left; font-size: 14px; margin-bottom: 0; margin-right: 8px; margin-top: 3px; padding: 6px; position: relative; }
+.c-radio + label::after { background-color: #fff; border-radius: 50px; content: ''; height: 6px; left: 5px; opacity: 0; position: absolute; top: 8px; transition-duration: .1s; width: 6px; z-index: 5px; }
+.c-radio:focus + label, .c-radio + label:active, .c-radio:checked + label:active { box-shadow: 0 0 6px #00a0d0; }
+.c-radio:checked + label::before { background-color: #09b081; border: 2px solid #09b081; color: #99a1a7; }
+.c-radio:checked + label::after { opacity: 1; }
+.c-radio--alt {
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  width: 0;
+}
+.c-radio--alt + label { cursor: pointer; font-weight: normal; line-height: 1em; margin-bottom: 1em; position: relative; text-align: left; vertical-align: top; }
+.c-radio--alt + label::before, .c-radio--alt + label::after { direction: ltr; display: inline-block; font-family: 'Material Icons'; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga'; font-size: 120%; font-style: normal; -webkit-font-variant-ligatures: common-ligatures; font-variant-ligatures: common-ligatures; font-weight: normal; letter-spacing: normal; line-height: 1; margin-right: .25em; text-transform: none; white-space: nowrap; word-wrap: normal; }
+.c-radio--alt + label::before { border-radius: 4px; color: #77776d; content: 'radio_button_unchecked'; }
+.c-radio--alt + label::after { color: #00a0d0; content: 'radio_button_checked'; left: 0; position: absolute; }
+.c-radio--alt:focus + label, .c-radio--alt + label:active, .c-radio--alt:checked + label:active { box-shadow: 0 0 6px #00a0d0; }
+.c-radio--alt + label { display: inline-block; text-align: center !important; }
+.c-radio--alt + label::before, .c-radio--alt + label::after { font-size: 24px !important; margin: 0 .125em .25em !important; }
+.c-radio--alt + label::before { display: block; }
+.c-radio--alt + label::after { left: auto; top: 0; }
+.c-validation, .c-validation--warning, .c-validation--error {
+  border-radius: 0 0 4px 4px;
+  font-size: 12px;
+  line-height: 1.3;
+  margin-bottom: 16px;
+  margin-top: -18px;
+  padding: 5px 7px 3px;
+  position: relative;
+  transition-duration: .1s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: -1;
+}
+.c-validation--warning { background-color: #feb; color: #000; }
+.c-validation--error { background-color: #d03000; color: #fff; }
+hr {
+  border-top: .5px solid #ccccc2;
+  margin: .5em 0;
+}
+/*---
+ section: Form
+ title: Dropdowns
+ ---
+
+ ```example:html
+ <div class="c-dropdown">
+   <div class="c-dropdown__toggle">Option 1</div>
+   <ul class="c-dropdown__content is-active" id="test-dropdown" tabindex="-1" aria-hidden="true">
+     <li><button>Option 1</button></li>
+     <li><button>Option 2</button></li>
+     <li><button>Option 3</button></li>
+   </ul>
+ </div>
+ ```
+
+ */
+/* Callout */
+.c-dropdown, .c-dropdown--icon {
+  height: 35px;
+  position: relative;
+  z-index: 20;
+}
+.t-default select {
+  background-color: #fff;
+  border: 1px solid #a3a396;
+  border-radius: 4px;
+  color: rgba(0, 0, 0, .75);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px !important;
+  font-weight: normal !important;
+  margin: 0;
+  padding: 2px 5px;
+  position: relative;
+  text-align: left;
+}
+.t-default select { height: 38px; width: 100%; }
+.c-dropdown > button > i { transition: opacity .1s linear; }
+.c-dropdown__toggle { background-color: #fff; border: 1px solid #a3a396; border-radius: 4px; color: rgba(0, 0, 0, .75); cursor: pointer; display: inline-block; font-size: 18px !important; font-weight: normal !important; margin-top: 0 !important; min-width: 100px; padding: 0 5px; position: relative; text-align: left; }
+@media varonly screen and (min-width: 48em) {
+ .c-dropdown__toggle { font-size: 16px !important; min-width: 144px; } }
+.c-dropdown__toggle::before { $perpendicular-borders: 5px solid transparent;
+ @if 'bottom' == right { border-left: 7.5px solid #000; }
+ @if 'bottom' == top { border-bottom: 7.5px solid #000; }
+ @if 'bottom' == bottom { border-top: 7.5px solid #000; }
+ @if 'bottom' == left { border-right: 7.5px solid #000; }
+ @if 'bottom' == top or 'bottom' == bottom { border-left: $perpendicular-borders; border-right: $perpendicular-borders; }
+ @else if 'bottom' == right or 'bottom' == left { border-bottom: $perpendicular-borders; border-top: $perpendicular-borders; } content: ''; height: 0; width: 0; z-index: 2; position: absolute; right: 13px; top: 13px; }
+.c-dropdown__content { display: inline-block; margin: 0; max-width: 100%; min-width: 100px; overflow: hidden; position: relative; z-index: 1;/* @mixin fade-out; */ list-style: none; opacity: 0; padding: 3px; transition: visibility 0s .1s, opacity 1s linear; visibility: hidden; background-color: #fff; box-shadow: #a3a396 0 0 7px; color: rgba(0, 0, 0, .75); border-radius: 4px; position: absolute; right: 0; top: 2.25em; }
+.c-dropdown__content.is-active {/* @mixin fade-in; */ opacity: 1; transition: opacity .1s linear; visibility: visible; }
+.c-dropdown__content button { -webkit-appearance: none; -moz-appearance: none; appearance: none; background-color: initial; border-width: 0; cursor: pointer; display: block; line-height: 1; max-width: 100%; min-width: 44px; outline: 0; position: relative; text-align: center; text-decoration: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; vertical-align: middle; white-space: nowrap; z-index: 11; margin: 0; padding: 15px; width: 100%; text-align: left; }
+.c-dropdown__content button:not([class]) { background-color: #fff; border-radius: 4px; color: rgba(0, 0, 0, .75); transition: background .3s ease-in-out, color .3s ease-in-out; }
+.c-dropdown__content button:not([class])::after { bottom: 0; content: ''; left: 0; opacity: 0; position: absolute; right: 0; top: 0; z-index: 5; }
+.c-dropdown__content button:not([class]):hover::after { opacity: 1; }
+.c-dropdown__content button:not([class])[disabled] { pointer-events: none; }
+.c-dropdown__content button:not([class])::after { border-radius: 4px; box-shadow: 4px; transition: opacity .3s ease-in-out; }
+.c-dropdown__content button:not([class]):hover, .c-dropdown__content button:not([class]):focus { background-color: #eeeee7; }
+.c-dropdown__content button:not([class])[disabled] { opacity: .35; }
+.c-dropdown__content::before { right: 20px !important; }
+.c-dropdown__content::after { display: none; }
+.c-dropdown__content button { padding: 10px; width: 100%; }
+.c-dropdown__content i { color: #444; top: 3px !important; }
+.c-dropdown__content ul:not(:last-child) { border-bottom: 1px solid #ccccc2; margin-bottom: 3px; padding-bottom: 3px; }
+.c-dropdown__content .o-headline { cursor: default; font-size: 14px; font-weight: bold; text-transform: uppercase; }
+.c-dropdown__content .o-headline:hover, .c-dropdown__content .o-headline:focus { background-color: transparent; }
+.c-dropdown__content .o-external { color: #ccccc2; }
+.c-dropdown--icon { cursor: pointer; height: auto; }
+.c-dropdown--icon__content { position: absolute; right: 1rem; }
+.c-dropcard--right {
+  display: inline-block;
+  margin: 0;
+  max-width: 100%;
+  min-width: 289px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  /* @mixin fade-out; */
+  list-style: none;
+  opacity: 0;
+  padding: .5em 1em;
+  transition: visibility 0s .1s, opacity 1s linear;
+  visibility: hidden;
+  overflow: visible;
+  background-color: #fff;
+  box-shadow: #a3a396 0 0 7px;
+  color: rgba(0, 0, 0, .75);
+  border-radius: 4px;
+  margin-left: 9px;
+  left: 99%;
+  position: absolute;
+  top: 11px;
+  z-index: 10;
+}
+.c-dropcard--right.is-active {/* @mixin fade-in; */ opacity: 1; transition: opacity .1s linear; visibility: visible; }
+.c-dropcard--right button { -webkit-appearance: none; -moz-appearance: none; appearance: none; background-color: initial; border-width: 0; cursor: pointer; display: block; line-height: 1; max-width: 100%; min-width: 44px; outline: 0; position: relative; text-align: center; text-decoration: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; vertical-align: middle; white-space: nowrap; z-index: 11; margin: 0; padding: 15px; width: 100%; text-align: left; }
+.c-dropcard--right::before, .c-dropcard--right::after { content: ''; position: absolute; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.c-dropcard--right::before { height: 15px; width: 15px; }
+.c-dropcard--right::after { height: 11px; width: 11px; z-index: -1; }
+.c-dropcard--right button:not([class]) { background-color: #fff; border-radius: 4px; color: rgba(0, 0, 0, .75); transition: background .3s ease-in-out, color .3s ease-in-out; }
+.c-dropcard--right button:not([class])::after { bottom: 0; content: ''; left: 0; opacity: 0; position: absolute; right: 0; top: 0; z-index: 5; }
+.c-dropcard--right button:not([class]):hover::after { opacity: 1; }
+.c-dropcard--right button:not([class])[disabled] { pointer-events: none; }
+.c-dropcard--right button:not([class])::after { border-radius: 4px; box-shadow: 4px; transition: opacity .3s ease-in-out; }
+.c-dropcard--right button:not([class]):hover, .c-dropcard--right button:not([class]):focus { background-color: #eeeee7; }
+.c-dropcard--right button:not([class])[disabled] { opacity: .35; }
+.c-dropcard--right::before { background-color: #fff; }
+.c-dropcard--right::after { background-color: transparent; box-shadow: 0 0 3px 1px rgba(0, 0, 0, .4); }
+.c-dropcard--right::before, .c-dropcard--right::after { bottom: auto; left: -6px; right: auto; top: 6px; }
+.c-dropcard--right::before { margin-top: -2%; }
+.c-dropcard--right::before { margin-top: -2px !important; }
+.c-dropcard--right div { position: relative; }
+.c-dropcard--right small { color: #047; }
 /* Custom */
 /* stylelint-disable */
-.t-docs body { max-width: 1240px; margin: 0 auto; }
-.t-docs nav { max-width: 18em; position: fixed; }
-.t-docs .c-bar--top { background-color: #33332a; }
-.t-docs .o-brand { background-image: url('dist/img/navis-ui-logo.svg'); }
-.t-docs .section { border-bottom: 1px solid #ddddd4; padding-bottom: 2em; }
-/*
-  .c-menu {
-    @mixin menu var(--bar-bg), var(--orange-500);
-
-    > ul > li:hover > a + ul {
-      position: absolute;
-      text-align: left;
-    }
-  }
-  */
-.t-docs .example { border: #ccccc2 1px solid; padding: 1em; position: relative; }
-.t-docs .example > * { position: relative !important; }
-.t-docs iframe { width: 100% !important; }
-.t-docs pre, .t-docs code { background-color: rgba(0,0,0,.04); }
-.t-docs pre code { background-color: transparent; }
-.t-docs .token.punctuation { color: #33332a; }
-.t-docs .token.tag { color: #d03000; }
-.t-docs .token.attr-name { color: #f07700; }
-.t-docs .token.attr-value { color: #00996e; }
-.t-docs .token.function { color: #00a0d0; }
-.t-docs .token.string { color: #00996e; }
-.t-docs .token.comment { color: #77776d; }
-.t-docs .u-chip { font-family: monospace; height: 50px; padding: .5em 2em; }
+.t-docs .u-chip { font-family: monospace; min-height: 50px; padding: 1.5em; }
 .t-docs .u-chip-large { height: 100px; font-size: 2rem; font-family: inherit; padding: 1em; margin-top: .5em; }
 .t-docs .box-row { margin-bottom: 1rem; }
 .t-docs .box, .t-docs .box-first, .t-docs .box--large, .t-docs .box-nested, .t-docs .box-row { background-color: #00a0d0; color: #fff; min-height: 2rem; overflow: hidden; padding: .75rem; position: relative; text-align: center; font-size: .8rem; }
@@ -2977,11 +2933,7 @@ Markup:
 .u-grey-700 { background: #77776d !important; color: #fff; }
 .u-grey-800 { background: #33332a !important; color: #fff; }
 .u-black { background: #000 !important; color: #fff; }
-.u-white {
-  border: 1px solid #000;
-  background: #fff !important;
-  color: #000;
-}
+.u-white { background: #fff !important; color: #000; }
 .u-orange-500 { background: #f92 !important; color: #fff; }
 .u-orange-600 { background: #f07700 !important; color: #fff; }
 .u-gold-50 { background: #feb !important; color: #000; }
