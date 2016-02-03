@@ -54,22 +54,17 @@
 	<ul>
 		
 				<li>
-					<a href="#size"><span>Size</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#colour-palette"><span>Colour Palette</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#colour-theme"><span>Colour Theme</span></a>
+					<a href="#colour"><span>Colour</span></a>
 					
 				</li>
 				
 				<li>
 					<a href="#layout"><span>Layout</span></a>
+					
+				</li>
+				
+				<li>
+					<a href="#size"><span>Size</span></a>
 					
 				</li>
 				
@@ -940,31 +935,11 @@
 			<div>
 				
 				
-		<section id="size">
-			<h3>Size</h3>
+		<section id="colour">
+			<h3>Colour</h3>
 			<div>
-				<p>This is a list of global variables, and their default values.</p>
-<h6 id="elements-size-css">elements/size.css</h6>
-<pre><code class="lang-css">  --global-gutter-width: 1rem;
-  --global-outter-margin: 1rem;
-  --global-small-media-min: 48;
-  --global-medium-media-min: 64;
-  --global-large-media-min: 75;
-
-  --global-duration: .1s;
-  --global-margin: 8px;
-  --global-rounded: 4px;
-  --global-font-size: 16px;
-</code></pre>
-
-				
-			</div>
-		</section>
-		
-		<section id="colour-palette">
-			<h3>Colour Palette</h3>
-			<div>
-				<p>This collection of colors it intended to serve the interface of all our product applications and all the components you can see in this document.</p>
+				<h4 id="colour-palette">Colour Palette</h4>
+<p> This collection of colors it intended to serve the interface of all our product applications and all the components you can see in this document.</p>
 <pre><code class="lang-example"> &lt;h5&gt;Brand Primary&lt;/h5&gt;
  &lt;div class=&quot;u-chip u-blue-50&quot; contenteditable=&quot;true&quot;&gt;--blue-50&lt;/div&gt;
  &lt;div class=&quot;u-chip u-blue-100&quot; contenteditable=&quot;true&quot;&gt;--blue-100&lt;/div&gt;
@@ -1020,15 +995,10 @@
  &lt;div class=&quot;u-chip u-magenta-500&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--magenta-500&lt;/div&gt;
  &lt;div class=&quot;u-chip u-purple-a100&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt;--purple-a100&lt;/div&gt;
 </code></pre>
+ <h4>Colour Theme</h4>
 
-				
-			</div>
-		</section>
-		
-		<section id="colour-theme">
-			<h3>Colour Theme</h3>
-			<div>
-				<p>These colors are intended for very specific parts of the user interface.</p>
+ <p>These colors are intended for very specific parts of the user interface.</p>
+
 <p> <h5>Typography</h5></p>
 <pre><code class="lang-example">  &lt;div class=&quot;u-chip u-color--body-copy&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt; --body-copy &lt;/div&gt;
 </code></pre>
@@ -1075,6 +1045,38 @@
  </div>
 
 <p> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes#Holy_Grail_Layout_example">Mozilla - Holy Grail Layout</a></p>
+
+				
+			</div>
+		</section>
+		
+		<section id="size">
+			<h3>Size</h3>
+			<div>
+				<p>This is a list of global variables, and their default values.</p>
+<h6 id="elements-size-css">elements/size.css</h6>
+<pre><code class="lang-css">  --global-gutter-width: 1rem;
+  --global-outter-margin: 1rem;
+  --global-small-media-min: 48;
+  --global-medium-media-min: 64;
+  --global-large-media-min: 75;
+
+  --global-duration: .1s;
+  --global-margin: 8px;
+  --global-rounded: 4px;
+  --global-font-size: 16px;
+</code></pre>
+<h4 id="container-selectors">Container Selectors</h4>
+<p> Some of our metric visualizations require some adaptive controls where we would normally utilize container queries. In this case we are not able to utilize the prollyfill for container queries, so instead we are scoping with column classes with what I call &quot;container selectors&quot;.</p>
+<pre><code class="lang-css"> .o-example {
+
+   &amp;:--container-sm { width: 100px; }
+
+   &amp;:--container-md { width: 200px; }
+
+   &amp;:--container-lg { width: 300px; }
+ }
+</code></pre>
 
 				
 			</div>
@@ -1699,7 +1701,7 @@
 			</div>
 		</section>
 		
-	<footer>Last modified Tuesday, 2 February 2016 16:39
+	<footer>Last modified Wednesday, 3 February 2016 13:59
 </main>
 <script src="prism.js"></script>
 <script src="examples.js"></script>
