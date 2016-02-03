@@ -6,10 +6,19 @@
 
 <header>
 	<nav>
-		<img src="navis-ui-logo.svg" alt="NAVIS ui Styleguide">
+		<img src="navis-ui-logo.png" alt="NAVIS ui Styleguide">
 		
 	<ul>
 		
+				<li>
+					<a href="#navis-ui"><span>NAVIS ui</span></a>
+					
+	<ul>
+		
+	</ul>
+	
+				</li>
+				
 				<li>
 					<a href="#utilities"><span>Utilities</span></a>
 					
@@ -167,6 +176,34 @@
 
 <main>
 	
+		<section id="navis-ui">
+			<h2>NAVIS ui</h2>
+			<div>
+				
+				
+		<section>
+			
+			<div>
+				<p>In your command line application, you will want to install the necessary tools
+ to start working on the UI framework. Make sure your other projects are at the
+ same level for synced releases.</p>
+<p> Make sure to add these things to your layout file. Optionaly for legacy browser support of HTML5 and layout, you can import <a href="https://modernizr.com/">modernizr</a>/<a href="http://cdnjs.com/libraries/modernizr">cdn</a> into your head section.</p>
+<pre><code class="lang-html"> &lt;html class=&quot;s-app t-default&quot;&gt; &lt;!-- App scope and default theme classes --&gt;
+ &lt;head&gt;
+   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt; &lt;!-- This enables smaller devices to view this site responsively --&gt;
+   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700&quot;&gt; &lt;!-- This is the default webfont --&gt;
+   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;&gt; &lt;!-- This is the default icon webfont --&gt;
+   &lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/app.css&quot;&gt; &lt;!-- This is the main stylesheet --&gt;
+ &lt;/head&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+			</div>
+		</section>
+		
 		<section id="utilities">
 			<h2>Utilities</h2>
 			<div>
@@ -176,6 +213,46 @@
 			<h3>Grid</h3>
 			<div>
 				<p>Grids are the bread and butter of web design, this one is based on flexbox. Needless to say you will find this grid system a joy to use. <a href="http://jonyablonski.com/2015/flexbox-myth-busting/">Flexbox Mythbusting</a></p>
+<h4 id="12-columns">12 Columns</h4>
+<pre><code class="lang-example"> &lt;div class=&quot;u-row&quot;&gt;
+   &lt;div class=&quot;u-column--1&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;Col&lt;/div&gt;&lt;/div&gt;
+   &lt;div class=&quot;u-column--1&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;Col&lt;/div&gt;&lt;/div&gt;
+   &lt;div class=&quot;u-column--1&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;Col&lt;/div&gt;&lt;/div&gt;
+   &lt;div class=&quot;u-column--1&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;Col&lt;/div&gt;&lt;/div&gt;
+   &lt;div class=&quot;u-column--1&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;Col&lt;/div&gt;&lt;/div&gt;
+   &lt;div class=&quot;u-column--1&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;Col&lt;/div&gt;&lt;/div&gt;
+   &lt;div class=&quot;u-column--1&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;Col&lt;/div&gt;&lt;/div&gt;
+   &lt;div class=&quot;u-column--1&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;Col&lt;/div&gt;&lt;/div&gt;
+   &lt;div class=&quot;u-column--1&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;Col&lt;/div&gt;&lt;/div&gt;
+   &lt;div class=&quot;u-column--1&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;Col&lt;/div&gt;&lt;/div&gt;
+   &lt;div class=&quot;u-column--1&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;Col&lt;/div&gt;&lt;/div&gt;
+   &lt;div class=&quot;u-column--1&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;Col&lt;/div&gt;&lt;/div&gt;
+ &lt;/div&gt;
+</code></pre>
+<pre><code class="lang-html"> &lt;div class=&quot;u-row&quot;&gt;
+   &lt;div class=&quot;u-column--1&quot;&gt;...&lt;/div&gt;
+   &lt;div class=&quot;u-column--1&quot;&gt;...&lt;/div&gt;
+   &lt;div class=&quot;u-column--1&quot;&gt;...&lt;/div&gt;
+   ...
+ &lt;/div&gt;
+</code></pre>
+<h3 id="autopilot">Autopilot</h3>
+<p> If you don&#39;t have time to think about how wide things should be, don&#39;t specify, just say <code>.u-column</code>.</p>
+<pre><code class="lang-example"> &lt;div class=&quot;u-row&quot;&gt;
+ &lt;div class=&quot;u-column&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;auto&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=&quot;u-column&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;auto&lt;/div&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class=&quot;u-row&quot;&gt;
+ &lt;div class=&quot;u-column&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;auto&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=&quot;u-column&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;auto&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=&quot;u-column&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;auto&lt;/div&gt;&lt;/div&gt;
+ &lt;/div&gt;
+</code></pre>
+<pre><code class="lang-html"> &lt;div class=&quot;u-row&quot;&gt;
+ &lt;div class=&quot;u-column&quot;&gt;...&lt;/div&gt;
+ &lt;div class=&quot;u-column&quot;&gt;...&lt;/div&gt;
+ &lt;/div&gt;
+</code></pre>
 <h4 id="responsive">Responsive</h4>
 <p> Media appended classes let you create simple or complex grid systems.</p>
 <pre><code class="lang-example"> &lt;div class=&quot;u-row&quot;&gt;
@@ -351,33 +428,43 @@
 <pre><code class="lang-example"> &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--1 u-push--11&quot;&gt;
  &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 11&lt;/span&gt; &lt;/div&gt;
  &lt;/div&gt; &lt;/div&gt;
+
  &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--2 u-push--10&quot;&gt;
  &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 10&lt;/span&gt; &lt;/div&gt;
  &lt;/div&gt; &lt;/div&gt;
+
  &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--3 u-push--9&quot;&gt;
  &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 9&lt;/span&gt; &lt;/div&gt;
  &lt;/div&gt; &lt;/div&gt;
+
  &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--4 u-push--8&quot;&gt;
  &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 8&lt;/span&gt; &lt;/div&gt;
  &lt;/div&gt; &lt;/div&gt;
+
  &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--5 u-push--7&quot;&gt;
  &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 7&lt;/span&gt; &lt;/div&gt;
  &lt;/div&gt; &lt;/div&gt;
+
  &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--6 u-push--6&quot;&gt;
  &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 6&lt;/span&gt; &lt;/div&gt;
  &lt;/div&gt; &lt;/div&gt;
+
  &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--7 u-push--5&quot;&gt;
  &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 5&lt;/span&gt; &lt;/div&gt;
  &lt;/div&gt; &lt;/div&gt;
+
  &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--8 u-push--4&quot;&gt;
  &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 4&lt;/span&gt; &lt;/div&gt;
  &lt;/div&gt; &lt;/div&gt;
+
  &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--9 u-push--3&quot;&gt;
  &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 3&lt;/span&gt; &lt;/div&gt;
  &lt;/div&gt; &lt;/div&gt;
+
  &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--10 u-push--2&quot;&gt;
  &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 2&lt;/span&gt; &lt;/div&gt;
  &lt;/div&gt; &lt;/div&gt;
+
  &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--11 u-push--1&quot;&gt;
  &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 1&lt;/span&gt; &lt;/div&gt;
  &lt;/div&gt; &lt;/div&gt;
@@ -386,21 +473,62 @@
  &lt;div class=&quot;u-column--1 u-push--11&quot;&gt;...&lt;/div&gt;
  &lt;/div&gt;
 </code></pre>
-<h3 id="autopilot">Autopilot</h3>
-<p> If you don&#39;t have time to think about how wide things should be, don&#39;t specify, just say <code>.u-column</code>.</p>
-<pre><code class="lang-example"> &lt;div class=&quot;u-row&quot;&gt;
- &lt;div class=&quot;u-column&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;auto&lt;/div&gt;&lt;/div&gt;
- &lt;div class=&quot;u-column&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;auto&lt;/div&gt;&lt;/div&gt;
- &lt;/div&gt;
- &lt;div class=&quot;u-row&quot;&gt;
- &lt;div class=&quot;u-column&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;auto&lt;/div&gt;&lt;/div&gt;
- &lt;div class=&quot;u-column&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;auto&lt;/div&gt;&lt;/div&gt;
- &lt;div class=&quot;u-column&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;auto&lt;/div&gt;&lt;/div&gt;
+<h3 id="column-pull">Column Pull</h3>
+<p> Move back and forth any number of columns wide you need to pull the position of your column within the grid.</p>
+<pre><code class="lang-example"> &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--1 u-pull--11&quot;&gt;
+ &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 11&lt;/span&gt; &lt;/div&gt;
+ &lt;/div&gt; &lt;/div&gt;
+
+ &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--2 u-pull--10&quot;&gt;
+ &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 10&lt;/span&gt; &lt;/div&gt;
+ &lt;/div&gt; &lt;/div&gt;
+
+ &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--3 u-pull--9&quot;&gt;
+ &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 9&lt;/span&gt; &lt;/div&gt;
+ &lt;/div&gt; &lt;/div&gt;
+
+ &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--4 u-pull--8&quot;&gt;
+ &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 8&lt;/span&gt; &lt;/div&gt;
+ &lt;/div&gt; &lt;/div&gt;
+
+ &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--5 u-pull--7&quot;&gt;
+ &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 7&lt;/span&gt; &lt;/div&gt;
+ &lt;/div&gt; &lt;/div&gt;
+
+ &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--6 u-pull--6&quot;&gt;
+ &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 6&lt;/span&gt; &lt;/div&gt;
+ &lt;/div&gt; &lt;/div&gt;
+
+ &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--7 u-pull--5&quot;&gt;
+ &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 5&lt;/span&gt; &lt;/div&gt;
+ &lt;/div&gt; &lt;/div&gt;
+
+ &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--8 u-pull--4&quot;&gt;
+ &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 4&lt;/span&gt; &lt;/div&gt;
+ &lt;/div&gt; &lt;/div&gt;
+
+ &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--9 u-pull--3&quot;&gt;
+ &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 3&lt;/span&gt; &lt;/div&gt;
+ &lt;/div&gt; &lt;/div&gt;
+
+ &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--10 u-pull--2&quot;&gt;
+ &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 2&lt;/span&gt; &lt;/div&gt;
+ &lt;/div&gt; &lt;/div&gt;
+
+ &lt;div class=&quot;u-row&quot;&gt; &lt;div class=&quot;u-column--11 u-pull--1&quot;&gt;
+ &lt;div class=&quot;box-row&quot;&gt; &lt;span&gt;&lt;i class=&quot;o-icon-right-dir&quot;&gt;&lt;/i&gt; 1&lt;/span&gt; &lt;/div&gt;
+ &lt;/div&gt; &lt;/div&gt;
+</code></pre>
+<pre><code class="lang-html"> &lt;div class=&quot;row&quot;&gt;
+ &lt;div class=&quot;u-column--1 u-pull--11&quot;&gt;...&lt;/div&gt;
  &lt;/div&gt;
 </code></pre>
-<pre><code class="lang-html"> &lt;div class=&quot;u-row&quot;&gt;
- &lt;div class=&quot;u-column&quot;&gt;...&lt;/div&gt;
- &lt;div class=&quot;u-column&quot;&gt;...&lt;/div&gt;
+<pre><code class="lang-example"> &lt;div class=&quot;u-row&quot;&gt;
+ &lt;div class=&quot;u-column--2 u-push--5 u-pull--5&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;.u-column--2&lt;br&gt;.u-push--5&lt;br&gt;.u-pull--5&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=&quot;u-column--4 u-push--4 u-pull--4&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;.u-column--4&lt;br&gt;.u-push--4.u-pull--4&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=&quot;u-column--6 u-push--3 u-pull--3&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;.u-column--6.u-push--3.u-pull--3&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=&quot;u-column--8 u-push--2 u-pull--2&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;.u-column--8.u-push--2.u-pull--2&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=&quot;u-column--10 u-push--1 u-pull--1&quot;&gt;&lt;div class=&quot;box-row&quot;&gt;.u-column--10.u-push--1.u-pull--1&lt;/div&gt;&lt;/div&gt;
  &lt;/div&gt;
 </code></pre>
 <h3 id="nesting">Nesting</h3>
@@ -669,15 +797,13 @@
 			<h3>Positioning</h3>
 			<div>
 				<ul>
-<li><code>u-attach--top</code><ul>
+<li><code>u-attach--top</code></li>
 <li><code>u-attach--top-right</code></li>
 <li><code>u-attach--top-left</code></li>
 <li><code>u-attach--bottom</code></li>
 <li><code>u-attach--bottom-right</code></li>
 <li><code>u-attach--bottom-left</code></li>
 <li><code>u-attach--middle</code></li>
-</ul>
-</li>
 </ul>
 
 				
@@ -688,40 +814,60 @@
 			<h3>Syntax</h3>
 			<div>
 				<p>Synopsis - Give developers more knowledge about how the classes behave in a non-relative sense: BEM + ITCSS = BEMIT</p>
-<h6 id="sources">SOURCES</h6>
+<h6 id="sources">Sources</h6>
 <p><a href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/">More Transparent UI Code with Namespaces</a></p>
 <p><a href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT: Taking the BEM Naming Convention a Step Further</a></p>
-<h2 id="anatomy">Anatomy</h2>
+<h4 id="anatomy">Anatomy</h4>
 <pre><code class="lang-css">.namespace-block__element--modifier\@media { }
 </code></pre>
-<div class='u-row'>
-<div class='u-column--6@md'>
-
-<h3>Namespaces</h3>
-
-<p> Object <code>.o-object-name[<element>|<modifier>] {}</code></p>
-
-<p>Component <code> .c-component-name[<element>|<modifier>] {}</code></p>
-
-<p>Utility <code>.u-utility-name {}</code></p>
-
-<p>Theme <code>.t-theme-name {}</code></p>
-
-<p>Scope <code>.s-scope-name {}</code></p>
-
-<p>State <code>.[is|has]-state {}</code></p>
-
-<p>Hack <code>._<namespace>hack-name {}</code></p>
-
-<p>Javascript <code>.js-component-name {}</code></p>
-
-<p>Quality Assurance <code>.qa-node-name {}</code></p>
-
-</div>
-
-<div class='u-column--6@md'>
-
-<h2 id="responsive-suffixes">Responsive Suffixes</h2>
+<h4 id="namespaces">Namespaces</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object</td>
+<td><code>.o-object-name[&lt;element&gt;/&lt;modifier&gt;] {}</code></td>
+</tr>
+<tr>
+<td>Component</td>
+<td><code>.c-component-name[&lt;element&gt;/&lt;modifier&gt;] {}</code></td>
+</tr>
+<tr>
+<td>Utility</td>
+<td><code>.u-utility-name {}</code></td>
+</tr>
+<tr>
+<td>Theme</td>
+<td><code>.t-theme-name {}</code></td>
+</tr>
+<tr>
+<td>Scope</td>
+<td><code>.s-scope-name {}</code></td>
+</tr>
+<tr>
+<td>State</td>
+<td><code>.[is/has]-state {}</code></td>
+</tr>
+<tr>
+<td>Hack</td>
+<td><code>._&lt;namespace&gt;hack-name {}</code></td>
+</tr>
+<tr>
+<td>Javascript</td>
+<td><code>.js-component-name {}</code></td>
+</tr>
+<tr>
+<td>Quality Assurance</td>
+<td><code>.qa-node-name {}</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="responsive-suffixes">Responsive Suffixes</h4>
 <p>Breakpoints</p>
 <pre><code class="lang-css">.o-object-name\@sm {}
 .o-object-name\@md {}
@@ -730,12 +876,20 @@
 <p>Media type</p>
 <pre><code class="lang-css">.u-utility-name\@print {}
 </code></pre>
-<h2 id="extends">Extends</h2>
+<h4 id="bemit-healthcheck">BEMIT Healthcheck</h4>
+<p>Enable a new layer of outlines around everything on the DOM that describes and identifies different types of selectors.</p>
+<pre><code class="lang-html">&lt;html class=&quot;t-default s-healthcheck&quot;&gt;
+</code></pre>
+<h4 id="extends">Extends</h4>
 <p>Chaining selectors is good when done right, take for example this extend with a class.</p>
 <pre><code class="lang-css">.foo,
 %foo {
   color: pink;
 }
+</code></pre>
+<h4 id="a11y">a11y</h4>
+<p>With this, we can write styles with built-in assertions that point out certain elements that lack required a11y aria properties.</p>
+<pre><code class="lang-css">.foo { @extend %assert-selector; }
 </code></pre>
 
 				
@@ -789,20 +943,8 @@
 		<section id="size">
 			<h3>Size</h3>
 			<div>
-				<p>In your command line application, you will want to install the necessary tools
- to start working on the UI framework. Make sure your other projects are at the
- same level for synced releases.</p>
-<p> Make sure to add these things to your layout file. Optionaly for legacy browser support of HTML5 and layout, you can import <a href="https://modernizr.com/">modernizr</a>/<a href="http://cdnjs.com/libraries/modernizr">cdn</a> into your head section.</p>
-<pre><code class="lang-html"> &lt;html class=&quot;s-app t-default&quot;&gt; &lt;!-- App scope and default theme classes --&gt;
- &lt;head&gt;
-   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt; &lt;!-- This enables smaller devices to view this site responsively --&gt;
-   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700&quot;&gt; &lt;!-- This is the default webfont --&gt;
-   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;&gt; &lt;!-- This is the default icon webfont --&gt;
-   &lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/app.css&quot;&gt; &lt;!-- This is the main stylesheet --&gt;
- &lt;/head&gt;
-</code></pre>
-<p> This is a list of global variables, and their default values.</p>
-<h6 id="settings-global-css">SETTINGS/global.css</h6>
+				<p>This is a list of global variables, and their default values.</p>
+<h6 id="elements-size-css">elements/size.css</h6>
 <pre><code class="lang-css">  --global-gutter-width: 1rem;
   --global-outter-margin: 1rem;
   --global-small-media-min: 48;
@@ -886,17 +1028,40 @@
 		<section id="colour-theme">
 			<h3>Colour Theme</h3>
 			<div>
-				<p>This collection of colors it intended to serve the interface of all our product applications and all the components you can see in this document.</p>
- <div class="u-row">
-   <div class="u-column--12@sm u-column--4@md">
-     <div class="u-chip u-blue-900" contenteditable="true" onclick="document.execCommand('selectAll',false,null)"> --primary-color </div>
-     <div class="u-chip u-orange-600" contenteditable="true" onclick="document.execCommand('selectAll',false,null)"> --secondary-color </div>
-   </div>
-   <div class="u-column--12@sm u-column--4@md">
-     <div class="u-chip u-grey-800" contenteditable="true" onclick="document.execCommand('selectAll',false,null)"> --body-copy </div>
-     <div class="u-chip u-grey-50" contenteditable="true" onclick="document.execCommand('selectAll',false,null)"> --background-color </div>
-   </div>
- </div>
+				<p>These colors are intended for very specific parts of the user interface.</p>
+<p> <h5>Typography</h5></p>
+<pre><code class="lang-example">  &lt;div class=&quot;u-chip u-color--body-copy&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt; --body-copy &lt;/div&gt;
+</code></pre>
+ <hr>
+
+<p> <h5>Backgrounds &amp; Borders</h5></p>
+<pre><code class="lang-example">  &lt;div class=&quot;u-chip u-color--background&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt; --background-color &lt;/div&gt;
+  &lt;div class=&quot;u-chip u-color--shadow&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt; --shadow-color &lt;/div&gt;
+  &lt;div class=&quot;u-chip u-color--primary&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt; --primary-color &lt;/div&gt;
+  &lt;div class=&quot;u-chip u-color--secondary&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt; --secondary-color &lt;/div&gt;
+
+  &lt;hr&gt;
+
+  &lt;h5&gt;Highlights&lt;/h5&gt;
+  &lt;div class=&quot;u-chip u-color--highlight-announcement&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt; --highlight-announcement &lt;/div&gt;
+  &lt;div class=&quot;u-chip u-color--highlight-error&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt; --highlight-error &lt;/div&gt;
+  &lt;div class=&quot;u-chip u-color--highlight-success&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt; --highlight-success &lt;/div&gt;
+  &lt;div class=&quot;u-chip u-color--highlight-warning&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt; --highlight-warning &lt;/div&gt;
+
+  &lt;hr&gt;
+
+  &lt;h5&gt;Social Media&lt;/h5&gt;
+  &lt;div class=&quot;u-chip u-color--facebook&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt; --facebook &lt;/div&gt;
+  &lt;div class=&quot;u-chip u-color--google-plus&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt; --google-plus &lt;/div&gt;
+  &lt;div class=&quot;u-chip u-color--linkedin&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt; --linkedin &lt;/div&gt;
+  &lt;div class=&quot;u-chip u-color--pinterest&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt; --pinterest &lt;/div&gt;
+  &lt;div class=&quot;u-chip u-color--stumbleupon&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt; --stumbleupon &lt;/div&gt;
+  &lt;div class=&quot;u-chip u-color--tripadvisor&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt; --tripadvisor &lt;/div&gt;
+  &lt;div class=&quot;u-chip u-color--trustyou&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt; --trustyou &lt;/div&gt;
+  &lt;div class=&quot;u-chip u-color--tumblr&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt; --tumblr &lt;/div&gt;
+  &lt;div class=&quot;u-chip u-color--twitter&quot; contenteditable=&quot;true&quot; onclick=&quot;document.execCommand(&#39;selectAll&#39;,false,null)&quot;&gt; --twitter &lt;/div&gt;
+</code></pre>
+
 				
 			</div>
 		</section>
@@ -918,12 +1083,31 @@
 		<section id="typography">
 			<h3>Typography</h3>
 			<div>
-				<h1 id="headline-1">Headline 1</h1>
-<h2 id="headline-2">Headline 2</h2>
-<h3 id="headline-3">Headline 3</h3>
-<h4 id="headline-4">Headline 4</h4>
-<h5 id="headline-5">Headline 5</h5>
-<h6 id="headline-6">Headline 6</h6>
+				<h4 id="headings">Headings</h4>
+<pre><code class="lang-example"> &lt;h1&gt;The quick, brown fox (48px)&lt;/h1&gt;
+ &lt;h2&gt;The quick, brown fox (40px)&lt;/h2&gt;
+ &lt;h3&gt;The quick, brown fox (31px)&lt;/h3&gt;
+ &lt;h4&gt;The quick, brown fox (25px)&lt;/h4&gt;
+ &lt;h5&gt;The quick, brown fox (20px)&lt;/h5&gt;
+ &lt;h6&gt;The quick, brown fox (16px)&lt;/h6&gt;
+</code></pre>
+<h4 id="feature-body-copy">Feature &amp; Body Copy</h4>
+<pre><code class="lang-example"> &lt;p class=&quot;o-feature&quot;&gt;For the execution of the voyage to the Indies, I did not make use of intelligence, mathematics or maps. (24px)&lt;/p&gt;
+ &lt;p&gt;After having dispatched a meal, I went ashore, and found no habitation save a single house, and that without an occupant; we had no doubt that the people had fled in terror at our approach, as the house was completely furnished. (16px)&lt;/p&gt;
+</code></pre>
+<h4 id="lists">Lists</h4>
+<pre><code class="lang-example"> &lt;ol&gt;
+   &lt;li&gt;This is how an ordered list looks.&lt;/li&gt;
+   &lt;li&gt;I am struggling to say anything more about them.&lt;/li&gt;
+   &lt;li&gt;That brings us to the next type of list&amp;hellip;&lt;/li&gt;
+ &lt;/ol&gt;
+
+ &lt;ul&gt;
+   &lt;li&gt;This is how an unordered list looks.&lt;/li&gt;
+   &lt;li&gt;I am struggling to say anything more about them.&lt;/li&gt;
+   &lt;li&gt;That brings us to tiny copy&amp;hellip;&lt;/li&gt;
+ &lt;/ul&gt;
+</code></pre>
 <h3 id="customize">Customize</h3>
 <pre><code class="lang-css">  --font-family: &#39;Source Sans Pro&#39;, sans-serif;
   --font-weight: 400;
@@ -1515,7 +1699,7 @@
 			</div>
 		</section>
 		
-	<footer>Last modified Tuesday, 2 February 2016 14:05
+	<footer>Last modified Tuesday, 2 February 2016 16:39
 </main>
 <script src="prism.js"></script>
 <script src="examples.js"></script>
