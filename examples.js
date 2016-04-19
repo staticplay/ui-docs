@@ -165,8 +165,12 @@ examples.lang = {
 		idoc.close();
 
 		// add default block styles to iframe dom
-		idoc.documentElement.setAttribute('style', examples.htmlcss);
-		idoc.body.setAttribute('style', examples.bodycss);
+		// idoc.documentElement.setAttribute('style', examples.htmlcss);
+		// idoc.body.setAttribute('style', examples.bodycss);
+    iwin.addEventListener('load', function(){
+        idoc.documentElement.setAttribute('style', examples.htmlcss);
+        idoc.body.setAttribute('style', examples.bodycss);
+    })
 
 		if (conf.width) style.width = String(conf.width);
 

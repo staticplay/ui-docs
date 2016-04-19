@@ -32,7 +32,7 @@ $('.o-column-switcher').change(function() {
 
 $(function() {
     // Dropdown Demo
-    $('.c-dropdown__toggle, .c-button--dropdown').click(function() {
+    $('.js-dropdown-toggle').click(function() {
         $(this).next('.c-dropdown__content').toggleClass('is-active');
     });
 
@@ -61,5 +61,25 @@ $(function() {
     // Modal Demo
     $('.o-modal__close').click(function() {
         $(this).parents('.o-modal').toggleClass('is-active');
+    });
+
+    $('.js-fade-control').click(function() {
+        $('.js-fade-example').toggleClass('u-fade-in');
+    });
+
+    // Inspector
+    $('.o-inspector__edit').click(function() {
+        $(this).parent().parent().find('.is-editable').each(function() {
+            var str = $(this).text();
+            $(this).replaceWith('<input class="c-input" value="' + str + '" >');
+        });
+        $(this).parent().parent().addClass('is-active');
+    });
+
+    $('.o-inspector__done').click(function() {
+        $(this).parent().parent().find('.c-input').each(function() {
+            $(this).replaceWith("<p class='is-editable'>" + this.value + "</p>");
+        });
+        $(this).parent().parent().removeClass('is-active');
     });
 });
