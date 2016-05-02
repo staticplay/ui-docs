@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="style.css" rel="stylesheet">
-<script>examples={"base":"","target":"_self","css":["guide.css","fonts/source-sans-pro/source-sans-pro.css","fonts/material-icons/material-icons.css"],"js":[],"bodyjs":["jquery-2.2.3.min.js","dom.js"],"htmlcss":"","bodycss":"margin:1em;"};</script>
+<script>examples={"base":"","target":"_self","css":["guide.css","fonts/source-sans-pro/source-sans-pro.css","fonts/material-icons/material-icons.css"],"js":[],"bodyjs":["jquery-2.2.3.min.js","dom.js"],"htmlcss":"overflow: hidden;","bodycss":"overflow-x: hidden; padding: 20px;"};</script>
 
 <header>
 	<nav>
@@ -257,13 +257,14 @@
 to start working on the UI framework. Make sure your other projects are at the
 same level for synced releases.</p>
 <h4 id="install">Install</h4>
+<p><code>npm install navis-ui --registry https://artifacts.buehner-fry.com/artifactory/api/npm/npm-registries --save-dev</code></p>
+<h4 id="publishing">Publishing</h4>
 <p>You will want to setup Artifactory specific NPM configuration with the following:</p>
-<p><code>curl -i -u&lt;username&gt;:&lt;encryptPass&gt; &quot;https://artifacts.buehner-fry.com/artifactory/api/npm/npm-registries/auth/jfrog”</code></p>
-<p>Next you will want to yank and paste what you get back from that curl command into 
-your <code>~/.npmrc</code> file with this additional line:</p>
+<p><code>curl -u&lt;USERNAME&gt;:&lt;ENCRYPTPASS&gt; https://artifacts.buehner-fry.com/artifactory/api/npm/auth</code>
+<code>curl -i -u&lt;USERNAME&gt;:&lt;ENCRYPTPASS&gt; &quot;https://artifacts.buehner-fry.com/artifactory/api/npm/npm-registries/auth/jfrog”</code></p>
+<p>Next you will want to yank and paste what you get back from both of those curl commands into your <code>~/.npmrc</code> file with this additional line:</p>
 <p><code>registry=https://artifacts.buehner-fry.com/artifactory/api/npm/npm-registries</code></p>
-<p>Now you can install NAVIS ui using npm:</p>
-<p><code>npm i navis-ui</code></p>
+<p>Now you can install NAVIS ui simply by using npm: <code>npm i navis-ui</code></p>
 <h4 id="development">Development</h4>
 <p>For development of this project you will want to clone and run these commands</p>
 <pre><code class="lang-shell">npm i -g gulp
@@ -1513,27 +1514,35 @@ gulp watch
 			<h3>Card</h3>
 			<div>
 				<pre><code class="lang-example:html"> &lt;div class=&quot;c-card&quot;&gt;
-   &lt;h3&gt;Card Title&lt;/h3&gt;
+   &lt;h1&gt;Card Title&lt;/h1&gt;
+   &lt;p&gt;I could have used lorem ipsum, but what&#39;s the fun in that?&lt;/p&gt;
+ &lt;/div&gt;
+</code></pre>
+<h4 id="card-with-titlebar">Card with Titlebar</h4>
+<pre><code class="lang-example:html"> &lt;div class=&quot;c-card c-card--round&quot;&gt;
+   &lt;div class=&quot;c-card__title&quot;&gt;
+     &lt;h1 class=&quot;c-card__heading&quot;&gt;Card Heading&lt;/h1&gt;
+   &lt;/div&gt;
    &lt;p&gt;I could have used lorem ipsum, but what&#39;s the fun in that?&lt;/p&gt;
  &lt;/div&gt;
 </code></pre>
 <h4 id="card-transparent">Card Transparent</h4>
 <pre><code class="lang-example:html"> &lt;div class=&quot;c-card c-card--transparent&quot;&gt;
-   &lt;h3&gt;Card Transparent&lt;/h3&gt;
+   &lt;h1&gt;Card Transparent&lt;/h1&gt;
    &lt;p&gt;I could have used lorem ipsum, but what&#39;s the fun in that?&lt;/p&gt;
  &lt;/div&gt;
 </code></pre>
 <h4 id="card-row">Card Row</h4>
 <pre><code class="lang-example:html"> &lt;div class=&quot;c-card c-card--row&quot;&gt;
-   &lt;h3&gt;Card Row&lt;/h3&gt;
+   &lt;h1&gt;Card Row&lt;/h1&gt;
    &lt;p&gt;I could have used lorem ipsum, but what&#39;s the fun in that?&lt;/p&gt;
  &lt;/div&gt;
  &lt;div class=&quot;c-card c-card--row is-active&quot;&gt;
-   &lt;h3&gt;Card Row&lt;/h3&gt;
+   &lt;h1&gt;Card Row&lt;/h1&gt;
    &lt;p&gt;I could have used lorem ipsum, but what&#39;s the fun in that?&lt;/p&gt;
  &lt;/div&gt;
  &lt;div class=&quot;c-card c-card--row&quot;&gt;
-   &lt;h3&gt;Card Row&lt;/h3&gt;
+   &lt;h1&gt;Card Row&lt;/h1&gt;
    &lt;p&gt;I could have used lorem ipsum, but what&#39;s the fun in that?&lt;/p&gt;
  &lt;/div&gt;
 </code></pre>
@@ -1983,6 +1992,22 @@ gulp watch
 &lt;input id=&#39;r2&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio c-radio--informative&quot; aria-labelledby=&quot;r2l&quot; checked&gt;&lt;/input&gt;
 &lt;label for=&#39;r2&#39; id=&quot;r2l&quot;&gt;Selected Radio&lt;/label&gt;
 </code></pre>
+<h4 id="stacked">Stacked</h4>
+<pre><code class="lang-example:html">&lt;input id=&#39;r1&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio c-radio--informative c-radio--stacked&quot; aria-labelledby=&quot;r1l&quot;&gt;&lt;/input&gt;
+&lt;label for=&#39;r1&#39; id=&quot;r1l&quot;&gt;1&lt;/label&gt;
+
+&lt;input id=&#39;r2&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio c-radio--informative c-radio--stacked&quot; aria-labelledby=&quot;r2l&quot; checked&gt;&lt;/input&gt;
+&lt;label for=&#39;r2&#39; id=&quot;r2l&quot;&gt;2&lt;/label&gt;
+
+&lt;input id=&#39;r3&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio c-radio--informative c-radio--stacked&quot;&gt;&lt;/input&gt;
+&lt;label for=&#39;r3&#39;&gt;3&lt;/label&gt;
+
+&lt;input id=&#39;r4&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio c-radio--informative c-radio--stacked&quot;&gt;&lt;/input&gt;
+&lt;label for=&#39;r4&#39;&gt;4&lt;/label&gt;
+
+&lt;input id=&#39;r5&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio c-radio--informative c-radio--stacked&quot;&gt;&lt;/input&gt;
+&lt;label for=&#39;r5&#39;&gt;5&lt;/label&gt;
+</code></pre>
 
 				
 			</div>
@@ -2297,40 +2322,70 @@ gulp watch
 			<h3>Accordion</h3>
 			<div>
 				<p>A simple accordion with a gradient of blue. More advanced use cases to come.</p>
-<pre><code class="lang-example:html">&lt;nav class=&quot;o-accordion&quot;&gt;
+<pre><code class="lang-example:html">&lt;nav class=&quot;o-accordion is-collapsed&quot;&gt;
   &lt;ul class=&quot;o-accordion__list o-accordion__list--top&quot;&gt;
     &lt;li class=&quot;o-accordion__item has-descendants is-open&quot;&gt;
       &lt;span class=&quot;o-accordion__label&quot;&gt;Top item 1&lt;/span&gt;
       &lt;ul class=&quot;o-accordion__list o-accordion__list--mid&quot;&gt;
         &lt;li class=&quot;o-accordion__item&quot;&gt;
-          &lt;span class=&quot;o-accordion__title&quot;&gt;Mid item 1&lt;/span&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;o-accordion__item has-descendants is-open&quot;&gt;
-          &lt;span class=&quot;o-accordion__title&quot;&gt;Mid item 1&lt;/span&gt;
-          &lt;ul class=&quot;o-accordion__list o-accordion__list--bottom&quot;&gt;
-            &lt;li class=&quot;o-accordion__item&quot;&gt;
-            &lt;span&gt;
-              &lt;strong&gt;Bottom item 1&lt;/strong&gt;
-              &lt;div&gt;Description&lt;/div&gt;
-            &lt;/span&gt;
-            &lt;/li&gt;
-            &lt;li class=&quot;o-accordion__item&quot;&gt;
-            &lt;span&gt;
-              &lt;strong&gt;Bottom item 2&lt;/strong&gt;
-              &lt;div&gt;Description&lt;/div&gt;
-            &lt;/span&gt;
-            &lt;/li&gt;
-          &lt;/ul&gt;
+          &lt;div class=&quot;o-accordion__title&quot;&gt;Mid item 1&lt;/div&gt;
+          &lt;div class=&quot;o-accordion__description&quot;&gt;More things to say here about this mid item!&lt;/div&gt;
+          &lt;div class=&quot;o-accordion__actions&quot;&gt;
+            &lt;button class=&quot;o-accordion__action&quot;&gt;
+              &lt;span class=&quot;c-icon c-icon--small&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class=&quot;o-accordion__action o-accordion__action--success&quot;&gt;
+              &lt;span class=&quot;c-icon c-icon--small&quot;&gt;
+                &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z&quot;/&gt;&lt;/svg&gt;
+              &lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
         &lt;/li&gt;
         &lt;li class=&quot;o-accordion__item&quot;&gt;
-          &lt;span class=&quot;o-accordion__title&quot;&gt;Mid item 3&lt;/span&gt;
+          &lt;div class=&quot;o-accordion__title&quot;&gt;Mid item 1&lt;/div&gt;
+          &lt;div class=&quot;o-accordion__description&quot;&gt;More things to say here about this mid item!&lt;/div&gt;
+          &lt;div class=&quot;o-accordion__actions&quot;&gt;
+            &lt;button class=&quot;o-accordion__action&quot;&gt;
+              &lt;span class=&quot;c-icon c-icon--small&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class=&quot;o-accordion__action o-accordion__action--success&quot;&gt;
+              &lt;span class=&quot;c-icon c-icon--small&quot;&gt;
+                &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z&quot;/&gt;&lt;/svg&gt;
+              &lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
         &lt;/li&gt;
         &lt;li class=&quot;o-accordion__item&quot;&gt;
-          &lt;span class=&quot;o-accordion__title&quot;&gt;Mid item 4&lt;/span&gt;
+          &lt;div class=&quot;o-accordion__title&quot;&gt;Mid item 3&lt;/div&gt;
+          &lt;div class=&quot;o-accordion__description&quot;&gt;More things to say here about this mid item!&lt;/div&gt;
+          &lt;div class=&quot;o-accordion__actions&quot;&gt;
+            &lt;button class=&quot;o-accordion__action&quot;&gt;
+              &lt;span class=&quot;c-icon c-icon--small&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class=&quot;o-accordion__action o-accordion__action--success&quot;&gt;
+              &lt;span class=&quot;c-icon c-icon--small&quot;&gt;
+                &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z&quot;/&gt;&lt;/svg&gt;
+              &lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;o-accordion__item&quot;&gt;
+          &lt;div class=&quot;o-accordion__title&quot;&gt;Mid item 4&lt;/div&gt;
+          &lt;div class=&quot;o-accordion__description&quot;&gt;More things to say here about this mid item!&lt;/div&gt;
+          &lt;div class=&quot;o-accordion__actions&quot;&gt;
+            &lt;button class=&quot;o-accordion__action&quot;&gt;
+              &lt;span class=&quot;c-icon c-icon--small&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class=&quot;o-accordion__action o-accordion__action--success&quot;&gt;
+              &lt;span class=&quot;c-icon c-icon--small&quot;&gt;
+                &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z&quot;/&gt;&lt;/svg&gt;
+              &lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
         &lt;/li&gt;
       &lt;/ul&gt;
   &lt;/ul&gt;
-  &lt;a class=&quot;o-accordion__toggle&quot;&gt;&lt;/a&gt;
+  &lt;button class=&quot;o-accordion__toggle&quot;&gt;&lt;/button&gt;
 &lt;/nav&gt;
 </code></pre>
 <h4 id="customize">Customize</h4>
@@ -2726,15 +2781,115 @@ gulp watch
 		<section id="editor">
 			<h3>Editor</h3>
 			<div>
-				<pre><code class="lang-example:html"> &lt;section class=&quot;o-editor is-active&quot;&gt;
+				<pre><code class="lang-example:html"> &lt;section class=&quot;o-editor is-active&quot; tabindex=&quot;-1&quot;&gt;
    &lt;header class=&quot;o-editor__toolbar has-actions&quot; role=&quot;toolbar&quot;&gt;
-     &lt;div class=&quot;u-column u-start&quot;&gt;
+     &lt;div class=&quot;o-editor__nav&quot;&gt;
        &lt;ul class=&quot;c-menu c-menu--inline&quot;&gt;
         &lt;li&gt;&lt;button class=&quot;c-menu__link is-active&quot;&gt;Object&lt;/button&gt;&lt;/li&gt;
         &lt;li&gt;&lt;button class=&quot;c-menu__link&quot;&gt;Options&lt;/button&gt;&lt;/li&gt;
        &lt;/ul&gt;
      &lt;/div&gt;
+     &lt;div class=&quot;o-editor__info&quot;&gt;
+        &lt;div class=&quot;o-editor__extras&quot;&gt;
+          &lt;button class=&quot;c-button--favorite is-active&quot; title=&quot;Add to Favorites&quot;&gt;
+            &lt;span class=&quot;c-icon&quot;&gt;
+            &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z&quot;/&gt;&lt;/svg&gt;
+            &lt;/span&gt;
+          &lt;/button&gt;
+          &lt;span class=&quot;c-badge c-badge--round c-badge--positive&quot; title=&quot;Key Attribute&quot;&gt;
+            &lt;span class=&quot;c-icon c-icon--small&quot;&gt;
+            &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z&quot;/&gt;&lt;/svg&gt;
+            &lt;/span&gt;
+          &lt;/span&gt;
+          &lt;span class=&quot;c-badge c-badge--round c-badge--alterable&quot; title=&quot;NAVIS Recommended Object&quot;&gt;N&lt;/span&gt;
+          &lt;div class=&quot;c-dropdown o-editor__more-action&quot;&gt;
+            &lt;span class=&quot;c-dropdown--icon js-dropdown-toggle&quot; title=&quot;Options&quot;&gt;
+              &lt;span class=&quot;c-icon&quot;&gt;
+              &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z&quot;/&gt;&lt;/svg&gt;
+              &lt;/span&gt;
+            &lt;/span&gt;
+            &lt;ul class=&quot;c-dropdown__content [is-active]&quot;&gt;
+              &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot; title=&quot;Duplicate&quot;&gt;Duplicate&lt;/button&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot; title=&quot;Forget&quot;&gt;Forget&lt;/button&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;o-editor__actions o-button-group&quot;&gt;
+          &lt;!-- Done --&gt;
+          &lt;button class=&quot;c-button c-button--large o-editor__done&quot;&gt;&lt;span class=&quot;c-icon is-positive&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;c-button__content u-hide@sm-down&quot;&gt;Done&lt;/span&gt;&lt;/button&gt;
+          &lt;!-- Edit --&gt;
+        &lt;button class=&quot;c-button c-button--large o-editor__edit&quot;&gt;&lt;span class=&quot;c-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;c-button__content u-hide@sm-down&quot;&gt;Edit&lt;/span&gt;&lt;/button&gt;
+        &lt;button class=&quot;c-button c-button--large&quot;&gt;&lt;span class=&quot;c-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/button&gt;
+        &lt;button class=&quot;c-button c-button--large&quot;&gt;&lt;span class=&quot;c-icon&quot;&gt;
+          &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z&quot;/&gt;&lt;/svg&gt;
+        &lt;/span&gt;&lt;/button&gt;
+        &lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/header&gt;
+
+   &lt;div class=&quot;o-editor__content&quot;&gt;
+     &lt;input class=&quot;c-input&quot; value=&quot;Hello, I&#39;m content inside an editor! :)&quot;&gt;
+   &lt;/div&gt;
+
+   &lt;footer class=&quot;o-editor__toolbar o-editor__toolbar--small&quot;&gt;
+     &lt;div class=&quot;u-start&quot;&gt;
+      &lt;span class=&quot;c-icon&quot;&gt;
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M7 10l5 5 5-5z&quot;/&gt;&lt;/svg&gt;
+      &lt;/span&gt;
+      Conditions
+       &lt;button class=&quot;c-button c-button--anchor js-add-conditions&quot;&gt;
+       &lt;span class=&quot;c-icon c-icon--small&quot;&gt;
+       &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z&quot;/&gt;&lt;/svg&gt;
+        &lt;/span&gt;
+        &lt;span class=&quot;c-button__content&quot;&gt;Add&lt;/span&gt;
+      &lt;/button&gt;
+     &lt;/div&gt;
      &lt;div class=&quot;u-column u-end&quot;&gt;
+       &lt;input type=&quot;checkbox&quot; class=&quot;c-checkbox&quot; id=&quot;c-checkbox-1&quot; checked=&quot;true&quot;&gt;
+       &lt;label for=&quot;c-checkbox-1&quot;&gt;
+Required&lt;/label&gt;
+     &lt;/div&gt;
+   &lt;/footer&gt;
+   &lt;div class=&quot;o-editor__content&quot;&gt;
+    &lt;div class=&quot;o-editor__conditionals&quot;&gt;
+      &lt;div&gt;
+        &lt;span class=&quot;c-icon&quot;&gt;
+          &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M7 10l5 5 5-5z&quot;/&gt;&lt;/svg&gt;
+        &lt;/span&gt;
+        &lt;span&gt;If response&amp;nbsp;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;c-dropdown&quot;&gt;
+        &lt;button class=&quot;c-dropdown__toggle js-dropdown-toggle&quot;&gt;is&lt;/button&gt;
+        &lt;ul class=&quot;c-dropdown__content&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
+          &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;is&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;is not&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;contains&lt;/button&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;c-dropdown&quot;&gt;
+        &lt;button class=&quot;c-dropdown__toggle js-dropdown-toggle&quot;&gt;Red wine&lt;/button&gt;
+        &lt;ul class=&quot;c-dropdown__content&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
+          &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Red Wine&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;White Wine&lt;/button&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Crux Scotch Ale&lt;/button&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;span&gt;&amp;nbsp;then:&lt;/span&gt;
+    &lt;/div&gt;
+
+
+
+
+ &lt;section class=&quot;o-editor is-active&quot; tabindex=&quot;-1&quot;&gt;
+   &lt;header class=&quot;o-editor__toolbar has-actions&quot; role=&quot;toolbar&quot;&gt;
+     &lt;div class=&quot;o-editor__nav&quot;&gt;
+       &lt;ul class=&quot;c-menu c-menu--inline&quot;&gt;
+        &lt;li&gt;&lt;button class=&quot;c-menu__link is-active&quot;&gt;Object&lt;/button&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;button class=&quot;c-menu__link&quot;&gt;Options&lt;/button&gt;&lt;/li&gt;
+       &lt;/ul&gt;
+     &lt;/div&gt;
+     &lt;div class=&quot;o-editor__info&quot;&gt;
+       &lt;div class=&quot;o-editor__extras&quot;&gt;
        &lt;button class=&quot;c-button--favorite is-active&quot; title=&quot;Add to Favorites&quot;&gt;
          &lt;span class=&quot;c-icon&quot;&gt;
           &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z&quot;/&gt;&lt;/svg&gt;
@@ -2747,46 +2902,48 @@ gulp watch
        &lt;/span&gt;
        &lt;span class=&quot;c-badge c-badge--round c-badge--alterable&quot; title=&quot;NAVIS Recommended Object&quot;&gt;N&lt;/span&gt;
        &lt;div class=&quot;c-dropdown o-editor__more-action&quot;&gt;
-         &lt;span class=&quot;c-dropdown--icon&quot; title=&quot;Options&quot;&gt;
+         &lt;span class=&quot;c-dropdown--icon js-dropdown-toggle&quot; title=&quot;Options&quot;&gt;
            &lt;span class=&quot;c-icon&quot;&gt;
             &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z&quot;/&gt;&lt;/svg&gt;
            &lt;/span&gt;
          &lt;/span&gt;
          &lt;ul class=&quot;c-dropdown__content [is-active]&quot;&gt;
-           &lt;li&gt;&lt;button class=&quot;c-button c-button--anchor&quot; title=&quot;Action&quot;&gt;Action&lt;/button&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot; title=&quot;Duplicate&quot;&gt;Duplicate&lt;/button&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot; title=&quot;Forget&quot;&gt;Forget&lt;/button&gt;&lt;/li&gt;
          &lt;/ul&gt;
+        &lt;/div&gt;
        &lt;/div&gt;
+        &lt;div class=&quot;o-editor__actions o-button-group&quot;&gt;
+            &lt;!-- Done --&gt;
+            &lt;button class=&quot;c-button c-button--large o-editor__done&quot;&gt;&lt;span class=&quot;c-icon is-positive&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;c-button__content u-hide@sm-down&quot;&gt;Done&lt;/span&gt;&lt;/button&gt;
+            &lt;!-- Edit --&gt;
+          &lt;button class=&quot;c-button c-button--large o-editor__edit&quot;&gt;&lt;span class=&quot;c-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;c-button__content u-hide@sm-down&quot;&gt;Edit&lt;/span&gt;&lt;/button&gt;
+          &lt;button class=&quot;c-button c-button--large&quot;&gt;&lt;span class=&quot;c-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/button&gt;
+        &lt;/div&gt;
      &lt;/div&gt;
    &lt;/header&gt;
-   &lt;div class=&quot;o-editor__actions o-button-group&quot;&gt;
-      &lt;!-- Done --&gt;
-      &lt;button class=&quot;c-button c-button--large o-editor__done&quot;&gt;&lt;span class=&quot;c-icon is-positive&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;c-button__content u-hide@sm-down&quot;&gt;Done&lt;/span&gt;&lt;/button&gt;
-      &lt;!-- Edit --&gt;
-     &lt;button class=&quot;c-button c-button--large o-editor__edit&quot;&gt;&lt;span class=&quot;c-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;c-button__content u-hide@sm-down&quot;&gt;Edit&lt;/span&gt;&lt;/button&gt;
-     &lt;button class=&quot;c-button c-button--large&quot;&gt;&lt;span class=&quot;c-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/button&gt;
-     &lt;button class=&quot;c-button c-button--large&quot;&gt;&lt;span class=&quot;c-icon&quot;&gt;
-      &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z&quot;/&gt;&lt;/svg&gt;
-     &lt;/span&gt;&lt;/button&gt;
-   &lt;/div&gt;
-
    &lt;div class=&quot;o-editor__content&quot;&gt;
      &lt;input class=&quot;c-input&quot; value=&quot;Hello, I&#39;m content inside an editor! :)&quot;&gt;
    &lt;/div&gt;
 
-   &lt;footer class=&quot;o-editor__toolbar o-inspector__toolbar--small&quot;&gt;
-     &lt;div class=&quot;u-column--6 u-start&quot;&gt;
-       &lt;button class=&quot;c-button c-button--anchor&quot;&gt;
-        &lt;span class=&quot;c-icon c-icon--small&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z&quot;/&gt;&lt;/svg&gt;
+   &lt;footer class=&quot;o-editor__toolbar o-editor__toolbar--small&quot;&gt;
+     &lt;div class=&quot;u-start&quot;&gt;
+       &lt;button class=&quot;c-button c-button--anchor js-add-conditions&quot;&gt;
+       &lt;span class=&quot;c-icon c-icon--small&quot;&gt;
+       &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z&quot;/&gt;&lt;/svg&gt;
         &lt;/span&gt;
         &lt;span class=&quot;c-button__content&quot;&gt;Add Conditions&lt;/span&gt;
       &lt;/button&gt;
      &lt;/div&gt;
-     &lt;div class=&quot;u-column--6 u-end&quot;&gt;
+     &lt;div class=&quot;u-column u-end&quot;&gt;
        &lt;input type=&quot;checkbox&quot; class=&quot;c-checkbox&quot; id=&quot;c-checkbox-1&quot; checked=&quot;true&quot;&gt;
        &lt;label for=&quot;c-checkbox-1&quot;&gt;
 Required&lt;/label&gt;
      &lt;/div&gt;
    &lt;/footer&gt;
+ &lt;/section&gt;
+
+   &lt;/div&gt;
  &lt;/section&gt;
 </code></pre>
 
@@ -3047,7 +3204,7 @@ Required&lt;/label&gt;
 			</div>
 		</section>
 		
-	<footer>Last modified Tuesday, 19 April 2016 13:23
+	<footer>Last modified Monday, 2 May 2016 15:27
 </main>
 <script src="prism.js"></script>
 <script src="examples.js"></script>

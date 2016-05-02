@@ -67,19 +67,23 @@ $(function() {
         $('.js-fade-example').toggleClass('u-fade-in');
     });
 
-    // Inspector
-    $('.o-inspector__edit').click(function() {
-        $(this).parent().parent().find('.is-editable').each(function() {
+    // Editor
+    $('.o-editor__edit').click(function() {
+        $(this).parent().parent().parent().parent().find('.is-editable').each(function() {
             var str = $(this).text();
             $(this).replaceWith('<input class="c-input" value="' + str + '" >');
         });
-        $(this).parent().parent().addClass('is-active');
+        $(this).parent().parent().parent().parent().addClass('is-active');
     });
 
-    $('.o-inspector__done').click(function() {
-        $(this).parent().parent().find('.c-input').each(function() {
+    $('.o-editor__done').click(function() {
+        $(this).parent().parent().parent().parent().find('.c-input').each(function() {
             $(this).replaceWith("<p class='is-editable'>" + this.value + "</p>");
         });
-        $(this).parent().parent().removeClass('is-active');
+        $(this).parent().parent().parent().parent().removeClass('is-active');
+    });
+
+    $('.js-add-conditions').click(function() {
+        $(this).text('Add');
     });
 });
