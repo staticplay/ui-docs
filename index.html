@@ -144,6 +144,11 @@
 				</li>
 				
 				<li>
+					<a href="#loader"><span>Loader</span></a>
+					
+				</li>
+				
+				<li>
 					<a href="#menu"><span>Menu</span></a>
 					
 				</li>
@@ -1433,6 +1438,7 @@ gulp watch
 <p>You can optionally use modifier classes that let you manipulate the size and shape of your button.</p>
 <pre><code class="lang-example:html">&lt;button class=&#39;c-button&#39;&gt;Regular&lt;/button&gt;
 &lt;button class=&#39;c-button c-button--large&#39;&gt;Large&lt;/button&gt;
+&lt;button class=&#39;c-button c-button--xlarge&#39;&gt;Extra Large&lt;/button&gt;
 &lt;button class=&#39;c-button c-button--round&#39;&gt;Round&lt;/button&gt;
 &lt;button class=&#39;c-button c-button--wide&#39;&gt;Wide&lt;/button&gt;
 &lt;button class=&#39;c-button&#39;&gt;
@@ -1847,6 +1853,27 @@ gulp watch
 &lt;input class=&quot;c-input is-invalid&quot; type=&quot;text&quot; placeholder=&quot;:invalid&quot;&gt;
 &lt;input class=&quot;c-input is-error&quot; type=&quot;text&quot; placeholder=&quot;.is-error&quot;&gt;
 </code></pre>
+<h4 id="input-validation">Input Validation</h4>
+<pre><code class="lang-example:html">&lt;div class=&quot;u-wrapper&quot;&gt;
+  &lt;input class=&quot;c-input has-focus&quot; type=&#39;text&#39;&gt;
+  &lt;div class=&#39;c-input__validation&#39;&gt;Validated message&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="lang-example:html">&lt;div class=&quot;u-wrapper&quot;&gt;
+  &lt;input class=&quot;c-input&quot; type=&#39;text&#39;&gt;
+  &lt;div class=&#39;c-input__validation c-input__validation--neutral&#39;&gt;Neutral validated message&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="lang-example:html">&lt;div class=&quot;u-wrapper&quot;&gt;
+  &lt;input class=&quot;c-input&quot; type=&quot;email&quot; value=&quot;notauser at clientcom&quot; required&gt;
+  &lt;div class=&quot;c-input__validation c-input__validation--warning&quot;&gt;Warning validated message&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="lang-example:html">&lt;div class=&quot;u-wrapper&quot;&gt;
+  &lt;input class=&quot;c-input is-error&quot; type=&#39;text&#39; placeholder=&quot;Placeholder text&quot;&gt;
+  &lt;div class=&#39;c-input__validation c-input__validation--error&#39;&gt;Error validated message&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 
 				
 			</div>
@@ -1867,6 +1894,20 @@ gulp watch
       &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z&quot;/&gt;&lt;/svg&gt;
     &lt;/span&gt;
   &lt;/span&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+		<section id="loader">
+			<h3>Loader</h3>
+			<div>
+				<pre><code class="lang-example">&lt;br&gt;&lt;br&gt;
+&lt;div class=&quot;c-loader u-fixed--middle-center&quot;&gt;&lt;/div&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+</code></pre>
+<pre><code class="lang-html">&lt;div class=&quot;c-loader u-fixed--middle-center&quot;&gt;&lt;/div&gt;
 </code></pre>
 
 				
@@ -1927,8 +1968,6 @@ gulp watch
 			<h3>Notification</h3>
 			<div>
 				<p>Notifications communicate the state of your user&#39;s interactions as well as system status. We have a flexible notification style with a few variations for different states.</p>
-<h3 id="states">States</h3>
-<h4 id="info">Info</h4>
 <pre><code class="lang-example">&lt;div class=&quot;c-notification&quot;&gt;
   &lt;span class=&quot;c-icon c-icon--info&quot;&gt;
     &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z&quot;/&gt;&lt;/svg&gt;
@@ -1955,7 +1994,6 @@ gulp watch
   &lt;/button&gt;
 &lt;/div&gt;
 </code></pre>
-<h4 id="success">Success</h4>
 <pre><code class="lang-example">&lt;div class=&quot;c-notification c-notification--success&quot;&gt;
   &lt;span class=&quot;c-icon c-icon--check-circle&quot;&gt;
     &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z&quot;/&gt;&lt;/svg&gt;
@@ -1974,7 +2012,6 @@ gulp watch
 <pre><code class="lang-html">&lt;div class=&quot;c-notification c-notification--success&quot;&gt; ... &lt;/div&gt;
 &lt;!-- Use the check_circle icon --&gt;
 </code></pre>
-<h4 id="warning">Warning</h4>
 <pre><code class="lang-example">&lt;div class=&quot;c-notification c-notification--warning&quot;&gt;
   &lt;span class=&quot;c-icon c-icon--warning&quot;&gt;
     &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z&quot;/&gt;&lt;/svg&gt;
@@ -1993,7 +2030,6 @@ gulp watch
 <pre><code class="lang-html">&lt;div class=&quot;c-notification c-notification--warning&quot;&gt; ... &lt;/div&gt;
 &lt;!-- Use the warning icon --&gt;
 </code></pre>
-<h4 id="error">Error</h4>
 <pre><code class="lang-example">&lt;div class=&quot;c-notification c-notification--error&quot;&gt;
   &lt;span class=&quot;c-icon c-icon--error&quot;&gt;
     &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z&quot;/&gt;&lt;/svg&gt;
@@ -2011,6 +2047,21 @@ gulp watch
 </code></pre>
 <pre><code class="lang-html">&lt;div class=&quot;c-notification c-notification--error&quot;&gt; ... &lt;/div&gt;
 &lt;!-- Use the error icon --&gt;
+</code></pre>
+<h3 id="wide">Wide</h3>
+<p>Alternatively we have an alert-style notification that takes the whole page width.</p>
+<pre><code class="lang-example:html">&lt;div class=&quot;c-notification c-notification--wide c-notification--informative&quot;&gt;
+  &lt;svg class=&quot;c-icon c-icon--info&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z&quot;/&gt;&lt;/svg&gt;
+  &lt;div class=&quot;c-notification__content&quot;&gt;
+    &lt;h1 class=&quot;c-notification__heading&quot;&gt;Wide Notification&lt;/h1&gt;
+    &lt;p&gt;Communicate a meaningful message.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;button class=&quot;c-button c-button--icon&quot;&gt;
+    &lt;span class=&quot;c-icon c-icon--medium c-icon--close&quot;&gt;
+      &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z&quot;/&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
 </code></pre>
 <h3 id="positions">Positions</h3>
 <p>You can apply modifier classes to your notification to pin them to different areas around the viewport.</p>
@@ -2340,21 +2391,8 @@ gulp watch
 		<section id="validation">
 			<h3>Validation</h3>
 			<div>
-				<pre><code class="lang-example:html">&lt;div class=&quot;u-wrapper&quot;&gt;
-  &lt;input class=&quot;c-input has-focus&quot; type=&#39;text&#39;&gt;
-  &lt;div class=&#39;c-validation&#39;&gt;Validated message&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-<pre><code class="lang-example:html">&lt;div class=&quot;u-wrapper&quot;&gt;
-  &lt;input class=&quot;c-input&quot; type=&quot;email&quot; value=&quot;notauser at clientcom&quot; required&gt;
-  &lt;div class=&quot;c-validation c-validation--warning&quot;&gt;Warning validated message&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-<pre><code class="lang-example:html">&lt;div class=&quot;u-wrapper&quot;&gt;
-  &lt;input class=&quot;c-input is-error&quot; type=&#39;text&#39; placeholder=&quot;Placeholder text&quot;&gt;
-  &lt;div class=&#39;c-validation c-validation--error&#39;&gt;Error validated message&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
+				<h2 id="deprecated">DEPRECATED</h2>
+<p>Validation has been deprecated as a single component, and now will be included in <a href="#input-validation">input validation</a> as it serves better semantic meaning there.</p>
 
 				
 			</div>
@@ -3254,7 +3292,7 @@ Required&lt;/label&gt;
 			</div>
 		</section>
 		
-	<footer>Last modified Tuesday, 3 May 2016 16:52
+	<footer>Last modified Friday, 6 May 2016 11:42
 </main>
 <script src="prism.js"></script>
 <script src="examples.js"></script>
