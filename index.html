@@ -2,7 +2,7 @@
 <title>NAVIS ui Styleguide</title>
 <meta charset="utf-8">
 <link href="style.css" rel="stylesheet">
-<script>examples={"base":"","target":"_self","css":["guide.css","fonts/source-sans-pro/source-sans-pro.css"],"js":[],"bodyjs":["js/jquery-2.2.3.min.js","js/dom.js"],"htmlcss":"overflow: hidden;","bodycss":"overflow-x: hidden; padding: 20px;"};</script>
+<script>examples={"base":"","target":"_self","css":["guide.css","fonts/source-sans-pro/source-sans-pro.css"],"js":[],"bodyjs":["js/jquery-2.2.3.min.js","js/d3.min.js","js/dom.js"],"htmlcss":"overflow: hidden;","bodycss":"overflow-x: hidden; padding: 20px;"};</script>
 
 <header>
 	<nav>
@@ -94,7 +94,7 @@
 				</li>
 				
 				<li>
-					<a href="#typography"><span>Typography</span></a>
+					<a href="#composition"><span>Composition</span></a>
 					
 				</li>
 				
@@ -336,17 +336,6 @@ gulp watch
   --frame-double: calc(var(--global-line-height) * 2); /* 64px */
   --frame-triple: calc(var(--global-line-height) * 3); /* 96px */
 </code></pre>
-<h4 id="container-selectors">Container Selectors</h4>
-<p>Some of our metric visualizations require some adaptive controls where we would normally utilize container queries. In this case we are not able to utilize the prollyfill for container queries, so instead we are scoping with column classes with what I call &quot;container selectors&quot;.</p>
-<pre><code class="lang-css">.o-example {
-
-  &amp;:--container-sm { width: 100px; }
-
-  &amp;:--container-md { width: 200px; }
-
-  &amp;:--container-lg { width: 300px; }
-}
-</code></pre>
 
 				
 			</div>
@@ -503,29 +492,8 @@ width: 1.5em;
 		<section id="typography">
 			<h3>Typography</h3>
 			<div>
-				<p><h4 id="font-scale">Font Scale</h4></p>
-<pre><code class="lang-example">&lt;div style=&quot;font-size: 4.7rem;&quot;&gt;X-Large (75.2px)&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div style=&quot;font-size: 3rem;&quot;&gt;Large (48px)&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div style=&quot;font-size: 2.5rem;&quot;&gt;Semi-Large (40px)&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div style=&quot;font-size: 2rem;&quot;&gt;Medium (32px)&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div style=&quot;font-size: 1.5rem;&quot;&gt;Semi-Medium (24px)&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div style=&quot;font-size: 1.25rem;&quot;&gt;Normal Plus (20px)&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div style=&quot;font-size: 1.125rem;&quot;&gt;Normal (18px)&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div style=&quot;font-size: 1rem;&quot;&gt;Semi-Normal (16px)&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div style=&quot;font-size: .875rem;&quot;&gt;Small (14px)&lt;/div&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div style=&quot;font-size: .75rem;&quot;&gt;Tiny (12px)&lt;/div&gt;
-</code></pre>
-<h4 id="headings">Headings</h4>
-<p>All headings are the same size from the start, so we can concentrate on semantics out of the gate without having to worry about what size the heading will be. This is better than overwriting it with more styles, or choosing the wrong semantic heading to make it look right based on what size it gives you.</p>
+				<p><h4 id="headings">Headings</h4></p>
+<p><p>All headings are the same size from the start, so we can concentrate on semantics out of the gate without having to worry about what size the heading will be. This is better than overwriting it with more styles, or choosing the wrong semantic heading to make it look right based on what size it gives you.</p></p>
 <pre><code class="lang-example">&lt;h1&gt;The quick, brown fox (20px)&lt;/h1&gt;
 </code></pre>
 <h4 id="feature-body-copy">Feature &amp; Body Copy</h4>
@@ -546,19 +514,6 @@ width: 1.5em;
   &lt;li&gt;I am struggling to say anything more about them.&lt;/li&gt;
   &lt;li&gt;That brings us to tiny copy&amp;hellip;&lt;/li&gt;
 &lt;/ul&gt;
-</code></pre>
-<h4 id="customize">Customize</h4>
-<pre><code class="lang-css">--font-family: &#39;Source Sans Pro&#39;, sans-serif;
---font-size: 100%;
---font-size--normal: 1rem;
---font-size--semi-medium: 1.5rem;
---font-size--medium: 2rem;
---font-size--semi-large: 2.5rem;
---font-size--large: 3rem;
---font-line-height: 1.5;
---font-weight: 400;
---font-weight--bold: 800;
---heading-font-size: 1.25rem;
 </code></pre>
 
 				
@@ -1433,10 +1388,64 @@ position: fixed;
 			</div>
 		</section>
 		
-		<section id="typography">
-			<h3>Typography</h3>
+		<section id="composition">
+			<h3>Composition</h3>
 			<div>
-				
+				<p><h4 id="font-scale">Font Scale</h4></p>
+<pre><code class="lang-example">&lt;div style=&quot;font-size: 4.7rem;&quot;&gt;X-Large (75.2px)&lt;/div&gt;
+&lt;br&gt;
+&lt;code&gt;.u-font-size--xlarge&lt;/code&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div style=&quot;font-size: 3rem;&quot;&gt;Large (48px)&lt;/div&gt;
+&lt;br&gt;
+&lt;code&gt;.u-font-size--large&lt;/code&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div style=&quot;font-size: 2.5rem;&quot;&gt;Semi-Large (40px)&lt;/div&gt;
+&lt;br&gt;
+&lt;code&gt;.u-font-size--semi-large&lt;/code&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div style=&quot;font-size: 2rem;&quot;&gt;Medium (32px)&lt;/div&gt;
+&lt;br&gt;
+&lt;code&gt;.u-font-size--medium&lt;/code&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div style=&quot;font-size: 1.5rem;&quot;&gt;Semi-Medium (24px)&lt;/div&gt;
+&lt;br&gt;
+&lt;code&gt;.u-font-size--semi-medium&lt;/code&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div style=&quot;font-size: 1.25rem;&quot;&gt;Normal Plus (20px)&lt;/div&gt;
+&lt;br&gt;
+&lt;code&gt;.u-font-size--normal-plus&lt;/code&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div style=&quot;font-size: 1.125rem;&quot;&gt;Normal (18px)&lt;/div&gt;
+&lt;br&gt;
+&lt;code&gt;.u-font-size--normal&lt;/code&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div style=&quot;font-size: 1rem;&quot;&gt;Semi-Normal (16px)&lt;/div&gt;
+&lt;br&gt;
+&lt;code&gt;.u-font-size--semi-normal&lt;/code&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div style=&quot;font-size: .875rem;&quot;&gt;Small (14px)&lt;/div&gt;
+&lt;br&gt;
+&lt;code&gt;.u-font-size--small&lt;/code&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div style=&quot;font-size: .75rem;&quot;&gt;Tiny (12px)&lt;/div&gt;
+&lt;br&gt;
+&lt;code&gt;.u-font-size--tiny&lt;/code&gt;
+</code></pre>
+<h4 id="customize">Customize</h4>
+<pre><code class="lang-css">--font-family: &#39;Source Sans Pro&#39;, sans-serif;
+--font-size: 100%;
+--font-size--normal: 1rem;
+--font-size--semi-medium: 1.5rem;
+--font-size--medium: 2rem;
+--font-size--semi-large: 2.5rem;
+--font-size--large: 3rem;
+--font-line-height: 1.5;
+--font-weight: 400;
+--font-weight--bold: 800;
+--heading-font-size: 1.25rem;
+</code></pre>
+
 				
 			</div>
 		</section>
@@ -1607,24 +1616,35 @@ position: fixed;
 			<div>
 				<pre><code class="lang-example:html"> &lt;div class=&quot;c-card&quot;&gt;
    &lt;h1&gt;Card Heading&lt;/h1&gt;
-   &lt;p&gt;I could have used lorem ipsum, but what&#39;s the fun in that?&lt;/p&gt;
+   &lt;p&gt;Card paragraph text goes here.&lt;/p&gt;
  &lt;/div&gt;
 </code></pre>
 <pre><code class="lang-example:html"> &lt;div class=&quot;c-card c-card--round&quot;&gt;
    &lt;h1&gt;Card Rounded&lt;/h1&gt;
-   &lt;p&gt;I could have used lorem ipsum, but what&#39;s the fun in that?&lt;/p&gt;
+   &lt;p&gt;This is just a monolithic class that rounds off any card you apply it to.&lt;/p&gt;
  &lt;/div&gt;
 </code></pre>
 <pre><code class="lang-example:html"> &lt;div class=&quot;c-card c-card--transparent&quot;&gt;
    &lt;h1&gt;Card Transparent&lt;/h1&gt;
-   &lt;p&gt;I could have used lorem ipsum, but what&#39;s the fun in that?&lt;/p&gt;
+   &lt;p&gt;This gives you the basic box properties without any background color or text color.&lt;/p&gt;
+ &lt;/div&gt;
+</code></pre>
+<pre><code class="lang-example:html"> &lt;div class=&quot;u-wrapper&quot;&gt;
+  &lt;div class=&quot;c-card c-card--ruled&quot;&gt;
+    &lt;h1&gt;Card Ruled&lt;/h1&gt;
+    &lt;p&gt;A simple card, horizontal ruled.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;c-card c-card--ruled&quot;&gt;
+    &lt;h1&gt;Card Ruled&lt;/h1&gt;
+    &lt;p&gt;A simple card, horizontal ruled.&lt;/p&gt;
+  &lt;/div&gt;
  &lt;/div&gt;
 </code></pre>
 <pre><code class="lang-example:html"> &lt;div class=&quot;c-card&quot;&gt;
    &lt;div class=&quot;c-card__title&quot;&gt;
      &lt;h1 class=&quot;c-card__heading&quot;&gt;Card Titlebar&lt;/h1&gt;
    &lt;/div&gt;
-   &lt;p&gt;I could have used lorem ipsum, but what&#39;s the fun in that?&lt;/p&gt;
+   &lt;p&gt;Add these title and heading modifiers to your card to get a titlebar.&lt;/p&gt;
  &lt;/div&gt;
 </code></pre>
 <pre><code class="lang-example:html"> &lt;div class=&quot;c-card c-card--row is-active&quot;&gt;
@@ -1721,8 +1741,18 @@ position: fixed;
 			<h3>Dropdowns</h3>
 			<div>
 				<pre><code class="lang-example:html"> &lt;div class=&quot;c-dropdown&quot;&gt;
-   &lt;button class=&quot;c-dropdown__toggle js-dropdown-toggle&quot;&gt;Apples&lt;/button&gt;
-   &lt;ul class=&quot;c-dropdown__content is-active&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
+   &lt;button class=&quot;c-dropdown__select js-dropdown-toggle&quot;&gt;Apples&lt;/button&gt;
+   &lt;ul class=&quot;c-dropdown__menu is-active&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
+     &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Apples&lt;/button&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Oranges&lt;/button&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Banannas&lt;/button&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+ &lt;/div&gt;
+ &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+</code></pre>
+<pre><code class="lang-example:html"> &lt;div class=&quot;c-dropdown c-dropdown--large&quot;&gt;
+   &lt;button class=&quot;c-dropdown__select js-dropdown-toggle&quot;&gt;Large Toggle&lt;/button&gt;
+   &lt;ul class=&quot;c-dropdown__menu is-active&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
      &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Apples&lt;/button&gt;&lt;/li&gt;
      &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Oranges&lt;/button&gt;&lt;/li&gt;
      &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Banannas&lt;/button&gt;&lt;/li&gt;
@@ -1734,7 +1764,7 @@ position: fixed;
 <pre><code class="lang-example"> &lt;div class=&quot;u-end&quot;&gt;
 
  &lt;div class=&quot;c-dropdown c-dropdown--right&quot;&gt;
-   &lt;button class=&quot;c-dropdown__toggle js-dropdown-toggle&quot;&gt;Apples&lt;/button&gt;
+   &lt;button class=&quot;c-dropdown__select c-dropdown__select--right js-dropdown-toggle&quot;&gt;Apples&lt;/button&gt;
    &lt;ul class=&quot;c-dropdown__content is-active&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
      &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Apples&lt;/button&gt;&lt;/li&gt;
      &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Oranges&lt;/button&gt;&lt;/li&gt;
@@ -1746,7 +1776,7 @@ position: fixed;
  &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
 </code></pre>
 <pre><code class="lang-html"> &lt;div class=&quot;c-dropdown c-dropdown--right&quot;&gt;
-   &lt;button class=&quot;c-dropdown__toggle js-dropdown-toggle&quot;&gt;Apples&lt;/button&gt;
+   &lt;button class=&quot;c-dropdown__select js-dropdown-toggle&quot;&gt;Apples&lt;/button&gt;
    &lt;ul class=&quot;c-dropdown__content is-active&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
      &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Apples&lt;/button&gt;&lt;/li&gt;
      &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Oranges&lt;/button&gt;&lt;/li&gt;
@@ -2096,12 +2126,18 @@ position: fixed;
 			<h3>Tables</h3>
 			<div>
 				<p><p>This is a set of ways to format tables for responsive applications.</p></p>
-<pre><code class="lang-example">  &lt;div class=&quot;c-button-group&quot;&gt;
-    &lt;button class=&quot;c-button c-button--small is-active&quot; aria-label=&quot;Swipe View&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;view_headline&lt;/i&gt;&lt;/button&gt;
-    &lt;button class=&quot;c-button c-button--small&quot; aria-label=&quot;Toggle View&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;view_column&lt;/i&gt;&lt;/button&gt;
-    &lt;button class=&quot;c-button c-button--small&quot; aria-label=&quot;Stacked View&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;view_stream&lt;/i&gt;&lt;/button&gt;
+<pre><code class="lang-example:html">  &lt;div class=&quot;o-button-group&quot;&gt;
+    &lt;button class=&quot;c-button c-button--small js-view--swipe is-active&quot; aria-label=&quot;Swipe View&quot;&gt;
+      &lt;svg class=&quot;c-icon&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M4 15h16v-2H4v2zm0 4h16v-2H4v2zm0-8h16V9H4v2zm0-6v2h16V5H4z&quot;/&gt;&lt;/svg&gt;
+    &lt;/button&gt;
+    &lt;button class=&quot;c-button c-button--small js-view--toggle&quot; aria-label=&quot;Toggle View&quot;&gt;
+      &lt;svg class=&quot;c-icon&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M10 18h5V5h-5v13zm-6 0h5V5H4v13zM16 5v13h5V5h-5z&quot;/&gt;&lt;/svg&gt;
+    &lt;/button&gt;
+    &lt;button class=&quot;c-button c-button--small js-view--stacked&quot; aria-label=&quot;Stacked View&quot;&gt;
+      &lt;svg class=&quot;c-icon&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M4 18h17v-6H4v6zM4 5v6h17V5H4z&quot;/&gt;&lt;/svg&gt;
+    &lt;/button&gt;
   &lt;/div&gt;
-  &lt;table class=&quot;c-table c-table--toggle&quot;&gt;
+  &lt;table class=&quot;c-table c-table--toggle js-table-view&quot;&gt;
     &lt;thead&gt;
       &lt;tr&gt;
         &lt;th scope=&quot;col&quot;&gt;&lt;/th&gt;
@@ -2462,17 +2498,31 @@ position: fixed;
 			<div>
 				<p><p>Follow this example of markup on a <code>&lt;div&gt;</code> or <code>&lt;header&gt;</code> to get an application style toolbar. The main toolbar class should only be used on network-level NAVIS operations.</p></p>
 <pre><code class="lang-example:html">&lt;div class=&quot;o-toolbar&quot;&gt;
-  &lt;nav class=&quot;o-toolbar__info&quot;&gt;
+  &lt;nav class=&quot;u-column--bar&quot;&gt;
     &lt;h1 class=&quot;o-toolbar__brand&quot;&gt;NAVIS&lt;/h1&gt;
-    &lt;h2 class=&quot;o-toolbar__product&quot;&gt;UI&lt;/h2&gt;
+    &lt;div class=&quot;c-dropdown&quot;&gt;
+      &lt;button class=&quot;c-dropdown__select c-dropdown__select--right js-dropdown-toggle&quot;&gt;UI&lt;/button&gt;
+      &lt;ul class=&quot;c-dropdown__menu is-active&quot; tabindex=&quot;-1&quot;&gt;
+        &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;
+          &lt;svg class=&quot;c-icon&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z&quot;/&gt;&lt;/svg&gt;
+          App
+        &lt;/button&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;
+          &lt;svg class=&quot;c-icon&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z&quot;/&gt;&lt;/svg&gt;
+          App
+        &lt;/button&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;
+          &lt;svg class=&quot;c-icon&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z&quot;/&gt;&lt;/svg&gt;
+          App
+        &lt;/button&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
   &lt;/nav&gt;
-  &lt;ul class=&quot;o-toolbar__nav u-end&quot;&gt;
+  &lt;ul class=&quot;u-column--bar&quot;&gt;
       &lt;li class=&quot;o-toolbar__link&quot;&gt;
         &lt;div class=&quot;c-dropdown&quot;&gt;
           &lt;button class=&quot;c-button c-button--icon u-hide@md-up&quot;&gt;
-            &lt;span class=&quot;c-icon&quot;&gt;
-              &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z&quot;/&gt;&lt;/svg&gt;
-            &lt;/span&gt;
+            &lt;svg class=&quot;c-icon&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z&quot;/&gt;&lt;/svg&gt;
             &lt;/button&gt;
           &lt;button class=&quot;c-button c-button--text c-button--dropdown u-hide@sm-down&quot;&gt;English-US&lt;/button&gt;
           &lt;ul class=&quot;c-dropdown__content&quot; tabindex=&quot;-1&quot;&gt;
@@ -2482,14 +2532,12 @@ position: fixed;
         &lt;/div&gt;
       &lt;/li&gt;
       &lt;li class=&quot;o-toolbar__link&quot;&gt;
-        &lt;span class=&quot;c-icon c-icon--person&quot;&gt;
-          &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z&quot;/&gt;&lt;/svg&gt;
-        &lt;/span&gt;
+        &lt;svg class=&quot;c-icon c-icon--person&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z&quot;/&gt;&lt;/svg&gt;
         &lt;span class=&quot;u-hide@sm-down&quot;&gt;Kevin Mitnick&lt;/span&gt;
       &lt;/li&gt;
       &lt;li class=&quot;o-toolbar__link&quot;&gt;
         &lt;button class=&quot;c-button c-button--icon&quot;&gt;
-          &lt;span class=&quot;c-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;
+          &lt;svg class=&quot;c-icon&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z&quot;/&gt;&lt;/svg&gt;
         &lt;/button&gt;
       &lt;/li&gt;
   &lt;/ul&gt;
@@ -2516,52 +2564,36 @@ position: fixed;
   &lt;!-- View Actions for Mobile --&gt;
   &lt;div class=&quot;u-column u-hide@md-up u-end&quot;&gt;
     &lt;button class=&quot;c-button c-button--icon u-hide@md-up&quot; title=&quot;Filter by tag&quot;&gt;
-      &lt;span class=&quot;c-icon c-icon--filter_list&quot;&gt;
-        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z&quot;/&gt;&lt;/svg&gt;
-      &lt;/span&gt;
+      &lt;svg class=&quot;c-icon c-icon--filter_list&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z&quot;/&gt;&lt;/svg&gt;
     &lt;/button&gt;
     &lt;button class=&quot;c-button c-button--icon u-hide@md-up&quot; title=&quot;Search widgets&quot;&gt;
-      &lt;span class=&quot;c-icon c-icon--search&quot;&gt;
-        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z&quot;/&gt;&lt;/svg&gt;
-      &lt;/span&gt;
+      &lt;svg class=&quot;c-icon c-icon--search&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z&quot;/&gt;&lt;/svg&gt;
     &lt;/button&gt;
     &lt;button class=&quot;c-button c-button--icon u-hide@md-up&quot; title=&quot;List view&quot;&gt;
-      &lt;span class=&quot;c-icon c-icon--list&quot;&gt;
-        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z&quot;/&gt;&lt;/svg&gt;
-      &lt;/span&gt;
+      &lt;svg class=&quot;c-icon c-icon--list&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z&quot;/&gt;&lt;/svg&gt;
     &lt;/button&gt;
     &lt;button class=&quot;c-button c-button--icon u-hide@md-up&quot; title=&quot;Create widgets&quot;&gt;
-      &lt;span class=&quot;c-icon c-icon--create&quot;&gt;
-        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z&quot;/&gt;&lt;/svg&gt;
-      &lt;/span&gt;
+      &lt;svg class=&quot;c-icon c-icon--create&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z&quot;/&gt;&lt;/svg&gt;
     &lt;/button&gt;
   &lt;/div&gt;
 
   &lt;!-- View Actions for Tablets and Computers --&gt;
-  &lt;div class=&quot;u-column u-hide@sm-down&quot;&gt;
-    &lt;div class=&quot;u-row u-row--collapse u-middle&quot;&gt;
-      &lt;div class=&quot;u-column--4&quot;&gt;
-        &lt;div class=&quot;c-dropdown&quot;&gt;
-          &lt;button class=&quot;c-button c-button--dropdown&quot;&gt;Filter by tag&lt;/button&gt; &lt;ul class=&quot;c-dropdown__content [is-active]&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
-            &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Water&lt;/button&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Coffee&lt;/button&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Tea&lt;/button&gt;&lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;u-column&quot;&gt;
-        &lt;div class=&quot;u-wrapper&quot;&gt;
-          &lt;input class=&quot;c-input c-input--inset&quot; type=&quot;text&quot; placeholder=&quot;Search your widgets&quot; autocorrect=&quot;off&quot; autocapitalize=&quot;off&quot; autocomplete=&quot;off&quot; spellcheck=&quot;false&quot;&gt;
-          &lt;button class=&quot;c-button c-button--icon u-absolute--top-left&quot; type=&quot;submit&quot; disabled aria-label=&quot;Submit&quot;&gt;
-            &lt;span class=&quot;c-icon c-icon--search&quot;&gt;
-              &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z&quot;/&gt;&lt;/svg&gt;
-            &lt;/span&gt;
-          &lt;/button&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
+  &lt;div class=&quot;u-column--bar u-hide@sm-down&quot;&gt;
+    &lt;div class=&quot;c-dropdown&quot;&gt;
+      &lt;button class=&quot;c-button c-button--dropdown&quot;&gt;Filter by tag&lt;/button&gt; &lt;ul class=&quot;c-dropdown__content [is-active]&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Water&lt;/button&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Coffee&lt;/button&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Tea&lt;/button&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;u-wrapper&quot;&gt;
+      &lt;input class=&quot;c-input c-input--inset&quot; type=&quot;text&quot; placeholder=&quot;Search your widgets&quot; autocorrect=&quot;off&quot; autocapitalize=&quot;off&quot; autocomplete=&quot;off&quot; spellcheck=&quot;false&quot;&gt;
+      &lt;button class=&quot;c-button c-button--icon u-absolute--top-left&quot; type=&quot;submit&quot; disabled aria-label=&quot;Submit&quot;&gt;
+        &lt;svg class=&quot;c-icon c-icon--search&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z&quot;/&gt;&lt;/svg&gt;
+      &lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;u-column u-end u-hide@sm-down&quot;&gt;
+  &lt;div class=&quot;u-column--bar u-hide@sm-down&quot;&gt;
     &lt;div class=&#39;o-button-group--toggle&#39;&gt;
       &lt;button class=&#39;c-button&#39;&gt;List&lt;/button&gt;
       &lt;button class=&#39;c-button c-button--text&#39;&gt;Detail&lt;/button&gt;
@@ -2578,16 +2610,16 @@ position: fixed;
   &lt;!-- View Actions for Mobile --&gt;
   &lt;div class=&quot;u-column u-hide@md-up u-end&quot;&gt;
     &lt;button class=&quot;c-button c-button--icon u-hide@md-up&quot; title=&quot;Filter by tag&quot;&gt;
-      &lt;span class=&quot;c-icon c-icon--filter_list&quot;&gt; ... &lt;/span&gt;
+      &lt;svg class=&quot;c-icon c-icon--filter_list&quot;&gt; ... &lt;/svg&gt;
     &lt;/button&gt;
     &lt;button class=&quot;c-button c-button--icon u-hide@md-up&quot; title=&quot;Search widgets&quot;&gt;
-      &lt;span class=&quot;c-icon c-icon--search&quot;&gt; ... &lt;/span&gt;
+      &lt;svg class=&quot;c-icon c-icon--search&quot;&gt; ... &lt;/svg&gt;
     &lt;/button&gt;
     &lt;button class=&quot;c-button c-button--icon u-hide@md-up&quot; title=&quot;List view&quot;&gt;
-      &lt;span class=&quot;c-icon c-icon--list&quot;&gt; ... &lt;/span&gt;
+      &lt;svg class=&quot;c-icon c-icon--list&quot;&gt; ... &lt;/svg&gt;
     &lt;/button&gt;
     &lt;button class=&quot;c-button c-button--icon u-hide@md-up&quot; title=&quot;Create widgets&quot;&gt;
-      &lt;span class=&quot;c-icon c-icon--create&quot;&gt; ... &lt;/span&gt;
+      &lt;svg class=&quot;c-icon c-icon--create&quot;&gt; ... &lt;/svg&gt;
     &lt;/button&gt;
   &lt;/div&gt;
 
@@ -2607,7 +2639,7 @@ position: fixed;
         &lt;div class=&quot;u-wrapper&quot;&gt;
           &lt;input class=&quot;c-input c-input--inset&quot; type=&quot;text&quot; placeholder=&quot;Search your widgets&quot; autocorrect=&quot;off&quot; autocapitalize=&quot;off&quot; autocomplete=&quot;off&quot; spellcheck=&quot;false&quot;&gt;
           &lt;button class=&quot;c-button c-button--icon u-absolute--top-left&quot; type=&quot;submit&quot; disabled aria-label=&quot;Submit&quot;&gt;
-            &lt;span class=&quot;c-icon c-icon--search&quot;&gt; ... &lt;/span&gt;
+            &lt;svg class=&quot;c-icon c-icon--search&quot;&gt; ... &lt;/svg&gt;
           &lt;/button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -2837,8 +2869,33 @@ position: fixed;
 		<section id="editor">
 			<h3>Editor</h3>
 			<div>
-				<pre><code class="lang-example:html"> &lt;section class=&quot;o-editor is-active&quot; tabindex=&quot;-1&quot;&gt;
-   &lt;header class=&quot;o-editor__toolbar has-actions&quot; role=&quot;toolbar&quot;&gt;
+				<p><h4 id="inactive">Inactive</h4></p>
+<pre><code class="lang-example:html"> &lt;section class=&quot;o-editor&quot;&gt;
+   &lt;header class=&quot;o-editor__toolbar has-actions&quot;&gt;
+     &lt;div class=&quot;o-editor__nav&quot;&gt;
+     &lt;/div&gt;
+     &lt;div class=&quot;o-editor__info&quot;&gt;
+        &lt;div class=&quot;o-editor__actions o-button-group&quot;&gt;
+          &lt;!-- Edit --&gt;
+          &lt;button class=&quot;c-button c-button--large o-editor__edit&quot;&gt;&lt;span class=&quot;c-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;c-button__content u-hide@sm-down&quot;&gt;Edit&lt;/span&gt;&lt;/button&gt;
+          &lt;!-- Delete --&gt;
+          &lt;button class=&quot;c-button c-button--large&quot;&gt;&lt;span class=&quot;c-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/button&gt;
+          &lt;!-- Move --&gt;
+          &lt;button class=&quot;c-button c-button--large&quot;&gt;&lt;span class=&quot;c-icon&quot;&gt;
+            &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z&quot;/&gt;&lt;/svg&gt;
+        &lt;/span&gt;&lt;/button&gt;
+        &lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/header&gt;
+
+   &lt;div class=&quot;o-editor__content&quot;&gt;
+     &lt;input class=&quot;c-input&quot; value=&quot;Hello, I&#39;m content inside an editor! :)&quot;&gt;
+   &lt;/div&gt;
+ &lt;/section&gt;
+</code></pre>
+<h4 id="active">Active</h4>
+<pre><code class="lang-example:html"> &lt;section class=&quot;o-editor is-active&quot;&gt;
+   &lt;header class=&quot;o-editor__toolbar has-actions&quot;&gt;
      &lt;div class=&quot;o-editor__nav&quot;&gt;
        &lt;ul class=&quot;c-menu c-menu--inline&quot;&gt;
         &lt;li&gt;&lt;button class=&quot;c-menu__link is-active&quot;&gt;Object&lt;/button&gt;&lt;/li&gt;
@@ -2860,8 +2917,6 @@ position: fixed;
         &lt;div class=&quot;o-editor__actions o-button-group&quot;&gt;
           &lt;!-- Done --&gt;
           &lt;button class=&quot;c-button c-button--large o-editor__done&quot;&gt;&lt;span class=&quot;c-icon is-positive&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;c-button__content u-hide@sm-down&quot;&gt;Done&lt;/span&gt;&lt;/button&gt;
-          &lt;!-- Edit --&gt;
-        &lt;button class=&quot;c-button c-button--large o-editor__edit&quot;&gt;&lt;span class=&quot;c-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;c-button__content u-hide@sm-down&quot;&gt;Edit&lt;/span&gt;&lt;/button&gt;
         &lt;button class=&quot;c-button c-button--large&quot;&gt;&lt;span class=&quot;c-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/button&gt;
         &lt;button class=&quot;c-button c-button--large&quot;&gt;&lt;span class=&quot;c-icon&quot;&gt;
           &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z&quot;/&gt;&lt;/svg&gt;
@@ -2955,8 +3010,6 @@ Required&lt;/label&gt;
         &lt;div class=&quot;o-editor__actions o-button-group&quot;&gt;
             &lt;!-- Done --&gt;
             &lt;button class=&quot;c-button c-button--large o-editor__done&quot;&gt;&lt;span class=&quot;c-icon is-positive&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;c-button__content u-hide@sm-down&quot;&gt;Done&lt;/span&gt;&lt;/button&gt;
-            &lt;!-- Edit --&gt;
-          &lt;button class=&quot;c-button c-button--large o-editor__edit&quot;&gt;&lt;span class=&quot;c-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;c-button__content u-hide@sm-down&quot;&gt;Edit&lt;/span&gt;&lt;/button&gt;
           &lt;button class=&quot;c-button c-button--large&quot;&gt;&lt;span class=&quot;c-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/button&gt;
         &lt;button class=&quot;c-button c-button--large&quot;&gt;&lt;span class=&quot;c-icon&quot;&gt;
           &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z&quot;/&gt;&lt;/svg&gt;
@@ -3269,7 +3322,7 @@ Required&lt;/label&gt;
 			</div>
 		</section>
 		
-	<footer>Last modified Monday, 16 May 2016 15:19
+	<footer>Last modified Monday, 23 May 2016 10:25
 </main>
 <script src="prism.js"></script>
 <script src="examples.js"></script>

@@ -86,4 +86,24 @@ $(function() {
     $('.js-add-conditions').click(function() {
         $(this).text('Add');
     });
+
+    // Tables
+    $('.js-view--swipe').click(function() {
+        $('.js-table-view').removeClass('c-table--swipe').removeClass('c-table--toggle').removeClass('c-table--stacked');
+        $('.js-table-view').addClass('c-table--swipe');
+        $('.js-view--swipe, .js-view--toggle, .js-view--stacked').removeClass('is-active');
+        $(this).addClass('is-active');
+    });
+    $('.js-view--toggle').click(function() {
+        $('.js-table-view').removeClass('c-table--swipe').removeClass('c-table--toggle').removeClass('c-table--stacked');
+        $('.js-table-view').addClass('c-table--toggle');
+        $('.js-view--swipe, .js-view--toggle, .js-view--stacked').removeClass('is-active');
+        $(this).addClass('is-active');
+    });
+    $('.js-view--stacked').click(function() {
+        $('.js-table-view').removeClass('c-table--swipe').removeClass('c-table--toggle').removeClass('c-table--stacked');
+        $('.js-table-view').addClass('c-table--stacked');
+        $('.js-view--swipe, .js-view--toggle, .js-view--stacked').removeClass('is-active');
+        $(this).addClass('is-active');
+    });
 });
