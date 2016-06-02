@@ -1,287 +1,194 @@
 <!doctype html>
-<title>NAVIS ui Styleguide</title>
+<title>NAVIS UI Styleguide</title>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="style.css" rel="stylesheet">
 <script>examples={"base":"","target":"_self","css":["guide.css","fonts/source-sans-pro/source-sans-pro.css"],"js":[],"bodyjs":["js/jquery-2.2.3.min.js","js/d3.min.js","js/dom.js"],"htmlcss":"overflow: hidden;","bodycss":"overflow-x: hidden; padding: 20px;"};</script>
 
-<header>
-	<nav>
-		<img src="img/navis-logo.svg" alt="NAVIS ui Styleguide">
-		
-	<ul>
-		
-				<li>
-					<a href="#navis-ui"><span>NAVIS ui</span></a>
-					
-	<ul>
-		
-	</ul>
-	
-				</li>
-				
-				<li>
-					<a href="#elements"><span>Elements</span></a>
-					
-	<ul>
-		
-				<li>
-					<a href="#size"><span>Size</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#colour"><span>Colour</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#forms"><span>Forms</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#images"><span>Images</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#layout"><span>Layout</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#typography"><span>Typography</span></a>
-					
-				</li>
-				
-	</ul>
-	
-				</li>
-				
-				<li>
-					<a href="#utilities"><span>Utilities</span></a>
-					
-	<ul>
-		
-				<li>
-					<a href="#grid"><span>Grid</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#positioning"><span>Positioning</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#a11y"><span>a11y</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#visibility"><span>Visibility</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#shapes"><span>Shapes</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#syntax"><span>Syntax</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#composition"><span>Composition</span></a>
-					
-				</li>
-				
-	</ul>
-	
-				</li>
-				
-				<li>
-					<a href="#components"><span>Components</span></a>
-					
-	<ul>
-		
-				<li>
-					<a href="#input"><span>Input</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#badges"><span>Badges</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#card"><span>Card</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#checkbox"><span>Checkbox</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#radio"><span>Radio</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#dropdowns"><span>Dropdowns</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#field"><span>Field</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#buttons"><span>Buttons</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#label"><span>Label</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#loader"><span>Loader</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#menu"><span>Menu</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#messages"><span>Messages</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#notification"><span>Notification</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#tables"><span>Tables</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#tooltips"><span>Tooltips</span></a>
-					
-				</li>
-				
-	</ul>
-	
-				</li>
-				
-				<li>
-					<a href="#objects"><span>Objects</span></a>
-					
-	<ul>
-		
-				<li>
-					<a href="#accordion"><span>Accordion</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#toolbar"><span>Toolbar</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#button-groups"><span>Button Groups</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#calendar"><span>Calendar</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#drawer"><span>Drawer</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#editor"><span>Editor</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#iconbar"><span>Iconbar</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#listing"><span>Listing</span></a>
-					
-				</li>
-				
-				<li>
-					<a href="#modal"><span>Modal</span></a>
-					
-				</li>
-				
-	</ul>
-	
-				</li>
-				
-	</ul>
-	
-	</nav>
+
+<header class="masthead">
+  <div class="container">
+    <a href="/" class="masthead-logo">
+      <img src="img/navis-symbol.png" alt="NAVIS UI Styleguide" height="32"> NAVIS UI Styleguide
+    </a>
+    <nav class="masthead-nav">
+      <!-- TODO Add Page Navigation -->
+    </nav>
+  </div>
 </header>
 
-<main>
+<div class="container">
+  <div class="columns docs-layout">
+    <div class="one-fourth column">
+      <nav class="menu docs-menu">
+        
+		
+        <a class="menu-heading" href="#elements"><span>Elements</span></a>
+        
+		
+        <a class="menu-item" href="#size"><span>Size</span></a>
+        
+				
+        <a class="menu-item" href="#colour"><span>Colour</span></a>
+        
+				
+        <a class="menu-item" href="#forms"><span>Forms</span></a>
+        
+				
+        <a class="menu-item" href="#images"><span>Images</span></a>
+        
+				
+        <a class="menu-item" href="#layout"><span>Layout</span></a>
+        
+				
+        <a class="menu-item" href="#typography"><span>Typography</span></a>
+        
+				
 	
-		<section id="navis-ui">
-			<h2>NAVIS ui</h2>
-			<div>
 				
+        <a class="menu-heading" href="#utilities"><span>Utilities</span></a>
+        
+		
+        <a class="menu-item" href="#grid"><span>Grid</span></a>
+        
 				
+        <a class="menu-item" href="#positioning"><span>Positioning</span></a>
+        
+				
+        <a class="menu-item" href="#a11y"><span>a11y</span></a>
+        
+				
+        <a class="menu-item" href="#visibility"><span>Visibility</span></a>
+        
+				
+        <a class="menu-item" href="#shapes"><span>Shapes</span></a>
+        
+				
+        <a class="menu-item" href="#syntax"><span>Syntax</span></a>
+        
+				
+        <a class="menu-item" href="#composition"><span>Composition</span></a>
+        
+				
+	
+				
+        <a class="menu-heading" href="#components"><span>Components</span></a>
+        
+		
+        <a class="menu-item" href="#input"><span>Input</span></a>
+        
+				
+        <a class="menu-item" href="#badges"><span>Badges</span></a>
+        
+				
+        <a class="menu-item" href="#card"><span>Card</span></a>
+        
+				
+        <a class="menu-item" href="#checkbox"><span>Checkbox</span></a>
+        
+				
+        <a class="menu-item" href="#radio"><span>Radio</span></a>
+        
+				
+        <a class="menu-item" href="#dropdowns"><span>Dropdowns</span></a>
+        
+				
+        <a class="menu-item" href="#field"><span>Field</span></a>
+        
+				
+        <a class="menu-item" href="#icon"><span>Icon</span></a>
+        
+				
+        <a class="menu-item" href="#buttons"><span>Buttons</span></a>
+        
+				
+        <a class="menu-item" href="#label"><span>Label</span></a>
+        
+				
+        <a class="menu-item" href="#loader"><span>Loader</span></a>
+        
+				
+        <a class="menu-item" href="#menu"><span>Menu</span></a>
+        
+				
+        <a class="menu-item" href="#messages"><span>Messages</span></a>
+        
+				
+        <a class="menu-item" href="#notification"><span>Notification</span></a>
+        
+				
+        <a class="menu-item" href="#tables"><span>Tables</span></a>
+        
+				
+        <a class="menu-item" href="#tooltips"><span>Tooltips</span></a>
+        
+				
+	
+				
+        <a class="menu-heading" href="#objects"><span>Objects</span></a>
+        
+		
+        <a class="menu-item" href="#accordion"><span>Accordion</span></a>
+        
+				
+        <a class="menu-item" href="#toolbar"><span>Toolbar</span></a>
+        
+				
+        <a class="menu-item" href="#button-groups"><span>Button Groups</span></a>
+        
+				
+        <a class="menu-item" href="#calendar"><span>Calendar</span></a>
+        
+				
+        <a class="menu-item" href="#drawer"><span>Drawer</span></a>
+        
+				
+        <a class="menu-item" href="#editor"><span>Editor</span></a>
+        
+				
+        <a class="menu-item" href="#iconbar"><span>Iconbar</span></a>
+        
+				
+        <a class="menu-item" href="#listing"><span>Listing</span></a>
+        
+				
+        <a class="menu-item" href="#modal"><span>Modal</span></a>
+        
+				
+	
+				
+	
+      </nav>
+    </div>
+
+    <main class="three-fourths column markdown-body">
+      
 		<section>
 			
-			<div>
-				<p><p><a href="https://gitlab.buehner-fry.com/SCWay/navis-ui">GitLab</a> | <a href="http://cssstats.com/stats?link=http%3A%2F%2Fstaticplay.github.io%2Fui-docs%2Fguide.css">CSS Stats</a> | <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fstaticplay.github.io%2Fui-docs%2Fguide.css&amp;profile=css3&amp;usermedium=all&amp;warning=1&amp;vextwarning=&amp;lang=en">CSS Validator</a></p></p>
-<p><h3 id="getting-started">Getting Started</h3></p>
+
+			<div class="markdown-body">
+				<p><h1 id="navis-ui">NAVIS UI</h1></p>
+<p><p><a href="https://gitlab.buehner-fry.com/navis/navis-ui">GitLab</a> | <a href="https://www.npmjs.com/package/navis-ui">NPM</a> | <a href="http://cssstats.com/stats?link=http%3A%2F%2Fstaticplay.github.io%2Fui-docs%2Fguide.css">CSS Stats</a> | <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fstaticplay.github.io%2Fui-docs%2Fguide.css&amp;profile=css3&amp;usermedium=all&amp;warning=1&amp;vextwarning=&amp;lang=en">CSS Validator</a></p></p>
+<p><h2 id="getting-started">Getting Started</h2></p>
 <p><p>In your command line application, you will want to install the necessary tools
 to start working on the UI framework. Make sure your other projects are at the
 same level for synced releases.</p></p>
-<p><h4 id="install">Install</h4></p>
-<p><p><code>npm install navis-ui --registry <a href="https://artifacts.buehner-fry.com/artifactory/api/npm/npm-registries">https://artifacts.buehner-fry.com/artifactory/api/npm/npm-registries</a> --save-dev</code></p></p>
-<p><h4 id="publishing">Publishing</h4></p>
-<p><p>You will want to setup Artifactory specific NPM configuration with the following:</p></p>
-<p><p><code>curl -u&lt;USERNAME&gt;:&lt;ENCRYPTPASS&gt; <a href="https://artifacts.buehner-fry.com/artifactory/api/npm/auth">https://artifacts.buehner-fry.com/artifactory/api/npm/auth</a></code>
-<code>curl -i -u&lt;USERNAME&gt;:&lt;ENCRYPTPASS&gt; &quot;<a href="https://artifacts.buehner-fry.com/artifactory/api/npm/npm-registries/auth/jfrog”">https://artifacts.buehner-fry.com/artifactory/api/npm/npm-registries/auth/jfrog”</a></code></p></p>
-<p><p>Next you will want to yank and paste what you get back from both of those curl commands into your <code>~/.npmrc</code> file with this additional line:</p></p>
-<p><p><code>registry=<a href="https://artifacts.buehner-fry.com/artifactory/api/npm/npm-registries">https://artifacts.buehner-fry.com/artifactory/api/npm/npm-registries</a></code></p></p>
-<p><p>Now you can install NAVIS ui simply by using npm: <code>npm i navis-ui</code></p></p>
-<p><h4 id="development">Development</h4></p>
+<p><h3 id="install">Install</h3></p>
+<p><p><code>npm i navis-ui</code></p></p>
+<p><h3 id="development">Development</h3></p>
 <p><p>For development of this project you will want to clone and run these commands</p></p>
 <pre><code class="lang-shell">npm i -g gulp
 npm i
 gulp watch
 </code></pre>
+<h2 id="publishing">Publishing</h2>
+<p>For now, I think a PR for version bump is good enough.</p>
 <h3 id="index-html">index.html</h3>
 <p>Make sure to add these things to your layout file. Optionally, for legacy browser support of HTML5 and layout, you can import <a href="https://modernizr.com/">modernizr</a>/<a href="http://cdnjs.com/libraries/modernizr">cdn</a> into your head section.</p>
 <pre><code class="lang-html">&lt;html class=&quot;s-app&quot;&gt; &lt;!-- App scope class--&gt;
 &lt;head&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt; &lt;!-- This enables smaller devices to view this site responsively --&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700&quot;&gt; &lt;!-- This is the default webfont --&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/icon?family=Material+Icons&quot;&gt; &lt;!-- This is the default icon webfont --&gt;
   &lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/app.css&quot;&gt; &lt;!-- This is the main stylesheet --&gt;
 &lt;/head&gt;
 </code></pre>
@@ -311,17 +218,16 @@ gulp watch
 			</div>
 		</section>
 		
-			</div>
-		</section>
-		
 		<section id="elements">
-			<h2>Elements</h2>
-			<div>
+			<h1 class="page-title">Elements</h1>
+
+			<div class="markdown-body">
 				
 				
 		<section id="size">
-			<h3>Size</h3>
-			<div>
+			<h2 class="page-title">Size</h2>
+
+			<div class="markdown-body">
 				<p><p>This is a list of global variables, and their default values.</p></p>
 <p><h6 id="elements-size-css">elements/size.css</h6></p>
 <pre><code class="lang-css">  --global-duration: .1s;
@@ -342,8 +248,9 @@ gulp watch
 		</section>
 		
 		<section id="colour">
-			<h3>Colour</h3>
-			<div>
+			<h2 class="page-title">Colour</h2>
+
+			<div class="markdown-body">
 				<p><h4 id="colour-palette">Colour Palette</h4></p>
 <p><p>This collection of CSS colors are intended to serve the interface of all our product applications and all the components you can see in this document.</p></p>
 <p><h5 id="example-usage">Example Usage</h5></p>
@@ -369,6 +276,7 @@ gulp watch
 <h5 id="brand-secondary">Brand Secondary</h5>
 <pre><code class="lang-example:color">@color: #f92 @name: --orange-500
 @color: #f07700 @name: --orange-600
+@color: #cc5000 @name: --orange-700
 </code></pre>
 <h5 id="grayscale-neutral-">Grayscale (Neutral)</h5>
 <pre><code class="lang-example:color">@color: #fff @name: --white
@@ -402,7 +310,7 @@ gulp watch
 <p>These colors are intended for very specific parts of the user interface.</p>
 <h5 id="type-color">Type Color</h5>
 <p>State classes are provided for colored text in this section so you can apply appropriate emotion to your work, <code>e.g. &lt;span class=&quot;is-positive&quot;&gt;Your file has been saved!&lt;/span&gt;</code>.</p>
-<pre><code class="lang-example:copy">@color: #33332a @name: --body-copy
+<pre><code class="lang-example:color">@color: #33332a @name: --body-copy
 @color: #ccccc2 @name: --placeholder-copy
 @color: #00996e @name: .is-positive
 @color: #1c7dab @name: .is-informative
@@ -440,8 +348,9 @@ gulp watch
 		</section>
 		
 		<section id="forms">
-			<h3>Forms</h3>
-			<div>
+			<h2 class="page-title">Forms</h2>
+
+			<div class="markdown-body">
 				<p>TODO forms.md</p>
 
 				
@@ -449,8 +358,9 @@ gulp watch
 		</section>
 		
 		<section id="images">
-			<h3>Images</h3>
-			<div>
+			<h2 class="page-title">Images</h2>
+
+			<div class="markdown-body">
 				<p><p>This section covers how we handle images. By default all <code>&lt;img&gt;</code> tags are 100% wide.</p></p>
 <p><h4 id="triangle">Triangle</h4></p>
 <p><p>You can draw a small triangle into any object or component using this apply that leverages a border hack.</p></p>
@@ -465,8 +375,9 @@ width: 1.5em;
 		</section>
 		
 		<section id="layout">
-			<h3>Layout</h3>
-			<div>
+			<h2 class="page-title">Layout</h2>
+
+			<div class="markdown-body">
 				<p><p>The main layout depends on the <code>.s-app</code> class to render a holy grail layout that scales down nicely to mobile.</p></p>
 <p><p><a href="http://codepen.io/stephenway/pen/EKORdr">Use the master layout CodePen</a></p></p>
 <svg width="725" height="465" viewBox="0 0 725 465" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><title>Artboard 1</title><desc>Created with Sketch.</desc><g sketch:type="MSArtboardGroup" fill="none"><g id="Group" sketch:type="MSLayerGroup"><path fill="#047" sketch:type="MSShapeGroup" d="M26 31h356v44h-356z"/><path fill="#cef" sketch:type="MSShapeGroup" d="M26 80h77v310h-77z"/><path fill="#FCFCF9" sketch:type="MSShapeGroup" d="M109 80h273v310h-273z"/><path fill="#EEEEE7" sketch:type="MSShapeGroup" d="M26 395h356v44h-356z"/></g><g sketch:type="MSLayerGroup"><path fill="#047" sketch:type="MSShapeGroup" d="M518 31h181.672v44h-181.672z"/><path fill="#FCFCF9" sketch:type="MSShapeGroup" d="M518 80h181.672v262h-181.672z"/><path fill="#EEEEE7" sketch:type="MSShapeGroup" d="M518 395h181.672v44h-181.672z"/><path fill="#CAEEFF" sketch:type="MSShapeGroup" d="M518 346h181.672v44h-181.672z"/></g><path d="M435 248v-30l30 15-30 15z" fill="#EEEEE7" sketch:type="MSShapeGroup"/></g></svg>
@@ -490,8 +401,9 @@ width: 1.5em;
 		</section>
 		
 		<section id="typography">
-			<h3>Typography</h3>
-			<div>
+			<h2 class="page-title">Typography</h2>
+
+			<div class="markdown-body">
 				<p><h4 id="headings">Headings</h4></p>
 <p><p>All headings are the same size from the start, so we can concentrate on semantics out of the gate without having to worry about what size the heading will be. This is better than overwriting it with more styles, or choosing the wrong semantic heading to make it look right based on what size it gives you.</p></p>
 <pre><code class="lang-example">&lt;h1&gt;The quick, brown fox (20px)&lt;/h1&gt;
@@ -524,13 +436,15 @@ width: 1.5em;
 		</section>
 		
 		<section id="utilities">
-			<h2>Utilities</h2>
-			<div>
+			<h1 class="page-title">Utilities</h1>
+
+			<div class="markdown-body">
 				
 				
 		<section id="grid">
-			<h3>Grid</h3>
-			<div>
+			<h2 class="page-title">Grid</h2>
+
+			<div class="markdown-body">
 				<p>Grids are the bread and butter of web design, this one is based on flexbox. Needless to say you will find this grid system a joy to use. <a href="http://jonyablonski.com/2015/flexbox-myth-busting/">Flexbox Mythbusting</a></p>
 <h4 id="new-to-grids-">New to grids?</h4>
 <p>Check out my presentation on CSS Grids can help you, complete with a <a href="https://speakerdeck.com/stephenway/css-grids-can-help-you">slide deck</a>, and a <a href="http://codepen.io/stephenway/pen/dMKzvy">CodePen</a> to play with complex grid layouts.</p>
@@ -1223,8 +1137,9 @@ width: 1.5em;
 		</section>
 		
 		<section id="positioning">
-			<h3>Positioning</h3>
-			<div>
+			<h2 class="page-title">Positioning</h2>
+
+			<div class="markdown-body">
 				<p><h4 id="fixed-classes">Fixed Classes</h4></p>
 <pre><code class="lang-html">&lt;div class=&quot;u-fixed--top&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;u-fixed--top-center&quot;&gt;&lt;/div&gt;
@@ -1253,14 +1168,19 @@ width: 1.5em;
 @apply --position-top;
 position: fixed;
 </code></pre>
+<h4 id="rotate">Rotate</h4>
+<pre><code class="lang-html">&lt;div class=&quot;u-rotate--cw&quot;&gt;Rotate right 90 degrees&lt;/div&gt;
+&lt;div class=&quot;u-rotate--ccw&quot;&gt;Rotate left -90 degrees&lt;/div&gt;
+</code></pre>
 
 				
 			</div>
 		</section>
 		
 		<section id="a11y">
-			<h3>a11y</h3>
-			<div>
+			<h2 class="page-title">a11y</h2>
+
+			<div class="markdown-body">
 				<p><h4 id="assert-selector">Assert Selector</h4></p>
 <p>With this, we can write styles with built-in assertions that point out certain elements that lack required a11y aria properties.</p>
 <pre><code class="lang-css">.c-input {
@@ -1279,8 +1199,9 @@ position: fixed;
 		</section>
 		
 		<section id="visibility">
-			<h3>Visibility</h3>
-			<div>
+			<h2 class="page-title">Visibility</h2>
+
+			<div class="markdown-body">
 				<p><p>Use simple utilities to hide or show elements across any span of devices</p></p>
 <p><h3 id="show">Show</h3></p>
 <p><p>This set of classes let you expose any element to the desired device(s). Just add one of the following classes and you will see your element on it&#39;s respective device.</p></p>
@@ -1324,8 +1245,9 @@ position: fixed;
 		</section>
 		
 		<section id="shapes">
-			<h3>Shapes</h3>
-			<div>
+			<h2 class="page-title">Shapes</h2>
+
+			<div class="markdown-body">
 				<p>TODO shapes.md</p>
 
 				
@@ -1333,8 +1255,9 @@ position: fixed;
 		</section>
 		
 		<section id="syntax">
-			<h3>Syntax</h3>
-			<div>
+			<h2 class="page-title">Syntax</h2>
+
+			<div class="markdown-body">
 				<p><p>Synopsis - Give developers more knowledge about how the classes behave in a non-relative sense: BEM + ITCSS = BEMIT</p></p>
 <p><h6 id="sources">Sources</h6></p>
 <p><p><a href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/">More Transparent UI Code with Namespaces</a></p></p>
@@ -1389,8 +1312,9 @@ position: fixed;
 		</section>
 		
 		<section id="composition">
-			<h3>Composition</h3>
-			<div>
+			<h2 class="page-title">Composition</h2>
+
+			<div class="markdown-body">
 				<p><h4 id="font-scale">Font Scale</h4></p>
 <pre><code class="lang-example">&lt;div style=&quot;font-size: 4.7rem;&quot;&gt;X-Large (75.2px)&lt;/div&gt;
 &lt;br&gt;
@@ -1454,13 +1378,15 @@ position: fixed;
 		</section>
 		
 		<section id="components">
-			<h2>Components</h2>
-			<div>
+			<h1 class="page-title">Components</h1>
+
+			<div class="markdown-body">
 				
 				
 		<section id="buttons">
-			<h3>Buttons</h3>
-			<div>
+			<h2 class="page-title">Buttons</h2>
+
+			<div class="markdown-body">
 				<p><p>Use these button classes on <code>&lt;button&gt;</code> or <code>&lt;input type=&#39;submit&#39;&gt;</code> element. It&#39;s easy to make a new button.</p></p>
 <pre><code class="lang-example:html">&lt;button class=&#39;c-button&#39;&gt;Default&lt;/button&gt;
 </code></pre>
@@ -1537,8 +1463,9 @@ position: fixed;
 		</section>
 		
 		<section id="input">
-			<h3>Input</h3>
-			<div>
+			<h2 class="page-title">Input</h2>
+
+			<div class="markdown-body">
 				<p><p>This is our input component, which gives you a lot of options for form interactions. Supported input types are, <code>text</code>, <code>password</code>, <code>date</code>, <code>datetime</code>, <code>datetime-local</code>, <code>month</code>, <code>week</code>, <code>email</code>, <code>number</code>, <code>search</code>, <code>tel</code>, <code>time</code>, <code>url</code>, <code>color</code>.</p></p>
 <pre><code class="lang-example:html">&lt;label class=&quot;c-input-label&quot; for=&quot;input-1&quot;&gt;Required Input&lt;/label&gt;
 &lt;input class=&quot;c-input&quot; id=&quot;input-1&quot; type=&quot;text&quot; required=&quot;true&quot; placeholder=&quot;The quick bown fox...&quot;&gt;
@@ -1612,8 +1539,9 @@ position: fixed;
 		</section>
 		
 		<section id="card">
-			<h3>Card</h3>
-			<div>
+			<h2 class="page-title">Card</h2>
+
+			<div class="markdown-body">
 				<pre><code class="lang-example:html"> &lt;div class=&quot;c-card&quot;&gt;
    &lt;h1&gt;Card Heading&lt;/h1&gt;
    &lt;p&gt;Card paragraph text goes here.&lt;/p&gt;
@@ -1679,8 +1607,9 @@ position: fixed;
 		</section>
 		
 		<section id="checkbox">
-			<h3>Checkbox</h3>
-			<div>
+			<h2 class="page-title">Checkbox</h2>
+
+			<div class="markdown-body">
 				<p><p>We now have a CSS only checkbox that uses pseudo-elements to draw the square and checkmark next to the label.</p></p>
 <pre><code class="lang-example:html">&lt;input id=&#39;checkbox-1&#39; type=&quot;checkbox&quot; class=&quot;c-checkbox&quot;&gt;&lt;/input&gt;
 &lt;label for=&#39;checkbox-1&#39;&gt;Checkbox&lt;/label&gt;
@@ -1690,10 +1619,22 @@ position: fixed;
 
 &lt;input id=&#39;checkbox-3&#39; type=&quot;checkbox&quot; class=&quot;c-checkbox is-indeterminate&quot;&gt;&lt;/input&gt;
 &lt;label for=&#39;checkbox-3&#39;&gt;Indeterminate Checkbox&lt;/label&gt;
+
+&lt;input id=&#39;checkbox-1&#39; type=&quot;checkbox&quot; class=&quot;c-checkbox&quot;&gt;&lt;/input&gt;
+&lt;label for=&#39;checkbox-1&#39;&gt;Nunc commodo a eros eu tempus. Cras nisl leo, tempor eget egestas at, venenatis ut dui. Pellentesque volutpat magna et nulla volutpat condimentum.&lt;/label&gt;
 </code></pre>
 <h4 id="consumer-blue">Consumer Blue</h4>
-<pre><code class="lang-example:html">&lt;input id=&#39;checkbox-2&#39; type=&quot;checkbox&quot; class=&quot;c-checkbox c-checkbox--informative&quot; checked&gt;&lt;/input&gt;
+<pre><code class="lang-example:html">&lt;input id=&#39;checkbox-1&#39; type=&quot;checkbox&quot; class=&quot;c-checkbox c-checkbox--informative&quot;&gt;&lt;/input&gt;
+&lt;label for=&#39;checkbox-1&#39;&gt;Checkbox&lt;/label&gt;
+
+&lt;input id=&#39;checkbox-2&#39; type=&quot;checkbox&quot; class=&quot;c-checkbox c-checkbox--informative&quot; checked&gt;&lt;/input&gt;
 &lt;label for=&#39;checkbox-2&#39;&gt;Checked Checkbox&lt;/label&gt;
+
+&lt;input id=&#39;checkbox-3&#39; type=&quot;checkbox&quot; class=&quot;c-checkbox c-checkbox--informative is-indeterminate&quot;&gt;&lt;/input&gt;
+&lt;label for=&#39;checkbox-3&#39;&gt;Indeterminate Checkbox&lt;/label&gt;
+
+&lt;input id=&#39;checkbox-4&#39; type=&quot;checkbox&quot; class=&quot;c-checkbox c-checkbox--informative&quot;&gt;&lt;/input&gt;
+&lt;label for=&#39;checkbox-4&#39;&gt;Nunc commodo a eros eu tempus. Cras nisl leo, tempor eget egestas at, venenatis ut dui. Pellentesque volutpat magna et nulla volutpat condimentum.&lt;/label&gt;
 </code></pre>
 
 				
@@ -1701,20 +1642,28 @@ position: fixed;
 		</section>
 		
 		<section id="radio">
-			<h3>Radio</h3>
-			<div>
-				<pre><code class="lang-example:html">&lt;input id=&#39;r1&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio&quot; aria-labelledby=&quot;r1l&quot;&gt;&lt;/input&gt;
+			<h2 class="page-title">Radio</h2>
+
+			<div class="markdown-body">
+				<pre><code class="lang-example:html">&lt;input id=&#39;r1&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio&quot;&gt;&lt;/input&gt;
 &lt;label for=&#39;r1&#39; id=&quot;r1l&quot;&gt;Radio&lt;/label&gt;
 
-&lt;input id=&#39;r2&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio&quot; aria-labelledby=&quot;r2l&quot; checked&gt;&lt;/input&gt;
+&lt;input id=&#39;r2&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio&quot; checked&gt;&lt;/input&gt;
 &lt;label for=&#39;r2&#39; id=&quot;r2l&quot;&gt;Selected Radio&lt;/label&gt;
+
+
+&lt;input id=&#39;r3&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio&quot; checked&gt;&lt;/input&gt;
+&lt;label for=&#39;r3&#39;&gt;Nunc commodo a eros eu tempus. Cras nisl leo, tempor eget egestas at, venenatis ut dui. Pellentesque volutpat magna et nulla volutpat condimentum.&lt;/label&gt;
 </code></pre>
 <h4 id="consumer-blue">Consumer Blue</h4>
-<pre><code class="lang-example:html">&lt;input id=&#39;r1&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio c-radio--informative&quot; aria-labelledby=&quot;r1l&quot;&gt;&lt;/input&gt;
+<pre><code class="lang-example:html">&lt;input id=&#39;r1&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio c-radio--informative&quot;&gt;&lt;/input&gt;
 &lt;label for=&#39;r1&#39; id=&quot;r1l&quot;&gt;Radio&lt;/label&gt;
 
-&lt;input id=&#39;r2&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio c-radio--informative&quot; aria-labelledby=&quot;r2l&quot; checked&gt;&lt;/input&gt;
+&lt;input id=&#39;r2&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio c-radio--informative&quot; checked&gt;&lt;/input&gt;
 &lt;label for=&#39;r2&#39; id=&quot;r2l&quot;&gt;Selected Radio&lt;/label&gt;
+
+&lt;input id=&#39;r3&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio c-radio--informative&quot; checked&gt;&lt;/input&gt;
+&lt;label for=&#39;r3&#39;&gt;Nunc commodo a eros eu tempus. Cras nisl leo, tempor eget egestas at, venenatis ut dui. Pellentesque volutpat magna et nulla volutpat condimentum.&lt;/label&gt;
 </code></pre>
 <h4 id="stacked">Stacked</h4>
 <pre><code class="lang-example:html">&lt;input id=&#39;r1&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio c-radio--informative c-radio--stacked&quot; aria-labelledby=&quot;r1l&quot;&gt;&lt;/input&gt;
@@ -1738,8 +1687,9 @@ position: fixed;
 		</section>
 		
 		<section id="dropdowns">
-			<h3>Dropdowns</h3>
-			<div>
+			<h2 class="page-title">Dropdowns</h2>
+
+			<div class="markdown-body">
 				<pre><code class="lang-example:html"> &lt;div class=&quot;c-dropdown&quot;&gt;
    &lt;button class=&quot;c-dropdown__select js-dropdown-toggle&quot;&gt;Apples&lt;/button&gt;
    &lt;ul class=&quot;c-dropdown__menu is-active&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
@@ -1760,12 +1710,36 @@ position: fixed;
  &lt;/div&gt;
  &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
 </code></pre>
-<h4 id="right-aligned-dropdown">Right Aligned Dropdown</h4>
-<pre><code class="lang-example"> &lt;div class=&quot;u-end&quot;&gt;
+<pre><code class="lang-example:html"> &lt;div class=&quot;c-dropdown&quot;&gt;
+   &lt;button class=&quot;c-dropdown__select c-dropdown__select--positive js-dropdown-toggle&quot;&gt;Positive Select&lt;/button&gt;
+   &lt;ul class=&quot;c-dropdown__menu&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
+     &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Apples&lt;/button&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Oranges&lt;/button&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Banannas&lt;/button&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+ &lt;/div&gt;
+ &lt;div class=&quot;c-dropdown&quot;&gt;
+   &lt;button class=&quot;c-dropdown__select c-dropdown__select--alterable js-dropdown-toggle&quot;&gt;Alterable Select&lt;/button&gt;
+   &lt;ul class=&quot;c-dropdown__menu&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
+     &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Apples&lt;/button&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Oranges&lt;/button&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Banannas&lt;/button&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+ &lt;/div&gt;
+ &lt;div class=&quot;c-dropdown&quot;&gt;
+   &lt;button class=&quot;c-dropdown__select c-dropdown__select--negative js-dropdown-toggle&quot;&gt;Negative Select&lt;/button&gt;
+   &lt;ul class=&quot;c-dropdown__menu&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
+     &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Apples&lt;/button&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Oranges&lt;/button&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Banannas&lt;/button&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+ &lt;/div&gt;
+</code></pre>
+<pre><code class="lang-example:html"> &lt;div class=&quot;u-end&quot;&gt;
 
  &lt;div class=&quot;c-dropdown c-dropdown--right&quot;&gt;
-   &lt;button class=&quot;c-dropdown__select c-dropdown__select--right js-dropdown-toggle&quot;&gt;Apples&lt;/button&gt;
-   &lt;ul class=&quot;c-dropdown__content is-active&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
+   &lt;button class=&quot;c-dropdown__select c-dropdown__select--right js-dropdown-toggle&quot;&gt;Right Aligned&lt;/button&gt;
+   &lt;ul class=&quot;c-dropdown__menu is-active&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
      &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Apples&lt;/button&gt;&lt;/li&gt;
      &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Oranges&lt;/button&gt;&lt;/li&gt;
      &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Banannas&lt;/button&gt;&lt;/li&gt;
@@ -1775,19 +1749,10 @@ position: fixed;
  &lt;/div&gt;
  &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
 </code></pre>
-<pre><code class="lang-html"> &lt;div class=&quot;c-dropdown c-dropdown--right&quot;&gt;
-   &lt;button class=&quot;c-dropdown__select js-dropdown-toggle&quot;&gt;Apples&lt;/button&gt;
-   &lt;ul class=&quot;c-dropdown__content is-active&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
-     &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Apples&lt;/button&gt;&lt;/li&gt;
-     &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Oranges&lt;/button&gt;&lt;/li&gt;
-     &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Banannas&lt;/button&gt;&lt;/li&gt;
-   &lt;/ul&gt;
- &lt;/div&gt;
-</code></pre>
 <h4 id="button-dropdown">Button Dropdown</h4>
 <pre><code class="lang-example:html"> &lt;div class=&quot;c-dropdown&quot;&gt;
    &lt;button class=&quot;c-button c-button--dropdown js-dropdown-toggle&quot;&gt;Filter&lt;/button&gt;
-   &lt;ul class=&quot;c-dropdown__content is-active&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
+   &lt;ul class=&quot;c-dropdown__menu is-active&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
      &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Water&lt;/button&gt;&lt;/li&gt;
      &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Coffee&lt;/button&gt;&lt;/li&gt;
      &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Tea&lt;/button&gt;&lt;/li&gt;
@@ -1798,7 +1763,7 @@ position: fixed;
 <h4 id="large-dropdown">Large Dropdown</h4>
 <pre><code class="lang-example:html"> &lt;div class=&quot;c-dropdown c-dropdown--large&quot;&gt;
    &lt;button class=&quot;c-button c-button--dropdown js-dropdown-toggle&quot;&gt;Filter&lt;/button&gt;
-   &lt;div class=&quot;c-dropdown__content is-active&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
+   &lt;div class=&quot;c-dropdown__menu is-active&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
      &lt;div class=&quot;u-trailer--quarter&quot;&gt;
        &lt;input class=&quot;c-input&quot; type=&quot;text&quot; placeholder=&quot;Search...&quot;&gt;
      &lt;/div&gt;
@@ -1852,8 +1817,8 @@ position: fixed;
 <h4 id="dropdown-data">Dropdown Data</h4>
 <p>Note: The dropdown list underneath should not be enabled when the dropdown list is visible. Doing this fosters a better interaction for the user.</p>
 <pre><code class="lang-example:html"> &lt;div class=&quot;c-dropdown c-dropdown--data&quot;&gt;
-   &lt;button class=&quot;c-dropdown__toggle js-dropdown-toggle&quot;&gt;{In room beverages}&lt;/button&gt;
-   &lt;ul class=&quot;c-dropdown__content&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
+   &lt;button class=&quot;c-dropdown__select js-dropdown-toggle&quot;&gt;{In room beverages}&lt;/button&gt;
+   &lt;ul class=&quot;c-dropdown__menu&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
      &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Select answer data...&lt;/button&gt;&lt;/li&gt;
      &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;in room - beverages&lt;/button&gt;&lt;/li&gt;
      &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;in room - media&lt;/button&gt;&lt;/li&gt;
@@ -1872,8 +1837,9 @@ position: fixed;
 		</section>
 		
 		<section id="field">
-			<h3>Field</h3>
-			<div>
+			<h2 class="page-title">Field</h2>
+
+			<div class="markdown-body">
 				<pre><code class="lang-example:html">&lt;input class=&quot;c-field&quot; type=&quot;text&quot; required=&quot;true&quot; placeholder=&quot;Required field&quot;&gt;&lt;/input&gt;
 &lt;input class=&quot;c-field&quot; type=&quot;text&quot; placeholder=&quot;Optional field&quot;&gt;&lt;/input&gt;
 </code></pre>
@@ -1893,9 +1859,131 @@ position: fixed;
 			</div>
 		</section>
 		
+		<section id="icon">
+			<h2 class="page-title">Icon</h2>
+
+			<div class="markdown-body">
+				<p><p>The preferred icon library when using NAVIS ui is Google&#39;s <a href="https://design.google.com/icons/">Material icons</a>. We include the entire library in the UI Components project in the form of svg paths that get inlined into your markup.</p></p>
+<p><p>Use these icon classes on <code>&lt;span&gt;</code> elements wrapping your inline svg icons. Here is a simple icon in it&#39;s purest form.</p></p>
+<pre><code class="lang-example">&lt;span class=&quot;c-icon c-icon--large&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z&quot;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+</code></pre>
+<pre><code class="lang-html">&lt;span class=&quot;c-icon&quot;&gt;&lt;svg&gt;...&lt;/svg&gt;&lt;/span&gt;
+</code></pre>
+<h4 id="size-and-form">Size and Form</h4>
+<p>These icons are drawn on a 24px grid, so we initially size them 24px by 24px, then from small to xlarge we scale them to render as clearly as possible.</p>
+<pre><code class="lang-example">&lt;figure&gt;
+&lt;span class=&quot;c-icon c-icon--small&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z&quot;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+&lt;figcaption&gt;.c-icon--small&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;span class=&quot;c-icon&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z&quot;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+&lt;figcaption&gt;.c-icon&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;span class=&quot;c-icon c-icon--medium&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z&quot;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+&lt;figcaption&gt;.c-icon--medium&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;span class=&quot;c-icon c-icon--large&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z&quot;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+&lt;figcaption&gt;.c-icon--large&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;span class=&quot;c-icon c-icon--xlarge&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z&quot;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+&lt;figcaption&gt;.c-icon--xlarge&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;span class=&quot;c-icon c-icon--huge&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z&quot;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+&lt;figcaption&gt;.c-icon--huge&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<h4 id="color">Color</h4>
+<pre><code class="lang-example">&lt;figure&gt;
+&lt;span class=&quot;c-icon c-icon--large is-positive&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M11.99 2C6.47 2 2 6.47 2 12s4.47 10 9.99 10S22 17.53 22 12 17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm1-10.06L14.06 11l1.06-1.06L16.18 11l1.06-1.06-2.12-2.12zm-4.12 0L9.94 11 11 9.94 8.88 7.82 6.76 9.94 7.82 11zM12 17.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z&quot;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+&lt;figcaption&gt;.is-positive&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;span class=&quot;c-icon c-icon--large is-informative&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;circle cx=&quot;15.5&quot; cy=&quot;9.5&quot; r=&quot;1.5&quot;/&gt;&lt;circle cx=&quot;8.5&quot; cy=&quot;9.5&quot; r=&quot;1.5&quot;/&gt;&lt;path d=&quot;M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-4c-1.48 0-2.75-.81-3.45-2H6.88c.8 2.05 2.79 3.5 5.12 3.5s4.32-1.45 5.12-3.5h-1.67c-.7 1.19-1.97 2-3.45 2z&quot;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+&lt;figcaption&gt;.is-informative&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;span class=&quot;c-icon c-icon--large is-neutral&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M9 14h6v1.5H9z&quot;/&gt;&lt;circle cx=&quot;15.5&quot; cy=&quot;9.5&quot; r=&quot;1.5&quot;/&gt;&lt;circle cx=&quot;8.5&quot; cy=&quot;9.5&quot; r=&quot;1.5&quot;/&gt;&lt;path d=&quot;M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z&quot;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+&lt;figcaption&gt;.is-neutral&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;span class=&quot;c-icon c-icon--large is-live&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M9 14h6v1.5H9z&quot;/&gt;&lt;circle cx=&quot;15.5&quot; cy=&quot;9.5&quot; r=&quot;1.5&quot;/&gt;&lt;circle cx=&quot;8.5&quot; cy=&quot;9.5&quot; r=&quot;1.5&quot;/&gt;&lt;path d=&quot;M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z&quot;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+&lt;figcaption&gt;.is-live&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;span class=&quot;c-icon c-icon--large is-alterable&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;circle cx=&quot;15.5&quot; cy=&quot;9.5&quot; r=&quot;1.5&quot;/&gt;&lt;circle cx=&quot;8.5&quot; cy=&quot;9.5&quot; r=&quot;1.5&quot;/&gt;&lt;path d=&quot;M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-6c-2.33 0-4.32 1.45-5.12 3.5h1.67c.69-1.19 1.97-2 3.45-2s2.75.81 3.45 2h1.67c-.8-2.05-2.79-3.5-5.12-3.5z&quot;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+&lt;figcaption&gt;.is-alterable&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;span class=&quot;c-icon c-icon--large is-negative&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M11.99 2C6.47 2 2 6.47 2 12s4.47 10 9.99 10S22 17.53 22 12 17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm4.18-12.24l-1.06 1.06-1.06-1.06L13 8.82l1.06 1.06L13 10.94 14.06 12l1.06-1.06L16.18 12l1.06-1.06-1.06-1.06 1.06-1.06zM7.82 12l1.06-1.06L9.94 12 11 10.94 9.94 9.88 11 8.82 9.94 7.76 8.88 8.82 7.82 7.76 6.76 8.82l1.06 1.06-1.06 1.06zM12 14c-2.33 0-4.31 1.46-5.11 3.5h10.22c-.8-2.04-2.78-3.5-5.11-3.5z&quot;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+&lt;figcaption&gt;.is-negative&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<h4 id="states">States</h4>
+<pre><code class="lang-example">&lt;figure&gt;
+&lt;span class=&quot;c-icon c-icon--large is-active&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z&quot;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+&lt;figcaption&gt;.is-active&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+&lt;span class=&quot;c-icon c-icon--large is-passive&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm-1.2-9.1c0-.66.54-1.2 1.2-1.2.66 0 1.2.54 1.2 1.2l-.01 6.2c0 .66-.53 1.2-1.19 1.2-.66 0-1.2-.54-1.2-1.2V4.9zm6.5 6.1c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z&quot;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+&lt;figcaption&gt;.is-passive&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+&lt;span class=&quot;c-icon c-icon--large is-disabled&quot;&gt;
+  &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 11h-1.7c0 .74-.16 1.43-.43 2.05l1.23 1.23c.56-.98.9-2.09.9-3.28zm-4.02.17c0-.06.02-.11.02-.17V5c0-1.66-1.34-3-3-3S9 3.34 9 5v.18l5.98 5.99zM4.27 3L3 4.27l6.01 6.01V11c0 1.66 1.33 3 2.99 3 .22 0 .44-.03.65-.08l1.66 1.66c-.71.33-1.5.52-2.31.52-2.76 0-5.3-2.1-5.3-5.1H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c.91-.13 1.77-.45 2.54-.9L19.73 21 21 19.73 4.27 3z&quot;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+&lt;figcaption&gt;.is-disabled&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+&lt;svg class=&quot;c-icon c-icon--large is-selectable&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 11h-1.7c0 .74-.16 1.43-.43 2.05l1.23 1.23c.56-.98.9-2.09.9-3.28zm-4.02.17c0-.06.02-.11.02-.17V5c0-1.66-1.34-3-3-3S9 3.34 9 5v.18l5.98 5.99zM4.27 3L3 4.27l6.01 6.01V11c0 1.66 1.33 3 2.99 3 .22 0 .44-.03.65-.08l1.66 1.66c-.71.33-1.5.52-2.31.52-2.76 0-5.3-2.1-5.3-5.1H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c.91-.13 1.77-.45 2.54-.9L19.73 21 21 19.73 4.27 3z&quot;/&gt;&lt;/svg&gt;
+&lt;figcaption&gt;.is-selectable&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
 		<section id="badges">
-			<h3>Badges</h3>
-			<div>
+			<h2 class="page-title">Badges</h2>
+
+			<div class="markdown-body">
 				<pre><code class="lang-example:html">&lt;p&gt;&lt;a href=&quot;#&quot;&gt;Inbox &lt;span class=&quot;c-badge&quot;&gt;7&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;button class=&quot;c-button&quot;&gt;
@@ -1915,8 +2003,9 @@ position: fixed;
 		</section>
 		
 		<section id="label">
-			<h3>Label</h3>
-			<div>
+			<h2 class="page-title">Label</h2>
+
+			<div class="markdown-body">
 				<pre><code class="lang-example:html">&lt;span class=&quot;c-label&quot;&gt;Default&lt;/span&gt;
 &lt;span class=&quot;c-label c-label--positive&quot;&gt;Positive&lt;/span&gt;
 &lt;span class=&quot;c-label c-label--informative&quot;&gt;Informative&lt;/span&gt;
@@ -1946,13 +2035,26 @@ position: fixed;
 		</section>
 		
 		<section id="loader">
-			<h3>Loader</h3>
-			<div>
+			<h2 class="page-title">Loader</h2>
+
+			<div class="markdown-body">
 				<pre><code class="lang-example">&lt;br&gt;&lt;br&gt;
 &lt;div class=&quot;c-loader u-fixed--middle-center&quot;&gt;&lt;/div&gt;
 &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
 </code></pre>
 <pre><code class="lang-html">&lt;div class=&quot;c-loader u-fixed--middle-center&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="lang-example">&lt;br&gt;&lt;br&gt;
+&lt;div class=&quot;c-loader-secondary u-fixed--middle-center&quot;&gt;&lt;/div&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+</code></pre>
+<pre><code class="lang-html">&lt;div class=&quot;c-loader-secondary u-fixed--middle-center&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="lang-example">&lt;br&gt;&lt;br&gt;
+&lt;div class=&quot;c-loader-secondary c-loader-secondary--neutral u-fixed--middle-center&quot;&gt;&lt;/div&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+</code></pre>
+<pre><code class="lang-html">&lt;div class=&quot;c-loader-secondary c-loader-secondary--neutral u-fixed--middle-center&quot;&gt;&lt;/div&gt;
 </code></pre>
 
 				
@@ -1960,8 +2062,9 @@ position: fixed;
 		</section>
 		
 		<section id="menu">
-			<h3>Menu</h3>
-			<div>
+			<h2 class="page-title">Menu</h2>
+
+			<div class="markdown-body">
 				<p><h3 id="block">Block</h3></p>
 <p><p>A horizontal list of block-level links using a <code>&lt;ul&gt;</code>.</p></p>
 <pre><code class="lang-example:html">  &lt;ul class=&quot;c-menu c-menu--block&quot;&gt;
@@ -1991,8 +2094,9 @@ position: fixed;
 		</section>
 		
 		<section id="messages">
-			<h3>Messages</h3>
-			<div>
+			<h2 class="page-title">Messages</h2>
+
+			<div class="markdown-body">
 				<p><p>Use these message classes on text strings to style them for various type treatments.</p></p>
 <pre><code class="lang-example:html">&lt;div class=&quot;c-message&quot;&gt;This is a message&lt;/div&gt;
 </code></pre>
@@ -2010,121 +2114,79 @@ position: fixed;
 		</section>
 		
 		<section id="notification">
-			<h3>Notification</h3>
-			<div>
-				<p><p>Notifications communicate the state of your user&#39;s interactions as well as system status. We have a flexible notification style with a few variations for different states.</p></p>
+			<h2 class="page-title">Notification</h2>
+
+			<div class="markdown-body">
+				<p>Notifications communicate the state of your user&#39;s interactions as well as system status. We have a flexible notification style with a few variations for different states.</p>
+<pre><code class="lang-html">&lt;div class=&quot;c-notification [c-notification--warning]&quot;&gt;
+  &lt;svg class=&quot;c-icon c-icon--info&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+    &lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z&quot;/&gt;
+  &lt;/svg&gt;
+  &lt;div class=&quot;c-notification<strong>content&quot;&gt;
+    &lt;h1 class=&quot;c-notification</strong>heading&quot;&gt;Heading&lt;/h1&gt;
+    &lt;p&gt;Communicate a meaningful message.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;button class=&quot;c-button c-button--icon&quot;&gt;
+    &lt;svg class=&quot;c-icon c-icon--close&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+      &lt;path d=&quot;M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z&quot;/&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
 <pre><code class="lang-example">&lt;div class=&quot;c-notification&quot;&gt;
-  &lt;span class=&quot;c-icon c-icon--info&quot;&gt;
-    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z&quot;/&gt;&lt;/svg&gt;
-  &lt;/span&gt;
-  &lt;div class=&quot;c-notification__content&quot;&gt;
-    &lt;h1 class=&quot;c-notification__heading&quot;&gt;Default Notification&lt;/h1&gt;
+  &lt;svg class=&quot;c-icon c-icon--check-circle&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+    &lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z&quot;/&gt;
+  &lt;/svg&gt;
+  &lt;div class=&quot;c-notification<strong>content&quot;&gt;
+    &lt;h1 class=&quot;c-notification</strong>heading&quot;&gt;Successful Notification&lt;/h1&gt;
     &lt;p&gt;Communicate a meaningful message.&lt;/p&gt;
   &lt;/div&gt;
   &lt;button class=&quot;c-button c-button--icon&quot;&gt;
-    &lt;span class=&quot;c-icon c-icon--close&quot;&gt;
-      &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z&quot;/&gt;&lt;/svg&gt;
-    &lt;/span&gt;
+    &lt;svg class=&quot;c-icon c-icon--close&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+      &lt;path d=&quot;M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z&quot;/&gt;
+    &lt;/svg&gt;
   &lt;/button&gt;
 &lt;/div&gt;
-</code></pre>
-<pre><code class="lang-html">&lt;div class=&quot;c-notification&quot;&gt;
-  &lt;span class=&quot;c-icon c-icon--info&quot;&gt; ... &lt;/span&gt;
-  &lt;div class=&quot;c-notification__content&quot;&gt;
-    &lt;h1 class=&quot;c-notification__heading&quot;&gt;Default Notification&lt;/h1&gt;
-    &lt;p&gt;Communicate a meaningful message.&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;button class=&quot;c-button c-button--icon&quot;&gt;
-    &lt;span class=&quot;c-icon c-icon--close&quot;&gt; ... &lt;/span&gt;
-  &lt;/button&gt;
-&lt;/div&gt;
-</code></pre>
-<pre><code class="lang-example">&lt;div class=&quot;c-notification c-notification--success&quot;&gt;
-  &lt;span class=&quot;c-icon c-icon--check-circle&quot;&gt;
-    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z&quot;/&gt;&lt;/svg&gt;
-  &lt;/span&gt;
-  &lt;div class=&quot;c-notification__content&quot;&gt;
-    &lt;h1 class=&quot;c-notification__heading&quot;&gt;Successful Notification&lt;/h1&gt;
-    &lt;p&gt;Communicate a meaningful message.&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;button class=&quot;c-button c-button--icon&quot;&gt;
-    &lt;span class=&quot;c-icon c-icon--close&quot;&gt;
-      &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z&quot;/&gt;&lt;/svg&gt;
-    &lt;/span&gt;
-  &lt;/button&gt;
-&lt;/div&gt;
-</code></pre>
-<pre><code class="lang-html">&lt;div class=&quot;c-notification c-notification--success&quot;&gt; ... &lt;/div&gt;
-&lt;!-- Use the check_circle icon --&gt;
 </code></pre>
 <pre><code class="lang-example">&lt;div class=&quot;c-notification c-notification--warning&quot;&gt;
-  &lt;span class=&quot;c-icon c-icon--warning&quot;&gt;
-    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z&quot;/&gt;&lt;/svg&gt;
-  &lt;/span&gt;
-  &lt;div class=&quot;c-notification__content&quot;&gt;
-    &lt;h1 class=&quot;c-notification__heading&quot;&gt;Warning Notification&lt;/h1&gt;
+  &lt;svg class=&quot;c-icon c-icon--warning&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+    &lt;path d=&quot;M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z&quot;/&gt;
+  &lt;/svg&gt;
+  &lt;div class=&quot;c-notification<strong>content&quot;&gt;
+    &lt;h1 class=&quot;c-notification</strong>heading&quot;&gt;Warning Notification&lt;/h1&gt;
     &lt;p&gt;Communicate a meaningful message.&lt;/p&gt;
   &lt;/div&gt;
   &lt;button class=&quot;c-button c-button--icon&quot;&gt;
-    &lt;span class=&quot;c-icon c-icon--close&quot;&gt;
-      &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z&quot;/&gt;&lt;/svg&gt;
-    &lt;/span&gt;
+    &lt;svg class=&quot;c-icon c-icon--close&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+      &lt;path d=&quot;M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z&quot;/&gt;
+    &lt;/svg&gt;
   &lt;/button&gt;
 &lt;/div&gt;
-</code></pre>
-<pre><code class="lang-html">&lt;div class=&quot;c-notification c-notification--warning&quot;&gt; ... &lt;/div&gt;
-&lt;!-- Use the warning icon --&gt;
-</code></pre>
-<pre><code class="lang-example">&lt;div class=&quot;c-notification c-notification--error&quot;&gt;
-  &lt;span class=&quot;c-icon c-icon--error&quot;&gt;
-    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z&quot;/&gt;&lt;/svg&gt;
-  &lt;/span&gt;
-  &lt;div class=&quot;c-notification__content&quot;&gt;
-    &lt;h1 class=&quot;c-notification__heading&quot;&gt;Error Notification&lt;/h1&gt;
-    &lt;p&gt;Communicate a meaningful message.&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;button class=&quot;c-button c-button--icon&quot;&gt;
-    &lt;span class=&quot;c-icon c-icon--close&quot;&gt;
-      &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z&quot;/&gt;&lt;/svg&gt;
-    &lt;/span&gt;
-  &lt;/button&gt;
-&lt;/div&gt;
-</code></pre>
-<pre><code class="lang-html">&lt;div class=&quot;c-notification c-notification--error&quot;&gt; ... &lt;/div&gt;
-&lt;!-- Use the error icon --&gt;
 </code></pre>
 <h3 id="wide">Wide</h3>
 <p>Alternatively we have an alert-style notification that takes the whole page width.</p>
-<pre><code class="lang-example:html">&lt;div class=&quot;c-notification c-notification--wide c-notification--informative&quot;&gt;
-  &lt;svg class=&quot;c-icon c-icon--info&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z&quot;/&gt;&lt;/svg&gt;
-  &lt;div class=&quot;c-notification__content&quot;&gt;
-    &lt;h1 class=&quot;c-notification__heading&quot;&gt;Wide Notification&lt;/h1&gt;
+<pre><code class="lang-example">&lt;div class=&quot;c-notification c-notification--wide c-notification--informative&quot;&gt;
+  &lt;svg class=&quot;c-icon c-icon--info&quot; xmlns=&quot;<a href="http://www.w3.org/2000/svg&amp;quot">http://www.w3.org/2000/svg&amp;quot</a>; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z&quot;/&gt;&lt;/svg&gt;
+  &lt;div class=&quot;c-notification<strong>content&quot;&gt;
+    &lt;h1 class=&quot;c-notification</strong>heading&quot;&gt;Wide Notification&lt;/h1&gt;
     &lt;p&gt;Communicate a meaningful message.&lt;/p&gt;
   &lt;/div&gt;
   &lt;button class=&quot;c-button c-button--icon&quot;&gt;
-    &lt;span class=&quot;c-icon c-icon--medium c-icon--close&quot;&gt;
-      &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z&quot;/&gt;&lt;/svg&gt;
-    &lt;/span&gt;
+    &lt;svg class=&quot;c-icon c-icon--close&quot; xmlns=&quot;<a href="http://www.w3.org/2000/svg&amp;quot">http://www.w3.org/2000/svg&amp;quot</a>; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z&quot;/&gt;&lt;/svg&gt;
   &lt;/button&gt;
 &lt;/div&gt;
 </code></pre>
 <h3 id="positions">Positions</h3>
-<p>You can apply modifier classes to your notification to pin them to different areas around the viewport.</p>
-<h6 id="classes">CLASSES</h6>
-<pre><code>.c-notification--top-left
-.c-notification--top
-.c-notification--top-right
-.c-notification--bottom-right
-.c-notification--bottom
-.c-notification--bottom-left
-</code></pre>
+<p>You can apply modifier classes to your notification to pin them to different areas around the viewport. See <a href="#positioning">positioning</a>.</p>
+
 				
 			</div>
 		</section>
 		
 		<section id="tables">
-			<h3>Tables</h3>
-			<div>
+			<h2 class="page-title">Tables</h2>
+
+			<div class="markdown-body">
 				<p><p>This is a set of ways to format tables for responsive applications.</p></p>
 <pre><code class="lang-example:html">  &lt;div class=&quot;o-button-group&quot;&gt;
     &lt;button class=&quot;c-button c-button--small js-view--swipe is-active&quot; aria-label=&quot;Swipe View&quot;&gt;
@@ -2322,8 +2384,9 @@ position: fixed;
 		</section>
 		
 		<section id="tooltips">
-			<h3>Tooltips</h3>
-			<div>
+			<h2 class="page-title">Tooltips</h2>
+
+			<div class="markdown-body">
 				<p><p>This is a data-attribute based component, so you will only be able to use it if you add a <code>data-tooltip</code> into your element.</p></p>
 <p><h4 id="positions">Positions</h4></p>
 <p><p>For positioning, use <code>data-tooltip-pos</code> data-attribute with one of these values: <code>up</code>, <code>down</code>, <code>right</code>, <code>left</code></p></p>
@@ -2406,13 +2469,15 @@ position: fixed;
 		</section>
 		
 		<section id="objects">
-			<h2>Objects</h2>
-			<div>
+			<h1 class="page-title">Objects</h1>
+
+			<div class="markdown-body">
 				
 				
 		<section id="accordion">
-			<h3>Accordion</h3>
-			<div>
+			<h2 class="page-title">Accordion</h2>
+
+			<div class="markdown-body">
 				<p><p>A simple accordion with a gradient of blue. More advanced use cases to come.</p></p>
 <pre><code class="lang-example:html">&lt;nav class=&quot;o-accordion is-collapsed&quot;&gt;
   &lt;ul class=&quot;o-accordion__list o-accordion__list--top&quot;&gt;
@@ -2494,8 +2559,9 @@ position: fixed;
 		</section>
 		
 		<section id="toolbar">
-			<h3>Toolbar</h3>
-			<div>
+			<h2 class="page-title">Toolbar</h2>
+
+			<div class="markdown-body">
 				<p><p>Follow this example of markup on a <code>&lt;div&gt;</code> or <code>&lt;header&gt;</code> to get an application style toolbar. The main toolbar class should only be used on network-level NAVIS operations.</p></p>
 <pre><code class="lang-example:html">&lt;div class=&quot;o-toolbar&quot;&gt;
   &lt;nav class=&quot;u-column--bar&quot;&gt;
@@ -2660,8 +2726,9 @@ position: fixed;
 		</section>
 		
 		<section id="button-groups">
-			<h3>Button Groups</h3>
-			<div>
+			<h2 class="page-title">Button Groups</h2>
+
+			<div class="markdown-body">
 				<pre><code class="lang-example:html">&lt;div class=&#39;o-button-group&#39;&gt;
   &lt;button class=&#39;c-button&#39;&gt;Play&lt;/button&gt;
   &lt;button class=&#39;c-button&#39;&gt;Pause&lt;/button&gt;
@@ -2702,8 +2769,9 @@ position: fixed;
 		</section>
 		
 		<section id="calendar">
-			<h3>Calendar</h3>
-			<div>
+			<h2 class="page-title">Calendar</h2>
+
+			<div class="markdown-body">
 				<p><p>This is a month view calendar for overlaying on input fields that control date selection.</p></p>
 <pre><code class="lang-example:html">&lt;div class=&quot;u-wrapper&quot;&gt;
   &lt;span class=&quot;o-button-group-label&quot;&gt; X Date&lt;/span&gt;
@@ -2806,8 +2874,9 @@ position: fixed;
 		</section>
 		
 		<section id="drawer">
-			<h3>Drawer</h3>
-			<div>
+			<h2 class="page-title">Drawer</h2>
+
+			<div class="markdown-body">
 				<pre><code class="lang-example:html">&lt;div class=&quot;o-drawer o-drawer--left is-open&quot;&gt;
   &lt;header class=&quot;o-drawer__header&quot;&gt;
     &lt;h1 class=&quot;o-drawer__brand&quot;&gt;Navis&lt;/h1&gt;
@@ -2867,8 +2936,9 @@ position: fixed;
 		</section>
 		
 		<section id="editor">
-			<h3>Editor</h3>
-			<div>
+			<h2 class="page-title">Editor</h2>
+
+			<div class="markdown-body">
 				<p><h4 id="inactive">Inactive</h4></p>
 <pre><code class="lang-example:html"> &lt;section class=&quot;o-editor&quot;&gt;
    &lt;header class=&quot;o-editor__toolbar has-actions&quot;&gt;
@@ -3054,8 +3124,9 @@ Required&lt;/label&gt;
 		</section>
 		
 		<section id="iconbar">
-			<h3>Iconbar</h3>
-			<div>
+			<h2 class="page-title">Iconbar</h2>
+
+			<div class="markdown-body">
 				<pre><code class="lang-example:html">&lt;nav class=&quot;o-iconbar&quot;&gt;
   &lt;button class=&quot;o-iconbar__item is-active&quot;&gt;
     &lt;span class=&quot;c-icon&quot;&gt;
@@ -3148,8 +3219,9 @@ Required&lt;/label&gt;
 		</section>
 		
 		<section id="listing">
-			<h3>Listing</h3>
-			<div>
+			<h2 class="page-title">Listing</h2>
+
+			<div class="markdown-body">
 				<p><h4 id="beginner-view">Beginner view</h4></p>
 <pre><code class="lang-example:html">&lt;br&gt;&lt;br&gt;&lt;br&gt;
 &lt;div class=&quot;u-fixed--middle-center&quot;&gt;
@@ -3260,8 +3332,9 @@ Required&lt;/label&gt;
 		</section>
 		
 		<section id="modal">
-			<h3>Modal</h3>
-			<div>
+			<h2 class="page-title">Modal</h2>
+
+			<div class="markdown-body">
 				<pre><code class="lang-example">&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
 &lt;div class=&quot;o-modal is-active&quot;&gt;
   &lt;div class=&quot;o-modal__card&quot;&gt;
@@ -3322,8 +3395,12 @@ Required&lt;/label&gt;
 			</div>
 		</section>
 		
-	<footer>Last modified Monday, 23 May 2016 10:25
-</main>
+    </main>
+  </div>
+  <footer class="footer">
+    Last modified Thursday, 2 June 2016 15:05
+  </footer>
+</div>
 <script src="prism.js"></script>
 <script src="examples.js"></script>
 <script src="script.js"></script>

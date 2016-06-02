@@ -33,7 +33,7 @@ $('.o-column-switcher').change(function() {
 $(function() {
     // Dropdown Demo
     $('.js-dropdown-toggle').click(function() {
-        $(this).next('.c-dropdown__content').toggleClass('is-active');
+        $(this).next('.c-dropdown__menu').toggleClass('is-active');
     });
 
     // Menu Demo
@@ -44,7 +44,7 @@ $(function() {
 
     // Notification Demo
     $('.c-notification .c-button--icon').click(function() {
-        $(this).parent().addClass('u-hide');
+        $(this).parent().addClass('u-fade-out');
     });
 
     // Accordion Demo
