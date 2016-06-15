@@ -48,8 +48,12 @@ $(function() {
     });
 
     // Accordion Demo
-    $('.o-accordion .o-accordion__label').click(function() {
-        $(this).parent().toggleClass('is-open');
+    $('.o-accordion .is-nested').click(function() {
+      const $accordContent = $(this).next('.c-accordion__content');
+      const $accordNested = $(this).siblings().not($accordContent);
+      $accordNested.removeClass('is-active');
+      $(this).toggleClass('is-active');
+      $accordContent.toggleClass('is-active');
     });
 
     // Iconbar Demo

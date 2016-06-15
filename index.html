@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="style.css" rel="stylesheet">
-<script>examples={"base":"","target":"_self","css":["guide.css","fonts/source-sans-pro/source-sans-pro.css"],"js":[],"bodyjs":["js/jquery-2.2.3.min.js","js/d3.min.js","js/dom.js"],"htmlcss":"overflow: hidden;","bodycss":"overflow-x: hidden; padding: 20px;"};</script>
+<script>examples={"base":"","target":"_self","css":["guide.css","fonts/source-sans-pro/source-sans-pro.css?675981"],"js":[],"bodyjs":["js/jquery-2.2.3.min.js?9083278132","js/d3.min.js?123080874","js/dom.js?89871234978"],"htmlcss":"overflow: hidden;","bodycss":"overflow-x: hidden; padding: 20px;"};</script>
 
 
 <header class="masthead">
@@ -23,13 +23,24 @@
       <nav class="menu docs-menu">
         
 		
+        <a class="menu-heading" href="#settings"><span>Settings</span></a>
+        
+		
+        <a class="menu-item" href="#config"><span>Config</span></a>
+        
+				
+        <a class="menu-item" href="#global"><span>Global</span></a>
+        
+				
+        <a class="menu-item" href="#colour"><span>Colour</span></a>
+        
+				
+	
+				
         <a class="menu-heading" href="#elements"><span>Elements</span></a>
         
 		
         <a class="menu-item" href="#size"><span>Size</span></a>
-        
-				
-        <a class="menu-item" href="#colour"><span>Colour</span></a>
         
 				
         <a class="menu-item" href="#forms"><span>Forms</span></a>
@@ -123,12 +134,15 @@
         <a class="menu-item" href="#tooltips"><span>Tooltips</span></a>
         
 				
+        <a class="menu-item" href="#accordion"><span>Accordion</span></a>
+        
+				
 	
 				
         <a class="menu-heading" href="#objects"><span>Objects</span></a>
         
 		
-        <a class="menu-item" href="#accordion"><span>Accordion</span></a>
+        <a class="menu-item" href="#aside"><span>Aside</span></a>
         
 				
         <a class="menu-item" href="#toolbar"><span>Toolbar</span></a>
@@ -153,6 +167,9 @@
         
 				
         <a class="menu-item" href="#modal"><span>Modal</span></a>
+        
+				
+        <a class="menu-item" href="#sidebar"><span>Sidebar</span></a>
         
 				
 	
@@ -218,31 +235,26 @@ gulp watch
 			</div>
 		</section>
 		
-		<section id="elements">
-			<h1 class="page-title">Elements</h1>
+		<section id="settings">
+			<h1 class="page-title">Settings</h1>
 
 			<div class="markdown-body">
 				
 				
-		<section id="size">
-			<h2 class="page-title">Size</h2>
+		<section id="config">
+			<h2 class="page-title">Config</h2>
 
 			<div class="markdown-body">
-				<p><p>This is a list of global variables, and their default values.</p></p>
-<p><h6 id="elements-size-css">elements/size.css</h6></p>
-<pre><code class="lang-css">  --global-duration: .1s;
-  --global-margin: 8px;
-  --global-rounded: 4px;
-  --global-line-height: 32px;
-  --global-z-index: 100;
-  --frame-quarter: calc(var(--global-line-height) / 4); /* 8px */
-  --frame-third: calc(var(--global-line-height) / 3); /* 10.6px */
-  --frame-half: calc(var(--global-line-height) / 2); /* 16px */
-  --frame: var(--global-line-height); /* 32px */
-  --frame-double: calc(var(--global-line-height) * 2); /* 64px */
-  --frame-triple: calc(var(--global-line-height) * 3); /* 96px */
-</code></pre>
+				
+				
+			</div>
+		</section>
+		
+		<section id="global">
+			<h2 class="page-title">Global</h2>
 
+			<div class="markdown-body">
+				
 				
 			</div>
 		</section>
@@ -261,50 +273,82 @@ gulp watch
 </code></pre>
 <h5 id="brand-primary">Brand Primary</h5>
 <pre><code class="lang-example:color">@color: #f0faff @name: --blue-50
-@color: #cef @name: --blue-100
-@color: #aaddfa @name: --blue-200
-@color: #94d8ff @name: --blue-300
-@color: #85cce5 @name: --blue-400
-@color: #55bee5 @name: --blue-500
-@color: #00a0d0 @name: --blue-600
-@color: #1c7dab @name: --blue-700
-@color: #047 @name: --blue-800
+@color: #cbdfee @name: --blue-100
+@color: #a6c6dd @name: --blue-200
+@color: #81adcc @name: --blue-300
+@color: #5795bb @name: --blue-400
+@color: #1c7dab @name: --blue-500
+@color: #146590 @name: --blue-600
+@color: #0d4d76 @name: --blue-700
+@color: #05375c @name: --blue-800
 @color: #0d2c54 @name: --blue-900
-@color: #002244 @name: --blue-1000
-@color: #002 @name: --blue-1100
 </code></pre>
 <h5 id="brand-secondary">Brand Secondary</h5>
-<pre><code class="lang-example:color">@color: #f92 @name: --orange-500
-@color: #f07700 @name: --orange-600
-@color: #cc5000 @name: --orange-700
+<pre><code class="lang-example:color">@color: #fff3e0 @name: --orange-50
+@color: #ffe5c8 @name: --orange-100
+@color: #ffd5af @name: --orange-200
+@color: #ffc595 @name: --orange-300
+@color: #ffb67c @name: --orange-400
+@color: #fea661 @name: --orange-500
+@color: #fa9748 @name: --orange-600
+@color: #f5872c @name: --orange-700
+@color: #f07700 @name: --orange-800
+@color: #cc5000 @name: --orange-900
 </code></pre>
-<h5 id="grayscale-neutral-">Grayscale (Neutral)</h5>
-<pre><code class="lang-example:color">@color: #fff @name: --white
-@color: #fcfcf9 @name: --grey-50
-@color: #eeeee7 @name: --grey-100
-@color: #ddddd4 @name: --grey-300
-@color: #ccccc2 @name: --grey-500
-@color: #a3a396 @name: --grey-600
-@color: #77776d @name: --grey-700
-@color: #33332a @name: --grey-800
-@color: #000 @name: --black
+<h5 id="red">Red</h5>
+<pre><code class="lang-example:color">@color: #ffebee @name: --red-50
+@color: #ffd3d5 @name: --red-100
+@color: #fbb    @name: --red-200
+@color: #faa296 @name: --red-300
+@color: #f38773 @name: --red-400
+@color: #e96d4f @name: --red-500
+@color: #de512d @name: --red-600
+@color: #d03000 @name: --red-700
+@color: #b51c01 @name: --red-800
+@color: #900    @name: --red-900
 </code></pre>
-<h5 id="utility">Utility</h5>
-<pre><code class="lang-example:color">@color: #b6f5e3 @name: --green-50
-@color: #09b081 @name: --green-600
-@color: #00996e @name: --green-700
-@color: #007a56 @name: --green-800
-@color: #feb @name: --gold-50
-@color: #ffd666 @name: --gold-200
-@color: #ffc838 @name: --gold-300
-@color: #ffba0a @name: --gold-500
-@color: #eeb111 @name: --gold-700
-@color: #fbb @name: --red-50
-@color: #d03000 @name: --red-600
-@color: #900 @name: --red-700
-@color: #800 @name: --red-800
-@color: #d95db7 @name: --magenta-500
+<h5 id="gold">Gold</h5>
+<pre><code class="lang-example:color">@color: #fff9e8 @name: --gold-50
+@color: #fff3d1 @name: --gold-100
+@color: #feb    @name: --gold-200
+@color: #ffe49e @name: --gold-300
+@color: #ffdd84 @name: --gold-400
+@color: #ffd666 @name: --gold-500
+@color: #ffc838 @name: --gold-600
+@color: #ffba0a @name: --gold-700
+@color: #fda704 @name: --gold-800
+@color: #fa9400 @name: --gold-900
+</code></pre>
+<h5 id="green">Green</h5>
+<pre><code class="lang-example:color">@color: #e6fff8 @name: --green-50
+@color: #b6f5e3 @name: --green-100
+@color: #8adec2 @name: --green-200
+@color: #5ac7a1 @name: --green-300
+@color: #09b081 @name: --green-400
+@color: #00996e @name: --green-500
+@color: #008962 @name: --green-600
+@color: #007a56 @name: --green-700
+@color: #006d4d @name: --green-800
+@color: #005f43 @name: --green-900
+</code></pre>
+<h5 id="other">Other</h5>
+<pre><code class="lang-example:color">@color: #d95db7 @name: --magenta-500
 @color: #831dcb @name: --purple-a100
+</code></pre>
+<h5 id="gray">Gray</h5>
+<pre><code class="lang-example:color">@color: #fcfcf9 @name: --grey-50
+@color: #e4e3e0 @name: --grey-100
+@color: #cbcbc7 @name: --grey-200
+@color: #b4b4ae @name: --grey-300
+@color: #9d9c96 @name: --grey-400
+@color: #86857e @name: --grey-500
+@color: #706f68 @name: --grey-600
+@color: #5b5b52 @name: --grey-700
+@color: #47473e @name: --grey-800
+@color: #33332a @name: --grey-900
+</code></pre>
+<pre><code class="lang-example:color">@color: #000 @name: --black
+@color: #fff @name: --white
 </code></pre>
 <h4 id="colour-theme">Colour Theme</h4>
 <p>These colors are intended for very specific parts of the user interface.</p>
@@ -341,6 +385,38 @@ gulp watch
 @color: #3498db @name: --trustyou
 @color: #35465c @name: --tumblr
 @color: #2fc2ef @name: --twitter
+</code></pre>
+
+				
+			</div>
+		</section>
+		
+			</div>
+		</section>
+		
+		<section id="elements">
+			<h1 class="page-title">Elements</h1>
+
+			<div class="markdown-body">
+				
+				
+		<section id="size">
+			<h2 class="page-title">Size</h2>
+
+			<div class="markdown-body">
+				<p><p>This is a list of global variables, and their default values.</p></p>
+<p><h6 id="elements-size-css">elements/size.css</h6></p>
+<pre><code class="lang-css">  --global-duration: .1s;
+  --global-margin: 8px;
+  --global-rounded: 4px;
+  --global-line-height: 32px;
+  --global-z-index: 100;
+  --frame-quarter: calc(var(--global-line-height) / 4); /* 8px */
+  --frame-third: calc(var(--global-line-height) / 3); /* 10.6px */
+  --frame-half: calc(var(--global-line-height) / 2); /* 16px */
+  --frame: var(--global-line-height); /* 32px */
+  --frame-double: calc(var(--global-line-height) * 2); /* 64px */
+  --frame-triple: calc(var(--global-line-height) * 3); /* 96px */
 </code></pre>
 
 				
@@ -1183,14 +1259,12 @@ position: fixed;
 			<div class="markdown-body">
 				<p><h4 id="assert-selector">Assert Selector</h4></p>
 <p>With this, we can write styles with built-in assertions that point out certain elements that lack required a11y aria properties.</p>
-<pre><code class="lang-css">.c-input {
-  &amp;:not([aria-label]) {
-    @apply --assert-selector;
-  }
+<pre><code class="lang-css">.c-input:not([aria-label]) {
+  @apply --assert-selector;
 }
 </code></pre>
 <h4 id="aria-cursors">Aria Cursors</h4>
-<p>For any elements that have the <code>aria-busy</code> attribute, we change the cursor to indicate progress.</p>
+<p>Any elements that have the <code>aria-busy</code> attribute, it will change the cursor to indicate progress.</p>
 <p>With every control that has the <code>aria-controls</code> attribute, we change the cursor to a pointer as usual for all controls.</p>
 <p>If an element is <code>aria-disabled</code> then we reset the cursor to default.</p>
 
@@ -1356,18 +1430,95 @@ position: fixed;
 &lt;br&gt;
 &lt;code&gt;.u-font-size--tiny&lt;/code&gt;
 </code></pre>
+<h4 id="no-bullet">No Bullet</h4>
+<p>You can remove your list bullet from any <code>&lt;li&gt;</code> element.</p>
+<pre><code class="lang-example">&lt;div class=&quot;u-row&quot;&gt;
+  &lt;div class=&quot;u-column u-push--1&quot;&gt;
+    &lt;h1&gt;Before&lt;/h1&gt;
+    &lt;ul class=&quot;is-negative&quot;&gt;
+      &lt;li&gt;Bullet&lt;/li&gt;
+      &lt;li&gt;Bullet&lt;/li&gt;
+      &lt;li&gt;Bullet&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;u-column&quot;&gt;
+    &lt;h1&gt;After&lt;/h1&gt;
+    &lt;ul class=&quot;is-positive&quot;&gt;
+      &lt;li&gt;Bullet&lt;/li&gt;
+      &lt;li&gt;Bullet&lt;/li&gt;
+      &lt;li class=&quot;u-no-bullet&quot;&gt;No Bullet&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="lang-html">&lt;li class=&quot;u-no-bullet&quot;&gt; ... &lt;/li&gt;
+</code></pre>
+<h4 id="no-bullets">No Bullets</h4>
+<p>Display a list without bullets in any <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> element.</p>
+<pre><code class="lang-example">&lt;div class=&quot;u-row&quot;&gt;
+  &lt;div class=&quot;u-column u-push--1&quot;&gt;
+    &lt;h1&gt;Before&lt;/h1&gt;
+    &lt;ul class=&quot;is-negative&quot;&gt;
+      &lt;li&gt;Item 1&lt;/li&gt;
+      &lt;li&gt;Item 2&lt;/li&gt;
+      &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;u-column&quot;&gt;
+  &lt;h1&gt;After&lt;/h1&gt;
+  &lt;ul class=&quot;u-no-bullets is-positive&quot;&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="lang-html">&lt;ul class=&quot;u-no-bullets&quot;&gt; ... &lt;/ul&gt;
+</code></pre>
+<h4 id="ellipsis">Ellipsis</h4>
+<p>Truncate longer strings of text to avoid any layout overflows using ellipsis.</p>
+<pre><code class="lang-example">&lt;h1&gt;Before&lt;/h1&gt;
+&lt;p class=&quot;is-negative&quot;&gt;This is a very long string of text that will get cut off by exactly three dots forming an ellipsis character to truncate this text.&lt;/p&gt;
+
+&lt;h1&gt;After&lt;/h1&gt;
+&lt;p class=&quot;u-ellipsis is-positive&quot;&gt;This is a very long string of text that will get cut off by exactly three dots forming an ellipsis character to truncate this text.&lt;/p&gt;
+</code></pre>
+<pre><code class="lang-html">&lt;p class=&quot;u-ellipsis&quot;&gt; ... &lt;/p&gt;
+</code></pre>
+<h4 id="break-word">Break Word</h4>
+<p>Prevent overflowing long words from messing up your layout by forcing justified text that breaks before the word is over.</p>
+<pre><code class="lang-example">&lt;h1&gt;Before&lt;/h1&gt;
+&lt;p class=&quot;is-negative&quot;&gt;SupercalifragalisticexpialadoshiousSupercalifragalisticexpialadoshiousSupercalifragalisticexpialadoshiousSupercalifragalisticexpialadoshious&lt;/p&gt;
+
+&lt;h1&gt;After&lt;/h1&gt;
+&lt;p class=&quot;u-break-word is-positive&quot;&gt;SupercalifragalisticexpialadoshiousSupercalifragalisticexpialadoshiousSupercalifragalisticexpialadoshiousSupercalifragalisticexpialadoshious&lt;/p&gt;
+</code></pre>
+<pre><code class="lang-html">&lt;p class=&quot;u-break-word&quot;&gt; ... &lt;/p&gt;
+</code></pre>
 <h4 id="customize">Customize</h4>
-<pre><code class="lang-css">--font-family: &#39;Source Sans Pro&#39;, sans-serif;
---font-size: 100%;
---font-size--normal: 1rem;
---font-size--semi-medium: 1.5rem;
---font-size--medium: 2rem;
---font-size--semi-large: 2.5rem;
---font-size--large: 3rem;
---font-line-height: 1.5;
---font-weight: 400;
---font-weight--bold: 800;
---heading-font-size: 1.25rem;
+<pre><code class="lang-css">--fontFamily--sans: &#39;Source Sans Pro&#39;, sans-serif;
+--fontFamily--monospaced: Consolas, &quot;Andale Mono WT&quot;, &quot;Andale Mono&quot;, &quot;Lucida Console&quot;, &quot;Lucida Sans Typewriter&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Liberation Mono&quot;, &quot;Nimbus Mono L&quot;, Monaco, &quot;Courier New&quot;, Courier, monospace;
+--fontFamily-page: var(--fontFamily--sans);
+--fontSize--tiny: .75rem;
+--fontSize--small: .875rem;
+--fontSize--semiNormal: 1rem;
+--fontSize--normal: 1.125rem;
+--fontSize--normalPlus: 1.25rem;
+--fontSize--semiMedium: 1.5rem;
+--fontSize--medium: 2rem;
+--fontSize--semiLarge: 2.5rem;
+--fontSize--large: 3rem;
+--fontSize--xlarge: 4.7rem;
+--fontSize-page: 100%;
+--fontSize-heading: var(--fontSize--normalPlus);
+--fontWeight-page: 400;
+--fontWeight-page--bold: 800;
+--lineHeight-page: 1;
+--lineHeight-paragraph: 1.4;
+--lineHeight-heading: 1.3;
 </code></pre>
 
 				
@@ -1813,6 +1964,9 @@ position: fixed;
    &lt;/div&gt;
  &lt;/div&gt;
  &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+ &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+ &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+ &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
 </code></pre>
 <h4 id="dropdown-data">Dropdown Data</h4>
 <p>Note: The dropdown list underneath should not be enabled when the dropdown list is visible. Doing this fosters a better interaction for the user.</p>
@@ -2038,7 +2192,8 @@ position: fixed;
 			<h2 class="page-title">Loader</h2>
 
 			<div class="markdown-body">
-				<pre><code class="lang-example">&lt;br&gt;&lt;br&gt;
+				<p><p>Our webapps need to provide feedback to the user for when things are loading, so we have a few loader components that are animated using only CSS techniques.</p></p>
+<pre><code class="lang-example">&lt;br&gt;&lt;br&gt;
 &lt;div class=&quot;c-loader u-fixed--middle-center&quot;&gt;&lt;/div&gt;
 &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
 </code></pre>
@@ -2117,13 +2272,24 @@ position: fixed;
 			<h2 class="page-title">Notification</h2>
 
 			<div class="markdown-body">
-				<p>Notifications communicate the state of your user&#39;s interactions as well as system status. We have a flexible notification style with a few variations for different states.</p>
+				<p>Communicate the state of your user&#39;s interactions as well as system status. We have a flexible notification component with a few variations for different states.</p>
 <pre><code class="lang-html">&lt;div class=&quot;c-notification [c-notification--warning]&quot;&gt;
+  &lt;svg class=&quot;c-icon c-icon--info&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt; ... &lt;/svg&gt;
+  &lt;div class=&quot;c-notification_content&quot;&gt;
+    &lt;h1 class=&quot;c-notification_heading&quot;&gt;Heading&lt;/h1&gt;
+    &lt;p&gt;Communicate a meaningful message.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;button class=&quot;c-button c-button--icon&quot;&gt;
+    &lt;svg class=&quot;c-icon c-icon--close&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt; ... &lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="lang-example:html,width=320px">  &lt;div class=&quot;c-notification&quot;&gt;
   &lt;svg class=&quot;c-icon c-icon--info&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;
     &lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z&quot;/&gt;
   &lt;/svg&gt;
-  &lt;div class=&quot;c-notification<strong>content&quot;&gt;
-    &lt;h1 class=&quot;c-notification</strong>heading&quot;&gt;Heading&lt;/h1&gt;
+  &lt;div class=&quot;c-notification_content&quot;&gt;
+    &lt;h1 class=&quot;c-notification_heading&quot;&gt;Info Notification&lt;/h1&gt;
     &lt;p&gt;Communicate a meaningful message.&lt;/p&gt;
   &lt;/div&gt;
   &lt;button class=&quot;c-button c-button--icon&quot;&gt;
@@ -2134,11 +2300,11 @@ position: fixed;
 &lt;/div&gt;
 </code></pre>
 <pre><code class="lang-example">&lt;div class=&quot;c-notification&quot;&gt;
-  &lt;svg class=&quot;c-icon c-icon--check-circle&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+  &lt;svg class=&quot;c-icon c-icon--check-circle is-positive&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;
     &lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z&quot;/&gt;
   &lt;/svg&gt;
-  &lt;div class=&quot;c-notification<strong>content&quot;&gt;
-    &lt;h1 class=&quot;c-notification</strong>heading&quot;&gt;Successful Notification&lt;/h1&gt;
+  &lt;div class=&quot;c-notification_content&quot;&gt;
+    &lt;h1 class=&quot;c-notification_heading&quot;&gt;Successful Notification&lt;/h1&gt;
     &lt;p&gt;Communicate a meaningful message.&lt;/p&gt;
   &lt;/div&gt;
   &lt;button class=&quot;c-button c-button--icon&quot;&gt;
@@ -2152,8 +2318,23 @@ position: fixed;
   &lt;svg class=&quot;c-icon c-icon--warning&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;
     &lt;path d=&quot;M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z&quot;/&gt;
   &lt;/svg&gt;
-  &lt;div class=&quot;c-notification<strong>content&quot;&gt;
-    &lt;h1 class=&quot;c-notification</strong>heading&quot;&gt;Warning Notification&lt;/h1&gt;
+  &lt;div class=&quot;c-notification_content&quot;&gt;
+    &lt;h1 class=&quot;c-notification_heading&quot;&gt;Warning Notification&lt;/h1&gt;
+    &lt;p&gt;Communicate a meaningful message.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;button class=&quot;c-button c-button--icon&quot;&gt;
+    &lt;svg class=&quot;c-icon c-icon--close&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+      &lt;path d=&quot;M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z&quot;/&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="lang-example">&lt;div class=&quot;c-notification c-notification--error&quot;&gt;
+  &lt;svg class=&quot;c-icon c-icon--error&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;
+    &lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z&quot;/&gt;
+  &lt;/svg&gt;
+  &lt;div class=&quot;c-notification_content&quot;&gt;
+    &lt;h1 class=&quot;c-notification_heading&quot;&gt;Error Notification&lt;/h1&gt;
     &lt;p&gt;Communicate a meaningful message.&lt;/p&gt;
   &lt;/div&gt;
   &lt;button class=&quot;c-button c-button--icon&quot;&gt;
@@ -2167,8 +2348,8 @@ position: fixed;
 <p>Alternatively we have an alert-style notification that takes the whole page width.</p>
 <pre><code class="lang-example">&lt;div class=&quot;c-notification c-notification--wide c-notification--informative&quot;&gt;
   &lt;svg class=&quot;c-icon c-icon--info&quot; xmlns=&quot;<a href="http://www.w3.org/2000/svg&amp;quot">http://www.w3.org/2000/svg&amp;quot</a>; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z&quot;/&gt;&lt;/svg&gt;
-  &lt;div class=&quot;c-notification<strong>content&quot;&gt;
-    &lt;h1 class=&quot;c-notification</strong>heading&quot;&gt;Wide Notification&lt;/h1&gt;
+  &lt;div class=&quot;c-notification_content&quot;&gt;
+    &lt;h1 class=&quot;c-notification_heading&quot;&gt;Wide Notification&lt;/h1&gt;
     &lt;p&gt;Communicate a meaningful message.&lt;/p&gt;
   &lt;/div&gt;
   &lt;button class=&quot;c-button c-button--icon&quot;&gt;
@@ -2465,6 +2646,195 @@ position: fixed;
 			</div>
 		</section>
 		
+		<section id="accordion">
+			<h2 class="page-title">Accordion</h2>
+
+			<div class="markdown-body">
+				<p><p><strong>NEW!</strong> This object is redesigned to be un-opinionated and flexible for almost any interactive list you might need in your app. The simplified markup resembles this node list:</p></p>
+<pre><code class="lang-shell">.o-accordion [ --inline | --right | --small ]
+   __title   [ is-active | is-nested | is-selected ]
+   __content [ is-active ]
+     __group
+       __info
+       __actions
+         __action [ --informative | --success ]
+         __meta
+           __meta-item
+</code></pre>
+<pre><code class="lang-example:html">&lt;div class=&quot;o-accordion&quot;&gt;
+  &lt;div class=&quot;o-accordion__title is-nested is-active&quot;&gt;
+    &lt;span class=&quot;c-badge c-badge--informative&quot;&gt;2&lt;/span&gt;
+    Contacts
+  &lt;/div&gt;
+  &lt;div class=&quot;o-accordion__content is-active&quot;&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt;
+      &lt;div class=&quot;o-accordion__info o-accordion__info--critical&quot;&gt;
+        &lt;svg class=&quot;c-icon is-neutral&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z&quot;/&gt;&lt;/svg&gt;
+        Kennee
+      &lt;/div&gt;
+      &lt;div class=&quot;o-accordion__info&quot;&gt;
+        &lt;svg class=&quot;c-icon is-neutral&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z&quot;/&gt;&lt;/svg&gt;
+        ilovemicrosoft@yahoo.com
+      &lt;/div&gt;
+      &lt;div class=&quot;o-accordion__info&quot;&gt;
+        &lt;svg class=&quot;c-icon is-neutral&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z&quot;/&gt;&lt;/svg&gt;
+        2m ago
+      &lt;/div&gt;
+      &lt;div class=&quot;o-accordion__actions&quot;&gt;
+        &lt;span class=&quot;o-accordion__action&quot;&gt;
+          &lt;svg class=&quot;c-icon is-informative&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z&quot;/&gt;&lt;/svg&gt;
+        &lt;/span&gt;
+        &lt;span class=&quot;o-accordion__action o-accordion__action--informative&quot;&gt;
+          &lt;svg class=&quot;c-icon is-informative&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z&quot;/&gt;&lt;/svg&gt;
+        &lt;/span&gt;
+        &lt;span class=&quot;o-accordion__action o-accordion__action--success&quot;&gt;
+          &lt;svg class=&quot;c-icon is-informative&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z&quot;/&gt;&lt;/svg&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt;
+      &lt;div class=&quot;o-accordion__info o-accordion__info--critical&quot;&gt;
+        &lt;svg class=&quot;c-icon is-neutral&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z&quot;/&gt;&lt;/svg&gt;
+        Krassy Pants
+      &lt;/div&gt;
+      &lt;div class=&quot;o-accordion__info&quot;&gt;
+        &lt;svg class=&quot;c-icon is-neutral&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z&quot;/&gt;&lt;/svg&gt;
+        krass@pants.com
+      &lt;/div&gt;
+      &lt;div class=&quot;o-accordion__info&quot;&gt;
+        &lt;svg class=&quot;c-icon is-neutral&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z&quot;/&gt;&lt;/svg&gt;
+        2m ago
+      &lt;/div&gt;
+      &lt;div class=&quot;o-accordion__actions&quot;&gt;
+        &lt;span class=&quot;o-accordion__action&quot;&gt;
+          &lt;svg class=&quot;c-icon is-informative&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z&quot;/&gt;&lt;/svg&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;o-accordion__title is-nested&quot;&gt;
+    What kinds of dogs are there?
+  &lt;/div&gt;
+  &lt;div class=&quot;o-accordion__content&quot;&gt;
+    &lt;p&gt;There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;o-accordion__title is-nested&quot;&gt;
+    How do you acquire a dog?
+  &lt;/div&gt;
+  &lt;div class=&quot;o-accordion__content&quot;&gt;
+    &lt;p&gt;Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.&lt;/p&gt;
+    &lt;p class=&quot;is-nested&quot;&gt;A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.&lt;/p&gt;
+  &lt;/div&gt;
+   &lt;div class=&quot;o-accordion__title is-nested&quot;&gt;
+    How do you acquire a dog?
+  &lt;/div&gt;
+  &lt;div class=&quot;o-accordion__content&quot;&gt;
+    &lt;p&gt;Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.&lt;/p&gt;
+    &lt;p class=&quot;is-nested&quot;&gt;A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.&lt;/p&gt;
+  &lt;/div&gt;
+   &lt;div class=&quot;o-accordion__title is-nested&quot;&gt;
+    How do you acquire a dog?
+  &lt;/div&gt;
+  &lt;div class=&quot;o-accordion__content&quot;&gt;
+    &lt;p&gt;Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.&lt;/p&gt;
+    &lt;p class=&quot;is-nested&quot;&gt;A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.&lt;/p&gt;
+  &lt;/div&gt;
+   &lt;div class=&quot;o-accordion__title&quot;&gt;
+    Non-nested title
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Notice how you can add <code>.is-nested</code> to any element and it collapses and expands with <code>.is-active</code></p>
+<pre><code class="lang-example:html">&lt;div class=&quot;o-accordion&quot;&gt;
+  &lt;div class=&quot;o-accordion__title&quot;&gt;Recent notes&lt;/div&gt;
+  &lt;div class=&quot;o-accordion__content is-active&quot;&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt;
+      &lt;div class=&quot;o-accordion__info&quot;&gt;
+        &lt;div class=&quot;o-accordion__meta&quot;&gt;
+          &lt;div class=&quot;o-accordion__meta-item&quot;&gt;
+            &lt;svg class=&quot;c-icon c-icon--small&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z&quot;/&gt;&lt;/svg&gt;
+            Agent Name
+          &lt;/div&gt;
+          &lt;div class=&quot;o-accordion__meta-item&quot;&gt;
+            &lt;svg class=&quot;c-icon c-icon--small&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z&quot;/&gt;&lt;/svg&gt;
+            3 days ago
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;is-nested&quot;&gt;So strongly and metaphysically did I conceive of my situation then, that while earnestly watching his motions, I seemed distinctly to perceive in the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards among the crew.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+        &lt;div class=&quot;o-accordion__group&quot;&gt;
+      &lt;div class=&quot;o-accordion__info&quot;&gt;
+        &lt;div class=&quot;o-accordion__meta&quot;&gt;
+          &lt;div class=&quot;o-accordion__meta-item&quot;&gt;
+            &lt;svg class=&quot;c-icon c-icon--small&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z&quot;/&gt;&lt;/svg&gt;
+            Agent Name
+          &lt;/div&gt;
+          &lt;div class=&quot;o-accordion__meta-item&quot;&gt;
+            &lt;svg class=&quot;c-icon c-icon--small&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z&quot;/&gt;&lt;/svg&gt;
+            3 days ago
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;is-nested&quot;&gt;So strongly and metaphysically did I conceive of my situation then, that while earnestly watching his motions, I seemed distinctly to perceive in the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards among the crew.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+        &lt;div class=&quot;o-accordion__group&quot;&gt;
+      &lt;div class=&quot;o-accordion__info&quot;&gt;
+        &lt;div class=&quot;o-accordion__meta&quot;&gt;
+          &lt;div class=&quot;o-accordion__meta-item&quot;&gt;
+            &lt;svg class=&quot;c-icon c-icon--small&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z&quot;/&gt;&lt;/svg&gt;
+            Agent Name
+          &lt;/div&gt;
+          &lt;div class=&quot;o-accordion__meta-item&quot;&gt;
+            &lt;svg class=&quot;c-icon c-icon--small&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z&quot;/&gt;&lt;/svg&gt;
+            3 days ago
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;is-nested&quot;&gt;So strongly and metaphysically did I conceive of my situation then, that while earnestly watching his motions, I seemed distinctly to perceive in the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards among the crew.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h4 id="accordion-inside-a-sidebar">Accordion inside a Sidebar</h4>
+<pre><code class="lang-example:html">&lt;nav class=&quot;o-sidebar [is-collapsed]&quot;&gt;
+  &lt;div class=&quot;o-accordion o-accordion--small&quot;&gt;
+    &lt;div class=&quot;o-accordion__title is-nested is-active&quot;&gt;
+      Title 1
+    &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__content is-active&quot;&gt;
+      &lt;div class=&quot;o-accordion__group&quot;&gt;
+        &lt;div class=&quot;o-accordion__info&quot;&gt;View 1&lt;/div&gt;
+        &lt;div class=&quot;o-accordion__actions&quot;&gt; 
+          &lt;span class=&quot;o-accordion__action&quot;&gt;
+            &lt;svg class=&quot;c-icon is-informative&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z&quot;/&gt;&lt;/svg&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;o-accordion__group&quot;&gt;
+        &lt;div class=&quot;o-accordion__info&quot;&gt;View 2.1&lt;/div&gt;
+        &lt;div class=&quot;o-accordion__actions&quot;&gt;
+          &lt;span class=&quot;o-accordion__action&quot;&gt;
+            &lt;svg class=&quot;c-icon is-informative&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z&quot;/&gt;&lt;/svg&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__title is-selected&quot;&gt;Title 2&lt;/div&gt;
+    &lt;div class=&quot;o-accordion__title&quot;&gt;Title 3&lt;/div&gt;
+    &lt;div class=&quot;o-accordion__title is-informative&quot;&gt;
+      &lt;svg class=&quot;c-icon c-icon--small&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z&quot;/&gt;&lt;/svg&gt;
+      Action 1
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;o-sidebar__toggle&quot;&gt;&lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
 			</div>
 		</section>
 		
@@ -2474,84 +2844,43 @@ position: fixed;
 			<div class="markdown-body">
 				
 				
-		<section id="accordion">
-			<h2 class="page-title">Accordion</h2>
+		<section id="aside">
+			<h2 class="page-title">Aside</h2>
 
 			<div class="markdown-body">
-				<p><p>A simple accordion with a gradient of blue. More advanced use cases to come.</p></p>
-<pre><code class="lang-example:html">&lt;nav class=&quot;o-accordion is-collapsed&quot;&gt;
-  &lt;ul class=&quot;o-accordion__list o-accordion__list--top&quot;&gt;
-    &lt;li class=&quot;o-accordion__item has-descendants is-open&quot;&gt;
-      &lt;span class=&quot;o-accordion__label&quot;&gt;Top item 1&lt;/span&gt;
-      &lt;ul class=&quot;o-accordion__list o-accordion__list--mid&quot;&gt;
-        &lt;li class=&quot;o-accordion__item&quot;&gt;
-          &lt;div class=&quot;o-accordion__title&quot;&gt;Mid item 1&lt;/div&gt;
-          &lt;div class=&quot;o-accordion__description&quot;&gt;More things to say here about this mid item!&lt;/div&gt;
-          &lt;div class=&quot;o-accordion__actions&quot;&gt;
-            &lt;button class=&quot;o-accordion__action&quot;&gt;
-              &lt;span class=&quot;c-icon c-icon--small&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;
-            &lt;/button&gt;
-            &lt;button class=&quot;o-accordion__action o-accordion__action--success&quot;&gt;
-              &lt;span class=&quot;c-icon c-icon--small&quot;&gt;
-                &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z&quot;/&gt;&lt;/svg&gt;
-              &lt;/span&gt;
-            &lt;/button&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;o-accordion__item&quot;&gt;
-          &lt;div class=&quot;o-accordion__title&quot;&gt;Mid item 1&lt;/div&gt;
-          &lt;div class=&quot;o-accordion__description&quot;&gt;More things to say here about this mid item!&lt;/div&gt;
-          &lt;div class=&quot;o-accordion__actions&quot;&gt;
-            &lt;button class=&quot;o-accordion__action&quot;&gt;
-              &lt;span class=&quot;c-icon c-icon--small&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;
-            &lt;/button&gt;
-            &lt;button class=&quot;o-accordion__action o-accordion__action--success&quot;&gt;
-              &lt;span class=&quot;c-icon c-icon--small&quot;&gt;
-                &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z&quot;/&gt;&lt;/svg&gt;
-              &lt;/span&gt;
-            &lt;/button&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;o-accordion__item&quot;&gt;
-          &lt;div class=&quot;o-accordion__title&quot;&gt;Mid item 3&lt;/div&gt;
-          &lt;div class=&quot;o-accordion__description&quot;&gt;More things to say here about this mid item!&lt;/div&gt;
-          &lt;div class=&quot;o-accordion__actions&quot;&gt;
-            &lt;button class=&quot;o-accordion__action&quot;&gt;
-              &lt;span class=&quot;c-icon c-icon--small&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;
-            &lt;/button&gt;
-            &lt;button class=&quot;o-accordion__action o-accordion__action--success&quot;&gt;
-              &lt;span class=&quot;c-icon c-icon--small&quot;&gt;
-                &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z&quot;/&gt;&lt;/svg&gt;
-              &lt;/span&gt;
-            &lt;/button&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;o-accordion__item&quot;&gt;
-          &lt;div class=&quot;o-accordion__title&quot;&gt;Mid item 4&lt;/div&gt;
-          &lt;div class=&quot;o-accordion__description&quot;&gt;More things to say here about this mid item!&lt;/div&gt;
-          &lt;div class=&quot;o-accordion__actions&quot;&gt;
-            &lt;button class=&quot;o-accordion__action&quot;&gt;
-              &lt;span class=&quot;c-icon c-icon--small&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;
-            &lt;/button&gt;
-            &lt;button class=&quot;o-accordion__action o-accordion__action--success&quot;&gt;
-              &lt;span class=&quot;c-icon c-icon--small&quot;&gt;
-                &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z&quot;/&gt;&lt;/svg&gt;
-              &lt;/span&gt;
-            &lt;/button&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-  &lt;/ul&gt;
-  &lt;button class=&quot;o-accordion__toggle&quot;&gt;&lt;/button&gt;
-&lt;/nav&gt;
+				<p><p><strong>NEW!</strong> A simple sliding card that displays lists of links and other various content. The simplified markup resembles this node list:</p></p>
+<pre><code class="lang-shell">.o-aside [ --right | is-active ]
+  __title [ --section ]
+  __close
+  __list
+    __item
+  __backdrop
 </code></pre>
-<h4 id="customize">Customize</h4>
-<pre><code class="lang-css">--accordion-top-color: var(--blue-400);
---accordion-mid-color: var(--blue-100);
---accordion-bottom-color: var(--blue-50);
---accordion-hover-color: var(--blue-800);
---accordion-text-color: var(--grey-800);
---accordion-toggle-color: var(--grey-500);
+<pre><code class="lang-example:html">&lt;div style=&quot;height: 520px;&quot;&gt;
+
+&lt;aside class=&quot;o-aside o-aside--right is-active&quot;&gt;
+  &lt;h1 class=&quot;o-aside__title&quot;&gt;Favorites&lt;/h1&gt;
+  &lt;span class=&quot;o-aside__close&quot;&gt;
+    &lt;svg class=&quot;c-icon&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z&quot;/&gt;&lt;/svg&gt;
+  &lt;/span&gt;
+  &lt;h2 class=&quot;o-aside__title o-aside__title--section&quot;&gt;Reveal&lt;/h2&gt;
+  &lt;ul class=&quot;o-aside__list&quot;&gt;
+    &lt;li&gt;&lt;a class=&quot;o-aside__item&quot; href=&quot;#&quot;&gt;Segment analysis&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;o-aside__item&quot; href=&quot;#&quot;&gt;Source of business report&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;h2 class=&quot;o-aside__title o-aside__title--section&quot;&gt;Narrowcast&lt;/h2&gt;
+  &lt;ul class=&quot;o-aside__list&quot;&gt;
+    &lt;li&gt;&lt;a class=&quot;o-aside__item&quot; href=&quot;#&quot;&gt;Agent performance report&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;o-aside__item&quot; href=&quot;#&quot;&gt;Roll-up report&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;h2 class=&quot;o-aside__title o-aside__title--section&quot;&gt;Reach&lt;/h2&gt;
+  &lt;ul class=&quot;o-aside__list&quot;&gt;
+    &lt;li&gt;&lt;a class=&quot;o-aside__item&quot; href=&quot;#&quot;&gt;Create new list&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class=&quot;o-aside__backdrop&quot;&gt;&lt;/div&gt;
+&lt;/aside&gt;
+
+&lt;/div&gt;
 </code></pre>
 
 				
@@ -3392,13 +3721,100 @@ Required&lt;/label&gt;
 			</div>
 		</section>
 		
+		<section id="sidebar">
+			<h2 class="page-title">Sidebar</h2>
+
+			<div class="markdown-body">
+				<pre><code class="lang-example:html">&lt;nav class=&quot;o-sidebar o-sidebar--large [is-collapsed]&quot; style=&quot;/* Demo Constraints */ width: 16.25em; height: 300px;&quot;&gt;
+        &lt;div class=&quot;o-sidebar__controls&quot;&gt;
+          &lt;input class=&quot;c-input&quot; placeholder=&quot;Search library...&quot;&gt;&lt;/input&gt;
+        &lt;button class=&quot;c-button c-button--icon u-absolute--top-right&quot;&gt;
+          &lt;svg class=&quot;c-icon c-icon--search  &quot; version=&quot;1.1&quot; width=&quot;24&quot; height=&quot;24&quot; aria-labelledby=&quot;title&quot; role=&quot;img&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;title&gt;Search&lt;/title&gt;&lt;path d=&quot;M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+        &lt;/button&gt;
+        &lt;div class=&quot;c-dropdown c-dropdown--picker&quot;&gt;
+          &lt;button class=&quot;c-button c-button--small&quot;&gt;
+            Filter items &lt;svg class=&quot;c-icon c-icon--arrow-drop-down&quot; version=&quot;1.1&quot; width=&quot;24&quot; height=&quot;24&quot; aria-labelledby=&quot;title&quot; role=&quot;img&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;title&gt;Arrow Drop Down&lt;/title&gt;&lt;path d=&quot;M7 10l5 5 5-5z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;button class=&quot;c-button c-button--anchor c-button--small&quot;&gt;
+          &lt;svg class=&quot;c-icon c-icon--remove-circle  &quot; version=&quot;1.1&quot; width=&quot;24&quot; height=&quot;24&quot; aria-labelledby=&quot;title&quot; role=&quot;img&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;title&gt;Remove Circle&lt;/title&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;
+          Clear
+        &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;o-accordion o-accordion--small&quot;&gt;
+          &lt;div class=&quot;o-accordion__title is-nested is-active&quot;&gt;Title 1&lt;/div&gt;
+            &lt;div class=&quot;o-accordion__content&quot;&gt;
+              &lt;div class=&quot;o-accordion__group&quot;&gt;
+                &lt;div class=&quot;o-accordion__info&quot;&gt;View 1&lt;/div&gt;
+                &lt;div class=&quot;o-accordion__action&quot;&gt;
+                  &lt;svg class=&quot;c-icon is-informative&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z&quot;/&gt;&lt;/svg&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt;
+      &lt;div class=&quot;o-accordion__info&quot;&gt;View 2.1&lt;/div&gt;
+      &lt;div class=&quot;o-accordion__action&quot;&gt;
+        &lt;svg class=&quot;c-icon is-informative&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z&quot;/&gt;&lt;/svg&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;o-accordion__title is-selected&quot;&gt;Title 2&lt;/div&gt;
+  &lt;div class=&quot;o-accordion__title&quot;&gt;Title 3&lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 3&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 4&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 5&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 6&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 7&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 8&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 9&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 10&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 11&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 12&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 13&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 14&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 15&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 16&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 17&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 18&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 19&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 20&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 21&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 22&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 23&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 24&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 25&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 26&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__group&quot;&gt; &lt;div class=&quot;o-accordion__info&quot;&gt;View 27&lt;/div&gt; &lt;/div&gt;
+    &lt;div class=&quot;o-accordion__title is-informative&quot;&gt;
+      &lt;svg class=&quot;c-icon c-icon--small&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z&quot;/&gt;&lt;/svg&gt;
+      Action 1
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;o-sidebar__toggle&quot;&gt;&lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+<h4 id="sidebar-inline-and-right-sided">Sidebar inline and right sided</h4>
+<pre><code class="lang-example:html">&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;nav class=&quot;o-sidebar o-sidebar--right o-sidebar--inline [is-collapsed]&quot;&gt;
+  &lt;textarea class=&quot;c-input c-input--multi-line c-input--note&quot; placeholder=&quot;Start typing here...&quot;&gt;&lt;/textarea&gt;
+  &lt;button class=&quot;c-button&quot;&gt;Save&lt;/button&gt;
+  &lt;div class=&quot;o-sidebar__toggle o-sidebar__toggle--alt&quot;&gt;&lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+</code></pre>
+
+				
+			</div>
+		</section>
+		
 			</div>
 		</section>
 		
     </main>
   </div>
   <footer class="footer">
-    Last modified Thursday, 2 June 2016 15:05
+    Last modified Wednesday, 15 June 2016 11:47
   </footer>
 </div>
 <script src="prism.js"></script>
