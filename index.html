@@ -1,191 +1,202 @@
 <!doctype html>
-<title>NAVIS UI Styleguide</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="style.css" rel="stylesheet">
-<script>examples={"base":"","target":"_self","css":["guide.css","fonts/source-sans-pro/source-sans-pro.css?675981"],"js":[],"bodyjs":["js/jquery-2.2.3.min.js?9083278132","js/d3.min.js?123080874","js/dom.js?89871234978"],"htmlcss":"overflow: hidden;","bodycss":"overflow-x: hidden; padding: 20px;"};</script>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>NAVIS UI Styleguide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <script>examples={"base":"","target":"_self","css":["guide.css","fonts/source-sans-pro/source-sans-pro.css?675981"],"js":[],"bodyjs":["js/jquery-2.2.3.min.js?9083278132","js/d3.min.js?123080874","js/dom.js?89871234978"],"htmlcss":"overflow: hidden;","bodycss":"overflow-x: hidden; padding: 20px;"};</script>
+    
+  </head>
+  <body>
+    <header class="masthead" style="background-color: #0d2c54;">
+      <div class="container">
+        <a href="/" class="masthead-logo">
+          <img src="img/navis-symbol.png" alt="NAVIS UI Styleguide" height="32"> NAVIS UI Styleguide
+        </a>
+        <nav class="masthead-nav">
+            
+                <a href="https://gitlab.buehner-fry.com/navis/navis-ui" target="_blank">Gitlab</a>
+            
+                <a href="https://www.npmjs.com/package/navis-ui" target="_blank">NPM</a>
+            
+                <a href="http://cssstats.com/stats?link=http%3A%2F%2Fstaticplay.github.io%2Fui-docs%2Fguide.css" target="_blank">Stats</a>
+            
+                <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fstaticplay.github.io%2Fui-docs%2Fguide.css&amp;profile=css3&amp;usermedium=all&amp;warning=1&amp;vextwarning=&amp;lang=en" target="_blank">Validation</a>
+            
+        </nav>
+      </div>
+    </header>
 
-
-<header class="masthead">
-  <div class="container">
-    <a href="/" class="masthead-logo">
-      <img src="img/navis-symbol.png" alt="NAVIS UI Styleguide" height="32"> NAVIS UI Styleguide
-    </a>
-    <nav class="masthead-nav">
-      <!-- TODO Add Page Navigation -->
-    </nav>
-  </div>
-</header>
-
-<div class="container">
-  <div class="columns docs-layout">
-    <div class="one-fourth column">
-      <nav class="menu docs-menu">
-        
-		
+    <div class="container">
+      <div class="columns docs-layout">
+        <div class="one-fourth column">
+          <nav class="menu docs-menu">
+            
+    
         <a class="menu-heading" href="#settings"><span>Settings</span></a>
         
-		
+    
         <a class="menu-item" href="#config"><span>Config</span></a>
         
-				
+        
         <a class="menu-item" href="#global"><span>Global</span></a>
         
-				
+        
         <a class="menu-item" href="#colour"><span>Colour</span></a>
         
-				
-	
-				
+        
+  
+        
         <a class="menu-heading" href="#elements"><span>Elements</span></a>
         
-		
+    
         <a class="menu-item" href="#size"><span>Size</span></a>
         
-				
+        
         <a class="menu-item" href="#forms"><span>Forms</span></a>
         
-				
+        
         <a class="menu-item" href="#images"><span>Images</span></a>
         
-				
+        
         <a class="menu-item" href="#layout"><span>Layout</span></a>
         
-				
+        
         <a class="menu-item" href="#typography"><span>Typography</span></a>
         
-				
-	
-				
+        
+  
+        
         <a class="menu-heading" href="#utilities"><span>Utilities</span></a>
         
-		
+    
         <a class="menu-item" href="#grid"><span>Grid</span></a>
         
-				
+        
         <a class="menu-item" href="#positioning"><span>Positioning</span></a>
         
-				
+        
         <a class="menu-item" href="#a11y"><span>a11y</span></a>
         
-				
+        
         <a class="menu-item" href="#visibility"><span>Visibility</span></a>
         
-				
+        
         <a class="menu-item" href="#shapes"><span>Shapes</span></a>
         
-				
+        
         <a class="menu-item" href="#syntax"><span>Syntax</span></a>
         
-				
+        
         <a class="menu-item" href="#composition"><span>Composition</span></a>
         
-				
-	
-				
+        
+  
+        
         <a class="menu-heading" href="#components"><span>Components</span></a>
         
-		
+    
         <a class="menu-item" href="#input"><span>Input</span></a>
         
-				
+        
         <a class="menu-item" href="#badges"><span>Badges</span></a>
         
-				
+        
         <a class="menu-item" href="#card"><span>Card</span></a>
         
-				
+        
         <a class="menu-item" href="#checkbox"><span>Checkbox</span></a>
         
-				
+        
         <a class="menu-item" href="#radio"><span>Radio</span></a>
         
-				
+        
         <a class="menu-item" href="#dropdowns"><span>Dropdowns</span></a>
         
-				
+        
         <a class="menu-item" href="#field"><span>Field</span></a>
         
-				
+        
         <a class="menu-item" href="#icon"><span>Icon</span></a>
         
-				
+        
         <a class="menu-item" href="#buttons"><span>Buttons</span></a>
         
-				
+        
         <a class="menu-item" href="#label"><span>Label</span></a>
         
-				
+        
         <a class="menu-item" href="#loader"><span>Loader</span></a>
         
-				
+        
         <a class="menu-item" href="#menu"><span>Menu</span></a>
         
-				
+        
         <a class="menu-item" href="#messages"><span>Messages</span></a>
         
-				
+        
         <a class="menu-item" href="#notification"><span>Notification</span></a>
         
-				
+        
         <a class="menu-item" href="#tables"><span>Tables</span></a>
         
-				
+        
         <a class="menu-item" href="#tooltips"><span>Tooltips</span></a>
         
-				
+        
         <a class="menu-item" href="#accordion"><span>Accordion</span></a>
         
-				
-	
-				
+        
+  
+        
         <a class="menu-heading" href="#objects"><span>Objects</span></a>
         
-		
+    
         <a class="menu-item" href="#aside"><span>Aside</span></a>
         
-				
+        
         <a class="menu-item" href="#toolbar"><span>Toolbar</span></a>
         
-				
+        
         <a class="menu-item" href="#button-groups"><span>Button Groups</span></a>
         
-				
+        
         <a class="menu-item" href="#calendar"><span>Calendar</span></a>
         
-				
+        
         <a class="menu-item" href="#drawer"><span>Drawer</span></a>
         
-				
+        
         <a class="menu-item" href="#editor"><span>Editor</span></a>
         
-				
+        
         <a class="menu-item" href="#iconbar"><span>Iconbar</span></a>
         
-				
+        
         <a class="menu-item" href="#listing"><span>Listing</span></a>
         
-				
+        
         <a class="menu-item" href="#modal"><span>Modal</span></a>
         
-				
+        
         <a class="menu-item" href="#sidebar"><span>Sidebar</span></a>
         
-				
-	
-				
-	
-      </nav>
-    </div>
+        
+  
+        
+  
+          </nav>
+        </div>
 
-    <main class="three-fourths column markdown-body">
+        <main class="three-fourths column markdown-body">
+          
+    <section>
       
-		<section>
-			
 
-			<div class="markdown-body">
-				<p><h1 id="navis-ui">NAVIS UI</h1></p>
-<p><p><a href="https://gitlab.buehner-fry.com/navis/navis-ui">GitLab</a> | <a href="https://www.npmjs.com/package/navis-ui">NPM</a> | <a href="http://cssstats.com/stats?link=http%3A%2F%2Fstaticplay.github.io%2Fui-docs%2Fguide.css">CSS Stats</a> | <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fstaticplay.github.io%2Fui-docs%2Fguide.css&amp;profile=css3&amp;usermedium=all&amp;warning=1&amp;vextwarning=&amp;lang=en">CSS Validator</a></p></p>
+      <div class="markdown-body">
+        <p><h1 id="navis-ui">NAVIS UI</h1></p>
 <p><h2 id="getting-started">Getting Started</h2></p>
 <p><p>In your command line application, you will want to install the necessary tools
 to start working on the UI framework. Make sure your other projects are at the
@@ -231,39 +242,63 @@ gulp watch
 &lt;/div&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="settings">
-			<h1 class="page-title">Settings</h1>
+        
+      </div>
+    </section>
+    
+    <section id="settings">
+      <h1 class="page-title">Settings</h1>
 
-			<div class="markdown-body">
-				
-				
-		<section id="config">
-			<h2 class="page-title">Config</h2>
+      <div class="markdown-body">
+        
+        
+    <section id="config">
+      <h2 class="page-title">Config</h2>
 
-			<div class="markdown-body">
-				
-				
-			</div>
-		</section>
-		
-		<section id="global">
-			<h2 class="page-title">Global</h2>
+      <div class="markdown-body">
+        <p><p>We provide a few custom properties to configure your project.</p></p>
+<p><h4 id="environment">Environment</h4></p>
+<p><p>Set this to either <code>dev</code> or <code>prod</code> to compile for specific environment needs.</p></p>
+<pre><code class="lang-css">--env: dev;
+</code></pre>
+<h4 id="healthcheck">Healthcheck</h4>
+<p>This draws borders around elements of different types on your design so you can see what your selector health is looking like, visually.</p>
+<pre><code class="lang-css">--healthcheck: false;
+</code></pre>
+<h4 id="debug">Debug</h4>
+<p>This is a boolean property that lets you debug your code.</p>
+<pre><code class="lang-css">--debug: false;
+</code></pre>
 
-			<div class="markdown-body">
-				
-				
-			</div>
-		</section>
-		
-		<section id="colour">
-			<h2 class="page-title">Colour</h2>
+        
+      </div>
+    </section>
+    
+    <section id="global">
+      <h2 class="page-title">Global</h2>
 
-			<div class="markdown-body">
-				<p><h4 id="colour-palette">Colour Palette</h4></p>
+      <div class="markdown-body">
+        <p><p>This set of custom properties are global to your project, so you can make &quot;broad stoke&quot; changes.</p></p>
+<pre><code class="lang-css">/* Typographical styles and baseline grid */
+--global-font-size: 1rem;
+--global-line-height: 32px;
+
+/* Standardized treatments */
+--global-duration: .1s;
+--global-margin: 8px;
+--global-rounded: 4px;
+--global-z-index: 100;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+    <section id="colour">
+      <h2 class="page-title">Colour</h2>
+
+      <div class="markdown-body">
+        <p><h4 id="colour-palette">Colour Palette</h4></p>
 <p><p>This collection of CSS colors are intended to serve the interface of all our product applications and all the components you can see in this document.</p></p>
 <p><h5 id="example-usage">Example Usage</h5></p>
 <pre><code class="lang-css">.c-button {
@@ -354,8 +389,8 @@ gulp watch
 <p>These colors are intended for very specific parts of the user interface.</p>
 <h5 id="type-color">Type Color</h5>
 <p>State classes are provided for colored text in this section so you can apply appropriate emotion to your work, <code>e.g. &lt;span class=&quot;is-positive&quot;&gt;Your file has been saved!&lt;/span&gt;</code>.</p>
-<pre><code class="lang-example:color">@color: #33332a @name: --body-copy
-@color: #ccccc2 @name: --placeholder-copy
+<pre><code class="lang-example:color">@color: #33332a @name: --color-page
+@color: #ccccc2 @name: --color-placeholder
 @color: #00996e @name: .is-positive
 @color: #1c7dab @name: .is-informative
 @color: #77776d @name: .is-neutral
@@ -364,16 +399,16 @@ gulp watch
 @color: #d03000 @name: .is-negative
 </code></pre>
 <h5 id="backgrounds-borders">Backgrounds &amp; Borders</h5>
-<pre><code class="lang-example:color">@color: #fcfcf9 @name: --background-color
-@color: rgba(51,51,42,.6) @name: --shadow-color
-@color: #0d2c54 @name: --primary-color
-@color: #f07700 @name: --secondary-color
+<pre><code class="lang-example:color">@color: #fcfcf9           @name: --backgroundColor-page
+@color: rgba(51,51,42,.6) @name: --color-shadow
+@color: #0d2c54           @name: --color-primary
+@color: #f07700           @name: --color-secondary
 </code></pre>
 <h5 id="highlights">Highlights</h5>
 <pre><code class="lang-example:color">@color: #f0faff @name: --highlight-announcement
-@color: #fbb @name: --highlight-error
+@color: #fbb    @name: --highlight-error
 @color: #b6f5e3 @name: --highlight-success
-@color: #feb @name: --highlight-warning
+@color: #feb    @name: --highlight-warning
 </code></pre>
 <h5 id="social-media">Social Media</h5>
 <pre><code class="lang-example:color">@color: #4c66a4 @name: --facebook
@@ -387,24 +422,24 @@ gulp watch
 @color: #2fc2ef @name: --twitter
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-			</div>
-		</section>
-		
-		<section id="elements">
-			<h1 class="page-title">Elements</h1>
+        
+      </div>
+    </section>
+    
+      </div>
+    </section>
+    
+    <section id="elements">
+      <h1 class="page-title">Elements</h1>
 
-			<div class="markdown-body">
-				
-				
-		<section id="size">
-			<h2 class="page-title">Size</h2>
+      <div class="markdown-body">
+        
+        
+    <section id="size">
+      <h2 class="page-title">Size</h2>
 
-			<div class="markdown-body">
-				<p><p>This is a list of global variables, and their default values.</p></p>
+      <div class="markdown-body">
+        <p><p>This is a list of global variables, and their default values.</p></p>
 <p><h6 id="elements-size-css">elements/size.css</h6></p>
 <pre><code class="lang-css">  --global-duration: .1s;
   --global-margin: 8px;
@@ -419,25 +454,25 @@ gulp watch
   --frame-triple: calc(var(--global-line-height) * 3); /* 96px */
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="forms">
-			<h2 class="page-title">Forms</h2>
+        
+      </div>
+    </section>
+    
+    <section id="forms">
+      <h2 class="page-title">Forms</h2>
 
-			<div class="markdown-body">
-				<p>TODO forms.md</p>
+      <div class="markdown-body">
+        <p>TODO forms.md</p>
 
-				
-			</div>
-		</section>
-		
-		<section id="images">
-			<h2 class="page-title">Images</h2>
+        
+      </div>
+    </section>
+    
+    <section id="images">
+      <h2 class="page-title">Images</h2>
 
-			<div class="markdown-body">
-				<p><p>This section covers how we handle images. By default all <code>&lt;img&gt;</code> tags are 100% wide.</p></p>
+      <div class="markdown-body">
+        <p><p>This section covers how we handle images. By default all <code>&lt;img&gt;</code> tags are 100% wide.</p></p>
 <p><h4 id="triangle">Triangle</h4></p>
 <p><p>You can draw a small triangle into any object or component using this apply that leverages a border hack.</p></p>
 <pre><code class="lang-css">@apply triangle-bottom;
@@ -446,15 +481,15 @@ height: 1.5em;
 width: 1.5em;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="layout">
-			<h2 class="page-title">Layout</h2>
+        
+      </div>
+    </section>
+    
+    <section id="layout">
+      <h2 class="page-title">Layout</h2>
 
-			<div class="markdown-body">
-				<p><p>The main layout depends on the <code>.s-app</code> class to render a holy grail layout that scales down nicely to mobile.</p></p>
+      <div class="markdown-body">
+        <p><p>The main layout depends on the <code>.s-app</code> class to render a holy grail layout that scales down nicely to mobile.</p></p>
 <p><p><a href="http://codepen.io/stephenway/pen/EKORdr">Use the master layout CodePen</a></p></p>
 <svg width="725" height="465" viewBox="0 0 725 465" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><title>Artboard 1</title><desc>Created with Sketch.</desc><g sketch:type="MSArtboardGroup" fill="none"><g id="Group" sketch:type="MSLayerGroup"><path fill="#047" sketch:type="MSShapeGroup" d="M26 31h356v44h-356z"/><path fill="#cef" sketch:type="MSShapeGroup" d="M26 80h77v310h-77z"/><path fill="#FCFCF9" sketch:type="MSShapeGroup" d="M109 80h273v310h-273z"/><path fill="#EEEEE7" sketch:type="MSShapeGroup" d="M26 395h356v44h-356z"/></g><g sketch:type="MSLayerGroup"><path fill="#047" sketch:type="MSShapeGroup" d="M518 31h181.672v44h-181.672z"/><path fill="#FCFCF9" sketch:type="MSShapeGroup" d="M518 80h181.672v262h-181.672z"/><path fill="#EEEEE7" sketch:type="MSShapeGroup" d="M518 395h181.672v44h-181.672z"/><path fill="#CAEEFF" sketch:type="MSShapeGroup" d="M518 346h181.672v44h-181.672z"/></g><path d="M435 248v-30l30 15-30 15z" fill="#EEEEE7" sketch:type="MSShapeGroup"/></g></svg>
 
@@ -472,15 +507,15 @@ width: 1.5em;
 &lt;/body&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="typography">
-			<h2 class="page-title">Typography</h2>
+        
+      </div>
+    </section>
+    
+    <section id="typography">
+      <h2 class="page-title">Typography</h2>
 
-			<div class="markdown-body">
-				<p><h4 id="headings">Headings</h4></p>
+      <div class="markdown-body">
+        <p><h4 id="headings">Headings</h4></p>
 <p><p>All headings are the same size from the start, so we can concentrate on semantics out of the gate without having to worry about what size the heading will be. This is better than overwriting it with more styles, or choosing the wrong semantic heading to make it look right based on what size it gives you.</p></p>
 <pre><code class="lang-example">&lt;h1&gt;The quick, brown fox (20px)&lt;/h1&gt;
 </code></pre>
@@ -504,24 +539,24 @@ width: 1.5em;
 &lt;/ul&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-			</div>
-		</section>
-		
-		<section id="utilities">
-			<h1 class="page-title">Utilities</h1>
+        
+      </div>
+    </section>
+    
+      </div>
+    </section>
+    
+    <section id="utilities">
+      <h1 class="page-title">Utilities</h1>
 
-			<div class="markdown-body">
-				
-				
-		<section id="grid">
-			<h2 class="page-title">Grid</h2>
+      <div class="markdown-body">
+        
+        
+    <section id="grid">
+      <h2 class="page-title">Grid</h2>
 
-			<div class="markdown-body">
-				<p>Grids are the bread and butter of web design, this one is based on flexbox. Needless to say you will find this grid system a joy to use. <a href="http://jonyablonski.com/2015/flexbox-myth-busting/">Flexbox Mythbusting</a></p>
+      <div class="markdown-body">
+        <p>Grids are the bread and butter of web design, this one is based on flexbox. Needless to say you will find this grid system a joy to use. <a href="http://jonyablonski.com/2015/flexbox-myth-busting/">Flexbox Mythbusting</a></p>
 <h4 id="new-to-grids-">New to grids?</h4>
 <p>Check out my presentation on CSS Grids can help you, complete with a <a href="https://speakerdeck.com/stephenway/css-grids-can-help-you">slide deck</a>, and a <a href="http://codepen.io/stephenway/pen/dMKzvy">CodePen</a> to play with complex grid layouts.</p>
 <h4 id="12-columns">12 Columns</h4>
@@ -1208,15 +1243,15 @@ width: 1.5em;
 <p>You will also notice some classes are appended with <code>@tn</code>, <code>@sm</code>, <code>@md</code>, <code>@lg</code>, and <code>@print</code> for the same purposes.</p>
 <p>See <a href="#syntax">syntax</a> and <a href="#responsive-suffixes">responsive-suffixes</a> sections for more info.</p>
 
-				
-			</div>
-		</section>
-		
-		<section id="positioning">
-			<h2 class="page-title">Positioning</h2>
+        
+      </div>
+    </section>
+    
+    <section id="positioning">
+      <h2 class="page-title">Positioning</h2>
 
-			<div class="markdown-body">
-				<p><h4 id="fixed-classes">Fixed Classes</h4></p>
+      <div class="markdown-body">
+        <p><h4 id="fixed-classes">Fixed Classes</h4></p>
 <pre><code class="lang-html">&lt;div class=&quot;u-fixed--top&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;u-fixed--top-center&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;u-fixed--top-right&quot;&gt;&lt;/div&gt;
@@ -1249,15 +1284,15 @@ position: fixed;
 &lt;div class=&quot;u-rotate--ccw&quot;&gt;Rotate left -90 degrees&lt;/div&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="a11y">
-			<h2 class="page-title">a11y</h2>
+        
+      </div>
+    </section>
+    
+    <section id="a11y">
+      <h2 class="page-title">a11y</h2>
 
-			<div class="markdown-body">
-				<p><h4 id="assert-selector">Assert Selector</h4></p>
+      <div class="markdown-body">
+        <p><h4 id="assert-selector">Assert Selector</h4></p>
 <p>With this, we can write styles with built-in assertions that point out certain elements that lack required a11y aria properties.</p>
 <pre><code class="lang-css">.c-input:not([aria-label]) {
   @apply --assert-selector;
@@ -1268,15 +1303,15 @@ position: fixed;
 <p>With every control that has the <code>aria-controls</code> attribute, we change the cursor to a pointer as usual for all controls.</p>
 <p>If an element is <code>aria-disabled</code> then we reset the cursor to default.</p>
 
-				
-			</div>
-		</section>
-		
-		<section id="visibility">
-			<h2 class="page-title">Visibility</h2>
+        
+      </div>
+    </section>
+    
+    <section id="visibility">
+      <h2 class="page-title">Visibility</h2>
 
-			<div class="markdown-body">
-				<p><p>Use simple utilities to hide or show elements across any span of devices</p></p>
+      <div class="markdown-body">
+        <p><p>Use simple utilities to hide or show elements across any span of devices</p></p>
 <p><h3 id="show">Show</h3></p>
 <p><p>This set of classes let you expose any element to the desired device(s). Just add one of the following classes and you will see your element on it&#39;s respective device.</p></p>
 <pre><code class="lang-example:html">&lt;div&gt;+ Shown All The Time&lt;/div&gt;
@@ -1314,25 +1349,25 @@ position: fixed;
 &lt;/span&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="shapes">
-			<h2 class="page-title">Shapes</h2>
+        
+      </div>
+    </section>
+    
+    <section id="shapes">
+      <h2 class="page-title">Shapes</h2>
 
-			<div class="markdown-body">
-				<p>TODO shapes.md</p>
+      <div class="markdown-body">
+        <p>TODO shapes.md</p>
 
-				
-			</div>
-		</section>
-		
-		<section id="syntax">
-			<h2 class="page-title">Syntax</h2>
+        
+      </div>
+    </section>
+    
+    <section id="syntax">
+      <h2 class="page-title">Syntax</h2>
 
-			<div class="markdown-body">
-				<p><p>Synopsis - Give developers more knowledge about how the classes behave in a non-relative sense: BEM + ITCSS = BEMIT</p></p>
+      <div class="markdown-body">
+        <p><p>Synopsis - Give developers more knowledge about how the classes behave in a non-relative sense: BEM + ITCSS = BEMIT</p></p>
 <p><h6 id="sources">Sources</h6></p>
 <p><p><a href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/">More Transparent UI Code with Namespaces</a></p></p>
 <p><p><a href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT: Taking the BEM Naming Convention a Step Further</a></p></p>
@@ -1381,15 +1416,15 @@ position: fixed;
 <pre><code class="lang-html">&lt;html class=&quot;s-healthcheck&quot;&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="composition">
-			<h2 class="page-title">Composition</h2>
+        
+      </div>
+    </section>
+    
+    <section id="composition">
+      <h2 class="page-title">Composition</h2>
 
-			<div class="markdown-body">
-				<p><h4 id="font-scale">Font Scale</h4></p>
+      <div class="markdown-body">
+        <p><h4 id="font-scale">Font Scale</h4></p>
 <pre><code class="lang-example">&lt;div style=&quot;font-size: 4.7rem;&quot;&gt;X-Large (75.2px)&lt;/div&gt;
 &lt;br&gt;
 &lt;code&gt;.u-font-size--xlarge&lt;/code&gt;
@@ -1521,24 +1556,24 @@ position: fixed;
 --lineHeight-heading: 1.3;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-			</div>
-		</section>
-		
-		<section id="components">
-			<h1 class="page-title">Components</h1>
+        
+      </div>
+    </section>
+    
+      </div>
+    </section>
+    
+    <section id="components">
+      <h1 class="page-title">Components</h1>
 
-			<div class="markdown-body">
-				
-				
-		<section id="buttons">
-			<h2 class="page-title">Buttons</h2>
+      <div class="markdown-body">
+        
+        
+    <section id="buttons">
+      <h2 class="page-title">Buttons</h2>
 
-			<div class="markdown-body">
-				<p><p>Use these button classes on <code>&lt;button&gt;</code> or <code>&lt;input type=&#39;submit&#39;&gt;</code> element. It&#39;s easy to make a new button.</p></p>
+      <div class="markdown-body">
+        <p><p>Use these button classes on <code>&lt;button&gt;</code> or <code>&lt;input type=&#39;submit&#39;&gt;</code> element. It&#39;s easy to make a new button.</p></p>
 <pre><code class="lang-example:html">&lt;button class=&#39;c-button&#39;&gt;Default&lt;/button&gt;
 </code></pre>
 <h4 id="size-and-form">Size and Form</h4>
@@ -1609,15 +1644,15 @@ position: fixed;
   --button-xlarge: 68px;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="input">
-			<h2 class="page-title">Input</h2>
+        
+      </div>
+    </section>
+    
+    <section id="input">
+      <h2 class="page-title">Input</h2>
 
-			<div class="markdown-body">
-				<p><p>This is our input component, which gives you a lot of options for form interactions. Supported input types are, <code>text</code>, <code>password</code>, <code>date</code>, <code>datetime</code>, <code>datetime-local</code>, <code>month</code>, <code>week</code>, <code>email</code>, <code>number</code>, <code>search</code>, <code>tel</code>, <code>time</code>, <code>url</code>, <code>color</code>.</p></p>
+      <div class="markdown-body">
+        <p><p>This is our input component, which gives you a lot of options for form interactions. Supported input types are, <code>text</code>, <code>password</code>, <code>date</code>, <code>datetime</code>, <code>datetime-local</code>, <code>month</code>, <code>week</code>, <code>email</code>, <code>number</code>, <code>search</code>, <code>tel</code>, <code>time</code>, <code>url</code>, <code>color</code>.</p></p>
 <pre><code class="lang-example:html">&lt;label class=&quot;c-input-label&quot; for=&quot;input-1&quot;&gt;Required Input&lt;/label&gt;
 &lt;input class=&quot;c-input&quot; id=&quot;input-1&quot; type=&quot;text&quot; required=&quot;true&quot; placeholder=&quot;The quick bown fox...&quot;&gt;
 
@@ -1685,15 +1720,15 @@ position: fixed;
 &lt;/div&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="card">
-			<h2 class="page-title">Card</h2>
+        
+      </div>
+    </section>
+    
+    <section id="card">
+      <h2 class="page-title">Card</h2>
 
-			<div class="markdown-body">
-				<pre><code class="lang-example:html"> &lt;div class=&quot;c-card&quot;&gt;
+      <div class="markdown-body">
+        <pre><code class="lang-example:html"> &lt;div class=&quot;c-card&quot;&gt;
    &lt;h1&gt;Card Heading&lt;/h1&gt;
    &lt;p&gt;Card paragraph text goes here.&lt;/p&gt;
  &lt;/div&gt;
@@ -1753,15 +1788,15 @@ position: fixed;
  &lt;/div&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="checkbox">
-			<h2 class="page-title">Checkbox</h2>
+        
+      </div>
+    </section>
+    
+    <section id="checkbox">
+      <h2 class="page-title">Checkbox</h2>
 
-			<div class="markdown-body">
-				<p><p>We now have a CSS only checkbox that uses pseudo-elements to draw the square and checkmark next to the label.</p></p>
+      <div class="markdown-body">
+        <p><p>We now have a CSS only checkbox that uses pseudo-elements to draw the square and checkmark next to the label.</p></p>
 <pre><code class="lang-example:html">&lt;input id=&#39;checkbox-1&#39; type=&quot;checkbox&quot; class=&quot;c-checkbox&quot;&gt;&lt;/input&gt;
 &lt;label for=&#39;checkbox-1&#39;&gt;Checkbox&lt;/label&gt;
 
@@ -1788,15 +1823,15 @@ position: fixed;
 &lt;label for=&#39;checkbox-4&#39;&gt;Nunc commodo a eros eu tempus. Cras nisl leo, tempor eget egestas at, venenatis ut dui. Pellentesque volutpat magna et nulla volutpat condimentum.&lt;/label&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="radio">
-			<h2 class="page-title">Radio</h2>
+        
+      </div>
+    </section>
+    
+    <section id="radio">
+      <h2 class="page-title">Radio</h2>
 
-			<div class="markdown-body">
-				<pre><code class="lang-example:html">&lt;input id=&#39;r1&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio&quot;&gt;&lt;/input&gt;
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">&lt;input id=&#39;r1&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio&quot;&gt;&lt;/input&gt;
 &lt;label for=&#39;r1&#39; id=&quot;r1l&quot;&gt;Radio&lt;/label&gt;
 
 &lt;input id=&#39;r2&#39; type=&quot;radio&quot; name=&quot;radiogroup&quot; class=&quot;c-radio&quot; checked&gt;&lt;/input&gt;
@@ -1833,15 +1868,15 @@ position: fixed;
 &lt;label for=&#39;r5&#39;&gt;5&lt;/label&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="dropdowns">
-			<h2 class="page-title">Dropdowns</h2>
+        
+      </div>
+    </section>
+    
+    <section id="dropdowns">
+      <h2 class="page-title">Dropdowns</h2>
 
-			<div class="markdown-body">
-				<pre><code class="lang-example:html"> &lt;div class=&quot;c-dropdown&quot;&gt;
+      <div class="markdown-body">
+        <pre><code class="lang-example:html"> &lt;div class=&quot;c-dropdown&quot;&gt;
    &lt;button class=&quot;c-dropdown__select js-dropdown-toggle&quot;&gt;Apples&lt;/button&gt;
    &lt;ul class=&quot;c-dropdown__menu is-active&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
      &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Apples&lt;/button&gt;&lt;/li&gt;
@@ -1986,15 +2021,15 @@ position: fixed;
  &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="field">
-			<h2 class="page-title">Field</h2>
+        
+      </div>
+    </section>
+    
+    <section id="field">
+      <h2 class="page-title">Field</h2>
 
-			<div class="markdown-body">
-				<pre><code class="lang-example:html">&lt;input class=&quot;c-field&quot; type=&quot;text&quot; required=&quot;true&quot; placeholder=&quot;Required field&quot;&gt;&lt;/input&gt;
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">&lt;input class=&quot;c-field&quot; type=&quot;text&quot; required=&quot;true&quot; placeholder=&quot;Required field&quot;&gt;&lt;/input&gt;
 &lt;input class=&quot;c-field&quot; type=&quot;text&quot; placeholder=&quot;Optional field&quot;&gt;&lt;/input&gt;
 </code></pre>
 <h4 id="sizes">Sizes</h4>
@@ -2009,15 +2044,15 @@ position: fixed;
 &lt;input class=&quot;c-field is-error&quot; type=&quot;text&quot; placeholder=&quot;.is-error&quot;&gt;&lt;/input&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="icon">
-			<h2 class="page-title">Icon</h2>
+        
+      </div>
+    </section>
+    
+    <section id="icon">
+      <h2 class="page-title">Icon</h2>
 
-			<div class="markdown-body">
-				<p><p>The preferred icon library when using NAVIS ui is Google&#39;s <a href="https://design.google.com/icons/">Material icons</a>. We include the entire library in the UI Components project in the form of svg paths that get inlined into your markup.</p></p>
+      <div class="markdown-body">
+        <p><p>The preferred icon library when using NAVIS ui is Google&#39;s <a href="https://design.google.com/icons/">Material icons</a>. We include the entire library in the UI Components project in the form of svg paths that get inlined into your markup.</p></p>
 <p><p>Use these icon classes on <code>&lt;span&gt;</code> elements wrapping your inline svg icons. Here is a simple icon in it&#39;s purest form.</p></p>
 <pre><code class="lang-example">&lt;span class=&quot;c-icon c-icon--large&quot;&gt;
   &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z&quot;/&gt;&lt;/svg&gt;
@@ -2130,15 +2165,15 @@ position: fixed;
 &lt;/figure&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="badges">
-			<h2 class="page-title">Badges</h2>
+        
+      </div>
+    </section>
+    
+    <section id="badges">
+      <h2 class="page-title">Badges</h2>
 
-			<div class="markdown-body">
-				<pre><code class="lang-example:html">&lt;p&gt;&lt;a href=&quot;#&quot;&gt;Inbox &lt;span class=&quot;c-badge&quot;&gt;7&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">&lt;p&gt;&lt;a href=&quot;#&quot;&gt;Inbox &lt;span class=&quot;c-badge&quot;&gt;7&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;button class=&quot;c-button&quot;&gt;
   Messages &lt;span class=&quot;c-badge&quot;&gt;37&lt;/span&gt;
@@ -2152,15 +2187,15 @@ position: fixed;
   &lt;/span&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="label">
-			<h2 class="page-title">Label</h2>
+        
+      </div>
+    </section>
+    
+    <section id="label">
+      <h2 class="page-title">Label</h2>
 
-			<div class="markdown-body">
-				<pre><code class="lang-example:html">&lt;span class=&quot;c-label&quot;&gt;Default&lt;/span&gt;
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">&lt;span class=&quot;c-label&quot;&gt;Default&lt;/span&gt;
 &lt;span class=&quot;c-label c-label--positive&quot;&gt;Positive&lt;/span&gt;
 &lt;span class=&quot;c-label c-label--informative&quot;&gt;Informative&lt;/span&gt;
 &lt;span class=&quot;c-label c-label--informative-alt&quot;&gt;Informative Alt&lt;/span&gt;
@@ -2184,15 +2219,15 @@ position: fixed;
 &lt;/span&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="loader">
-			<h2 class="page-title">Loader</h2>
+        
+      </div>
+    </section>
+    
+    <section id="loader">
+      <h2 class="page-title">Loader</h2>
 
-			<div class="markdown-body">
-				<p><p>Our webapps need to provide feedback to the user for when things are loading, so we have a few loader components that are animated using only CSS techniques.</p></p>
+      <div class="markdown-body">
+        <p><p>Our webapps need to provide feedback to the user for when things are loading, so we have a few loader components that are animated using only CSS techniques.</p></p>
 <pre><code class="lang-example">&lt;br&gt;&lt;br&gt;
 &lt;div class=&quot;c-loader u-fixed--middle-center&quot;&gt;&lt;/div&gt;
 &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
@@ -2212,15 +2247,15 @@ position: fixed;
 <pre><code class="lang-html">&lt;div class=&quot;c-loader-secondary c-loader-secondary--neutral u-fixed--middle-center&quot;&gt;&lt;/div&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="menu">
-			<h2 class="page-title">Menu</h2>
+        
+      </div>
+    </section>
+    
+    <section id="menu">
+      <h2 class="page-title">Menu</h2>
 
-			<div class="markdown-body">
-				<p><h3 id="block">Block</h3></p>
+      <div class="markdown-body">
+        <p><h3 id="block">Block</h3></p>
 <p><p>A horizontal list of block-level links using a <code>&lt;ul&gt;</code>.</p></p>
 <pre><code class="lang-example:html">  &lt;ul class=&quot;c-menu c-menu--block&quot;&gt;
     &lt;li&gt;&lt;button class=&quot;c-menu__link&quot;&gt;Widgets&lt;/button&gt;&lt;/li&gt;
@@ -2244,15 +2279,15 @@ position: fixed;
  &lt;/ul&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="messages">
-			<h2 class="page-title">Messages</h2>
+        
+      </div>
+    </section>
+    
+    <section id="messages">
+      <h2 class="page-title">Messages</h2>
 
-			<div class="markdown-body">
-				<p><p>Use these message classes on text strings to style them for various type treatments.</p></p>
+      <div class="markdown-body">
+        <p><p>Use these message classes on text strings to style them for various type treatments.</p></p>
 <pre><code class="lang-example:html">&lt;div class=&quot;c-message&quot;&gt;This is a message&lt;/div&gt;
 </code></pre>
 <pre><code class="lang-example:html">&lt;div class=&quot;c-message--neutral&quot;&gt;This is a neutral message&lt;/div&gt;
@@ -2264,15 +2299,15 @@ position: fixed;
 <pre><code class="lang-example:html">&lt;div class=&quot;c-message--warning&quot;&gt;This is a warning message&lt;/div&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="notification">
-			<h2 class="page-title">Notification</h2>
+        
+      </div>
+    </section>
+    
+    <section id="notification">
+      <h2 class="page-title">Notification</h2>
 
-			<div class="markdown-body">
-				<p>Communicate the state of your user&#39;s interactions as well as system status. We have a flexible notification component with a few variations for different states.</p>
+      <div class="markdown-body">
+        <p>Communicate the state of your user&#39;s interactions as well as system status. We have a flexible notification component with a few variations for different states.</p>
 <pre><code class="lang-html">&lt;div class=&quot;c-notification [c-notification--warning]&quot;&gt;
   &lt;svg class=&quot;c-icon c-icon--info&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt; ... &lt;/svg&gt;
   &lt;div class=&quot;c-notification_content&quot;&gt;
@@ -2360,15 +2395,15 @@ position: fixed;
 <h3 id="positions">Positions</h3>
 <p>You can apply modifier classes to your notification to pin them to different areas around the viewport. See <a href="#positioning">positioning</a>.</p>
 
-				
-			</div>
-		</section>
-		
-		<section id="tables">
-			<h2 class="page-title">Tables</h2>
+        
+      </div>
+    </section>
+    
+    <section id="tables">
+      <h2 class="page-title">Tables</h2>
 
-			<div class="markdown-body">
-				<p><p>This is a set of ways to format tables for responsive applications.</p></p>
+      <div class="markdown-body">
+        <p><p>This is a set of ways to format tables for responsive applications.</p></p>
 <pre><code class="lang-example:html">  &lt;div class=&quot;o-button-group&quot;&gt;
     &lt;button class=&quot;c-button c-button--small js-view--swipe is-active&quot; aria-label=&quot;Swipe View&quot;&gt;
       &lt;svg class=&quot;c-icon&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M4 15h16v-2H4v2zm0 4h16v-2H4v2zm0-8h16V9H4v2zm0-6v2h16V5H4z&quot;/&gt;&lt;/svg&gt;
@@ -2560,15 +2595,15 @@ position: fixed;
   &lt;/table&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="tooltips">
-			<h2 class="page-title">Tooltips</h2>
+        
+      </div>
+    </section>
+    
+    <section id="tooltips">
+      <h2 class="page-title">Tooltips</h2>
 
-			<div class="markdown-body">
-				<p><p>This is a data-attribute based component, so you will only be able to use it if you add a <code>data-tooltip</code> into your element.</p></p>
+      <div class="markdown-body">
+        <p><p>This is a data-attribute based component, so you will only be able to use it if you add a <code>data-tooltip</code> into your element.</p></p>
 <p><h4 id="positions">Positions</h4></p>
 <p><p>For positioning, use <code>data-tooltip-pos</code> data-attribute with one of these values: <code>up</code>, <code>down</code>, <code>right</code>, <code>left</code></p></p>
 <pre><code class="lang-example">&lt;!-- Yes I hacked the height this way, and that&#39;s okay. --&gt;
@@ -2642,15 +2677,15 @@ position: fixed;
 --tooltip-z-index: 50;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="accordion">
-			<h2 class="page-title">Accordion</h2>
+        
+      </div>
+    </section>
+    
+    <section id="accordion">
+      <h2 class="page-title">Accordion</h2>
 
-			<div class="markdown-body">
-				<p><p><strong>NEW!</strong> This object is redesigned to be un-opinionated and flexible for almost any interactive list you might need in your app. The simplified markup resembles this node list:</p></p>
+      <div class="markdown-body">
+        <p><p><strong>NEW!</strong> This object is redesigned to be un-opinionated and flexible for almost any interactive list you might need in your app. The simplified markup resembles this node list:</p></p>
 <pre><code class="lang-shell">.o-accordion [ --inline | --right | --small ]
    __title   [ is-active | is-nested | is-selected ]
    __content [ is-active ]
@@ -2831,24 +2866,24 @@ position: fixed;
 &lt;/nav&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-			</div>
-		</section>
-		
-		<section id="objects">
-			<h1 class="page-title">Objects</h1>
+        
+      </div>
+    </section>
+    
+      </div>
+    </section>
+    
+    <section id="objects">
+      <h1 class="page-title">Objects</h1>
 
-			<div class="markdown-body">
-				
-				
-		<section id="aside">
-			<h2 class="page-title">Aside</h2>
+      <div class="markdown-body">
+        
+        
+    <section id="aside">
+      <h2 class="page-title">Aside</h2>
 
-			<div class="markdown-body">
-				<p><p><strong>NEW!</strong> A simple sliding card that displays lists of links and other various content. The simplified markup resembles this node list:</p></p>
+      <div class="markdown-body">
+        <p><p><strong>NEW!</strong> A simple sliding card that displays lists of links and other various content. The simplified markup resembles this node list:</p></p>
 <pre><code class="lang-shell">.o-aside [ --right | is-active ]
   __title [ --section ]
   __close
@@ -2883,15 +2918,15 @@ position: fixed;
 &lt;/div&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="toolbar">
-			<h2 class="page-title">Toolbar</h2>
+        
+      </div>
+    </section>
+    
+    <section id="toolbar">
+      <h2 class="page-title">Toolbar</h2>
 
-			<div class="markdown-body">
-				<p><p>Follow this example of markup on a <code>&lt;div&gt;</code> or <code>&lt;header&gt;</code> to get an application style toolbar. The main toolbar class should only be used on network-level NAVIS operations.</p></p>
+      <div class="markdown-body">
+        <p><p>Follow this example of markup on a <code>&lt;div&gt;</code> or <code>&lt;header&gt;</code> to get an application style toolbar. The main toolbar class should only be used on network-level NAVIS operations.</p></p>
 <pre><code class="lang-example:html">&lt;div class=&quot;o-toolbar&quot;&gt;
   &lt;nav class=&quot;u-column--bar&quot;&gt;
     &lt;h1 class=&quot;o-toolbar__brand&quot;&gt;NAVIS&lt;/h1&gt;
@@ -3050,15 +3085,15 @@ position: fixed;
 &lt;/div&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="button-groups">
-			<h2 class="page-title">Button Groups</h2>
+        
+      </div>
+    </section>
+    
+    <section id="button-groups">
+      <h2 class="page-title">Button Groups</h2>
 
-			<div class="markdown-body">
-				<pre><code class="lang-example:html">&lt;div class=&#39;o-button-group&#39;&gt;
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">&lt;div class=&#39;o-button-group&#39;&gt;
   &lt;button class=&#39;c-button&#39;&gt;Play&lt;/button&gt;
   &lt;button class=&#39;c-button&#39;&gt;Pause&lt;/button&gt;
   &lt;button class=&#39;c-button&#39;&gt;Stop&lt;/button&gt;
@@ -3093,15 +3128,15 @@ position: fixed;
 &lt;/div&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="calendar">
-			<h2 class="page-title">Calendar</h2>
+        
+      </div>
+    </section>
+    
+    <section id="calendar">
+      <h2 class="page-title">Calendar</h2>
 
-			<div class="markdown-body">
-				<p><p>This is a month view calendar for overlaying on input fields that control date selection.</p></p>
+      <div class="markdown-body">
+        <p><p>This is a month view calendar for overlaying on input fields that control date selection.</p></p>
 <pre><code class="lang-example:html">&lt;div class=&quot;u-wrapper&quot;&gt;
   &lt;span class=&quot;o-button-group-label&quot;&gt; X Date&lt;/span&gt;
   &lt;div class=&quot;o-calendar-wrapper&quot;&gt;
@@ -3198,15 +3233,15 @@ position: fixed;
 &lt;/div&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="drawer">
-			<h2 class="page-title">Drawer</h2>
+        
+      </div>
+    </section>
+    
+    <section id="drawer">
+      <h2 class="page-title">Drawer</h2>
 
-			<div class="markdown-body">
-				<pre><code class="lang-example:html">&lt;div class=&quot;o-drawer o-drawer--left is-open&quot;&gt;
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">&lt;div class=&quot;o-drawer o-drawer--left is-open&quot;&gt;
   &lt;header class=&quot;o-drawer__header&quot;&gt;
     &lt;h1 class=&quot;o-drawer__brand&quot;&gt;Navis&lt;/h1&gt;
     &lt;h2 class=&quot;o-drawer__product&quot;&gt;Media&lt;/h2&gt;
@@ -3260,15 +3295,15 @@ position: fixed;
 &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="editor">
-			<h2 class="page-title">Editor</h2>
+        
+      </div>
+    </section>
+    
+    <section id="editor">
+      <h2 class="page-title">Editor</h2>
 
-			<div class="markdown-body">
-				<p><h4 id="inactive">Inactive</h4></p>
+      <div class="markdown-body">
+        <p><h4 id="inactive">Inactive</h4></p>
 <pre><code class="lang-example:html"> &lt;section class=&quot;o-editor&quot;&gt;
    &lt;header class=&quot;o-editor__toolbar has-actions&quot;&gt;
      &lt;div class=&quot;o-editor__nav&quot;&gt;
@@ -3448,15 +3483,15 @@ Required&lt;/label&gt;
  &lt;/section&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="iconbar">
-			<h2 class="page-title">Iconbar</h2>
+        
+      </div>
+    </section>
+    
+    <section id="iconbar">
+      <h2 class="page-title">Iconbar</h2>
 
-			<div class="markdown-body">
-				<pre><code class="lang-example:html">&lt;nav class=&quot;o-iconbar&quot;&gt;
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">&lt;nav class=&quot;o-iconbar&quot;&gt;
   &lt;button class=&quot;o-iconbar__item is-active&quot;&gt;
     &lt;span class=&quot;c-icon&quot;&gt;
       &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z&quot;/&gt;&lt;/svg&gt;
@@ -3543,15 +3578,15 @@ Required&lt;/label&gt;
 &lt;/nav&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="listing">
-			<h2 class="page-title">Listing</h2>
+        
+      </div>
+    </section>
+    
+    <section id="listing">
+      <h2 class="page-title">Listing</h2>
 
-			<div class="markdown-body">
-				<p><h4 id="beginner-view">Beginner view</h4></p>
+      <div class="markdown-body">
+        <p><h4 id="beginner-view">Beginner view</h4></p>
 <pre><code class="lang-example:html">&lt;br&gt;&lt;br&gt;&lt;br&gt;
 &lt;div class=&quot;u-fixed--middle-center&quot;&gt;
   &lt;span class=&quot;c-icon c-icon--huge is-passive&quot;&gt;
@@ -3656,15 +3691,15 @@ Required&lt;/label&gt;
 &lt;/div&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="modal">
-			<h2 class="page-title">Modal</h2>
+        
+      </div>
+    </section>
+    
+    <section id="modal">
+      <h2 class="page-title">Modal</h2>
 
-			<div class="markdown-body">
-				<pre><code class="lang-example">&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+      <div class="markdown-body">
+        <pre><code class="lang-example">&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
 &lt;div class=&quot;o-modal is-active&quot;&gt;
   &lt;div class=&quot;o-modal__card&quot;&gt;
     &lt;div class=&quot;o-modal__title&quot;&gt;
@@ -3717,15 +3752,15 @@ Required&lt;/label&gt;
 &lt;/div&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-		<section id="sidebar">
-			<h2 class="page-title">Sidebar</h2>
+        
+      </div>
+    </section>
+    
+    <section id="sidebar">
+      <h2 class="page-title">Sidebar</h2>
 
-			<div class="markdown-body">
-				<pre><code class="lang-example:html">&lt;nav class=&quot;o-sidebar o-sidebar--large [is-collapsed]&quot; style=&quot;/* Demo Constraints */ width: 16.25em; height: 300px;&quot;&gt;
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">&lt;nav class=&quot;o-sidebar o-sidebar--large [is-collapsed]&quot; style=&quot;/* Demo Constraints */ width: 16.25em; height: 300px;&quot;&gt;
         &lt;div class=&quot;o-sidebar__controls&quot;&gt;
           &lt;input class=&quot;c-input&quot; placeholder=&quot;Search library...&quot;&gt;&lt;/input&gt;
         &lt;button class=&quot;c-button c-button--icon u-absolute--top-right&quot;&gt;
@@ -3804,20 +3839,25 @@ Required&lt;/label&gt;
 &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
 </code></pre>
 
-				
-			</div>
-		</section>
-		
-			</div>
-		</section>
-		
-    </main>
-  </div>
-  <footer class="footer">
-    Last modified Wednesday, 15 June 2016 11:47
-  </footer>
-</div>
-<script src="prism.js"></script>
-<script src="examples.js"></script>
-<script src="script.js"></script>
+        
+      </div>
+    </section>
+    
+      </div>
+    </section>
+    
+        </main>
+      </div>
+      <footer class="footer">
+        Last modified Monday, 20 June 2016 14:13
+      </footer>
+    </div>
+    <script src="prism.js?871234"></script>
+    <script src="examples.js?873428"></script>
+    <script src="script.js?02359872"></script>
+    
+  
+  </body>
+</html>
+
 
