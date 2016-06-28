@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>NAVIS UI Styleguide</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="style.css" rel="stylesheet">
+    <link href="primer.css" rel="stylesheet"><link href="style.css" rel="stylesheet"><link href="octicons/octicons.css" rel="stylesheet">
     <script>examples={"base":"","target":"_self","css":["guide.css","fonts/source-sans-pro/source-sans-pro.css?675981"],"js":[],"bodyjs":["js/jquery-2.2.3.min.js?9083278132","js/d3.min.js?123080874","js/dom.js?89871234978"],"htmlcss":"overflow: hidden;","bodycss":"overflow-x: hidden; padding: 20px;"};</script>
     
   </head>
@@ -101,7 +101,10 @@
         <a class="menu-item" href="#input"><span>Input</span></a>
         
         
-        <a class="menu-item" href="#badges"><span>Badges</span></a>
+        <a class="menu-item" href="#backdrop"><span>Backdrop</span></a>
+        
+        
+        <a class="menu-item" href="#buttons"><span>Buttons</span></a>
         
         
         <a class="menu-item" href="#card"><span>Card</span></a>
@@ -122,7 +125,7 @@
         <a class="menu-item" href="#icon"><span>Icon</span></a>
         
         
-        <a class="menu-item" href="#buttons"><span>Buttons</span></a>
+        <a class="menu-item" href="#badges"><span>Badges</span></a>
         
         
         <a class="menu-item" href="#label"><span>Label</span></a>
@@ -1569,79 +1572,22 @@ position: fixed;
       <div class="markdown-body">
         
         
-    <section id="buttons">
-      <h2 class="page-title">Buttons</h2>
+    <section id="badges">
+      <h2 class="page-title">Badges</h2>
 
       <div class="markdown-body">
-        <p><p>Use these button classes on <code>&lt;button&gt;</code> or <code>&lt;input type=&#39;submit&#39;&gt;</code> element. It&#39;s easy to make a new button.</p></p>
-<pre><code class="lang-example:html">&lt;button class=&#39;c-button&#39;&gt;Default&lt;/button&gt;
+        <pre><code class="lang-example:html">&lt;p&gt;&lt;a href=&quot;#&quot;&gt;Inbox &lt;span class=&quot;c-badge&quot;&gt;7&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;button class=&quot;c-button&quot;&gt;
+  Messages &lt;span class=&quot;c-badge&quot;&gt;37&lt;/span&gt;
+&lt;/button&gt;&lt;/p&gt;
 </code></pre>
-<h4 id="size-and-form">Size and Form</h4>
-<p>You can optionally use modifier classes that let you manipulate the size and shape of your button.</p>
-<pre><code class="lang-example:html">&lt;button class=&#39;c-button&#39;&gt;Regular&lt;/button&gt;
-&lt;button class=&#39;c-button c-button--large&#39;&gt;Large&lt;/button&gt;
-&lt;button class=&#39;c-button c-button--xlarge&#39;&gt;Extra Large&lt;/button&gt;
-&lt;button class=&#39;c-button c-button--round&#39;&gt;Round&lt;/button&gt;
-&lt;button class=&#39;c-button c-button--wide&#39;&gt;Wide&lt;/button&gt;
-&lt;button class=&#39;c-button&#39;&gt;
-  &lt;span class=&quot;c-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;c-button__content&quot;&gt;Left Icon&lt;/span&gt;
-&lt;/button&gt;
-&lt;button class=&#39;c-button&#39;&gt;
-  &lt;span class=&quot;c-button__content&quot;&gt;Right Icon&lt;/span&gt;&lt;span class=&quot;c-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;
-&lt;/button&gt;
-&lt;button class=&#39;c-button c-button--icon&#39; title=&quot;Icon Button&quot;&gt;&lt;span class=&quot;c-icon&quot;&gt;
-&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z&quot;/&gt;&lt;/svg&gt;
-&lt;/span&gt;&lt;/button&gt;
-</code></pre>
-<h4 id="color">Color</h4>
-<p>Stateful color classes are provided to further communicate the intentions of your button action.</p>
-<pre><code class="lang-example:html">&lt;button class=&#39;c-button&#39;&gt;Default&lt;/button&gt;
-&lt;button class=&#39;c-button c-button--secondary&#39;&gt;Secondary&lt;/button&gt;
-&lt;button class=&#39;c-button c-button--alert&#39;&gt;Alert&lt;/button&gt;
-&lt;button class=&#39;c-button c-button--passive&#39;&gt;Passive&lt;/button&gt;
-&lt;button class=&#39;c-button c-button--text&#39;&gt;Text&lt;/button&gt;
-&lt;button class=&#39;c-button c-button--anchor&#39;&gt;Anchor&lt;/button&gt;
-</code></pre>
-<h4 id="states">States</h4>
-<pre><code class="lang-example:html">&lt;button class=&#39;c-button is-disabled&#39; aria-disabled=&quot;true&quot;&gt;Disabled&lt;/button&gt;
-&lt;button class=&#39;c-button is-active&#39; title=&quot;Click me to see the active state.&quot;&gt;Active&lt;/button&gt;
-</code></pre>
-<h4 id="postfix">Postfix</h4>
-<pre><code class="lang-example:html">&lt;div class=&quot;u-row u-row--collapse&quot;&gt;
-&lt;div class=&quot;u-column--9&quot;&gt;
-  &lt;input type=&quot;text&quot; class=&quot;c-input&quot; placeholder=&quot;Search for...&quot;&gt;
-&lt;/div&gt;
-&lt;div class=&quot;u-column--2&quot;&gt;
-  &lt;button class=&quot;c-button c-button--postfix&quot;&gt;Search&lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-<h4 id="customize">Customize</h4>
-<pre><code class="lang-css">  --button-background: var(--blue-800);
-  --button-background-hover: var(--blue-700);
-  --button-background-hover-alert: var(--red-600);
-  --button-background-hover-anchor: transparent;
-  --button-background-hover-passive: var(--white);
-  --button-background-hover-secondary: var(--orange-600);
-  --button-background-hover-success: var(--green-600);
-  --button-background-hover-text: var(--grey-100);
-  --button-background-alert: var(--red-700);
-  --button-background-passive: var(--blue-200);
-  --button-background-secondary: var(--orange-700);
-  --button-background-success: var(--green-700);
-  --button-background-text: transparent;
-  --button-border: var(--grey-600);
-  --button-text-color: var(--white);
-  --button-text-color-anchor: var(--blue-700);
-  --button-text-color-anchor-active: var(--blue-800);
-  --button-text-color-passive: var(--grey-800);
-  --button-text-color-text: currentColor;
-  --button-hover-shadow: 0 0 6px var(--shadow-color);
-  --button-duration: .1s;
-  --button-disabled-opacity: .35;
-  --button-large: 36px;
-  --button-regular: 30px;
-  --button-xlarge: 68px;
+<h4 id="with-icons">With icons</h4>
+<pre><code class="lang-example:html">  &lt;span class=&quot;c-badge c-badge--round&quot;&gt;
+    &lt;span class=&quot;c-icon&quot;&gt;
+      &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z&quot;/&gt;&lt;/svg&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
 </code></pre>
 
         
@@ -1718,6 +1664,85 @@ position: fixed;
   &lt;input class=&quot;c-input is-error&quot; type=&#39;text&#39; placeholder=&quot;Placeholder text&quot;&gt;
   &lt;div class=&#39;c-input__validation c-input__validation--error&#39;&gt;Error validated message&lt;/div&gt;
 &lt;/div&gt;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+    <section id="buttons">
+      <h2 class="page-title">Buttons</h2>
+
+      <div class="markdown-body">
+        <p><p>Use these button classes on <code>&lt;button&gt;</code> or <code>&lt;input type=&#39;submit&#39;&gt;</code> element. It&#39;s easy to make a new button.</p></p>
+<pre><code class="lang-example:html">&lt;button class=&#39;c-button&#39;&gt;Default&lt;/button&gt;
+</code></pre>
+<h4 id="size-and-form">Size and Form</h4>
+<p>You can optionally use modifier classes that let you manipulate the size and shape of your button.</p>
+<pre><code class="lang-example:html">&lt;button class=&#39;c-button&#39;&gt;Regular&lt;/button&gt;
+&lt;button class=&#39;c-button c-button--large&#39;&gt;Large&lt;/button&gt;
+&lt;button class=&#39;c-button c-button--xlarge&#39;&gt;Extra Large&lt;/button&gt;
+&lt;button class=&#39;c-button c-button--round&#39;&gt;Round&lt;/button&gt;
+&lt;button class=&#39;c-button c-button--wide&#39;&gt;Wide&lt;/button&gt;
+&lt;button class=&#39;c-button&#39;&gt;
+  &lt;span class=&quot;c-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;span class=&quot;c-button__content&quot;&gt;Left Icon&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&#39;c-button&#39;&gt;
+  &lt;span class=&quot;c-button__content&quot;&gt;Right Icon&lt;/span&gt;&lt;span class=&quot;c-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&#39;c-button c-button--icon&#39; title=&quot;Icon Button&quot;&gt;&lt;span class=&quot;c-icon&quot;&gt;
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z&quot;/&gt;&lt;/svg&gt;
+&lt;/span&gt;&lt;/button&gt;
+</code></pre>
+<h4 id="color">Color</h4>
+<p>Stateful color classes are provided to further communicate the intentions of your button action.</p>
+<pre><code class="lang-example:html">&lt;button class=&#39;c-button&#39;&gt;Default&lt;/button&gt;
+&lt;button class=&#39;c-button c-button--secondary&#39;&gt;Secondary&lt;/button&gt;
+&lt;button class=&#39;c-button c-button--alert&#39;&gt;Alert&lt;/button&gt;
+&lt;button class=&#39;c-button c-button--passive&#39;&gt;Passive&lt;/button&gt;
+&lt;button class=&#39;c-button c-button--text&#39;&gt;Text&lt;/button&gt;
+&lt;button class=&#39;c-button c-button--anchor&#39;&gt;Anchor&lt;/button&gt;
+</code></pre>
+<h4 id="states">States</h4>
+<pre><code class="lang-example:html">&lt;button class=&#39;c-button is-disabled&#39; aria-disabled=&quot;true&quot;&gt;Disabled&lt;/button&gt;
+&lt;button class=&#39;c-button is-active&#39; title=&quot;Click me to see the active state.&quot;&gt;Active&lt;/button&gt;
+</code></pre>
+<h4 id="postfix">Postfix</h4>
+<pre><code class="lang-example:html">&lt;div class=&quot;u-row u-row--collapse&quot;&gt;
+&lt;div class=&quot;u-column--9&quot;&gt;
+  &lt;input type=&quot;text&quot; class=&quot;c-input&quot; placeholder=&quot;Search for...&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;u-column--2&quot;&gt;
+  &lt;button class=&quot;c-button c-button--postfix&quot;&gt;Search&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h4 id="customize">Customize</h4>
+<pre><code class="lang-css">  --button-background: var(--blue-800);
+  --button-background-hover: var(--blue-700);
+  --button-background-hover-alert: var(--red-600);
+  --button-background-hover-anchor: transparent;
+  --button-background-hover-passive: var(--white);
+  --button-background-hover-secondary: var(--orange-600);
+  --button-background-hover-success: var(--green-600);
+  --button-background-hover-text: var(--grey-100);
+  --button-background-alert: var(--red-700);
+  --button-background-passive: var(--blue-200);
+  --button-background-secondary: var(--orange-700);
+  --button-background-success: var(--green-700);
+  --button-background-text: transparent;
+  --button-border: var(--grey-600);
+  --button-text-color: var(--white);
+  --button-text-color-anchor: var(--blue-700);
+  --button-text-color-anchor-active: var(--blue-800);
+  --button-text-color-passive: var(--grey-800);
+  --button-text-color-text: currentColor;
+  --button-hover-shadow: 0 0 6px var(--shadow-color);
+  --button-duration: .1s;
+  --button-disabled-opacity: .35;
+  --button-large: 36px;
+  --button-regular: 30px;
+  --button-xlarge: 68px;
 </code></pre>
 
         
@@ -1939,6 +1964,17 @@ position: fixed;
 <pre><code class="lang-example:html"> &lt;div class=&quot;c-dropdown&quot;&gt;
    &lt;button class=&quot;c-button c-button--dropdown js-dropdown-toggle&quot;&gt;Filter&lt;/button&gt;
    &lt;ul class=&quot;c-dropdown__menu is-active&quot; id=&quot;test-dropdown&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
+     &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Water&lt;/button&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Coffee&lt;/button&gt;&lt;/li&gt;
+     &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Tea&lt;/button&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+ &lt;/div&gt;
+ &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+</code></pre>
+<pre><code class="lang-example:html"> &lt;div class=&quot;o-button-group&quot;&gt;
+   &lt;button class=&quot;c-button&quot;&gt;Dropdown&lt;/button&gt;
+   &lt;button class=&quot;c-button c-button--dropdown&quot;&gt;&lt;/button&gt;
+   &lt;ul class=&quot;c-dropdown__menu is-active&quot;&gt;
      &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Water&lt;/button&gt;&lt;/li&gt;
      &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Coffee&lt;/button&gt;&lt;/li&gt;
      &lt;li&gt;&lt;button class=&quot;c-dropdown__link&quot;&gt;Tea&lt;/button&gt;&lt;/li&gt;
@@ -2169,24 +2205,11 @@ position: fixed;
       </div>
     </section>
     
-    <section id="badges">
-      <h2 class="page-title">Badges</h2>
+    <section id="backdrop">
+      <h2 class="page-title">Backdrop</h2>
 
       <div class="markdown-body">
-        <pre><code class="lang-example:html">&lt;p&gt;&lt;a href=&quot;#&quot;&gt;Inbox &lt;span class=&quot;c-badge&quot;&gt;7&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;button class=&quot;c-button&quot;&gt;
-  Messages &lt;span class=&quot;c-badge&quot;&gt;37&lt;/span&gt;
-&lt;/button&gt;&lt;/p&gt;
-</code></pre>
-<h4 id="with-icons">With icons</h4>
-<pre><code class="lang-example:html">  &lt;span class=&quot;c-badge c-badge--round&quot;&gt;
-    &lt;span class=&quot;c-icon&quot;&gt;
-      &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z&quot;/&gt;&lt;/svg&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-</code></pre>
-
+        
         
       </div>
     </section>
@@ -3699,57 +3722,92 @@ Required&lt;/label&gt;
       <h2 class="page-title">Modal</h2>
 
       <div class="markdown-body">
-        <pre><code class="lang-example">&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-&lt;div class=&quot;o-modal is-active&quot;&gt;
+        <pre><code class="lang-example:html">&lt;div class=&quot;o-modal is-active&quot;&gt;
   &lt;div class=&quot;o-modal__card&quot;&gt;
     &lt;div class=&quot;o-modal__title&quot;&gt;
       &lt;span&gt;Modal Title&lt;/span&gt;
-      &lt;button class=&quot;o-modal__close&quot;&gt;
-      &lt;span class=&quot;c-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;
+      &lt;div class=&quot;o-modal__actions&quot;&gt;
+        &lt;button class=&quot;o-modal__action&quot;&gt;
+          &lt;span class=&quot;c-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;
       &lt;/button&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;o-modal__content u-row u-row--colapse&quot;&gt;
       &lt;p&gt;This is a card in a modal, what will they think of next?&lt;/p&gt;
-      &lt;div class=&quot;o-modal__actions&quot;&gt;
+      &lt;div class=&quot;o-modal__row&quot;&gt;
         &lt;button class=&quot;c-button c-button--anchor c-button--small&quot;&gt;Close&lt;/button&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;o-modal__backdrop is-active&quot;&gt;&lt;/div&gt;
-&lt;/div&gt; 
-&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-</code></pre>
-<pre><code class="lang-html">&lt;div class=&quot;o-modal is-active&quot;&gt;
-  &lt;div class=&quot;o-modal__card&quot;&gt;
-    &lt;div class=&quot;o-modal__title&quot;&gt;
-      &lt;span&gt;Modal Title&lt;/span&gt;
-      &lt;button class=&quot;o-modal__close&quot;&gt; &lt;span class=&quot;c-icon&quot;&gt; ... &lt;/span&gt; &lt;/button&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;o-modal__content&quot;&gt;
-      &lt;p&gt;This is a card in a modal, what will they think of next?&lt;/p&gt;
-      &lt;div class=&quot;o-modal__actions&quot;&gt;
-        &lt;button class=&quot;c-button c-button--anchor c-button--small&quot;&gt;Close&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;o-modal__backdrop is-active&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
+&lt;div class=&quot;c-backdrop is-active&quot;&gt;&lt;/div&gt;
 </code></pre>
+<h4 id="small">Small</h4>
 <pre><code class="lang-example:html">&lt;div class=&quot;o-modal o-modal--small is-active&quot;&gt;
   &lt;div class=&quot;o-modal__card&quot;&gt;
     &lt;div class=&quot;o-modal__title&quot;&gt;
       &lt;span&gt;Modal Title&lt;/span&gt;
-      &lt;button class=&quot;o-modal__close&quot;&gt; &lt;span class=&quot;c-icon&quot;&gt; ... &lt;/span&gt; &lt;/button&gt;
+      &lt;div class=&quot;o-modal__actions&quot;&gt;
+        &lt;button class=&quot;o-modal__action&quot;&gt; &lt;span class=&quot;c-icon&quot;&gt; ... &lt;/span&gt; &lt;/button&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;o-modal__content&quot;&gt;
       &lt;p&gt;This is a card in a modal, what will they think of next?&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;c-backdrop is-active&quot;&gt;&lt;/div&gt;
+</code></pre>
+<h4 id="large">Large</h4>
+<pre><code class="lang-example:html">&lt;div class=&quot;o-modal o-modal--large is-active&quot;&gt;
+  &lt;div class=&quot;o-modal__card&quot;&gt;
+    &lt;div class=&quot;o-modal__title&quot;&gt;
+      &lt;span&gt;Modal Title&lt;/span&gt;
       &lt;div class=&quot;o-modal__actions&quot;&gt;
+        &lt;button class=&quot;o-modal__action&quot;&gt;
+          &lt;span class=&quot;c-icon&quot;&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot;&gt;&lt;path d=&quot;M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z&quot;/&gt;&lt;/svg&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-modal__content u-row u-row--colapse&quot;&gt;
+      &lt;p&gt;This is a card in a modal, what will they think of next?&lt;/p&gt;
+      &lt;div class=&quot;o-modal__row&quot;&gt;
         &lt;button class=&quot;c-button c-button--anchor c-button--small&quot;&gt;Close&lt;/button&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;o-modal__backdrop is-active&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
+&lt;div class=&quot;c-backdrop is-active&quot;&gt;&lt;/div&gt;
+</code></pre>
+<h4 id="primary">Primary</h4>
+<pre><code class="lang-example:html">&lt;div class=&quot;o-modal o-modal--primary is-active&quot;&gt;
+  &lt;div class=&quot;o-modal__card&quot;&gt;
+    &lt;div class=&quot;o-modal__content u-row u-row--colapse&quot;&gt;
+      &lt;p&gt;This is a card in a modal, what will they think of next?&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;c-backdrop is-active&quot;&gt;&lt;/div&gt;
+</code></pre>
+<h4 id="success">Success</h4>
+<pre><code class="lang-example:html">&lt;div class=&quot;o-modal o-modal--success is-active&quot;&gt;
+  &lt;div class=&quot;o-modal__card&quot;&gt;
+    &lt;div class=&quot;o-modal__content u-row u-row--colapse&quot;&gt;
+      &lt;p&gt;This is a card in a modal, what will they think of next?&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;c-backdrop is-active&quot;&gt;&lt;/div&gt;
+</code></pre>
+<h4 id="warning">Warning</h4>
+<pre><code class="lang-example:html">&lt;div class=&quot;o-modal o-modal--warning is-active&quot;&gt;
+  &lt;div class=&quot;o-modal__card&quot;&gt;
+    &lt;div class=&quot;o-modal__content u-row u-row--colapse&quot;&gt;
+      &lt;p&gt;This is a card in a modal, what will they think of next?&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;c-backdrop is-active&quot;&gt;&lt;/div&gt;
 </code></pre>
 
         
@@ -3849,12 +3907,64 @@ Required&lt;/label&gt;
         </main>
       </div>
       <footer class="footer">
-        Last modified Monday, 20 June 2016 14:13
+        Last modified Tuesday, 28 June 2016 11:20
       </footer>
     </div>
     <script src="prism.js?871234"></script>
     <script src="examples.js?873428"></script>
     <script src="script.js?02359872"></script>
+    <script src="anchor.min.js?225234"></script>
+    <script src="interact.min.js?8552934"></script>
+    <script>
+     anchors.options = {
+         placement: 'left',
+         visible: 'hover',
+         class: 'anchor-link'
+     };
+     anchors.add('h2, h3');
+
+     /* interact('.docs-resize')
+      *   .resizable({
+      *     edges: {
+      *       left: '.c-resize--left',
+      *       right: '.c-resize--right',
+      *       bottom: false,
+      *       top: false
+      *     },
+      *     onmove: function (e) {
+      *       var width = e.rect.width,
+      *         windowWidth = $(window).width();
+
+      *       if (width < 160) {
+      *         width = 160;
+      *       } else if ((width * 2) + 100 > windowWidth) {
+      *         width = (windowWidth - 100) / 2;
+      *       }
+
+      *       $('.docs-example').find('docs-resize').addClass('resize-overlay');
+      *       $('.docs-resize').style.width = (width * 2) + 'px';
+      *     },
+      *     onend: function () {
+      *       $('.docs-example').find('docs-resize').removeClass('resize-overlay');
+      *     }
+      *   })
+      *   .on('resizemove', function (event) {
+      *     var target = event.target,
+      *         x = (parseFloat(target.getAttribute('data-x')) || 0);
+
+      *     // update the element's style
+      *     target.style.width  = event.rect.width + 'px';
+
+      *     // translate when resizing from top or left edges
+      *     x += event.deltaRect.left;
+
+      *     target.style.webkitTransform = target.style.transform =
+      *       'translateX(' + x + 'px)';
+
+      *     target.setAttribute('data-x', x);
+      *     target.textContent = Math.round(event.rect.width);
+      *   });*/
+    </script>
     
   
   </body>
